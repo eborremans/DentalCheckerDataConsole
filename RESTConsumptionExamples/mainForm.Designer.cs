@@ -33,6 +33,8 @@
             this.json_TXT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.apiKey_TXT = new System.Windows.Forms.TextBox();
+            this.loadKey_BTN = new System.Windows.Forms.Button();
+            this.saveKey_BTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // getTestResponse_BTN
@@ -79,15 +81,36 @@
             // 
             this.apiKey_TXT.Location = new System.Drawing.Point(551, 4);
             this.apiKey_TXT.Name = "apiKey_TXT";
-            this.apiKey_TXT.Size = new System.Drawing.Size(639, 22);
+            this.apiKey_TXT.Size = new System.Drawing.Size(306, 22);
             this.apiKey_TXT.TabIndex = 4;
-            this.apiKey_TXT.TextChanged += new System.EventHandler(this.apiKey_TXT_TextChanged);
+            // 
+            // loadKey_BTN
+            // 
+            this.loadKey_BTN.Location = new System.Drawing.Point(864, 2);
+            this.loadKey_BTN.Name = "loadKey_BTN";
+            this.loadKey_BTN.Size = new System.Drawing.Size(89, 33);
+            this.loadKey_BTN.TabIndex = 5;
+            this.loadKey_BTN.Text = "Load Key";
+            this.loadKey_BTN.UseVisualStyleBackColor = true;
+            this.loadKey_BTN.Click += new System.EventHandler(this.loadKey_BTN_Click);
+            // 
+            // saveKey_BTN
+            // 
+            this.saveKey_BTN.Location = new System.Drawing.Point(959, 2);
+            this.saveKey_BTN.Name = "saveKey_BTN";
+            this.saveKey_BTN.Size = new System.Drawing.Size(87, 33);
+            this.saveKey_BTN.TabIndex = 6;
+            this.saveKey_BTN.Text = "Save Key";
+            this.saveKey_BTN.UseVisualStyleBackColor = true;
+            this.saveKey_BTN.Click += new System.EventHandler(this.saveKey_BTN_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 1018);
+            this.Controls.Add(this.saveKey_BTN);
+            this.Controls.Add(this.loadKey_BTN);
             this.Controls.Add(this.apiKey_TXT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.json_TXT);
@@ -95,7 +118,7 @@
             this.Controls.Add(this.getTestResponse_BTN);
             this.Name = "mainForm";
             this.Text = "REST API Consumption Examples";
-            this.Activated += new System.EventHandler(this.mainForm_Activated);
+            this.Load += new System.EventHandler(this.mainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,6 +131,8 @@
         private System.Windows.Forms.TextBox json_TXT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox apiKey_TXT;
+        private System.Windows.Forms.Button loadKey_BTN;
+        private System.Windows.Forms.Button saveKey_BTN;
     }
 }
 

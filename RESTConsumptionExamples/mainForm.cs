@@ -11,6 +11,8 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using System.Collections;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace RESTConsumptionExamples
 {
@@ -134,7 +136,7 @@ namespace RESTConsumptionExamples
             System.Xml.XmlWriterSettings settings = new System.Xml.XmlWriterSettings() { Indent = true };
 
             // Put writer in using scope; after end of scope, file is automatically saved.
-            using (System.Xml.XmlWriter writer = System.Xml.XmlTextWriter.Create("apikey.key", settings))
+            using (XmlWriter writer = XmlTextWriter.Create("apikey.key", settings))
             {
                 writer.WriteStartDocument();
                 writer.WriteStartElement("root");
@@ -147,22 +149,42 @@ namespace RESTConsumptionExamples
 
         private void loadApiKey()
         {
-            // Set indent=true so resulting file is more 'human-readable'
-            System.Xml.XmlWriterSettings settings = new System.Xml.XmlWriterSettings() { Indent = true };
-
-            // Put writer in using scope; after end of scope, file is automatically saved.
-            using (System.Xml.XmlReader reader = System.Xml.XmlReader.Create("apikey.key"))
+            String apiKey = "<no key found>";
+            using (XmlReader reader = XmlReader.Create("apikey.key"))
             {
+                while (reader.Read())
+                {
+                    if (reader.IsStartElement())
+                    {
+                            if (reader.ReadToDescendant("apiKey"))
+                            {
+                                reader.Read();
+                                apiKey = reader.Value;
+                                break;
+                            }
+                    }
+                }
+            }
+
+            if (apiKey != apiKey_TXT.Text)
+            {
+                apiKey_TXT.Text = apiKey;
             }
         }
 
-        private void apiKey_TXT_TextChanged(object sender, EventArgs e)
+        private void loadKey_BTN_Click(object sender, EventArgs e)
+        {
+            loadApiKey();
+        }
+
+        private void saveKey_BTN_Click(object sender, EventArgs e)
         {
             storeApiKey();
         }
 
-        private void mainForm_Activated(object sender, EventArgs e)
+        private void mainForm_Load(object sender, EventArgs e)
         {
-            loadApiKey();        }
+            loadApiKey();
+        }
     }
 }
