@@ -80,14 +80,14 @@ namespace RESTConsumptionExamples
             }
 
             json_TXT.Text = text.ToString();
-       }
+        }
 
         private void getTestResponse_BTN_Click(object sender, EventArgs e)
         {
             HttpWebRequest request = createTreatmentListRequest(apiKey_TXT.Text);
 
             HttpWebResponse response = getResponse(request);
-            if(null == response)
+            if (null == response)
             {
                 return;
             }
@@ -148,20 +148,28 @@ namespace RESTConsumptionExamples
         private void loadApiKey()
         {
             String apiKey = "<no key found>";
-            using (XmlReader reader = XmlReader.Create("apikey.key"))
+
+            try
             {
-                while (reader.Read())
+                using (XmlReader reader = XmlReader.Create("apikey.key"))
                 {
-                    if (reader.IsStartElement())
+                    while (reader.Read())
                     {
+                        if (reader.IsStartElement())
+                        {
                             if (reader.ReadToDescendant("apiKey"))
                             {
                                 reader.Read();
                                 apiKey = reader.Value;
                                 break;
                             }
+                        }
                     }
                 }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
             }
 
             if (apiKey != apiKey_TXT.Text)
