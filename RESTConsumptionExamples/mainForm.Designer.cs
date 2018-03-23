@@ -70,7 +70,7 @@
             this.json_TXT.Multiline = true;
             this.json_TXT.Name = "json_TXT";
             this.json_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.json_TXT.Size = new System.Drawing.Size(581, 973);
+            this.json_TXT.Size = new System.Drawing.Size(1285, 973);
             this.json_TXT.TabIndex = 2;
             // 
             // label1
@@ -137,14 +137,14 @@
             this.prettyJSon_TXT.Multiline = true;
             this.prettyJSon_TXT.Name = "prettyJSon_TXT";
             this.prettyJSon_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prettyJSon_TXT.Size = new System.Drawing.Size(581, 973);
+            this.prettyJSon_TXT.Size = new System.Drawing.Size(1285, 973);
             this.prettyJSon_TXT.TabIndex = 9;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 1018);
+            this.ClientSize = new System.Drawing.Size(1906, 1018);
             this.Controls.Add(this.prettyJSon_TXT);
             this.Controls.Add(this.invoiceNr_TXT);
             this.Controls.Add(this.getInvoice_BTN);

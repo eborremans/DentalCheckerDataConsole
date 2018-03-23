@@ -182,6 +182,7 @@ namespace RESTConsumptionExamples
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            getInvoice_BTN.Select();
             loadApiKey();
         }
 
