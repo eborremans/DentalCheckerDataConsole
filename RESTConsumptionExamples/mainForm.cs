@@ -33,6 +33,11 @@ namespace RESTConsumptionExamples
             return createRequest("http://127.0.0.1:28081/dental-checker/performancecodes", "", apiKey);
         }
 
+        private HttpWebRequest createInvoiceRequest(String apiKey, String invoicePublicID)
+        {
+            return createRequest("http://127.0.0.1:28081/dental-checker/invoices/" + invoicePublicID, "", apiKey);
+        }
+
         private HttpWebRequest createRequest(String url, String callerID, String apiKey)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -96,16 +101,9 @@ namespace RESTConsumptionExamples
                 }
             }
 
-            //String t = Newtonsoft.Json.JsonConvert.DeserializeObject<String>(content);
+            List<SimpleReferenceData> refdataList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SimpleReferenceData>>(content);
 
-            //StringBuilder text = new StringBuilder();
-            //foreach (String s in t)
-            //{
-            //    text.Append(s);
-            //    text.AppendLine();
-            //}
-
-            json_TXT.Text = content;
+            json_TXT.Text = VektisUtils.listToString<SimpleReferenceData>(refdataList);
         }
 
         private HttpWebResponse getResponse(HttpWebRequest request)
@@ -185,6 +183,34 @@ namespace RESTConsumptionExamples
         private void mainForm_Load(object sender, EventArgs e)
         {
             loadApiKey();
+        }
+
+        private void getInvoice_BTN_Click(object sender, EventArgs e)
+        {
+            HttpWebRequest request = createInvoiceRequest(apiKey_TXT.Text, invoiceNr_TXT.Text);
+
+            HttpWebResponse response = getResponse(request);
+            if (null == response)
+            {
+                return;
+            }
+
+            string content = string.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            SimpleInvoice invoice = Newtonsoft.Json.JsonConvert.DeserializeObject<SimpleInvoice>(content);
+
+            json_TXT.Text = invoice.ToString();
+
+            JToken jt = JToken.Parse(content);
+            string formattedJson = jt.ToString();
+            prettyJSon_TXT.Text = formattedJson;
         }
     }
 }
