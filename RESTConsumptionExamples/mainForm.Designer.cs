@@ -81,6 +81,7 @@
             this.apiKey_TXT.Name = "apiKey_TXT";
             this.apiKey_TXT.Size = new System.Drawing.Size(639, 22);
             this.apiKey_TXT.TabIndex = 4;
+            this.apiKey_TXT.TextChanged += new System.EventHandler(this.apiKey_TXT_TextChanged);
             // 
             // mainForm
             // 
@@ -94,6 +95,7 @@
             this.Controls.Add(this.getTestResponse_BTN);
             this.Name = "mainForm";
             this.Text = "REST API Consumption Examples";
+            this.Activated += new System.EventHandler(this.mainForm_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 

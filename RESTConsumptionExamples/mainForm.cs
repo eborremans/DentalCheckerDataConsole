@@ -26,6 +26,11 @@ namespace RESTConsumptionExamples
             return createRequest("http://127.0.0.1:28081/dental-checker/version", "TESTING", apiKey);
         }
 
+        private HttpWebRequest createTreatmentListRequest(String apiKey)
+        {
+            return createRequest("http://127.0.0.1:28081/dental-checker/performancecodes", "", apiKey);
+        }
+
         private HttpWebRequest createRequest(String url, String callerID, String apiKey)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -42,7 +47,12 @@ namespace RESTConsumptionExamples
         {
             HttpWebRequest request = createVersionRequest(apiKey_TXT.Text);
 
-            HttpWebResponse response = getResponse("http://127.0.0.1:28081/dental-checker/version", request);
+            HttpWebResponse response = getResponse(request);
+
+            if (null == response)
+            {
+                return;
+            }
 
             string content = string.Empty;
             using (var stream = response.GetResponseStream())
@@ -67,10 +77,36 @@ namespace RESTConsumptionExamples
 
         private void getTestResponse_BTN_Click(object sender, EventArgs e)
         {
+            HttpWebRequest request = createTreatmentListRequest(apiKey_TXT.Text);
 
+            HttpWebResponse response = getResponse(request);
+            if(null == response)
+            {
+                return;
+            }
+
+            string content = string.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            //String t = Newtonsoft.Json.JsonConvert.DeserializeObject<String>(content);
+
+            //StringBuilder text = new StringBuilder();
+            //foreach (String s in t)
+            //{
+            //    text.Append(s);
+            //    text.AppendLine();
+            //}
+
+            json_TXT.Text = content;
         }
 
-        private HttpWebResponse getResponse(String url, HttpWebRequest request)
+        private HttpWebResponse getResponse(HttpWebRequest request)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
@@ -87,5 +123,46 @@ namespace RESTConsumptionExamples
 
             return response;
         }
+
+        private void storeApiKey()
+        {
+            string text1 = apiKey_TXT.Text;
+            //string text2 = /* get value of textbox */;
+            //string text3 = /* get value of textbox */;
+
+            // Set indent=true so resulting file is more 'human-readable'
+            System.Xml.XmlWriterSettings settings = new System.Xml.XmlWriterSettings() { Indent = true };
+
+            // Put writer in using scope; after end of scope, file is automatically saved.
+            using (System.Xml.XmlWriter writer = System.Xml.XmlTextWriter.Create("apikey.key", settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("root");
+                writer.WriteElementString("apiKey", text1);
+                //writer.WriteElementString("text2", text2);
+                //writer.WriteElementString("text3", text3);
+                writer.WriteEndElement();
+            }
+        }
+
+        private void loadApiKey()
+        {
+            // Set indent=true so resulting file is more 'human-readable'
+            System.Xml.XmlWriterSettings settings = new System.Xml.XmlWriterSettings() { Indent = true };
+
+            // Put writer in using scope; after end of scope, file is automatically saved.
+            using (System.Xml.XmlReader reader = System.Xml.XmlReader.Create("apikey.key"))
+            {
+            }
+        }
+
+        private void apiKey_TXT_TextChanged(object sender, EventArgs e)
+        {
+            storeApiKey();
+        }
+
+        private void mainForm_Activated(object sender, EventArgs e)
+        {
+            loadApiKey();        }
     }
 }
