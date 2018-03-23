@@ -37,16 +37,17 @@
             // 
             // getTestResponse_BTN
             // 
-            this.getTestResponse_BTN.Location = new System.Drawing.Point(7, 1);
+            this.getTestResponse_BTN.Location = new System.Drawing.Point(183, 1);
             this.getTestResponse_BTN.Name = "getTestResponse_BTN";
-            this.getTestResponse_BTN.Size = new System.Drawing.Size(304, 34);
+            this.getTestResponse_BTN.Size = new System.Drawing.Size(144, 34);
             this.getTestResponse_BTN.TabIndex = 0;
             this.getTestResponse_BTN.Text = "Test Response";
             this.getTestResponse_BTN.UseVisualStyleBackColor = true;
+            this.getTestResponse_BTN.Click += new System.EventHandler(this.getTestResponse_BTN_Click);
             // 
             // getDentalCheckerVersionResponse_BTN
             // 
-            this.getDentalCheckerVersionResponse_BTN.Location = new System.Drawing.Point(311, 1);
+            this.getDentalCheckerVersionResponse_BTN.Location = new System.Drawing.Point(7, 1);
             this.getDentalCheckerVersionResponse_BTN.Name = "getDentalCheckerVersionResponse_BTN";
             this.getDentalCheckerVersionResponse_BTN.Size = new System.Drawing.Size(170, 34);
             this.getDentalCheckerVersionResponse_BTN.TabIndex = 1;

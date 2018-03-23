@@ -21,28 +21,29 @@ namespace RESTConsumptionExamples
             InitializeComponent();
         }
 
-        private void getDentalCheckerVersionResponse_BTN_Click(object sender, EventArgs ex)
+        private HttpWebRequest createVersionRequest(String apiKey)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://127.0.0.1:28081/dental-checker/version");
+            return createRequest("http://127.0.0.1:28081/dental-checker/version", "TESTING", apiKey);
+        }
 
-            request.Method = "GET";
-
-            // "Accept: */*" --header "CallerID: TESTING" --header "api_key: -----"
-            request.Headers.Add("CallerID", "TESTING");
-            String apiKey = apiKey_TXT.Text;
+        private HttpWebRequest createRequest(String url, String callerID, String apiKey)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Headers.Add("CallerID", callerID);
             request.Headers.Add("api_key", apiKey);
 
             request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36";
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
 
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-            HttpWebResponse response = null;
-            try {
-                response = (HttpWebResponse)request.GetResponse();
-            } catch (Exception exc) {
-                MessageBox.Show(exc.Message);
-                return;
-            }
+            return request;
+        }
+
+        private void getDentalCheckerVersionResponse_BTN_Click(object sender, EventArgs ex)
+        {
+            HttpWebRequest request = createVersionRequest(apiKey_TXT.Text);
+
+            HttpWebResponse response = getResponse("http://127.0.0.1:28081/dental-checker/version", request);
+
             string content = string.Empty;
             using (var stream = response.GetResponseStream())
             {
@@ -63,5 +64,28 @@ namespace RESTConsumptionExamples
 
             json_TXT.Text = text.ToString();
        }
+
+        private void getTestResponse_BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private HttpWebResponse getResponse(String url, HttpWebRequest request)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+
+            HttpWebResponse response = null;
+            try
+            {
+                response = (HttpWebResponse)request.GetResponse();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return null;
+            }
+
+            return response;
+        }
     }
 }
