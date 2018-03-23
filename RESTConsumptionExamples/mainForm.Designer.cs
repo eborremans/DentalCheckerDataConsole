@@ -1,6 +1,6 @@
 ﻿namespace RESTConsumptionExamples
 {
-    partial class Form1
+    partial class mainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             // 
             this.getTestResponse_BTN.Location = new System.Drawing.Point(7, 1);
             this.getTestResponse_BTN.Name = "getTestResponse_BTN";
-            this.getTestResponse_BTN.Size = new System.Drawing.Size(304, 23);
+            this.getTestResponse_BTN.Size = new System.Drawing.Size(304, 34);
             this.getTestResponse_BTN.TabIndex = 0;
             this.getTestResponse_BTN.Text = "Test Response";
             this.getTestResponse_BTN.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // 
             this.getDentalCheckerVersionResponse_BTN.Location = new System.Drawing.Point(311, 1);
             this.getDentalCheckerVersionResponse_BTN.Name = "getDentalCheckerVersionResponse_BTN";
-            this.getDentalCheckerVersionResponse_BTN.Size = new System.Drawing.Size(170, 23);
+            this.getDentalCheckerVersionResponse_BTN.Size = new System.Drawing.Size(170, 34);
             this.getDentalCheckerVersionResponse_BTN.TabIndex = 1;
             this.getDentalCheckerVersionResponse_BTN.Text = "DENTIC Response";
             this.getDentalCheckerVersionResponse_BTN.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@
             this.json_TXT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.json_TXT.Location = new System.Drawing.Point(7, 32);
+            this.json_TXT.Location = new System.Drawing.Point(7, 41);
             this.json_TXT.Multiline = true;
             this.json_TXT.Name = "json_TXT";
-            this.json_TXT.Size = new System.Drawing.Size(1187, 982);
+            this.json_TXT.Size = new System.Drawing.Size(1187, 973);
             this.json_TXT.TabIndex = 2;
             // 
             // label1
@@ -81,7 +81,7 @@
             this.apiKey_TXT.Size = new System.Drawing.Size(639, 22);
             this.apiKey_TXT.TabIndex = 4;
             // 
-            // Form1
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,8 +91,8 @@
             this.Controls.Add(this.json_TXT);
             this.Controls.Add(this.getDentalCheckerVersionResponse_BTN);
             this.Controls.Add(this.getTestResponse_BTN);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "mainForm";
+            this.Text = "REST API Consumption Examples";
             this.ResumeLayout(false);
             this.PerformLayout();
 
