@@ -68,7 +68,9 @@ namespace RESTConsumptionExamples
             text.AppendLine();
             text.Append("invoiceNumber          :" + invoiceNumber);
             text.AppendLine();
-            text.Append("patients               :" + VektisUtils.listToString<Patient>(patients));
+            text.Append("patients               :");
+            text.AppendLine();
+            text.Append(VektisUtils.listToString<Patient>(patients));
             text.AppendLine();
             text.Append("---");
             text.AppendLine();
