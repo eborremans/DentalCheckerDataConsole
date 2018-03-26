@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace RESTConsumptionExamples
 {
-    class RequestResponseController
+    public class RequestResponseController
     {
         public static HttpWebRequest createVersionRequest(String url, String apiKey)
         {

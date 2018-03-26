@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.getTestResponse_BTN = new System.Windows.Forms.Button();
+            this.getInvoicePublicIds_BTN = new System.Windows.Forms.Button();
             this.getDentalCheckerVersionResponse_BTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.apiKey_TXT = new System.Windows.Forms.TextBox();
@@ -41,21 +41,23 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.json_TXT = new System.Windows.Forms.TextBox();
             this.prettyJSon_TXT = new System.Windows.Forms.TextBox();
+            this.invoicePublicIds_CB = new System.Windows.Forms.ComboBox();
+            this.testResponse_BTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // getTestResponse_BTN
+            // getInvoicePublicIds_BTN
             // 
-            this.getTestResponse_BTN.Location = new System.Drawing.Point(484, 1);
-            this.getTestResponse_BTN.Name = "getTestResponse_BTN";
-            this.getTestResponse_BTN.Size = new System.Drawing.Size(144, 34);
-            this.getTestResponse_BTN.TabIndex = 0;
-            this.getTestResponse_BTN.Text = "Test Response";
-            this.getTestResponse_BTN.UseVisualStyleBackColor = true;
-            this.getTestResponse_BTN.Click += new System.EventHandler(this.getTestResponse_BTN_Click);
+            this.getInvoicePublicIds_BTN.Location = new System.Drawing.Point(647, 38);
+            this.getInvoicePublicIds_BTN.Name = "getInvoicePublicIds_BTN";
+            this.getInvoicePublicIds_BTN.Size = new System.Drawing.Size(214, 29);
+            this.getInvoicePublicIds_BTN.TabIndex = 0;
+            this.getInvoicePublicIds_BTN.Text = "Get Invoice Public Ids";
+            this.getInvoicePublicIds_BTN.UseVisualStyleBackColor = true;
+            this.getInvoicePublicIds_BTN.Click += new System.EventHandler(this.getInvoicePublicIds_BTN_Click);
             // 
             // getDentalCheckerVersionResponse_BTN
             // 
@@ -147,7 +149,7 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(7, 41);
+            this.splitContainer1.Location = new System.Drawing.Point(7, 76);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -157,7 +159,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.prettyJSon_TXT);
-            this.splitContainer1.Size = new System.Drawing.Size(1887, 973);
+            this.splitContainer1.Size = new System.Drawing.Size(1887, 938);
             this.splitContainer1.SplitterDistance = 461;
             this.splitContainer1.TabIndex = 13;
             // 
@@ -171,7 +173,7 @@
             this.json_TXT.Multiline = true;
             this.json_TXT.Name = "json_TXT";
             this.json_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.json_TXT.Size = new System.Drawing.Size(448, 967);
+            this.json_TXT.Size = new System.Drawing.Size(448, 932);
             this.json_TXT.TabIndex = 3;
             // 
             // prettyJSon_TXT
@@ -184,14 +186,38 @@
             this.prettyJSon_TXT.Multiline = true;
             this.prettyJSon_TXT.Name = "prettyJSon_TXT";
             this.prettyJSon_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prettyJSon_TXT.Size = new System.Drawing.Size(1412, 967);
+            this.prettyJSon_TXT.Size = new System.Drawing.Size(1412, 932);
             this.prettyJSon_TXT.TabIndex = 14;
+            // 
+            // invoicePublicIds_CB
+            // 
+            this.invoicePublicIds_CB.FormattingEnabled = true;
+            this.invoicePublicIds_CB.Items.AddRange(new object[] {
+            "<empty>"});
+            this.invoicePublicIds_CB.Location = new System.Drawing.Point(266, 41);
+            this.invoicePublicIds_CB.Name = "invoicePublicIds_CB";
+            this.invoicePublicIds_CB.Size = new System.Drawing.Size(368, 24);
+            this.invoicePublicIds_CB.TabIndex = 14;
+            this.invoicePublicIds_CB.SelectedIndexChanged += new System.EventHandler(this.invoicePublicIds_CB_SelectedIndexChanged);
+            this.invoicePublicIds_CB.SelectedValueChanged += new System.EventHandler(this.invoicePublicIds_CB_SelectedValueChanged);
+            // 
+            // testResponse_BTN
+            // 
+            this.testResponse_BTN.Location = new System.Drawing.Point(490, 4);
+            this.testResponse_BTN.Name = "testResponse_BTN";
+            this.testResponse_BTN.Size = new System.Drawing.Size(144, 34);
+            this.testResponse_BTN.TabIndex = 15;
+            this.testResponse_BTN.Text = "Test Response";
+            this.testResponse_BTN.UseVisualStyleBackColor = true;
+            this.testResponse_BTN.Click += new System.EventHandler(this.testResponse_BTN_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1906, 1018);
+            this.Controls.Add(this.testResponse_BTN);
+            this.Controls.Add(this.invoicePublicIds_CB);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.url_CB);
             this.Controls.Add(this.label2);
@@ -202,7 +228,7 @@
             this.Controls.Add(this.apiKey_TXT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.getDentalCheckerVersionResponse_BTN);
-            this.Controls.Add(this.getTestResponse_BTN);
+            this.Controls.Add(this.getInvoicePublicIds_BTN);
             this.Name = "mainForm";
             this.Text = "REST API Consumption Examples";
             this.Load += new System.EventHandler(this.mainForm_Load);
@@ -219,7 +245,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button getTestResponse_BTN;
+        private System.Windows.Forms.Button getInvoicePublicIds_BTN;
         private System.Windows.Forms.Button getDentalCheckerVersionResponse_BTN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox apiKey_TXT;
@@ -232,6 +258,8 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox json_TXT;
         private System.Windows.Forms.TextBox prettyJSon_TXT;
+        private System.Windows.Forms.ComboBox invoicePublicIds_CB;
+        private System.Windows.Forms.Button testResponse_BTN;
     }
 }
 

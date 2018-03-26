@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESTConsumptionExamples
 {
-    class Patient
+    public class Patient
     {
         public String healthInsuranceName { get; set; }
         public String patientBirthdate    { get; set; }

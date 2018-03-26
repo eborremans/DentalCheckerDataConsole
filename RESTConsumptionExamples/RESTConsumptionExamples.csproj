@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IInvoiceView.cs" />
+    <Compile Include="IInputView.cs" />
     <Compile Include="InvoiceController.cs" />
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>

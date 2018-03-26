@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESTConsumptionExamples
 {
-    class SimpleInvoice
+    public class SimpleInvoice
     {
         public String invoicePublicId { get; set; }
 

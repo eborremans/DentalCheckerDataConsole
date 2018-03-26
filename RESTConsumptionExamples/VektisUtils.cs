@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESTConsumptionExamples
 {
-    class VektisUtils
+    public class VektisUtils
     {
         public static String listToString<T>(List<T> objects)
         {

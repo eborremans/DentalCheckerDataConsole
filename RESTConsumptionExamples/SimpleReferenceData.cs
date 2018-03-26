@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESTConsumptionExamples
 {
-    class SimpleReferenceData : SimpleTreatment
+    public class SimpleReferenceData : SimpleTreatment
     {
         public Boolean hasTechnicalCost { get; set; }
         public String  validFrom        { get; set; }

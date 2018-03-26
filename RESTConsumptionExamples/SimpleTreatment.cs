@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESTConsumptionExamples
 {
-    class SimpleTreatment
+    public class SimpleTreatment
     {
         public String code { get; set; }
         public String description { get; set; }
