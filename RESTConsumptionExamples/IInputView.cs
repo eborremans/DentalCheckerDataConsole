@@ -10,6 +10,8 @@ namespace RESTConsumptionExamples
     public interface IInputView
     {
         String getAPIKey();
+        void setAPIKey(String apiKey);
+
         String getSelectedURL();
         String getSelectedInvoicePublicId();
 

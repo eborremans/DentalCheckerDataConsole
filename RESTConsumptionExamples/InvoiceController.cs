@@ -11,9 +11,22 @@ namespace RESTConsumptionExamples
 {
     public class InvoiceController
     {
+        private IInputView inputView = null;
+        private IInvoiceView invoiceView = null;
+
         RequestResponseController responseRequestController = new RequestResponseController();
-        
-        public void getInvoice(IInvoiceView invoiceView, IInputView inputView)
+
+        private InvoiceController()
+        {
+        }
+
+        public InvoiceController(IInvoiceView invoiceView, IInputView inputView)
+        {
+            this.invoiceView = invoiceView;
+            this.inputView = inputView;
+        }
+
+        public void getInvoice()
         {
             // HttpWebRequest request = RequestResponseController.createInvoiceRequest(url_CB.Text, apiKey_TXT.Text, invoiceNr_TXT.Text);
             HttpWebRequest request = RequestResponseController.createInvoiceRequest(inputView.getSelectedURL(), inputView.getAPIKey(), inputView.getSelectedInvoicePublicId());
@@ -58,7 +71,7 @@ namespace RESTConsumptionExamples
             invoiceView.setInvoiceJSon(formattedJson);
         }
 
-        public void getInvoicePublicIds(IInvoiceView invoiceView, IInputView inputView)
+        public void getInvoicePublicIds()
         {
             // HttpWebRequest request = RequestResponseController.createInvoicePublicIdsRequest(url_CB.Text, apiKey_TXT.Text);
             HttpWebRequest request = RequestResponseController.createInvoicePublicIdsRequest(inputView.getSelectedURL(), inputView.getAPIKey());
