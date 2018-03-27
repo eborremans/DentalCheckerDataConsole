@@ -28,7 +28,7 @@ namespace RESTConsumptionExamples
 
         public void getVersionInfo()
         {
-            HttpWebRequest request = RequestResponseController.createVersionRequest(inputView.getSelectedURL(), inputView.getAPIKey());
+            HttpWebRequest request = RequestResponseController.createVersionRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
             if (null == request)
             {
                 return;

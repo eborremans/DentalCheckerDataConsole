@@ -28,8 +28,8 @@ namespace RESTConsumptionExamples
 
         public void getInvoice()
         {
-            // HttpWebRequest request = RequestResponseController.createInvoiceRequest(url_CB.Text, apiKey_TXT.Text, invoiceNr_TXT.Text);
-            HttpWebRequest request = RequestResponseController.createInvoiceRequest(inputView.getSelectedURL(), inputView.getAPIKey(), inputView.getSelectedInvoicePublicId());
+            // HttpWebRequest request = RequestResponseController.createInvoiceRequest(inputView.getSelectedURL(), inputView.getAPIKey(), inputView.getSelectedInvoicePublicId());
+            HttpWebRequest request = RequestResponseController.createInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
             if (null == request)
             {
                 return;
@@ -73,8 +73,7 @@ namespace RESTConsumptionExamples
 
         public void getInvoicePublicIds()
         {
-            // HttpWebRequest request = RequestResponseController.createInvoicePublicIdsRequest(url_CB.Text, apiKey_TXT.Text);
-            HttpWebRequest request = RequestResponseController.createInvoicePublicIdsRequest(inputView.getSelectedURL(), inputView.getAPIKey());
+            HttpWebRequest request = RequestResponseController.createInvoicePublicIdsRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
             if (null == request)
             {
                 return;

@@ -39,6 +39,8 @@
             this.invoiceNr_TXT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.url_CB = new System.Windows.Forms.ComboBox();
+            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.urlsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jsonSplitContainer_SPLT = new System.Windows.Forms.SplitContainer();
             this.json_TXT = new System.Windows.Forms.TextBox();
             this.prettyJSon_TXT = new System.Windows.Forms.TextBox();
@@ -70,6 +72,9 @@
             this.treatmentsSplitContainer = new System.Windows.Forms.SplitContainer();
             this.patientViolations_LB = new System.Windows.Forms.ListBox();
             this.violationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urlsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
             this.jsonSplitContainer_SPLT.Panel2.SuspendLayout();
@@ -181,17 +186,23 @@
             // 
             // url_CB
             // 
+            this.url_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
+            this.url_CB.DataSource = this.urlsBindingSource;
             this.url_CB.FormattingEnabled = true;
-            this.url_CB.Items.AddRange(new object[] {
-            "http://172.30.143.132:9090/",
-            "http://127.0.0.1:18081/dental-checker/",
-            "http://127.0.0.1:28081/dental-checker/",
-            "http://172.30.182.88:9090/"});
             this.url_CB.Location = new System.Drawing.Point(29, 2);
             this.url_CB.Margin = new System.Windows.Forms.Padding(2);
             this.url_CB.Name = "url_CB";
             this.url_CB.Size = new System.Drawing.Size(277, 21);
             this.url_CB.TabIndex = 12;
+            // 
+            // configurationBindingSource
+            // 
+            this.configurationBindingSource.DataSource = typeof(RESTConsumptionExamples.Configuration);
+            // 
+            // urlsBindingSource
+            // 
+            this.urlsBindingSource.DataMember = "urls";
+            this.urlsBindingSource.DataSource = this.configurationBindingSource;
             // 
             // jsonSplitContainer_SPLT
             // 
@@ -237,7 +248,7 @@
             this.prettyJSon_TXT.Multiline = true;
             this.prettyJSon_TXT.Name = "prettyJSon_TXT";
             this.prettyJSon_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prettyJSon_TXT.Size = new System.Drawing.Size(1184, 310);
+            this.prettyJSon_TXT.Size = new System.Drawing.Size(1188, 310);
             this.prettyJSon_TXT.TabIndex = 14;
             // 
             // invoicePublicIds_CB
@@ -260,7 +271,7 @@
             this.testResponse_BTN.Name = "testResponse_BTN";
             this.testResponse_BTN.Size = new System.Drawing.Size(108, 28);
             this.testResponse_BTN.TabIndex = 15;
-            this.testResponse_BTN.Text = "Test Response";
+            this.testResponse_BTN.Text = "Test Save";
             this.testResponse_BTN.UseVisualStyleBackColor = true;
             this.testResponse_BTN.Click += new System.EventHandler(this.testResponse_BTN_Click);
             // 
@@ -292,7 +303,6 @@
             this.patientTreatments_DGV.ReadOnly = true;
             this.patientTreatments_DGV.Size = new System.Drawing.Size(1153, 156);
             this.patientTreatments_DGV.TabIndex = 16;
-            this.patientTreatments_DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientTreatments_DGV_CellContentClick);
             // 
             // codeDataGridViewTextBoxColumn
             // 
@@ -523,11 +533,23 @@
             this.violationsBindingSource.DataMember = "violations";
             this.violationsBindingSource.DataSource = this.treatmentBindingSource;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1233, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 28);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Test Load";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1579, 768);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.mainSplitContainer_SPLT);
             this.Controls.Add(this.testResponse_BTN);
             this.Controls.Add(this.url_CB);
@@ -541,6 +563,8 @@
             this.Name = "mainForm";
             this.Text = "REST API Consumption Examples";
             this.Load += new System.EventHandler(this.mainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urlsBindingSource)).EndInit();
             this.jsonSplitContainer_SPLT.Panel1.ResumeLayout(false);
             this.jsonSplitContainer_SPLT.Panel1.PerformLayout();
             this.jsonSplitContainer_SPLT.Panel2.ResumeLayout(false);
@@ -607,6 +631,9 @@
         private System.Windows.Forms.SplitContainer treatmentsSplitContainer;
         private System.Windows.Forms.ListBox patientViolations_LB;
         private System.Windows.Forms.BindingSource violationsBindingSource;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource configurationBindingSource;
+        private System.Windows.Forms.BindingSource urlsBindingSource;
     }
 }
 

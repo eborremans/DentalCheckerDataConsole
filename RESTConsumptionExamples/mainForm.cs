@@ -11,9 +11,10 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
+using System.Diagnostics;
 
 namespace RESTConsumptionExamples
 {
@@ -30,6 +31,8 @@ namespace RESTConsumptionExamples
         private SimpleInvoice invoice = null;
 
         private List<String> patientViolations = new List<String>();
+
+        private Configuration configuration = new Configuration();
 
         public mainForm()
         {
@@ -61,11 +64,11 @@ namespace RESTConsumptionExamples
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            configurationController.loadConfiguration();
+
             url_CB.SelectedIndex = 0;
 
             getInvoice_BTN.Select();
-
-            configurationController.loadConfiguration();
         }
 
         private void invoicePublicIds_CB_SelectedValueChanged(object sender, EventArgs e)
@@ -81,11 +84,6 @@ namespace RESTConsumptionExamples
         private void getInvoicePublicIds_BTN_Click(object sender, EventArgs e)
         {
             invoiceController.getInvoicePublicIds();
-        }
-
-        private void testResponse_BTN_Click(object sender, EventArgs e)
-        {
-
         }
 
         // ------------------ IInputView ------------------
@@ -104,12 +102,34 @@ namespace RESTConsumptionExamples
             return url_CB.Text;
         }
 
-        public string getSelectedInvoicePublicId()
-        {
-            return invoiceNr_TXT.Text;
+        public Configuration getConfiguration() {
+
+            configuration.apiKey = apiKey_TXT.Text;
+            configuration.urls = url_CB.Items.Cast<String>().ToList();
+            configuration.currentInvoiceId = invoiceNr_TXT.Text;
+            configuration.currentUrl = url_CB.SelectedItem.ToString();
+
+            return configuration;
         }
 
-        public HttpWebResponse getResponse(HttpWebRequest request)
+        public void setConfiguration(Configuration configuration)
+        {
+            this.configuration = configuration;
+            url_CB.DataSource = this.configuration.urls;
+            apiKey_TXT.Text = this.configuration.apiKey;
+            invoiceNr_TXT.Text = this.configuration.currentInvoiceId;
+        }
+
+        public void setSelectedURL(String url) { url_CB.Text = url; }
+
+        public List<String> getURLs() { return url_CB.Items.Cast<String>().ToList(); }
+        public void setURLs(List<String> urls)
+        {
+            url_CB.Items.Clear();
+            url_CB.Items.AddRange(urls.ToArray());
+        }
+
+        public HttpWebResponse getResponse(HttpWebRequest request) 
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
@@ -195,15 +215,51 @@ namespace RESTConsumptionExamples
             setPatientViolations(allViolations);
         }
 
-        private void patientTreatments_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         public void setPatientViolations(List<String> violations)
         {
             patientViolations = violations;
             patientViolations_LB.DataSource = patientViolations;
+        }
+
+        private void testResponse_BTN_Click(object sender, EventArgs e)
+        {
+            serializeTest();
+        }
+
+        public void serializeTest()
+        {
+            Configuration c = new Configuration();
+
+            c.apiKey = "the apikey";
+            c.urls = new List<String>();
+
+            c.urls.Add("http://url1");
+            c.urls.Add("http://url2");
+
+            XmlSerializer ser = new XmlSerializer(typeof(Configuration));
+
+            using (FileStream fs = new FileStream(@"sertest.xml", FileMode.Create))
+            {
+                ser.Serialize(fs, c);
+            }
+        }
+
+        public void deSerializeTest()
+        {
+            Configuration c = new Configuration();
+
+            XmlSerializer ser = new XmlSerializer(typeof(Configuration));
+
+            using (FileStream fs = new FileStream(@"sertest.xml", FileMode.Open))
+            {
+                c = (Configuration)ser.Deserialize(fs);
+            }
+            Debug.WriteLine(c.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            deSerializeTest();
         }
     }
 }
