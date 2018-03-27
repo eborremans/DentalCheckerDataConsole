@@ -8,15 +8,16 @@ namespace RESTConsumptionExamples
 {
     public class Treatment : SimpleTreatment
     {
-        public String  date              { get; set; }
-        public Decimal declaredAmount    { get; set; }
-        public String  dentalElementCode { get; set; }
-        public Int16   nrOfTreatments    { get; set; }
-        public String  referenceNumber   { get; set; }
-        public Decimal tariffAmount      { get; set; }
-        public String  therapistAGBCode  { get; set; }
-        public Int16   typeOfTreatment   { get; set; }
-        public Decimal calculatedAmount  { get; set; }
+        public String          date              { get; set; }
+        public Decimal         declaredAmount    { get; set; }
+        public String          dentalElementCode { get; set; }
+        public Int16           nrOfTreatments    { get; set; }
+        public String          referenceNumber   { get; set; }
+        public Decimal         tariffAmount      { get; set; }
+        public String          therapistAGBCode  { get; set; }
+        public Int16           typeOfTreatment   { get; set; }
+        public Decimal         calculatedAmount  { get; set; }
+        public List<Violation> violations        { get; set; }
 
         public Treatment(
             string code,
@@ -67,6 +68,8 @@ namespace RESTConsumptionExamples
             text.Append("typeOfTreatment   :" + typeOfTreatment  );
             text.AppendLine();
             text.Append("calculatedAmount  :" + calculatedAmount );
+            text.AppendLine();
+            text.Append(VektisUtils.listToString<Violation>(violations));
             text.AppendLine();
 
             text.Append("---");

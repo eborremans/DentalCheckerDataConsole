@@ -17,5 +17,7 @@ namespace RESTConsumptionExamples
         void setInvoicePatients(List<Patient> patients);
         void setInvoiceSelectedPatient(Patient patient);
         void setInvoiceSelectedPatientTreatments(List<Treatment> treatments);
+
+        void setPatientViolations(List<String> violations);
     }
 }

@@ -70,6 +70,7 @@
     <Compile Include="Treatment.cs" />
     <Compile Include="SimpleTreatment.cs" />
     <Compile Include="VektisUtils.cs" />
+    <Compile Include="Violation.cs" />
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +84,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Treatment.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

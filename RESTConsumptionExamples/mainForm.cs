@@ -29,6 +29,8 @@ namespace RESTConsumptionExamples
 
         private SimpleInvoice invoice = null;
 
+        private List<String> patientViolations = new List<String>();
+
         public mainForm()
         {
             InitializeComponent();
@@ -180,6 +182,28 @@ namespace RESTConsumptionExamples
         public void setInvoiceSelectedPatientTreatments(List<Treatment> treatments)
         {
             patientTreatments_DGV.DataSource = treatments;
+            List<String> allViolations = new List<String>();
+            foreach(Treatment treatment in treatments)
+            {
+                List<Violation> treatmentViolations = treatment.violations;
+                foreach(Violation violation in treatmentViolations)
+                {
+                    violation.treatmentRef = treatment.code + "-" + treatment.referenceNumber;
+                    allViolations.Add(violation.ToString());
+                }
+            }
+            setPatientViolations(allViolations);
+        }
+
+        private void patientTreatments_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void setPatientViolations(List<String> violations)
+        {
+            patientViolations = violations;
+            patientViolations_LB.DataSource = patientViolations;
         }
     }
 }
