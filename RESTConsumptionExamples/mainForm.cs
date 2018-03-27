@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -23,6 +24,9 @@ namespace RESTConsumptionExamples
         private TestController testController = null;
 
         private List<String> invoicePublicIdsList = new List<String>();
+        private List<String> invoicePatientIds = new List<String>();
+        private Dictionary<String, Patient> invoicePatients = new Dictionary<String, Patient>();
+
         private SimpleInvoice invoice = null;
 
         public mainForm()
@@ -140,6 +144,42 @@ namespace RESTConsumptionExamples
         public void setInvoiceJSon(string invoiceJSon)
         {
             prettyJSon_TXT.Text = invoiceJSon;
+        }
+
+        public void setInvoicePatients(List<Patient> patients)
+        {
+            invoicePatients = new Dictionary<string, Patient>();
+            invoicePatientIds = new List<String>();
+            foreach (Patient patient in patients) {
+                invoicePatients.Add(patient.patientExternalId, patient);
+                invoicePatientIds.Add(patient.patientExternalId);
+            }
+            patientExternalId_CB.DataSource = invoicePatientIds;
+        }
+
+        public void setInvoiceSelectedPatient(Patient patient)
+        {
+            if (null != patient)
+            {
+                patientHealthInsurance_TXT.Text = patient.healthInsuranceName;
+                patientBirthdate_TXT.Text = patient.patientBirthdate;
+                patientPolicyNumber_TXT.Text = patient.patientPolicyNumber;
+            }
+        }
+
+        private void patientExternalId_CB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String selectedPatientId = patientExternalId_CB.SelectedItem.ToString();
+            Patient selectedPatient = invoicePatients[selectedPatientId];
+            if (null != selectedPatient) { 
+                setInvoiceSelectedPatient(selectedPatient);
+                setInvoiceSelectedPatientTreatments(selectedPatient.treatments);
+            }
+        }
+
+        public void setInvoiceSelectedPatientTreatments(List<Treatment> treatments)
+        {
+            patientTreatments_DGV.DataSource = treatments;
         }
     }
 }

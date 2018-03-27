@@ -13,5 +13,9 @@ namespace RESTConsumptionExamples
         void setInvoicePublicIds(List<String> invoicePublicIds);
         void setInvoice(SimpleInvoice invoice);
         void setInvoiceJSon(String invoiceJSon);
+
+        void setInvoicePatients(List<Patient> patients);
+        void setInvoiceSelectedPatient(Patient patient);
+        void setInvoiceSelectedPatientTreatments(List<Treatment> treatments);
     }
 }

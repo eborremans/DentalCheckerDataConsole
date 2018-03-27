@@ -59,15 +59,15 @@ namespace RESTConsumptionExamples
                 formattedJson = jt.ToString();
 
                 invoice = Newtonsoft.Json.JsonConvert.DeserializeObject<SimpleInvoice>(content);
-                // json_TXT.Text = invoice.ToString();
-                invoiceView.setInvoice(invoice.ToString());
+                if (null != invoice) {
+                    invoiceView.setInvoicePatients(invoice.patients);
+                    invoiceView.setInvoice(invoice.ToString());
+                }
             }
             catch (Exception exc)
             {
-                // json_TXT.Text = exc.Message;
                 invoiceView.setInvoice(exc.Message);
             }
-            // prettyJSon_TXT.Text = formattedJson;
             invoiceView.setInvoiceJSon(formattedJson);
         }
 
