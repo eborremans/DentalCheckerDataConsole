@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace RESTConsumptionExamples
 {
-    public class RequestResponseController
+    public static class RequestResponseFactory
     {
         public static HttpWebRequest createVersionRequest(String url, String apiKey)
         {
@@ -33,6 +33,11 @@ namespace RESTConsumptionExamples
         public static HttpWebRequest createInvoicePublicIdsRequest(String url, String apiKey)
         {
             return createRequest(url + "invoices/publicIds", "", apiKey);
+        }
+
+        public static HttpWebRequest createReferenceDataRequest(String url, String apiKey, int year)
+        {
+            return createRequest(url + "refdata/" + year, "", apiKey);
         }
 
         public static HttpWebRequest createRequest(String url, String callerID, String apiKey)

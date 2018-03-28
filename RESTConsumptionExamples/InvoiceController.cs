@@ -14,8 +14,6 @@ namespace RESTConsumptionExamples
         private IInputView inputView = null;
         private IInvoiceView invoiceView = null;
 
-        RequestResponseController responseRequestController = new RequestResponseController();
-
         private InvoiceController()
         {
         }
@@ -34,7 +32,7 @@ namespace RESTConsumptionExamples
 
         public void getInvoiceJSon()
         {
-            HttpWebRequest request = RequestResponseController.createInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
+            HttpWebRequest request = RequestResponseFactory.createInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
             if (null == request)
             {
                 return;
@@ -81,7 +79,7 @@ namespace RESTConsumptionExamples
 
         public void getCustomerMessage()
         {
-            HttpWebRequest request = RequestResponseController.createCustomerMessageRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
+            HttpWebRequest request = RequestResponseFactory.createCustomerMessageRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
             if (null == request)
             {
                 return;
@@ -112,7 +110,7 @@ namespace RESTConsumptionExamples
 
         public void getInvoicePublicIds()
         {
-            HttpWebRequest request = RequestResponseController.createInvoicePublicIdsRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
+            HttpWebRequest request = RequestResponseFactory.createInvoicePublicIdsRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
             if (null == request)
             {
                 return;

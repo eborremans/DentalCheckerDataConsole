@@ -18,11 +18,12 @@ using System.Diagnostics;
 
 namespace RESTConsumptionExamples
 {
-    public partial class mainForm : Form, IInputView, IInvoiceView
+    public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView
     {
         private InvoiceController invoiceController = null;
         private ConfigurationController configurationController = null;
         private TestController testController = null;
+        private ReferenceDataController referenceDataController = null;
 
         private List<String> invoicePublicIdsList = new List<String>();
         private List<String> invoicePatientIds = new List<String>();
@@ -33,12 +34,13 @@ namespace RESTConsumptionExamples
         private List<String> patientViolations = new List<String>();
 
         private Configuration configuration = new Configuration();
-
+        
         public mainForm()
         {
             InitializeComponent();
             invoiceController = new InvoiceController(this, this);
             configurationController = new ConfigurationController(this);
+            referenceDataController = new ReferenceDataController(this, this);
             testController = new TestController(this, this);
         }
 
@@ -67,6 +69,7 @@ namespace RESTConsumptionExamples
             configurationController.loadConfiguration();
 
             url_CB.SelectedIndex = 0;
+            yearSelection_CB.SelectedIndex = 3;
 
             getInvoice_BTN.Select();
         }
@@ -270,6 +273,37 @@ namespace RESTConsumptionExamples
         private void button1_Click(object sender, EventArgs e)
         {
             deSerializeTest();
+        }
+
+        private void apiKey_TXT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadRefData_BTN_Click(object sender, EventArgs e)
+        {
+            String year = yearSelection_CB.SelectedItem.ToString();
+            referenceDataController.getReferenceData(yearStringToInteger(year));
+        }
+
+        private int yearStringToInteger(String yearString)
+        {
+            int year = 2018;
+            if (!int.TryParse(yearString, out year))
+            {
+                MessageBox.Show("Hey, we need an int over here. Defaulting to 2018");
+            }
+            return year;
+        }
+
+        public int getRefDataYear()
+        {
+            return yearStringToInteger(yearSelection_CB.SelectedItem.ToString());
+        }
+
+        public void setReferenceDataList(List<ReferenceData> referenceDataList)
+        {
+            referenceData_GV.DataSource = referenceDataList;
         }
     }
 }

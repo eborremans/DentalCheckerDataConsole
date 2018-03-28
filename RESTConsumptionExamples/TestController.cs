@@ -14,8 +14,6 @@ namespace RESTConsumptionExamples
         private IInputView inputView = null;
         private IInvoiceView invoiceView = null;
 
-        RequestResponseController responseRequestController = new RequestResponseController();
-
         private TestController()
         {
         }
@@ -28,7 +26,7 @@ namespace RESTConsumptionExamples
 
         public void getVersionInfo()
         {
-            HttpWebRequest request = RequestResponseController.createVersionRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
+            HttpWebRequest request = RequestResponseFactory.createVersionRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
             if (null == request)
             {
                 return;

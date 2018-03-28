@@ -13,5 +13,6 @@ namespace RESTConsumptionExamples
         void setConfiguration(Configuration configuration);
 
         HttpWebResponse getResponse(HttpWebRequest request);
+        int getRefDataYear();
     }
 }
