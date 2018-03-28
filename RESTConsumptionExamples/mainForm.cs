@@ -158,14 +158,24 @@ namespace RESTConsumptionExamples
             this.invoice = invoice;
         }
 
-        public void setInvoicePublicIds(List<string> invoicePublicIds)
+        public String getInvoiceString()
+        {
+            return json_TXT.Text;
+        }
+
+        public void setInvoicePublicIds(List<String> invoicePublicIds)
         {
             invoicePublicIds_CB.DataSource = invoicePublicIds;
         }
 
-        public void setInvoiceJSon(string invoiceJSon)
+        public void setInvoiceJSon(String invoiceJSon)
         {
             prettyJSon_TXT.Text = invoiceJSon;
+        }
+
+        public void setCustomerMessage(String customerMessage)
+        {
+            checkReportRenderer_WB.DocumentText = customerMessage;
         }
 
         public void setInvoicePatients(List<Patient> patients)

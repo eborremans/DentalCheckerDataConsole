@@ -25,6 +25,11 @@ namespace RESTConsumptionExamples
             return createRequest(url + "invoices/" + invoicePublicID, "", apiKey);
         }
 
+        public static HttpWebRequest createCustomerMessageRequest(String url, String apiKey, String invoicePublicID)
+        {
+            return createRequest(url + "checker/" + invoicePublicID, "", apiKey);
+        }
+
         public static HttpWebRequest createInvoicePublicIdsRequest(String url, String apiKey)
         {
             return createRequest(url + "invoices/publicIds", "", apiKey);

@@ -28,7 +28,12 @@ namespace RESTConsumptionExamples
 
         public void getInvoice()
         {
-            // HttpWebRequest request = RequestResponseController.createInvoiceRequest(inputView.getSelectedURL(), inputView.getAPIKey(), inputView.getSelectedInvoicePublicId());
+            getInvoiceJSon();
+            getCustomerMessage();
+        }
+
+        public void getInvoiceJSon()
+        {
             HttpWebRequest request = RequestResponseController.createInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
             if (null == request)
             {
@@ -41,7 +46,7 @@ namespace RESTConsumptionExamples
                 return;
             }
 
-            string content = string.Empty;
+            String content = String.Empty;
             using (var stream = response.GetResponseStream())
             {
                 using (var sr = new StreamReader(stream))
@@ -51,7 +56,7 @@ namespace RESTConsumptionExamples
             }
 
             SimpleInvoice invoice = null;
-            string formattedJson = "";
+            String formattedJson = "<No JSon found>";
 
             try
             {
@@ -59,16 +64,50 @@ namespace RESTConsumptionExamples
                 formattedJson = jt.ToString();
 
                 invoice = Newtonsoft.Json.JsonConvert.DeserializeObject<SimpleInvoice>(content);
-                if (null != invoice) {
+                if (null != invoice)
+                {
                     invoiceView.setInvoicePatients(invoice.patients);
                     invoiceView.setInvoice(invoice.ToString());
+                    invoiceView.setInvoiceJSon(formattedJson);
                 }
             }
             catch (Exception exc)
             {
                 invoiceView.setInvoice(exc.Message);
             }
-            invoiceView.setInvoiceJSon(formattedJson);
+
+            return;
+        }
+
+        public void getCustomerMessage()
+        {
+            HttpWebRequest request = RequestResponseController.createCustomerMessageRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
+            if (null == request)
+            {
+                return;
+            }
+
+            HttpWebResponse response = inputView.getResponse(request);
+            if (null == response)
+            {
+                return;
+            }
+
+            String content = String.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            if (null != content)
+            {
+                invoiceView.setCustomerMessage(content);
+            }
+
+            return;
         }
 
         public void getInvoicePublicIds()
