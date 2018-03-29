@@ -33,7 +33,7 @@ namespace RESTConsumptionExamples
             string referenceNumber, 
             decimal tariffAmount, 
             string therapistAGBCode, 
-            short typeOfTreatment) : base(code, description)
+            Int16 typeOfTreatment) : base(code, description)
         {
             this.calculatedAmount = calculatedAmount;
             this.date = date;

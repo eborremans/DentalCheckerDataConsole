@@ -36,6 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.getInvoicePublicIds_BTN = new System.Windows.Forms.Button();
             this.getDentalCheckerVersionResponse_BTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,6 +84,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.mainSplitContainer_SPLT = new System.Windows.Forms.SplitContainer();
             this.treatmentsSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.invoiceDate_TXT = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.endDatePicker_DTP = new System.Windows.Forms.DateTimePicker();
+            this.startDatePicker_DTP = new System.Windows.Forms.DateTimePicker();
             this.checkResultSplitContainer_SPLT = new System.Windows.Forms.SplitContainer();
             this.patientViolations_LB = new System.Windows.Forms.ListBox();
             this.violationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -89,7 +100,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
             this.referenceData_GV = new System.Windows.Forms.DataGridView();
-            this.referenceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codeRuleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addendumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,6 +128,7 @@
             this.inputFileIdDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.referenceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.urlsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
@@ -350,11 +361,11 @@
             this.therapistAGBCodeDataGridViewTextBoxColumn,
             this.typeOfTreatmentDataGridViewTextBoxColumn});
             this.patientTreatments_DGV.DataSource = this.treatmentBindingSource;
-            this.patientTreatments_DGV.Location = new System.Drawing.Point(548, 11);
+            this.patientTreatments_DGV.Location = new System.Drawing.Point(566, 11);
             this.patientTreatments_DGV.Margin = new System.Windows.Forms.Padding(4);
             this.patientTreatments_DGV.Name = "patientTreatments_DGV";
             this.patientTreatments_DGV.ReadOnly = true;
-            this.patientTreatments_DGV.Size = new System.Drawing.Size(2100, 343);
+            this.patientTreatments_DGV.Size = new System.Drawing.Size(2082, 343);
             this.patientTreatments_DGV.TabIndex = 16;
             // 
             // codeDataGridViewTextBoxColumn
@@ -374,6 +385,8 @@
             // dentalElementCodeDataGridViewTextBoxColumn
             // 
             this.dentalElementCodeDataGridViewTextBoxColumn.DataPropertyName = "dentalElementCode";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dentalElementCodeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.dentalElementCodeDataGridViewTextBoxColumn.HeaderText = "dentalElementCode";
             this.dentalElementCodeDataGridViewTextBoxColumn.Name = "dentalElementCodeDataGridViewTextBoxColumn";
             this.dentalElementCodeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -381,6 +394,8 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateDataGridViewTextBoxColumn.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -388,6 +403,8 @@
             // tariffAmountDataGridViewTextBoxColumn
             // 
             this.tariffAmountDataGridViewTextBoxColumn.DataPropertyName = "tariffAmount";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.tariffAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.tariffAmountDataGridViewTextBoxColumn.HeaderText = "tariffAmount";
             this.tariffAmountDataGridViewTextBoxColumn.Name = "tariffAmountDataGridViewTextBoxColumn";
             this.tariffAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -395,6 +412,8 @@
             // declaredAmountDataGridViewTextBoxColumn
             // 
             this.declaredAmountDataGridViewTextBoxColumn.DataPropertyName = "declaredAmount";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.declaredAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.declaredAmountDataGridViewTextBoxColumn.HeaderText = "declaredAmount";
             this.declaredAmountDataGridViewTextBoxColumn.Name = "declaredAmountDataGridViewTextBoxColumn";
             this.declaredAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -402,6 +421,8 @@
             // calculatedAmountDataGridViewTextBoxColumn
             // 
             this.calculatedAmountDataGridViewTextBoxColumn.DataPropertyName = "calculatedAmount";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.calculatedAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.calculatedAmountDataGridViewTextBoxColumn.HeaderText = "calculatedAmount";
             this.calculatedAmountDataGridViewTextBoxColumn.Name = "calculatedAmountDataGridViewTextBoxColumn";
             this.calculatedAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -409,6 +430,8 @@
             // nrOfTreatmentsDataGridViewTextBoxColumn
             // 
             this.nrOfTreatmentsDataGridViewTextBoxColumn.DataPropertyName = "nrOfTreatments";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.nrOfTreatmentsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.nrOfTreatmentsDataGridViewTextBoxColumn.HeaderText = "nrOfTreatments";
             this.nrOfTreatmentsDataGridViewTextBoxColumn.Name = "nrOfTreatmentsDataGridViewTextBoxColumn";
             this.nrOfTreatmentsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -430,6 +453,8 @@
             // typeOfTreatmentDataGridViewTextBoxColumn
             // 
             this.typeOfTreatmentDataGridViewTextBoxColumn.DataPropertyName = "typeOfTreatment";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.typeOfTreatmentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.typeOfTreatmentDataGridViewTextBoxColumn.HeaderText = "typeOfTreatment";
             this.typeOfTreatmentDataGridViewTextBoxColumn.Name = "typeOfTreatmentDataGridViewTextBoxColumn";
             this.typeOfTreatmentDataGridViewTextBoxColumn.ReadOnly = true;
@@ -440,7 +465,7 @@
             // 
             // patientHealthInsurance_TXT
             // 
-            this.patientHealthInsurance_TXT.Location = new System.Drawing.Point(149, 129);
+            this.patientHealthInsurance_TXT.Location = new System.Drawing.Point(149, 185);
             this.patientHealthInsurance_TXT.Margin = new System.Windows.Forms.Padding(4);
             this.patientHealthInsurance_TXT.Name = "patientHealthInsurance_TXT";
             this.patientHealthInsurance_TXT.Size = new System.Drawing.Size(169, 22);
@@ -449,7 +474,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 133);
+            this.label3.Location = new System.Drawing.Point(21, 189);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 17);
@@ -459,7 +484,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 172);
+            this.label4.Location = new System.Drawing.Point(73, 228);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 17);
@@ -469,7 +494,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(73, 217);
+            this.label7.Location = new System.Drawing.Point(73, 273);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 17);
@@ -478,7 +503,7 @@
             // 
             // patientBirthdate_TXT
             // 
-            this.patientBirthdate_TXT.Location = new System.Drawing.Point(149, 169);
+            this.patientBirthdate_TXT.Location = new System.Drawing.Point(149, 225);
             this.patientBirthdate_TXT.Margin = new System.Windows.Forms.Padding(4);
             this.patientBirthdate_TXT.Name = "patientBirthdate_TXT";
             this.patientBirthdate_TXT.Size = new System.Drawing.Size(169, 22);
@@ -486,7 +511,7 @@
             // 
             // patientPolicyNumber_TXT
             // 
-            this.patientPolicyNumber_TXT.Location = new System.Drawing.Point(149, 213);
+            this.patientPolicyNumber_TXT.Location = new System.Drawing.Point(149, 269);
             this.patientPolicyNumber_TXT.Margin = new System.Windows.Forms.Padding(4);
             this.patientPolicyNumber_TXT.Name = "patientPolicyNumber_TXT";
             this.patientPolicyNumber_TXT.Size = new System.Drawing.Size(169, 22);
@@ -497,7 +522,7 @@
             this.patientExternalId_CB.FormattingEnabled = true;
             this.patientExternalId_CB.Items.AddRange(new object[] {
             "<empty>"});
-            this.patientExternalId_CB.Location = new System.Drawing.Point(149, 90);
+            this.patientExternalId_CB.Location = new System.Drawing.Point(149, 146);
             this.patientExternalId_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.patientExternalId_CB.Name = "patientExternalId_CB";
             this.patientExternalId_CB.Size = new System.Drawing.Size(169, 24);
@@ -507,7 +532,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 94);
+            this.label6.Location = new System.Drawing.Point(13, 150);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 17);
@@ -556,6 +581,10 @@
             // 
             // treatmentsSplitContainer.Panel1
             // 
+            this.treatmentsSplitContainer.Panel1.Controls.Add(this.invoiceDate_TXT);
+            this.treatmentsSplitContainer.Panel1.Controls.Add(this.label9);
+            this.treatmentsSplitContainer.Panel1.Controls.Add(this.endDatePicker_DTP);
+            this.treatmentsSplitContainer.Panel1.Controls.Add(this.startDatePicker_DTP);
             this.treatmentsSplitContainer.Panel1.Controls.Add(this.patientTreatments_DGV);
             this.treatmentsSplitContainer.Panel1.Controls.Add(this.label5);
             this.treatmentsSplitContainer.Panel1.Controls.Add(this.getInvoice_BTN);
@@ -578,6 +607,42 @@
             this.treatmentsSplitContainer.SplitterDistance = 354;
             this.treatmentsSplitContainer.SplitterWidth = 5;
             this.treatmentsSplitContainer.TabIndex = 17;
+            // 
+            // invoiceDate_TXT
+            // 
+            this.invoiceDate_TXT.Location = new System.Drawing.Point(149, 90);
+            this.invoiceDate_TXT.Margin = new System.Windows.Forms.Padding(4);
+            this.invoiceDate_TXT.Name = "invoiceDate_TXT";
+            this.invoiceDate_TXT.Size = new System.Drawing.Size(169, 22);
+            this.invoiceDate_TXT.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(52, 90);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 17);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Invoice date:";
+            // 
+            // endDatePicker_DTP
+            // 
+            this.endDatePicker_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.endDatePicker_DTP.Location = new System.Drawing.Point(334, 90);
+            this.endDatePicker_DTP.Name = "endDatePicker_DTP";
+            this.endDatePicker_DTP.Size = new System.Drawing.Size(200, 22);
+            this.endDatePicker_DTP.TabIndex = 30;
+            this.endDatePicker_DTP.Value = new System.DateTime(2018, 3, 14, 22, 43, 0, 0);
+            // 
+            // startDatePicker_DTP
+            // 
+            this.startDatePicker_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.startDatePicker_DTP.Location = new System.Drawing.Point(334, 54);
+            this.startDatePicker_DTP.Name = "startDatePicker_DTP";
+            this.startDatePicker_DTP.Size = new System.Drawing.Size(200, 22);
+            this.startDatePicker_DTP.TabIndex = 29;
+            this.startDatePicker_DTP.Value = new System.DateTime(2018, 1, 1, 21, 49, 0, 0);
             // 
             // checkResultSplitContainer_SPLT
             // 
@@ -756,10 +821,6 @@
             this.referenceData_GV.Size = new System.Drawing.Size(2100, 1058);
             this.referenceData_GV.TabIndex = 0;
             // 
-            // referenceDataBindingSource
-            // 
-            this.referenceDataBindingSource.DataSource = typeof(RESTConsumptionExamples.ReferenceData);
-            // 
             // codeRuleDataGridViewTextBoxColumn
             // 
             this.codeRuleDataGridViewTextBoxColumn.DataPropertyName = "codeRule";
@@ -793,8 +854,8 @@
             // costDataGridViewTextBoxColumn
             // 
             this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.costDataGridViewTextBoxColumn.HeaderText = "cost";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
@@ -809,8 +870,8 @@
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.priceDataGridViewTextBoxColumn.HeaderText = "price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
@@ -855,8 +916,8 @@
             // nrOfSurfacesDataGridViewTextBoxColumn
             // 
             this.nrOfSurfacesDataGridViewTextBoxColumn.DataPropertyName = "nrOfSurfaces";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.nrOfSurfacesDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.nrOfSurfacesDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.nrOfSurfacesDataGridViewTextBoxColumn.HeaderText = "nrOfSurfaces";
             this.nrOfSurfacesDataGridViewTextBoxColumn.Name = "nrOfSurfacesDataGridViewTextBoxColumn";
             this.nrOfSurfacesDataGridViewTextBoxColumn.ReadOnly = true;
@@ -864,8 +925,8 @@
             // maxNrDataGridViewTextBoxColumn
             // 
             this.maxNrDataGridViewTextBoxColumn.DataPropertyName = "maxNr";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.maxNrDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.maxNrDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.maxNrDataGridViewTextBoxColumn.HeaderText = "maxNr";
             this.maxNrDataGridViewTextBoxColumn.Name = "maxNrDataGridViewTextBoxColumn";
             this.maxNrDataGridViewTextBoxColumn.ReadOnly = true;
@@ -880,8 +941,8 @@
             // periodLengthInDaysDataGridViewTextBoxColumn
             // 
             this.periodLengthInDaysDataGridViewTextBoxColumn.DataPropertyName = "periodLengthInDays";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.periodLengthInDaysDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.periodLengthInDaysDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.periodLengthInDaysDataGridViewTextBoxColumn.HeaderText = "periodLengthInDays";
             this.periodLengthInDaysDataGridViewTextBoxColumn.Name = "periodLengthInDaysDataGridViewTextBoxColumn";
             this.periodLengthInDaysDataGridViewTextBoxColumn.ReadOnly = true;
@@ -940,8 +1001,8 @@
             // validFromDataGridViewTextBoxColumn
             // 
             this.validFromDataGridViewTextBoxColumn.DataPropertyName = "validFrom";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.validFromDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.validFromDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.validFromDataGridViewTextBoxColumn.HeaderText = "validFrom";
             this.validFromDataGridViewTextBoxColumn.Name = "validFromDataGridViewTextBoxColumn";
             this.validFromDataGridViewTextBoxColumn.ReadOnly = true;
@@ -950,8 +1011,8 @@
             // validToDataGridViewTextBoxColumn
             // 
             this.validToDataGridViewTextBoxColumn.DataPropertyName = "validTo";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.validToDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.validToDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.validToDataGridViewTextBoxColumn.HeaderText = "validTo";
             this.validToDataGridViewTextBoxColumn.Name = "validToDataGridViewTextBoxColumn";
             this.validToDataGridViewTextBoxColumn.ReadOnly = true;
@@ -978,6 +1039,10 @@
             this.deletedDataGridViewCheckBoxColumn.Name = "deletedDataGridViewCheckBoxColumn";
             this.deletedDataGridViewCheckBoxColumn.ReadOnly = true;
             this.deletedDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // referenceDataBindingSource
+            // 
+            this.referenceDataBindingSource.DataSource = typeof(RESTConsumptionExamples.ReferenceData);
             // 
             // mainForm
             // 
@@ -1060,17 +1125,6 @@
         private System.Windows.Forms.ComboBox patientExternalId_CB;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dentalElementCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tariffAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn declaredAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calculatedAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nrOfTreatmentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn referenceNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn therapistAGBCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfTreatmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource treatmentBindingSource;
         private System.Windows.Forms.SplitContainer mainSplitContainer_SPLT;
         private System.Windows.Forms.SplitContainer treatmentsSplitContainer;
@@ -1117,6 +1171,21 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn inputFileIdDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxCountOnObjectTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn deletedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dentalElementCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tariffAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn declaredAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calculatedAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrOfTreatmentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn referenceNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn therapistAGBCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfTreatmentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker endDatePicker_DTP;
+        private System.Windows.Forms.DateTimePicker startDatePicker_DTP;
+        private System.Windows.Forms.TextBox invoiceDate_TXT;
+        private System.Windows.Forms.Label label9;
     }
 }
 

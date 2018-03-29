@@ -14,5 +14,6 @@ namespace RESTConsumptionExamples
 
         HttpWebResponse getResponse(HttpWebRequest request);
         int getRefDataYear();
+        DateRangeRequest getDateRange();
     }
 }

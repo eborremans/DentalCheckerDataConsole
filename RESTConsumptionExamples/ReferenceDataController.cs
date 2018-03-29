@@ -19,6 +19,7 @@ namespace RESTConsumptionExamples
             this.inputView = inputView;
             this.referenceDataView = referenceDataView;
         }
+
         public void getReferenceData(int year)
         {
             HttpWebRequest request = RequestResponseFactory.createReferenceDataRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getRefDataYear());

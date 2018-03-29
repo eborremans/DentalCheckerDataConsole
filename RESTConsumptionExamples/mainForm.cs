@@ -159,6 +159,10 @@ namespace RESTConsumptionExamples
         public void setInvoice(SimpleInvoice invoice)
         {
             this.invoice = invoice;
+            if(null != invoice)
+            {
+                invoiceDate_TXT.Text = invoice.invoiceDate;
+            }
         }
 
         public String getInvoiceString()
@@ -304,6 +308,15 @@ namespace RESTConsumptionExamples
         public void setReferenceDataList(List<ReferenceData> referenceDataList)
         {
             referenceData_GV.DataSource = referenceDataList;
+        }
+
+        public DateRangeRequest getDateRange()
+        {
+            DateRangeRequest request = new DateRangeRequest();
+            request.startDate = startDatePicker_DTP.Value;
+            request.endDate = endDatePicker_DTP.Value;
+
+            return request;
         }
     }
 }

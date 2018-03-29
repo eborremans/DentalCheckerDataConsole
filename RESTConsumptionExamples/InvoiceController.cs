@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -61,11 +62,18 @@ namespace RESTConsumptionExamples
                 JToken jt = JToken.Parse(content);
                 formattedJson = jt.ToString();
 
-                invoice = Newtonsoft.Json.JsonConvert.DeserializeObject<SimpleInvoice>(content);
+                JsonSerializerSettings settings = new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    MissingMemberHandling = MissingMemberHandling.Ignore
+                };
+
+                invoice = Newtonsoft.Json.JsonConvert.DeserializeObject<SimpleInvoice>(content, settings);
                 if (null != invoice)
                 {
                     invoiceView.setInvoicePatients(invoice.patients);
                     invoiceView.setInvoice(invoice.ToString());
+                    invoiceView.setInvoice(invoice);
                     invoiceView.setInvoiceJSon(formattedJson);
                 }
             }
@@ -110,7 +118,7 @@ namespace RESTConsumptionExamples
 
         public void getInvoicePublicIds()
         {
-            HttpWebRequest request = RequestResponseFactory.createInvoicePublicIdsRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
+            HttpWebRequest request = RequestResponseFactory.createInvoicePublicIdsRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getDateRange());
             if (null == request)
             {
                 return;
