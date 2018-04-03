@@ -776,6 +776,7 @@
             this.yearSelection_CB.Name = "yearSelection_CB";
             this.yearSelection_CB.Size = new System.Drawing.Size(121, 24);
             this.yearSelection_CB.TabIndex = 9;
+            this.yearSelection_CB.SelectedIndexChanged += new System.EventHandler(this.yearSelection_CB_SelectedIndexChanged);
             // 
             // label8
             // 

@@ -50,7 +50,7 @@ namespace RESTConsumptionExamples
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Error creating web request: " + e.Message + " for url " + url);
                 return null;
             }
             request.Headers.Add("CallerID", callerID);
@@ -58,6 +58,7 @@ namespace RESTConsumptionExamples
 
             request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36";
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
+
 
             if (null != dateRangeRequest)
             {
@@ -68,13 +69,20 @@ namespace RESTConsumptionExamples
                 request.ContentType = "application/json";
                 request.ContentLength = data.Length;
 
-                using (var stream = request.GetRequestStream())
+                try
                 {
-                    stream.Write(data, 0, data.Length);
-                    stream.Close();
+                    using (var stream = request.GetRequestStream())
+                    {
+                        stream.Write(data, 0, data.Length);
+                        stream.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error obtaining request stream: " + e.Message);
+                    return null;
                 }
             }
-
             return request;
         }
     }

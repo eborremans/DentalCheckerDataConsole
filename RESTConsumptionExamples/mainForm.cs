@@ -15,11 +15,14 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace RESTConsumptionExamples
 {
     public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView
     {
+        private const int CODE_COL_IDX = 1;
         private InvoiceController invoiceController = null;
         private ConfigurationController configurationController = null;
         private TestController testController = null;
@@ -34,7 +37,8 @@ namespace RESTConsumptionExamples
         private List<String> patientViolations = new List<String>();
 
         private Configuration configuration = new Configuration();
-        
+        private bool loading = true;
+
         public mainForm()
         {
             InitializeComponent();
@@ -69,12 +73,14 @@ namespace RESTConsumptionExamples
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            loading = true;
             configurationController.loadConfiguration();
 
             url_CB.SelectedIndex = 0;
             yearSelection_CB.SelectedIndex = 3;
 
             getInvoice_BTN.Select();
+            loading = false;
         }
 
         private void invoicePublicIds_CB_SelectedValueChanged(object sender, EventArgs e)
@@ -289,6 +295,11 @@ namespace RESTConsumptionExamples
 
         private void loadRefData_BTN_Click(object sender, EventArgs e)
         {
+            loadReferenceData();
+        }
+
+        private void loadReferenceData()
+        {
             String year = yearSelection_CB.SelectedItem.ToString();
             referenceDataController.getReferenceData(yearStringToInteger(year));
         }
@@ -325,27 +336,108 @@ namespace RESTConsumptionExamples
 
         private void codeFilter_TXT_TextChanged(object sender, EventArgs e)
         {
-            for (int u = 0; u < referenceData_GV.RowCount; u++)
+            matchWithWildCard();
+            // matchWithRegExp();
+        }
+
+        private void matchWithWildCard()
+        {
+            Boolean matchFound = false;
+            for (int rowCounter = 0; rowCounter < referenceData_GV.RowCount; rowCounter++)
             {
                 if (codeFilter_TXT.Text != null && codeFilter_TXT.Text != "")
                 {
-                    if (((String)referenceData_GV.Rows[u].Cells[1].Value).Contains(codeFilter_TXT.Text))
+                    String code = "";
+                    try
                     {
-                        referenceData_GV.Rows[u].Visible = true;
+                        code = (String)(referenceData_GV.Rows[rowCounter].Cells[CODE_COL_IDX].Value);
+                        matchFound = LikeOperator.LikeString(code, codeFilter_TXT.Text, Microsoft.VisualBasic.CompareMethod.Text);
+                    }
+                    catch (Exception exc)
+                    {
+                        Debug.WriteLine("Let's swallow this exception for now (Empty grid cell?)" + exc.Message);
+                    }
+                    if (matchFound)
+                    {
+                        referenceData_GV.Rows[rowCounter].Visible = true;
                     }
                     else
                     {
                         try
                         {
                             referenceData_GV.CurrentCell = null;
-                            referenceData_GV.Rows[u].Visible = false;
+                            referenceData_GV.Rows[rowCounter].Visible = false;
                         }
                         catch (Exception exc)
                         {
-                            Debug.WriteLine("Let's swallow this exception for now" + exc.Message);
+                            Debug.WriteLine("Let's swallow this exception for now (DataGridException?)" + exc.Message);
                         }
                     }
                 }
+            }
+        }
+
+        private void matchWithRegExp()
+        {
+            Regex regex = null;
+            try
+            {
+                regex = new Regex(codeFilter_TXT.Text);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("Let's swallow this exception for now (RegExp pattern problem?)" + exc.Message);
+                codeFilter_TXT.ForeColor = Color.Red; // Illegal regular expression
+            }
+            Boolean matchFound = false;
+            if (null != regex)
+            {
+                codeFilter_TXT.ForeColor = Color.Black; // Illegal regular expression
+                for (int rowCounter = 0; rowCounter < referenceData_GV.RowCount; rowCounter++)
+                {
+                    if (codeFilter_TXT.Text != null && codeFilter_TXT.Text != "")
+                    {
+                        try
+                        {
+                            matchFound = false;
+                            Match match = regex.Match((String)referenceData_GV.Rows[rowCounter].Cells[CODE_COL_IDX].Value);
+                            matchFound = match.Success;
+                        }
+                        catch (Exception exc)
+                        {
+                            Debug.WriteLine("Let's swallow this exception for now (RegExp match exception?)" + exc.Message);
+                        }
+                        if (matchFound)
+                        {
+                            referenceData_GV.Rows[rowCounter].Visible = true;
+                        }
+                        else
+                        {
+                            try
+                            {
+                                referenceData_GV.CurrentCell = null;
+                                referenceData_GV.Rows[rowCounter].Visible = false;
+                            }
+                            catch (Exception exc)
+                            {
+                                Debug.WriteLine("Let's swallow this exception for now (DataGridException?)" + exc.Message);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                codeFilter_TXT.ForeColor = Color.Red; // Illegal regular expression
+            }
+        }
+
+        private void yearSelection_CB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!loading)
+            {
+                loadReferenceData();
+                matchWithWildCard();
             }
         }
     }
