@@ -96,6 +96,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.codeFilter_TXT = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.yearSelection_CB = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
@@ -728,6 +730,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.codeFilter_TXT);
+            this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.yearSelection_CB);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.loadRefData_BTN);
@@ -739,6 +743,24 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reference Data";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // codeFilter_TXT
+            // 
+            this.codeFilter_TXT.Location = new System.Drawing.Point(481, 13);
+            this.codeFilter_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.codeFilter_TXT.Name = "codeFilter_TXT";
+            this.codeFilter_TXT.Size = new System.Drawing.Size(109, 22);
+            this.codeFilter_TXT.TabIndex = 11;
+            this.codeFilter_TXT.TextChanged += new System.EventHandler(this.codeFilter_TXT_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(401, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 17);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "code filter:";
             // 
             // yearSelection_CB
             // 
@@ -1186,6 +1208,8 @@
         private System.Windows.Forms.DateTimePicker startDatePicker_DTP;
         private System.Windows.Forms.TextBox invoiceDate_TXT;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox codeFilter_TXT;
+        private System.Windows.Forms.Label label10;
     }
 }
 

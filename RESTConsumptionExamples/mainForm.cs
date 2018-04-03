@@ -57,6 +57,9 @@ namespace RESTConsumptionExamples
         private void loadKey_BTN_Click(object sender, EventArgs e)
         {
             configurationController.loadConfiguration();
+            if (null == codeFilter_TXT.Text) {
+                codeFilter_TXT.Text = "";
+            }
         }
 
         private void saveKey_BTN_Click(object sender, EventArgs e)
@@ -308,6 +311,7 @@ namespace RESTConsumptionExamples
         public void setReferenceDataList(List<ReferenceData> referenceDataList)
         {
             referenceData_GV.DataSource = referenceDataList;
+            // (referenceData_GV.DataSource as DataTable).DefaultView.RowFilter = string.Format("Field = '{0}'", codeFilter_TXT.Text);
         }
 
         public DateRangeRequest getDateRange()
@@ -317,6 +321,32 @@ namespace RESTConsumptionExamples
             request.endDate = endDatePicker_DTP.Value;
 
             return request;
+        }
+
+        private void codeFilter_TXT_TextChanged(object sender, EventArgs e)
+        {
+            for (int u = 0; u < referenceData_GV.RowCount; u++)
+            {
+                if (codeFilter_TXT.Text != null && codeFilter_TXT.Text != "")
+                {
+                    if (((String)referenceData_GV.Rows[u].Cells[1].Value).Contains(codeFilter_TXT.Text))
+                    {
+                        referenceData_GV.Rows[u].Visible = true;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            referenceData_GV.CurrentCell = null;
+                            referenceData_GV.Rows[u].Visible = false;
+                        }
+                        catch (Exception exc)
+                        {
+                            Debug.WriteLine("Let's swallow this exception for now" + exc.Message);
+                        }
+                    }
+                }
+            }
         }
     }
 }
