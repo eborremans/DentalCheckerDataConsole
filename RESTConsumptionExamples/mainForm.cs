@@ -20,23 +20,37 @@ using Microsoft.VisualBasic.CompilerServices;
 
 namespace RESTConsumptionExamples
 {
+    // Main view
     public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView
     {
         private const int CODE_COL_IDX = 1;
-        private InvoiceController invoiceController = null;
+
+        // Controls the retrieval of invoice data
+        private InvoiceController invoiceController = null; 
+        // Controls the retrieval and storage of configuration data
         private ConfigurationController configurationController = null;
+        // Controls test functionality
         private TestController testController = null;
+        // Controls the retrieval of reference data
         private ReferenceDataController referenceDataController = null;
 
+        // Contains the list of invoices 
         private List<String> invoicePublicIdsList = new List<String>();
+        // Contains the ids of patients in the currently selected invoice
         private List<String> invoicePatientIds = new List<String>();
+        // List of Patients from the currently selected invoice
         private Dictionary<String, Patient> invoicePatients = new Dictionary<String, Patient>();
 
+        // Currently selected invoice
         private SimpleInvoice invoice = null;
 
+        // Violations found in the currently selected invoice
         private List<String> patientViolations = new List<String>();
 
+        // Configuration class
         private Configuration configuration = new Configuration();
+
+        // To mark the phase where the main form is being loaded
         private bool loading = true;
 
         public mainForm()
@@ -48,16 +62,19 @@ namespace RESTConsumptionExamples
             testController = new TestController(this, this);
         }
 
+        // Test button
         private void getDentalCheckerVersionResponse_BTN_Click(object sender, EventArgs ex)
         {
             testController.getVersionInfo();
         }
 
+        // Retrieves the invoice based on the id in invoiceNr_TXT
         private void getInvoice_BTN_Click(object sender, EventArgs e)
         {
             invoiceController.getInvoice();
         }
 
+        // Load de api key from the configuration file
         private void loadKey_BTN_Click(object sender, EventArgs e)
         {
             configurationController.loadConfiguration();
@@ -80,6 +97,10 @@ namespace RESTConsumptionExamples
             yearSelection_CB.SelectedIndex = 3;
 
             getInvoice_BTN.Select();
+
+            startDatePicker_DTP.Value = DateTime.Now.AddDays(-31);
+            endDatePicker_DTP.Value = DateTime.Now;
+
             loading = false;
         }
 

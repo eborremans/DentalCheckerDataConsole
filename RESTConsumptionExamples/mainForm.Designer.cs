@@ -648,6 +648,9 @@
             // 
             // checkResultSplitContainer_SPLT
             // 
+            this.checkResultSplitContainer_SPLT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkResultSplitContainer_SPLT.Location = new System.Drawing.Point(0, 0);
             this.checkResultSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(4);
             this.checkResultSplitContainer_SPLT.Name = "checkResultSplitContainer_SPLT";
@@ -659,7 +662,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2104, 443);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2104, 462);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 700;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -675,7 +678,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(695, 436);
+            this.patientViolations_LB.Size = new System.Drawing.Size(695, 452);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -685,12 +688,14 @@
             // 
             // checkReportRenderer_WB
             // 
-            this.checkReportRenderer_WB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkReportRenderer_WB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkReportRenderer_WB.Location = new System.Drawing.Point(0, 0);
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1399, 443);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1398, 462);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
