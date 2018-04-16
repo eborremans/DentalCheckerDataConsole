@@ -88,17 +88,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.referenceData2_GV = new System.Windows.Forms.DataGridView();
-            this.refDataURL2_CB = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.year2Selection_CB = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.refDataURL1_CB = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.codeFilter_TXT = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.year1Selection_CB = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.referenceDataSplitter_SPLT = new System.Windows.Forms.SplitContainer();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
             this.referenceData1_GV = new System.Windows.Forms.DataGridView();
             this.codeRuleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,7 +120,46 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.referenceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.year1Selection_CB = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.codeFilter_TXT = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.refDataURL1_CB = new System.Windows.Forms.ComboBox();
+            this.refDataURL2_CB = new System.Windows.Forms.ComboBox();
+            this.referenceData2_GV = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.year2Selection_CB = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeRuleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addendumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ignorePriceDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.costDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hasCostDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mandatoryWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onlyWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrOfSurfacesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.periodLengthInDaysDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alarmDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.elementRequiredDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.conflictsInGroupDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsInGroupExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mandatoryObjTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementGroupsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validFromDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validToDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputFileIdDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deletedDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
@@ -154,9 +183,13 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceDataSplitter_SPLT)).BeginInit();
+            this.referenceDataSplitter_SPLT.Panel1.SuspendLayout();
+            this.referenceDataSplitter_SPLT.Panel2.SuspendLayout();
+            this.referenceDataSplitter_SPLT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.referenceData1_GV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -657,7 +690,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2104, 449);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2104, 447);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 700;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -673,7 +706,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(695, 244);
+            this.patientViolations_LB.Size = new System.Drawing.Size(695, 212);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -690,7 +723,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1385, 449);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1383, 447);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -730,19 +763,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.referenceData2_GV);
-            this.tabPage2.Controls.Add(this.refDataURL2_CB);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.year2Selection_CB);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.refDataURL1_CB);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.codeFilter_TXT);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.year1Selection_CB);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.loadRefData_BTN);
-            this.tabPage2.Controls.Add(this.referenceData1_GV);
+            this.tabPage2.Controls.Add(this.referenceDataSplitter_SPLT);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -751,130 +772,40 @@
             this.tabPage2.Text = "Reference Data";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // referenceData2_GV
+            // referenceDataSplitter_SPLT
             // 
-            this.referenceData2_GV.AllowUserToDeleteRows = false;
-            this.referenceData2_GV.AllowUserToOrderColumns = true;
-            this.referenceData2_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.referenceDataSplitter_SPLT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceData2_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.referenceData2_GV.Location = new System.Drawing.Point(1, 607);
-            this.referenceData2_GV.Name = "referenceData2_GV";
-            this.referenceData2_GV.ReadOnly = true;
-            this.referenceData2_GV.RowTemplate.Height = 24;
-            this.referenceData2_GV.Size = new System.Drawing.Size(2100, 511);
-            this.referenceData2_GV.TabIndex = 19;
+            this.referenceDataSplitter_SPLT.Location = new System.Drawing.Point(6, 6);
+            this.referenceDataSplitter_SPLT.Name = "referenceDataSplitter_SPLT";
+            this.referenceDataSplitter_SPLT.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // refDataURL2_CB
+            // referenceDataSplitter_SPLT.Panel1
             // 
-            this.refDataURL2_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
-            this.refDataURL2_CB.FormattingEnabled = true;
-            this.refDataURL2_CB.Location = new System.Drawing.Point(54, 566);
-            this.refDataURL2_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.refDataURL2_CB.Name = "refDataURL2_CB";
-            this.refDataURL2_CB.Size = new System.Drawing.Size(335, 24);
-            this.refDataURL2_CB.TabIndex = 18;
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.loadRefData_BTN);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.referenceData1_GV);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label8);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.year1Selection_CB);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label10);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.codeFilter_TXT);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label11);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.refDataURL1_CB);
             // 
-            // label12
+            // referenceDataSplitter_SPLT.Panel2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 566);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 17);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "url 2: ";
-            // 
-            // year2Selection_CB
-            // 
-            this.year2Selection_CB.FormatString = "0000";
-            this.year2Selection_CB.FormattingEnabled = true;
-            this.year2Selection_CB.Items.AddRange(new object[] {
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019"});
-            this.year2Selection_CB.Location = new System.Drawing.Point(453, 566);
-            this.year2Selection_CB.Name = "year2Selection_CB";
-            this.year2Selection_CB.Size = new System.Drawing.Size(121, 24);
-            this.year2Selection_CB.TabIndex = 16;
-            this.year2Selection_CB.SelectedIndexChanged += new System.EventHandler(this.year2Selection_CB_SelectedIndexChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(407, 566);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 17);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "year:";
-            // 
-            // refDataURL1_CB
-            // 
-            this.refDataURL1_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
-            this.refDataURL1_CB.FormattingEnabled = true;
-            this.refDataURL1_CB.Location = new System.Drawing.Point(54, 13);
-            this.refDataURL1_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.refDataURL1_CB.Name = "refDataURL1_CB";
-            this.refDataURL1_CB.Size = new System.Drawing.Size(335, 24);
-            this.refDataURL1_CB.TabIndex = 14;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 13);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 17);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "url 1: ";
-            // 
-            // codeFilter_TXT
-            // 
-            this.codeFilter_TXT.Location = new System.Drawing.Point(864, 13);
-            this.codeFilter_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.codeFilter_TXT.Name = "codeFilter_TXT";
-            this.codeFilter_TXT.Size = new System.Drawing.Size(109, 22);
-            this.codeFilter_TXT.TabIndex = 11;
-            this.codeFilter_TXT.TextChanged += new System.EventHandler(this.codeFilter_TXT_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(784, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 17);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "code filter:";
-            // 
-            // year1Selection_CB
-            // 
-            this.year1Selection_CB.FormatString = "0000";
-            this.year1Selection_CB.FormattingEnabled = true;
-            this.year1Selection_CB.Items.AddRange(new object[] {
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019"});
-            this.year1Selection_CB.Location = new System.Drawing.Point(453, 13);
-            this.year1Selection_CB.Name = "year1Selection_CB";
-            this.year1Selection_CB.Size = new System.Drawing.Size(121, 24);
-            this.year1Selection_CB.TabIndex = 9;
-            this.year1Selection_CB.SelectedIndexChanged += new System.EventHandler(this.yearSelection_CB_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(407, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 17);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "year:";
+            this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.refDataURL2_CB);
+            this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.referenceData2_GV);
+            this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label13);
+            this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.year2Selection_CB);
+            this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label12);
+            this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(2097, 1112);
+            this.referenceDataSplitter_SPLT.SplitterDistance = 556;
+            this.referenceDataSplitter_SPLT.TabIndex = 20;
             // 
             // loadRefData_BTN
             // 
-            this.loadRefData_BTN.Location = new System.Drawing.Point(580, 13);
+            this.loadRefData_BTN.Location = new System.Drawing.Point(583, 11);
             this.loadRefData_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loadRefData_BTN.Name = "loadRefData_BTN";
             this.loadRefData_BTN.Size = new System.Drawing.Size(182, 33);
@@ -922,11 +853,11 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn,
             this.deletedDataGridViewCheckBoxColumn});
             this.referenceData1_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData1_GV.Location = new System.Drawing.Point(3, 60);
+            this.referenceData1_GV.Location = new System.Drawing.Point(3, 49);
             this.referenceData1_GV.Name = "referenceData1_GV";
             this.referenceData1_GV.ReadOnly = true;
             this.referenceData1_GV.RowTemplate.Height = 24;
-            this.referenceData1_GV.Size = new System.Drawing.Size(2100, 496);
+            this.referenceData1_GV.Size = new System.Drawing.Size(2091, 504);
             this.referenceData1_GV.TabIndex = 0;
             // 
             // codeRuleDataGridViewTextBoxColumn
@@ -1130,9 +1061,357 @@
             this.referenceDataBindingSource.DataSource = typeof(RESTConsumptionExamples.ReferenceData);
             this.referenceDataBindingSource.CurrentChanged += new System.EventHandler(this.referenceDataBindingSource_CurrentChanged);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(410, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "year:";
+            // 
+            // year1Selection_CB
+            // 
+            this.year1Selection_CB.FormatString = "0000";
+            this.year1Selection_CB.FormattingEnabled = true;
+            this.year1Selection_CB.Items.AddRange(new object[] {
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019"});
+            this.year1Selection_CB.Location = new System.Drawing.Point(456, 11);
+            this.year1Selection_CB.Name = "year1Selection_CB";
+            this.year1Selection_CB.Size = new System.Drawing.Size(121, 24);
+            this.year1Selection_CB.TabIndex = 9;
+            this.year1Selection_CB.SelectedIndexChanged += new System.EventHandler(this.yearSelection_CB_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(787, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 17);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "code filter:";
+            // 
+            // codeFilter_TXT
+            // 
+            this.codeFilter_TXT.Location = new System.Drawing.Point(867, 11);
+            this.codeFilter_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.codeFilter_TXT.Name = "codeFilter_TXT";
+            this.codeFilter_TXT.Size = new System.Drawing.Size(109, 22);
+            this.codeFilter_TXT.TabIndex = 11;
+            this.codeFilter_TXT.TextChanged += new System.EventHandler(this.codeFilter_TXT_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 17);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "url 1: ";
+            // 
+            // refDataURL1_CB
+            // 
+            this.refDataURL1_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
+            this.refDataURL1_CB.FormattingEnabled = true;
+            this.refDataURL1_CB.Location = new System.Drawing.Point(57, 11);
+            this.refDataURL1_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refDataURL1_CB.Name = "refDataURL1_CB";
+            this.refDataURL1_CB.Size = new System.Drawing.Size(335, 24);
+            this.refDataURL1_CB.TabIndex = 14;
+            // 
+            // refDataURL2_CB
+            // 
+            this.refDataURL2_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
+            this.refDataURL2_CB.FormattingEnabled = true;
+            this.refDataURL2_CB.Location = new System.Drawing.Point(57, 14);
+            this.refDataURL2_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refDataURL2_CB.Name = "refDataURL2_CB";
+            this.refDataURL2_CB.Size = new System.Drawing.Size(335, 24);
+            this.refDataURL2_CB.TabIndex = 18;
+            // 
+            // referenceData2_GV
+            // 
+            this.referenceData2_GV.AllowUserToDeleteRows = false;
+            this.referenceData2_GV.AllowUserToOrderColumns = true;
+            this.referenceData2_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.referenceData2_GV.AutoGenerateColumns = false;
+            this.referenceData2_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.referenceData2_GV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codeRuleDataGridViewTextBoxColumn1,
+            this.codeDataGridViewTextBoxColumn2,
+            this.addendumDataGridViewTextBoxColumn1,
+            this.ignorePriceDataGridViewCheckBoxColumn1,
+            this.costDataGridViewTextBoxColumn1,
+            this.hasCostDataGridViewCheckBoxColumn1,
+            this.priceDataGridViewTextBoxColumn1,
+            this.descriptionDataGridViewTextBoxColumn2,
+            this.conflictsWithExprDataGridViewTextBoxColumn1,
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1,
+            this.mandatoryWithExprDataGridViewTextBoxColumn1,
+            this.onlyWithExprDataGridViewTextBoxColumn1,
+            this.nrOfSurfacesDataGridViewTextBoxColumn1,
+            this.maxNrDataGridViewTextBoxColumn1,
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1,
+            this.periodLengthInDaysDataGridViewTextBoxColumn1,
+            this.alarmDataGridViewCheckBoxColumn1,
+            this.elementRequiredDataGridViewCheckBoxColumn1,
+            this.conflictsInGroupDataGridViewTextBoxColumn1,
+            this.conflictsInGroupExprDataGridViewTextBoxColumn1,
+            this.conflictObjectTypeDataGridViewTextBoxColumn1,
+            this.mandatoryObjTypeDataGridViewTextBoxColumn1,
+            this.elementGroupsDataGridViewTextBoxColumn1,
+            this.validFromDataGridViewTextBoxColumn1,
+            this.validToDataGridViewTextBoxColumn1,
+            this.inputFileIdDataGridViewCheckBoxColumn1,
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1,
+            this.deletedDataGridViewCheckBoxColumn1});
+            this.referenceData2_GV.DataSource = this.referenceDataBindingSource;
+            this.referenceData2_GV.Location = new System.Drawing.Point(3, 44);
+            this.referenceData2_GV.Name = "referenceData2_GV";
+            this.referenceData2_GV.ReadOnly = true;
+            this.referenceData2_GV.RowTemplate.Height = 24;
+            this.referenceData2_GV.Size = new System.Drawing.Size(2091, 505);
+            this.referenceData2_GV.TabIndex = 19;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(410, 14);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 17);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "year:";
+            // 
+            // year2Selection_CB
+            // 
+            this.year2Selection_CB.FormatString = "0000";
+            this.year2Selection_CB.FormattingEnabled = true;
+            this.year2Selection_CB.Items.AddRange(new object[] {
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019"});
+            this.year2Selection_CB.Location = new System.Drawing.Point(456, 14);
+            this.year2Selection_CB.Name = "year2Selection_CB";
+            this.year2Selection_CB.Size = new System.Drawing.Size(121, 24);
+            this.year2Selection_CB.TabIndex = 16;
+            this.year2Selection_CB.SelectedIndexChanged += new System.EventHandler(this.year2Selection_CB_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 17);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "url 2: ";
+            // 
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
+            // 
+            // codeRuleDataGridViewTextBoxColumn1
+            // 
+            this.codeRuleDataGridViewTextBoxColumn1.DataPropertyName = "codeRule";
+            this.codeRuleDataGridViewTextBoxColumn1.HeaderText = "codeRule";
+            this.codeRuleDataGridViewTextBoxColumn1.Name = "codeRuleDataGridViewTextBoxColumn1";
+            this.codeRuleDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // codeDataGridViewTextBoxColumn2
+            // 
+            this.codeDataGridViewTextBoxColumn2.DataPropertyName = "code";
+            this.codeDataGridViewTextBoxColumn2.HeaderText = "code";
+            this.codeDataGridViewTextBoxColumn2.Name = "codeDataGridViewTextBoxColumn2";
+            this.codeDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // addendumDataGridViewTextBoxColumn1
+            // 
+            this.addendumDataGridViewTextBoxColumn1.DataPropertyName = "addendum";
+            this.addendumDataGridViewTextBoxColumn1.HeaderText = "addendum";
+            this.addendumDataGridViewTextBoxColumn1.Name = "addendumDataGridViewTextBoxColumn1";
+            this.addendumDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ignorePriceDataGridViewCheckBoxColumn1
+            // 
+            this.ignorePriceDataGridViewCheckBoxColumn1.DataPropertyName = "ignorePrice";
+            this.ignorePriceDataGridViewCheckBoxColumn1.HeaderText = "ignorePrice";
+            this.ignorePriceDataGridViewCheckBoxColumn1.Name = "ignorePriceDataGridViewCheckBoxColumn1";
+            this.ignorePriceDataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // costDataGridViewTextBoxColumn1
+            // 
+            this.costDataGridViewTextBoxColumn1.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn1.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn1.Name = "costDataGridViewTextBoxColumn1";
+            this.costDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // hasCostDataGridViewCheckBoxColumn1
+            // 
+            this.hasCostDataGridViewCheckBoxColumn1.DataPropertyName = "hasCost";
+            this.hasCostDataGridViewCheckBoxColumn1.HeaderText = "hasCost";
+            this.hasCostDataGridViewCheckBoxColumn1.Name = "hasCostDataGridViewCheckBoxColumn1";
+            this.hasCostDataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn1
+            // 
+            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn1.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
+            this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn2
+            // 
+            this.descriptionDataGridViewTextBoxColumn2.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn2.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn2.Name = "descriptionDataGridViewTextBoxColumn2";
+            this.descriptionDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // conflictsWithExprDataGridViewTextBoxColumn1
+            // 
+            this.conflictsWithExprDataGridViewTextBoxColumn1.DataPropertyName = "conflictsWithExpr";
+            this.conflictsWithExprDataGridViewTextBoxColumn1.HeaderText = "conflictsWithExpr";
+            this.conflictsWithExprDataGridViewTextBoxColumn1.Name = "conflictsWithExprDataGridViewTextBoxColumn1";
+            this.conflictsWithExprDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // conflictsOnElementWithExprDataGridViewTextBoxColumn1
+            // 
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1.DataPropertyName = "conflictsOnElementWithExpr";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1.HeaderText = "conflictsOnElementWithExpr";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1.Name = "conflictsOnElementWithExprDataGridViewTextBoxColumn1";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // mandatoryWithExprDataGridViewTextBoxColumn1
+            // 
+            this.mandatoryWithExprDataGridViewTextBoxColumn1.DataPropertyName = "mandatoryWithExpr";
+            this.mandatoryWithExprDataGridViewTextBoxColumn1.HeaderText = "mandatoryWithExpr";
+            this.mandatoryWithExprDataGridViewTextBoxColumn1.Name = "mandatoryWithExprDataGridViewTextBoxColumn1";
+            this.mandatoryWithExprDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // onlyWithExprDataGridViewTextBoxColumn1
+            // 
+            this.onlyWithExprDataGridViewTextBoxColumn1.DataPropertyName = "onlyWithExpr";
+            this.onlyWithExprDataGridViewTextBoxColumn1.HeaderText = "onlyWithExpr";
+            this.onlyWithExprDataGridViewTextBoxColumn1.Name = "onlyWithExprDataGridViewTextBoxColumn1";
+            this.onlyWithExprDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nrOfSurfacesDataGridViewTextBoxColumn1
+            // 
+            this.nrOfSurfacesDataGridViewTextBoxColumn1.DataPropertyName = "nrOfSurfaces";
+            this.nrOfSurfacesDataGridViewTextBoxColumn1.HeaderText = "nrOfSurfaces";
+            this.nrOfSurfacesDataGridViewTextBoxColumn1.Name = "nrOfSurfacesDataGridViewTextBoxColumn1";
+            this.nrOfSurfacesDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // maxNrDataGridViewTextBoxColumn1
+            // 
+            this.maxNrDataGridViewTextBoxColumn1.DataPropertyName = "maxNr";
+            this.maxNrDataGridViewTextBoxColumn1.HeaderText = "maxNr";
+            this.maxNrDataGridViewTextBoxColumn1.Name = "maxNrDataGridViewTextBoxColumn1";
+            this.maxNrDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1
+            // 
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1.DataPropertyName = "maxNrOfPerformancesOnObjectType";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1.HeaderText = "maxNrOfPerformancesOnObjectType";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1.Name = "maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // periodLengthInDaysDataGridViewTextBoxColumn1
+            // 
+            this.periodLengthInDaysDataGridViewTextBoxColumn1.DataPropertyName = "periodLengthInDays";
+            this.periodLengthInDaysDataGridViewTextBoxColumn1.HeaderText = "periodLengthInDays";
+            this.periodLengthInDaysDataGridViewTextBoxColumn1.Name = "periodLengthInDaysDataGridViewTextBoxColumn1";
+            this.periodLengthInDaysDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // alarmDataGridViewCheckBoxColumn1
+            // 
+            this.alarmDataGridViewCheckBoxColumn1.DataPropertyName = "alarm";
+            this.alarmDataGridViewCheckBoxColumn1.HeaderText = "alarm";
+            this.alarmDataGridViewCheckBoxColumn1.Name = "alarmDataGridViewCheckBoxColumn1";
+            this.alarmDataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // elementRequiredDataGridViewCheckBoxColumn1
+            // 
+            this.elementRequiredDataGridViewCheckBoxColumn1.DataPropertyName = "elementRequired";
+            this.elementRequiredDataGridViewCheckBoxColumn1.HeaderText = "elementRequired";
+            this.elementRequiredDataGridViewCheckBoxColumn1.Name = "elementRequiredDataGridViewCheckBoxColumn1";
+            this.elementRequiredDataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // conflictsInGroupDataGridViewTextBoxColumn1
+            // 
+            this.conflictsInGroupDataGridViewTextBoxColumn1.DataPropertyName = "conflictsInGroup";
+            this.conflictsInGroupDataGridViewTextBoxColumn1.HeaderText = "conflictsInGroup";
+            this.conflictsInGroupDataGridViewTextBoxColumn1.Name = "conflictsInGroupDataGridViewTextBoxColumn1";
+            this.conflictsInGroupDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // conflictsInGroupExprDataGridViewTextBoxColumn1
+            // 
+            this.conflictsInGroupExprDataGridViewTextBoxColumn1.DataPropertyName = "conflictsInGroupExpr";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn1.HeaderText = "conflictsInGroupExpr";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn1.Name = "conflictsInGroupExprDataGridViewTextBoxColumn1";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // conflictObjectTypeDataGridViewTextBoxColumn1
+            // 
+            this.conflictObjectTypeDataGridViewTextBoxColumn1.DataPropertyName = "conflictObjectType";
+            this.conflictObjectTypeDataGridViewTextBoxColumn1.HeaderText = "conflictObjectType";
+            this.conflictObjectTypeDataGridViewTextBoxColumn1.Name = "conflictObjectTypeDataGridViewTextBoxColumn1";
+            this.conflictObjectTypeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // mandatoryObjTypeDataGridViewTextBoxColumn1
+            // 
+            this.mandatoryObjTypeDataGridViewTextBoxColumn1.DataPropertyName = "mandatoryObjType";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn1.HeaderText = "mandatoryObjType";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn1.Name = "mandatoryObjTypeDataGridViewTextBoxColumn1";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // elementGroupsDataGridViewTextBoxColumn1
+            // 
+            this.elementGroupsDataGridViewTextBoxColumn1.DataPropertyName = "elementGroups";
+            this.elementGroupsDataGridViewTextBoxColumn1.HeaderText = "elementGroups";
+            this.elementGroupsDataGridViewTextBoxColumn1.Name = "elementGroupsDataGridViewTextBoxColumn1";
+            this.elementGroupsDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // validFromDataGridViewTextBoxColumn1
+            // 
+            this.validFromDataGridViewTextBoxColumn1.DataPropertyName = "validFrom";
+            this.validFromDataGridViewTextBoxColumn1.HeaderText = "validFrom";
+            this.validFromDataGridViewTextBoxColumn1.Name = "validFromDataGridViewTextBoxColumn1";
+            this.validFromDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // validToDataGridViewTextBoxColumn1
+            // 
+            this.validToDataGridViewTextBoxColumn1.DataPropertyName = "validTo";
+            this.validToDataGridViewTextBoxColumn1.HeaderText = "validTo";
+            this.validToDataGridViewTextBoxColumn1.Name = "validToDataGridViewTextBoxColumn1";
+            this.validToDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // inputFileIdDataGridViewCheckBoxColumn1
+            // 
+            this.inputFileIdDataGridViewCheckBoxColumn1.DataPropertyName = "inputFileId";
+            this.inputFileIdDataGridViewCheckBoxColumn1.HeaderText = "inputFileId";
+            this.inputFileIdDataGridViewCheckBoxColumn1.Name = "inputFileIdDataGridViewCheckBoxColumn1";
+            this.inputFileIdDataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // maxCountOnObjectTypeDataGridViewTextBoxColumn1
+            // 
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1.DataPropertyName = "maxCountOnObjectType";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1.HeaderText = "maxCountOnObjectType";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1.Name = "maxCountOnObjectTypeDataGridViewTextBoxColumn1";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // deletedDataGridViewCheckBoxColumn1
+            // 
+            this.deletedDataGridViewCheckBoxColumn1.DataPropertyName = "deleted";
+            this.deletedDataGridViewCheckBoxColumn1.HeaderText = "deleted";
+            this.deletedDataGridViewCheckBoxColumn1.Name = "deletedDataGridViewCheckBoxColumn1";
+            this.deletedDataGridViewCheckBoxColumn1.ReadOnly = true;
             // 
             // mainForm
             // 
@@ -1179,10 +1458,15 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).EndInit();
+            this.referenceDataSplitter_SPLT.Panel1.ResumeLayout(false);
+            this.referenceDataSplitter_SPLT.Panel1.PerformLayout();
+            this.referenceDataSplitter_SPLT.Panel2.ResumeLayout(false);
+            this.referenceDataSplitter_SPLT.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceDataSplitter_SPLT)).EndInit();
+            this.referenceDataSplitter_SPLT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.referenceData1_GV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1286,6 +1570,35 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn inputFileIdDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxCountOnObjectTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn deletedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.SplitContainer referenceDataSplitter_SPLT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeRuleDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addendumDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ignorePriceDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn hasCostDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conflictsWithExprDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conflictsOnElementWithExprDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mandatoryWithExprDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn onlyWithExprDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrOfSurfacesDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxNrDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodLengthInDaysDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn alarmDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn elementRequiredDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conflictsInGroupDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conflictsInGroupExprDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conflictObjectTypeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mandatoryObjTypeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn elementGroupsDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn validFromDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn validToDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn inputFileIdDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxCountOnObjectTypeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn deletedDataGridViewCheckBoxColumn1;
     }
 }
 
