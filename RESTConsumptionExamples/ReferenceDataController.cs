@@ -10,7 +10,10 @@ namespace RESTConsumptionExamples
     public class ReferenceDataController
     {
         private IInputView inputView = null;
-        private IReferenceDataView referenceDataView = null;
+        private IReferenceDataView referenceDataView = null; // Top
+
+        private const int UPPER_REF_GRID = 1;
+        private const int LOWER_REF_GRID = 2;
 
         private ReferenceDataController() { }
 
@@ -20,9 +23,20 @@ namespace RESTConsumptionExamples
             this.referenceDataView = referenceDataView;
         }
 
-        public void getReferenceData(int year)
+        public void getReferenceData1(int year)
         {
-            HttpWebRequest request = RequestResponseFactory.createReferenceDataRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getRefDataYear());
+            getReferenceData(UPPER_REF_GRID, referenceDataView, year, inputView.getConfiguration().refDataUrl1);
+        }
+
+        public void getReferenceData2(int year)
+        {
+            getReferenceData(LOWER_REF_GRID, referenceDataView, year, inputView.getConfiguration().refDataUrl2);
+        }
+
+        public void getReferenceData(int refGrid, IReferenceDataView referenceDataView, int year, String url)
+        {
+            // HttpWebRequest request = RequestResponseFactory.createReferenceDataRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getRefDataYear());
+            HttpWebRequest request = RequestResponseFactory.createReferenceDataRequest(url, inputView.getConfiguration().apiKey, year);
             if (null == request)
             {
                 return;
@@ -56,7 +70,14 @@ namespace RESTConsumptionExamples
                 refdata = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ReferenceData>>(content, settings);
                 if (null != refdata)
                 {
-                    referenceDataView.setReferenceDataList(refdata);
+                    if (refGrid == UPPER_REF_GRID)
+                    {
+                        referenceDataView.setReferenceDataList1(refdata);
+                    }
+                    if (refGrid == LOWER_REF_GRID)
+                    {
+                        referenceDataView.setReferenceDataList2(refdata);
+                    }
                 }
             }
             catch (Exception exc)

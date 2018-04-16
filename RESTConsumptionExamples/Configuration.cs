@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace RESTConsumptionExamples
 {
@@ -11,7 +12,10 @@ namespace RESTConsumptionExamples
         public String apiKey { get; set; }
         public String currentUrl { get; set; }
         public String currentInvoiceId { get; set; }
+
         public List<String> urls { get; set; }
+        public String refDataUrl1 { get; set; }
+        public String refDataUrl2 { get; set; }
 
         public Configuration()
         {
@@ -34,6 +38,11 @@ namespace RESTConsumptionExamples
                 text.Append("url " + counter++ + " : " + url);
                 text.AppendLine();
             }
+            text.Append("refdata url 1     : " + refDataUrl1);
+            text.AppendLine();
+            text.Append("refdata url 2     : " + refDataUrl2);
+            text.AppendLine();
+
             return text.ToString();
         }
     }

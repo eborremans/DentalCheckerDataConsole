@@ -36,13 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.getInvoicePublicIds_BTN = new System.Windows.Forms.Button();
             this.getDentalCheckerVersionResponse_BTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.url_CB = new System.Windows.Forms.ComboBox();
             this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.urlsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jsonSplitContainer_SPLT = new System.Windows.Forms.SplitContainer();
             this.json_TXT = new System.Windows.Forms.TextBox();
             this.prettyJSon_TXT = new System.Windows.Forms.TextBox();
@@ -96,12 +88,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.referenceData2_GV = new System.Windows.Forms.DataGridView();
+            this.refDataURL2_CB = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.year2Selection_CB = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.refDataURL1_CB = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.codeFilter_TXT = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.yearSelection_CB = new System.Windows.Forms.ComboBox();
+            this.year1Selection_CB = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
-            this.referenceData_GV = new System.Windows.Forms.DataGridView();
+            this.referenceData1_GV = new System.Windows.Forms.DataGridView();
             this.codeRuleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addendumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -131,8 +130,8 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.referenceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urlsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
             this.jsonSplitContainer_SPLT.Panel2.SuspendLayout();
@@ -155,8 +154,10 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.referenceData_GV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceData1_GV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // getInvoicePublicIds_BTN
@@ -201,7 +202,7 @@
             // 
             // loadKey_BTN
             // 
-            this.loadKey_BTN.Location = new System.Drawing.Point(790, 1);
+            this.loadKey_BTN.Location = new System.Drawing.Point(789, 1);
             this.loadKey_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loadKey_BTN.Name = "loadKey_BTN";
             this.loadKey_BTN.Size = new System.Drawing.Size(101, 33);
@@ -253,7 +254,6 @@
             // url_CB
             // 
             this.url_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
-            this.url_CB.DataSource = this.urlsBindingSource;
             this.url_CB.FormattingEnabled = true;
             this.url_CB.Location = new System.Drawing.Point(39, 2);
             this.url_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -264,11 +264,6 @@
             // configurationBindingSource
             // 
             this.configurationBindingSource.DataSource = typeof(RESTConsumptionExamples.Configuration);
-            // 
-            // urlsBindingSource
-            // 
-            this.urlsBindingSource.DataMember = "urls";
-            this.urlsBindingSource.DataSource = this.configurationBindingSource;
             // 
             // jsonSplitContainer_SPLT
             // 
@@ -662,7 +657,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2104, 462);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2104, 449);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 700;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -678,7 +673,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(695, 452);
+            this.patientViolations_LB.Size = new System.Drawing.Size(695, 244);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -695,7 +690,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1398, 462);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1385, 449);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -735,12 +730,19 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.referenceData2_GV);
+            this.tabPage2.Controls.Add(this.refDataURL2_CB);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.year2Selection_CB);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.refDataURL1_CB);
+            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.codeFilter_TXT);
             this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.yearSelection_CB);
+            this.tabPage2.Controls.Add(this.year1Selection_CB);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.loadRefData_BTN);
-            this.tabPage2.Controls.Add(this.referenceData_GV);
+            this.tabPage2.Controls.Add(this.referenceData1_GV);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -749,9 +751,87 @@
             this.tabPage2.Text = "Reference Data";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // referenceData2_GV
+            // 
+            this.referenceData2_GV.AllowUserToDeleteRows = false;
+            this.referenceData2_GV.AllowUserToOrderColumns = true;
+            this.referenceData2_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.referenceData2_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.referenceData2_GV.Location = new System.Drawing.Point(1, 607);
+            this.referenceData2_GV.Name = "referenceData2_GV";
+            this.referenceData2_GV.ReadOnly = true;
+            this.referenceData2_GV.RowTemplate.Height = 24;
+            this.referenceData2_GV.Size = new System.Drawing.Size(2100, 511);
+            this.referenceData2_GV.TabIndex = 19;
+            // 
+            // refDataURL2_CB
+            // 
+            this.refDataURL2_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
+            this.refDataURL2_CB.FormattingEnabled = true;
+            this.refDataURL2_CB.Location = new System.Drawing.Point(54, 566);
+            this.refDataURL2_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refDataURL2_CB.Name = "refDataURL2_CB";
+            this.refDataURL2_CB.Size = new System.Drawing.Size(335, 24);
+            this.refDataURL2_CB.TabIndex = 18;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 566);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 17);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "url 2: ";
+            // 
+            // year2Selection_CB
+            // 
+            this.year2Selection_CB.FormatString = "0000";
+            this.year2Selection_CB.FormattingEnabled = true;
+            this.year2Selection_CB.Items.AddRange(new object[] {
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019"});
+            this.year2Selection_CB.Location = new System.Drawing.Point(453, 566);
+            this.year2Selection_CB.Name = "year2Selection_CB";
+            this.year2Selection_CB.Size = new System.Drawing.Size(121, 24);
+            this.year2Selection_CB.TabIndex = 16;
+            this.year2Selection_CB.SelectedIndexChanged += new System.EventHandler(this.year2Selection_CB_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(407, 566);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 17);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "year:";
+            // 
+            // refDataURL1_CB
+            // 
+            this.refDataURL1_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
+            this.refDataURL1_CB.FormattingEnabled = true;
+            this.refDataURL1_CB.Location = new System.Drawing.Point(54, 13);
+            this.refDataURL1_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refDataURL1_CB.Name = "refDataURL1_CB";
+            this.refDataURL1_CB.Size = new System.Drawing.Size(335, 24);
+            this.refDataURL1_CB.TabIndex = 14;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 17);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "url 1: ";
+            // 
             // codeFilter_TXT
             // 
-            this.codeFilter_TXT.Location = new System.Drawing.Point(481, 13);
+            this.codeFilter_TXT.Location = new System.Drawing.Point(864, 13);
             this.codeFilter_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.codeFilter_TXT.Name = "codeFilter_TXT";
             this.codeFilter_TXT.Size = new System.Drawing.Size(109, 22);
@@ -761,32 +841,32 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(401, 13);
+            this.label10.Location = new System.Drawing.Point(784, 13);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 17);
             this.label10.TabIndex = 10;
             this.label10.Text = "code filter:";
             // 
-            // yearSelection_CB
+            // year1Selection_CB
             // 
-            this.yearSelection_CB.FormatString = "0000";
-            this.yearSelection_CB.FormattingEnabled = true;
-            this.yearSelection_CB.Items.AddRange(new object[] {
+            this.year1Selection_CB.FormatString = "0000";
+            this.year1Selection_CB.FormattingEnabled = true;
+            this.year1Selection_CB.Items.AddRange(new object[] {
             "2015",
             "2016",
             "2017",
             "2018",
             "2019"});
-            this.yearSelection_CB.Location = new System.Drawing.Point(70, 13);
-            this.yearSelection_CB.Name = "yearSelection_CB";
-            this.yearSelection_CB.Size = new System.Drawing.Size(121, 24);
-            this.yearSelection_CB.TabIndex = 9;
-            this.yearSelection_CB.SelectedIndexChanged += new System.EventHandler(this.yearSelection_CB_SelectedIndexChanged);
+            this.year1Selection_CB.Location = new System.Drawing.Point(453, 13);
+            this.year1Selection_CB.Name = "year1Selection_CB";
+            this.year1Selection_CB.Size = new System.Drawing.Size(121, 24);
+            this.year1Selection_CB.TabIndex = 9;
+            this.year1Selection_CB.SelectedIndexChanged += new System.EventHandler(this.yearSelection_CB_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 13);
+            this.label8.Location = new System.Drawing.Point(407, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 17);
             this.label8.TabIndex = 8;
@@ -794,7 +874,7 @@
             // 
             // loadRefData_BTN
             // 
-            this.loadRefData_BTN.Location = new System.Drawing.Point(197, 13);
+            this.loadRefData_BTN.Location = new System.Drawing.Point(580, 13);
             this.loadRefData_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loadRefData_BTN.Name = "loadRefData_BTN";
             this.loadRefData_BTN.Size = new System.Drawing.Size(182, 33);
@@ -803,16 +883,16 @@
             this.loadRefData_BTN.UseVisualStyleBackColor = true;
             this.loadRefData_BTN.Click += new System.EventHandler(this.loadRefData_BTN_Click);
             // 
-            // referenceData_GV
+            // referenceData1_GV
             // 
-            this.referenceData_GV.AllowUserToDeleteRows = false;
-            this.referenceData_GV.AllowUserToOrderColumns = true;
-            this.referenceData_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.referenceData1_GV.AllowUserToDeleteRows = false;
+            this.referenceData1_GV.AllowUserToOrderColumns = true;
+            this.referenceData1_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceData_GV.AutoGenerateColumns = false;
-            this.referenceData_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.referenceData_GV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.referenceData1_GV.AutoGenerateColumns = false;
+            this.referenceData1_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.referenceData1_GV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codeRuleDataGridViewTextBoxColumn,
             this.codeDataGridViewTextBoxColumn1,
             this.addendumDataGridViewTextBoxColumn,
@@ -841,13 +921,13 @@
             this.inputFileIdDataGridViewCheckBoxColumn,
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn,
             this.deletedDataGridViewCheckBoxColumn});
-            this.referenceData_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData_GV.Location = new System.Drawing.Point(3, 60);
-            this.referenceData_GV.Name = "referenceData_GV";
-            this.referenceData_GV.ReadOnly = true;
-            this.referenceData_GV.RowTemplate.Height = 24;
-            this.referenceData_GV.Size = new System.Drawing.Size(2100, 1058);
-            this.referenceData_GV.TabIndex = 0;
+            this.referenceData1_GV.DataSource = this.referenceDataBindingSource;
+            this.referenceData1_GV.Location = new System.Drawing.Point(3, 60);
+            this.referenceData1_GV.Name = "referenceData1_GV";
+            this.referenceData1_GV.ReadOnly = true;
+            this.referenceData1_GV.RowTemplate.Height = 24;
+            this.referenceData1_GV.Size = new System.Drawing.Size(2100, 496);
+            this.referenceData1_GV.TabIndex = 0;
             // 
             // codeRuleDataGridViewTextBoxColumn
             // 
@@ -869,7 +949,6 @@
             this.addendumDataGridViewTextBoxColumn.HeaderText = "addendum";
             this.addendumDataGridViewTextBoxColumn.Name = "addendumDataGridViewTextBoxColumn";
             this.addendumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addendumDataGridViewTextBoxColumn.Visible = false;
             // 
             // ignorePriceDataGridViewCheckBoxColumn
             // 
@@ -877,13 +956,10 @@
             this.ignorePriceDataGridViewCheckBoxColumn.HeaderText = "ignorePrice";
             this.ignorePriceDataGridViewCheckBoxColumn.Name = "ignorePriceDataGridViewCheckBoxColumn";
             this.ignorePriceDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.ignorePriceDataGridViewCheckBoxColumn.Visible = false;
             // 
             // costDataGridViewTextBoxColumn
             // 
             this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.costDataGridViewTextBoxColumn.HeaderText = "cost";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
@@ -898,8 +974,6 @@
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.priceDataGridViewTextBoxColumn.HeaderText = "price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
@@ -924,7 +998,6 @@
             this.conflictsOnElementWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsOnElementWithExpr";
             this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Name = "conflictsOnElementWithExprDataGridViewTextBoxColumn";
             this.conflictsOnElementWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Visible = false;
             // 
             // mandatoryWithExprDataGridViewTextBoxColumn
             // 
@@ -939,13 +1012,10 @@
             this.onlyWithExprDataGridViewTextBoxColumn.HeaderText = "onlyWithExpr";
             this.onlyWithExprDataGridViewTextBoxColumn.Name = "onlyWithExprDataGridViewTextBoxColumn";
             this.onlyWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            this.onlyWithExprDataGridViewTextBoxColumn.Visible = false;
             // 
             // nrOfSurfacesDataGridViewTextBoxColumn
             // 
             this.nrOfSurfacesDataGridViewTextBoxColumn.DataPropertyName = "nrOfSurfaces";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.nrOfSurfacesDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.nrOfSurfacesDataGridViewTextBoxColumn.HeaderText = "nrOfSurfaces";
             this.nrOfSurfacesDataGridViewTextBoxColumn.Name = "nrOfSurfacesDataGridViewTextBoxColumn";
             this.nrOfSurfacesDataGridViewTextBoxColumn.ReadOnly = true;
@@ -953,8 +1023,6 @@
             // maxNrDataGridViewTextBoxColumn
             // 
             this.maxNrDataGridViewTextBoxColumn.DataPropertyName = "maxNr";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.maxNrDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.maxNrDataGridViewTextBoxColumn.HeaderText = "maxNr";
             this.maxNrDataGridViewTextBoxColumn.Name = "maxNrDataGridViewTextBoxColumn";
             this.maxNrDataGridViewTextBoxColumn.ReadOnly = true;
@@ -969,8 +1037,6 @@
             // periodLengthInDaysDataGridViewTextBoxColumn
             // 
             this.periodLengthInDaysDataGridViewTextBoxColumn.DataPropertyName = "periodLengthInDays";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.periodLengthInDaysDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.periodLengthInDaysDataGridViewTextBoxColumn.HeaderText = "periodLengthInDays";
             this.periodLengthInDaysDataGridViewTextBoxColumn.Name = "periodLengthInDaysDataGridViewTextBoxColumn";
             this.periodLengthInDaysDataGridViewTextBoxColumn.ReadOnly = true;
@@ -995,7 +1061,6 @@
             this.conflictsInGroupDataGridViewTextBoxColumn.HeaderText = "conflictsInGroup";
             this.conflictsInGroupDataGridViewTextBoxColumn.Name = "conflictsInGroupDataGridViewTextBoxColumn";
             this.conflictsInGroupDataGridViewTextBoxColumn.ReadOnly = true;
-            this.conflictsInGroupDataGridViewTextBoxColumn.Visible = false;
             // 
             // conflictsInGroupExprDataGridViewTextBoxColumn
             // 
@@ -1003,7 +1068,6 @@
             this.conflictsInGroupExprDataGridViewTextBoxColumn.HeaderText = "conflictsInGroupExpr";
             this.conflictsInGroupExprDataGridViewTextBoxColumn.Name = "conflictsInGroupExprDataGridViewTextBoxColumn";
             this.conflictsInGroupExprDataGridViewTextBoxColumn.ReadOnly = true;
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.Visible = false;
             // 
             // conflictObjectTypeDataGridViewTextBoxColumn
             // 
@@ -1029,18 +1093,13 @@
             // validFromDataGridViewTextBoxColumn
             // 
             this.validFromDataGridViewTextBoxColumn.DataPropertyName = "validFrom";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.validFromDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.validFromDataGridViewTextBoxColumn.HeaderText = "validFrom";
             this.validFromDataGridViewTextBoxColumn.Name = "validFromDataGridViewTextBoxColumn";
             this.validFromDataGridViewTextBoxColumn.ReadOnly = true;
-            this.validFromDataGridViewTextBoxColumn.Visible = false;
             // 
             // validToDataGridViewTextBoxColumn
             // 
             this.validToDataGridViewTextBoxColumn.DataPropertyName = "validTo";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.validToDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.validToDataGridViewTextBoxColumn.HeaderText = "validTo";
             this.validToDataGridViewTextBoxColumn.Name = "validToDataGridViewTextBoxColumn";
             this.validToDataGridViewTextBoxColumn.ReadOnly = true;
@@ -1051,7 +1110,6 @@
             this.inputFileIdDataGridViewCheckBoxColumn.HeaderText = "inputFileId";
             this.inputFileIdDataGridViewCheckBoxColumn.Name = "inputFileIdDataGridViewCheckBoxColumn";
             this.inputFileIdDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.inputFileIdDataGridViewCheckBoxColumn.Visible = false;
             // 
             // maxCountOnObjectTypeDataGridViewTextBoxColumn
             // 
@@ -1066,11 +1124,15 @@
             this.deletedDataGridViewCheckBoxColumn.HeaderText = "deleted";
             this.deletedDataGridViewCheckBoxColumn.Name = "deletedDataGridViewCheckBoxColumn";
             this.deletedDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.deletedDataGridViewCheckBoxColumn.Visible = false;
             // 
             // referenceDataBindingSource
             // 
             this.referenceDataBindingSource.DataSource = typeof(RESTConsumptionExamples.ReferenceData);
+            this.referenceDataBindingSource.CurrentChanged += new System.EventHandler(this.referenceDataBindingSource_CurrentChanged);
+            // 
+            // mainFormBindingSource
+            // 
+            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
             // 
             // mainForm
             // 
@@ -1092,7 +1154,6 @@
             this.Text = "REST API Consumption Examples";
             this.Load += new System.EventHandler(this.mainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urlsBindingSource)).EndInit();
             this.jsonSplitContainer_SPLT.Panel1.ResumeLayout(false);
             this.jsonSplitContainer_SPLT.Panel1.PerformLayout();
             this.jsonSplitContainer_SPLT.Panel2.ResumeLayout(false);
@@ -1119,8 +1180,10 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.referenceData_GV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referenceData1_GV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1160,17 +1223,41 @@
         private System.Windows.Forms.BindingSource violationsBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource configurationBindingSource;
-        private System.Windows.Forms.BindingSource urlsBindingSource;
         private System.Windows.Forms.WebBrowser checkReportRenderer_WB;
         private System.Windows.Forms.SplitContainer checkResultSplitContainer_SPLT;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView referenceData_GV;
-        private System.Windows.Forms.ComboBox yearSelection_CB;
+        private System.Windows.Forms.DataGridView referenceData1_GV;
+        private System.Windows.Forms.ComboBox year1Selection_CB;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button loadRefData_BTN;
         private System.Windows.Forms.BindingSource referenceDataBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dentalElementCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tariffAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn declaredAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calculatedAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrOfTreatmentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn referenceNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn therapistAGBCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfTreatmentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker endDatePicker_DTP;
+        private System.Windows.Forms.DateTimePicker startDatePicker_DTP;
+        private System.Windows.Forms.TextBox invoiceDate_TXT;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox codeFilter_TXT;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox refDataURL2_CB;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox year2Selection_CB;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox refDataURL1_CB;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView referenceData2_GV;
+        private System.Windows.Forms.BindingSource mainFormBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeRuleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn addendumDataGridViewTextBoxColumn;
@@ -1199,23 +1286,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn inputFileIdDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxCountOnObjectTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn deletedDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dentalElementCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tariffAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn declaredAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calculatedAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nrOfTreatmentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn referenceNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn therapistAGBCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfTreatmentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DateTimePicker endDatePicker_DTP;
-        private System.Windows.Forms.DateTimePicker startDatePicker_DTP;
-        private System.Windows.Forms.TextBox invoiceDate_TXT;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox codeFilter_TXT;
-        private System.Windows.Forms.Label label10;
     }
 }
 

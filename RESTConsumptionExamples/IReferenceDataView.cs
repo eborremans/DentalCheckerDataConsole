@@ -4,6 +4,7 @@ namespace RESTConsumptionExamples
 {
     public interface IReferenceDataView
     {
-        void setReferenceDataList(List<ReferenceData> referenceDataList);
+        void setReferenceDataList1(List<ReferenceData> referenceDataList);
+        void setReferenceDataList2(List<ReferenceData> referenceDataList);
     }
 }

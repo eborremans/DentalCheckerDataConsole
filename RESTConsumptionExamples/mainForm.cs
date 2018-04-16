@@ -47,6 +47,14 @@ namespace RESTConsumptionExamples
         // Violations found in the currently selected invoice
         private List<String> patientViolations = new List<String>();
 
+        List<String> refDataUrls1 { get; set; }
+        List<String> refDataUrls2 { get; set; }
+        
+        // Upper reference data grid contents
+        public List<ReferenceData> referenceData1 { get; set; }
+        // Lower reference data grid contents
+        public List<ReferenceData> referenceData2 { get; set; }
+
         // Configuration class
         private Configuration configuration = new Configuration();
 
@@ -94,7 +102,8 @@ namespace RESTConsumptionExamples
             configurationController.loadConfiguration();
 
             url_CB.SelectedIndex = 0;
-            yearSelection_CB.SelectedIndex = 3;
+            year1Selection_CB.SelectedIndex = 3;
+            year2Selection_CB.SelectedIndex = 3;
 
             getInvoice_BTN.Select();
 
@@ -141,6 +150,8 @@ namespace RESTConsumptionExamples
             configuration.urls = url_CB.Items.Cast<String>().ToList();
             configuration.currentInvoiceId = invoiceNr_TXT.Text;
             configuration.currentUrl = url_CB.SelectedItem.ToString();
+            configuration.refDataUrl1 = refDataURL1_CB.SelectedItem.ToString();
+            configuration.refDataUrl2 = refDataURL2_CB.SelectedItem.ToString();
 
             return configuration;
         }
@@ -151,6 +162,14 @@ namespace RESTConsumptionExamples
             url_CB.DataSource = this.configuration.urls;
             apiKey_TXT.Text = this.configuration.apiKey;
             invoiceNr_TXT.Text = this.configuration.currentInvoiceId;
+
+            refDataUrls1 = new List<String>(this.configuration.urls.ToList());
+            refDataUrls2 = new List<String>(this.configuration.urls.ToList());
+            refDataURL1_CB.DataSource = refDataUrls1;
+            refDataURL2_CB.DataSource = refDataUrls2;
+
+            //refDataURL1_CB.SelectedText = this.configuration.refDataUrl1;
+            //refDataURL2_CB.SelectedText = this.configuration.refDataUrl2;
         }
 
         public void setSelectedURL(String url) { url_CB.Text = url; }
@@ -316,13 +335,20 @@ namespace RESTConsumptionExamples
 
         private void loadRefData_BTN_Click(object sender, EventArgs e)
         {
-            loadReferenceData();
+            loadReferenceData1();
+            loadReferenceData2();
         }
 
-        private void loadReferenceData()
+        private void loadReferenceData1()
         {
-            String year = yearSelection_CB.SelectedItem.ToString();
-            referenceDataController.getReferenceData(yearStringToInteger(year));
+            String year1 = year1Selection_CB.SelectedItem.ToString();
+            referenceDataController.getReferenceData1(yearStringToInteger(year1));
+        }
+
+        private void loadReferenceData2()
+        {
+            String year2 = year2Selection_CB.SelectedItem.ToString();
+            referenceDataController.getReferenceData2(yearStringToInteger(year2));
         }
 
         private int yearStringToInteger(String yearString)
@@ -337,13 +363,23 @@ namespace RESTConsumptionExamples
 
         public int getRefDataYear()
         {
-            return yearStringToInteger(yearSelection_CB.SelectedItem.ToString());
+            return yearStringToInteger(year1Selection_CB.SelectedItem.ToString());
         }
 
-        public void setReferenceDataList(List<ReferenceData> referenceDataList)
+        public void setReferenceDataList1(List<ReferenceData> referenceDataList)
         {
-            referenceData_GV.DataSource = referenceDataList;
-            // (referenceData_GV.DataSource as DataTable).DefaultView.RowFilter = string.Format("Field = '{0}'", codeFilter_TXT.Text);
+            referenceData1 = referenceDataList;
+            SortableBindingList<ReferenceData> sortableReferenceData = new SortableBindingList<ReferenceData>(referenceData1.ToList());
+            referenceData1_GV.DataSource = sortableReferenceData;
+            referenceData1_GV.Sort(referenceData1_GV.Columns[0], ListSortDirection.Ascending);
+        }
+
+        public void setReferenceDataList2(List<ReferenceData> referenceDataList)
+        {
+            referenceData2 = referenceDataList;
+            SortableBindingList<ReferenceData> sortableReferenceData = new SortableBindingList<ReferenceData>(referenceData2.ToList());
+            referenceData2_GV.DataSource = sortableReferenceData;
+            referenceData2_GV.Sort(referenceData2_GV.Columns[0], ListSortDirection.Ascending);
         }
 
         public DateRangeRequest getDateRange()
@@ -357,21 +393,23 @@ namespace RESTConsumptionExamples
 
         private void codeFilter_TXT_TextChanged(object sender, EventArgs e)
         {
-            matchWithWildCard();
-            // matchWithRegExp();
+            matchWithWildCard(referenceData1_GV);
+            matchWithWildCard(referenceData2_GV);
+            // matchWithRegExp(referenceData1_GV);
+            // matchWithRegExp(referenceData2_GV);
         }
 
-        private void matchWithWildCard()
+        private void matchWithWildCard(DataGridView dataGridView)
         {
             Boolean matchFound = false;
-            for (int rowCounter = 0; rowCounter < referenceData_GV.RowCount; rowCounter++)
+            for (int rowCounter = 0; rowCounter < dataGridView.RowCount; rowCounter++)
             {
                 if (codeFilter_TXT.Text != null && codeFilter_TXT.Text != "")
                 {
                     String code = "";
                     try
                     {
-                        code = (String)(referenceData_GV.Rows[rowCounter].Cells[CODE_COL_IDX].Value);
+                        code = (String)(dataGridView.Rows[rowCounter].Cells[CODE_COL_IDX].Value);
                         matchFound = LikeOperator.LikeString(code, codeFilter_TXT.Text, Microsoft.VisualBasic.CompareMethod.Text);
                     }
                     catch (Exception exc)
@@ -380,14 +418,14 @@ namespace RESTConsumptionExamples
                     }
                     if (matchFound)
                     {
-                        referenceData_GV.Rows[rowCounter].Visible = true;
+                        dataGridView.Rows[rowCounter].Visible = true;
                     }
                     else
                     {
                         try
                         {
-                            referenceData_GV.CurrentCell = null;
-                            referenceData_GV.Rows[rowCounter].Visible = false;
+                            dataGridView.CurrentCell = null;
+                            dataGridView.Rows[rowCounter].Visible = false;
                         }
                         catch (Exception exc)
                         {
@@ -398,7 +436,7 @@ namespace RESTConsumptionExamples
             }
         }
 
-        private void matchWithRegExp()
+        private void matchWithRegExp(DataGridView dataGridView)
         {
             Regex regex = null;
             try
@@ -414,14 +452,14 @@ namespace RESTConsumptionExamples
             if (null != regex)
             {
                 codeFilter_TXT.ForeColor = Color.Black; // Illegal regular expression
-                for (int rowCounter = 0; rowCounter < referenceData_GV.RowCount; rowCounter++)
+                for (int rowCounter = 0; rowCounter < dataGridView.RowCount; rowCounter++)
                 {
                     if (codeFilter_TXT.Text != null && codeFilter_TXT.Text != "")
                     {
                         try
                         {
                             matchFound = false;
-                            Match match = regex.Match((String)referenceData_GV.Rows[rowCounter].Cells[CODE_COL_IDX].Value);
+                            Match match = regex.Match((String)dataGridView.Rows[rowCounter].Cells[CODE_COL_IDX].Value);
                             matchFound = match.Success;
                         }
                         catch (Exception exc)
@@ -430,14 +468,14 @@ namespace RESTConsumptionExamples
                         }
                         if (matchFound)
                         {
-                            referenceData_GV.Rows[rowCounter].Visible = true;
+                            dataGridView.Rows[rowCounter].Visible = true;
                         }
                         else
                         {
                             try
                             {
-                                referenceData_GV.CurrentCell = null;
-                                referenceData_GV.Rows[rowCounter].Visible = false;
+                                dataGridView.CurrentCell = null;
+                                dataGridView.Rows[rowCounter].Visible = false;
                             }
                             catch (Exception exc)
                             {
@@ -457,9 +495,24 @@ namespace RESTConsumptionExamples
         {
             if (!loading)
             {
-                loadReferenceData();
-                matchWithWildCard();
+                loadReferenceData1();
+                matchWithWildCard(referenceData1_GV);
             }
         }
+
+        private void year2Selection_CB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!loading)
+            {
+                loadReferenceData2();
+                matchWithWildCard(referenceData2_GV);
+            }
+        }
+
+        private void referenceDataBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
