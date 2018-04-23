@@ -91,47 +91,6 @@
             this.referenceDataSplitter_SPLT = new System.Windows.Forms.SplitContainer();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
             this.referenceData1_GV = new System.Windows.Forms.DataGridView();
-            this.referenceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.year1Selection_CB = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.codeFilter_TXT = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.refDataURL1_CB = new System.Windows.Forms.ComboBox();
-            this.refDataURL2_CB = new System.Windows.Forms.ComboBox();
-            this.referenceData2_GV = new System.Windows.Forms.DataGridView();
-            this.label13 = new System.Windows.Forms.Label();
-            this.year2Selection_CB = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codeRuleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addendumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ignorePriceDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.costDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hasCostDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictsWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mandatoryWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onlyWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nrOfSurfacesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.periodLengthInDaysDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alarmDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.elementRequiredDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.conflictsInGroupDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictsInGroupExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mandatoryObjTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elementGroupsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validFromDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validToDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inputFileIdDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deletedDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.codeRuleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addendumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -160,6 +119,47 @@
             this.inputFileIdDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.referenceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.year1Selection_CB = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.codeFilter_TXT = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.refDataURL1_CB = new System.Windows.Forms.ComboBox();
+            this.refDataURL2_CB = new System.Windows.Forms.ComboBox();
+            this.referenceData2_GV = new System.Windows.Forms.DataGridView();
+            this.codeRuleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addendumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ignorePriceDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.costDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hasCostDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mandatoryWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onlyWithExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrOfSurfacesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.periodLengthInDaysDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alarmDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.elementRequiredDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.conflictsInGroupDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsInGroupExprDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mandatoryObjTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementGroupsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validFromDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validToDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputFileIdDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deletedDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label13 = new System.Windows.Forms.Label();
+            this.year2Selection_CB = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
@@ -344,7 +344,7 @@
             this.prettyJSon_TXT.Multiline = true;
             this.prettyJSon_TXT.Name = "prettyJSon_TXT";
             this.prettyJSon_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prettyJSon_TXT.Size = new System.Drawing.Size(1057, 163);
+            this.prettyJSon_TXT.Size = new System.Drawing.Size(1058, 163);
             this.prettyJSon_TXT.TabIndex = 14;
             // 
             // invoicePublicIds_CB
@@ -692,7 +692,7 @@
             this.patientViolations_LB.FormattingEnabled = true;
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(471, 43);
+            this.patientViolations_LB.Size = new System.Drawing.Size(471, 251);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -851,6 +851,214 @@
             this.referenceData1_GV.Size = new System.Drawing.Size(1419, 292);
             this.referenceData1_GV.TabIndex = 0;
             // 
+            // codeRuleDataGridViewTextBoxColumn
+            // 
+            this.codeRuleDataGridViewTextBoxColumn.DataPropertyName = "codeRule";
+            this.codeRuleDataGridViewTextBoxColumn.HeaderText = "rule";
+            this.codeRuleDataGridViewTextBoxColumn.Name = "codeRuleDataGridViewTextBoxColumn";
+            this.codeRuleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeRuleDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // codeDataGridViewTextBoxColumn1
+            // 
+            this.codeDataGridViewTextBoxColumn1.DataPropertyName = "code";
+            this.codeDataGridViewTextBoxColumn1.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
+            this.codeDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // addendumDataGridViewTextBoxColumn
+            // 
+            this.addendumDataGridViewTextBoxColumn.DataPropertyName = "addendum";
+            this.addendumDataGridViewTextBoxColumn.HeaderText = "addendum";
+            this.addendumDataGridViewTextBoxColumn.Name = "addendumDataGridViewTextBoxColumn";
+            this.addendumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ignorePriceDataGridViewCheckBoxColumn
+            // 
+            this.ignorePriceDataGridViewCheckBoxColumn.DataPropertyName = "ignorePrice";
+            this.ignorePriceDataGridViewCheckBoxColumn.HeaderText = "Ign. Price";
+            this.ignorePriceDataGridViewCheckBoxColumn.Name = "ignorePriceDataGridViewCheckBoxColumn";
+            this.ignorePriceDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.ignorePriceDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hasCostDataGridViewCheckBoxColumn
+            // 
+            this.hasCostDataGridViewCheckBoxColumn.DataPropertyName = "hasCost";
+            this.hasCostDataGridViewCheckBoxColumn.HeaderText = "Cost?";
+            this.hasCostDataGridViewCheckBoxColumn.Name = "hasCostDataGridViewCheckBoxColumn";
+            this.hasCostDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.hasCostDataGridViewCheckBoxColumn.Width = 50;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // descriptionDataGridViewTextBoxColumn1
+            // 
+            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
+            this.descriptionDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // conflictsWithExprDataGridViewTextBoxColumn
+            // 
+            this.conflictsWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsWithExpr";
+            this.conflictsWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsWithExpr";
+            this.conflictsWithExprDataGridViewTextBoxColumn.Name = "conflictsWithExprDataGridViewTextBoxColumn";
+            this.conflictsWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conflictsOnElementWithExprDataGridViewTextBoxColumn
+            // 
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsOnElementWithExpr";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsOnElementWithExpr";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Name = "conflictsOnElementWithExprDataGridViewTextBoxColumn";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // mandatoryWithExprDataGridViewTextBoxColumn
+            // 
+            this.mandatoryWithExprDataGridViewTextBoxColumn.DataPropertyName = "mandatoryWithExpr";
+            this.mandatoryWithExprDataGridViewTextBoxColumn.HeaderText = "mandatoryWithExpr";
+            this.mandatoryWithExprDataGridViewTextBoxColumn.Name = "mandatoryWithExprDataGridViewTextBoxColumn";
+            this.mandatoryWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // onlyWithExprDataGridViewTextBoxColumn
+            // 
+            this.onlyWithExprDataGridViewTextBoxColumn.DataPropertyName = "onlyWithExpr";
+            this.onlyWithExprDataGridViewTextBoxColumn.HeaderText = "onlyWithExpr";
+            this.onlyWithExprDataGridViewTextBoxColumn.Name = "onlyWithExprDataGridViewTextBoxColumn";
+            this.onlyWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            this.onlyWithExprDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nrOfSurfacesDataGridViewTextBoxColumn
+            // 
+            this.nrOfSurfacesDataGridViewTextBoxColumn.DataPropertyName = "nrOfSurfaces";
+            this.nrOfSurfacesDataGridViewTextBoxColumn.HeaderText = "nrOfSurfaces";
+            this.nrOfSurfacesDataGridViewTextBoxColumn.Name = "nrOfSurfacesDataGridViewTextBoxColumn";
+            this.nrOfSurfacesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maxNrDataGridViewTextBoxColumn
+            // 
+            this.maxNrDataGridViewTextBoxColumn.DataPropertyName = "maxNr";
+            this.maxNrDataGridViewTextBoxColumn.HeaderText = "maxNr";
+            this.maxNrDataGridViewTextBoxColumn.Name = "maxNrDataGridViewTextBoxColumn";
+            this.maxNrDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn
+            // 
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxNrOfPerformancesOnObjectType";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "maxNrOfPerformancesOnObjectType";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.Name = "maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // periodLengthInDaysDataGridViewTextBoxColumn
+            // 
+            this.periodLengthInDaysDataGridViewTextBoxColumn.DataPropertyName = "periodLengthInDays";
+            this.periodLengthInDaysDataGridViewTextBoxColumn.HeaderText = "periodLengthInDays";
+            this.periodLengthInDaysDataGridViewTextBoxColumn.Name = "periodLengthInDaysDataGridViewTextBoxColumn";
+            this.periodLengthInDaysDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alarmDataGridViewCheckBoxColumn
+            // 
+            this.alarmDataGridViewCheckBoxColumn.DataPropertyName = "alarm";
+            this.alarmDataGridViewCheckBoxColumn.HeaderText = "Alarm";
+            this.alarmDataGridViewCheckBoxColumn.Name = "alarmDataGridViewCheckBoxColumn";
+            this.alarmDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.alarmDataGridViewCheckBoxColumn.Width = 50;
+            // 
+            // elementRequiredDataGridViewCheckBoxColumn
+            // 
+            this.elementRequiredDataGridViewCheckBoxColumn.DataPropertyName = "elementRequired";
+            this.elementRequiredDataGridViewCheckBoxColumn.HeaderText = "El. req?";
+            this.elementRequiredDataGridViewCheckBoxColumn.Name = "elementRequiredDataGridViewCheckBoxColumn";
+            this.elementRequiredDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.elementRequiredDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // conflictsInGroupDataGridViewTextBoxColumn
+            // 
+            this.conflictsInGroupDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroup";
+            this.conflictsInGroupDataGridViewTextBoxColumn.HeaderText = "conflictsInGroup";
+            this.conflictsInGroupDataGridViewTextBoxColumn.Name = "conflictsInGroupDataGridViewTextBoxColumn";
+            this.conflictsInGroupDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conflictsInGroupExprDataGridViewTextBoxColumn
+            // 
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroupExpr";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.HeaderText = "conflictsInGroupExpr";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.Name = "conflictsInGroupExprDataGridViewTextBoxColumn";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conflictObjectTypeDataGridViewTextBoxColumn
+            // 
+            this.conflictObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "conflictObjectType";
+            this.conflictObjectTypeDataGridViewTextBoxColumn.HeaderText = "conflictObjectType";
+            this.conflictObjectTypeDataGridViewTextBoxColumn.Name = "conflictObjectTypeDataGridViewTextBoxColumn";
+            this.conflictObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mandatoryObjTypeDataGridViewTextBoxColumn
+            // 
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.DataPropertyName = "mandatoryObjType";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.HeaderText = "mandatoryObjType";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.Name = "mandatoryObjTypeDataGridViewTextBoxColumn";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // elementGroupsDataGridViewTextBoxColumn
+            // 
+            this.elementGroupsDataGridViewTextBoxColumn.DataPropertyName = "elementGroups";
+            this.elementGroupsDataGridViewTextBoxColumn.HeaderText = "elementGroups";
+            this.elementGroupsDataGridViewTextBoxColumn.Name = "elementGroupsDataGridViewTextBoxColumn";
+            this.elementGroupsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // validFromDataGridViewTextBoxColumn
+            // 
+            this.validFromDataGridViewTextBoxColumn.DataPropertyName = "validFrom";
+            this.validFromDataGridViewTextBoxColumn.HeaderText = "validFrom";
+            this.validFromDataGridViewTextBoxColumn.Name = "validFromDataGridViewTextBoxColumn";
+            this.validFromDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // validToDataGridViewTextBoxColumn
+            // 
+            this.validToDataGridViewTextBoxColumn.DataPropertyName = "validTo";
+            this.validToDataGridViewTextBoxColumn.HeaderText = "validTo";
+            this.validToDataGridViewTextBoxColumn.Name = "validToDataGridViewTextBoxColumn";
+            this.validToDataGridViewTextBoxColumn.ReadOnly = true;
+            this.validToDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // inputFileIdDataGridViewCheckBoxColumn
+            // 
+            this.inputFileIdDataGridViewCheckBoxColumn.DataPropertyName = "inputFileId";
+            this.inputFileIdDataGridViewCheckBoxColumn.HeaderText = "inputFileId";
+            this.inputFileIdDataGridViewCheckBoxColumn.Name = "inputFileIdDataGridViewCheckBoxColumn";
+            this.inputFileIdDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.inputFileIdDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // maxCountOnObjectTypeDataGridViewTextBoxColumn
+            // 
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxCountOnObjectType";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "maxCountOnObjectType";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.Name = "maxCountOnObjectTypeDataGridViewTextBoxColumn";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deletedDataGridViewCheckBoxColumn
+            // 
+            this.deletedDataGridViewCheckBoxColumn.DataPropertyName = "deleted";
+            this.deletedDataGridViewCheckBoxColumn.HeaderText = "deleted";
+            this.deletedDataGridViewCheckBoxColumn.Name = "deletedDataGridViewCheckBoxColumn";
+            this.deletedDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.deletedDataGridViewCheckBoxColumn.Visible = false;
+            // 
             // referenceDataBindingSource
             // 
             this.referenceDataBindingSource.DataSource = typeof(RESTConsumptionExamples.ReferenceData);
@@ -976,49 +1184,8 @@
             this.referenceData2_GV.Name = "referenceData2_GV";
             this.referenceData2_GV.ReadOnly = true;
             this.referenceData2_GV.RowTemplate.Height = 24;
-            this.referenceData2_GV.Size = new System.Drawing.Size(1419, 296);
+            this.referenceData2_GV.Size = new System.Drawing.Size(1419, 297);
             this.referenceData2_GV.TabIndex = 19;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(308, 11);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "year:";
-            // 
-            // year2Selection_CB
-            // 
-            this.year2Selection_CB.FormatString = "0000";
-            this.year2Selection_CB.FormattingEnabled = true;
-            this.year2Selection_CB.Items.AddRange(new object[] {
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019"});
-            this.year2Selection_CB.Location = new System.Drawing.Point(342, 11);
-            this.year2Selection_CB.Margin = new System.Windows.Forms.Padding(2);
-            this.year2Selection_CB.Name = "year2Selection_CB";
-            this.year2Selection_CB.Size = new System.Drawing.Size(92, 21);
-            this.year2Selection_CB.TabIndex = 16;
-            this.year2Selection_CB.SelectedIndexChanged += new System.EventHandler(this.year2Selection_CB_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 11);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 13);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "url 2: ";
-            // 
-            // mainFormBindingSource
-            // 
-            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
             // 
             // codeRuleDataGridViewTextBoxColumn1
             // 
@@ -1228,213 +1395,46 @@
             this.deletedDataGridViewCheckBoxColumn1.ReadOnly = true;
             this.deletedDataGridViewCheckBoxColumn1.Visible = false;
             // 
-            // codeRuleDataGridViewTextBoxColumn
+            // label13
             // 
-            this.codeRuleDataGridViewTextBoxColumn.DataPropertyName = "codeRule";
-            this.codeRuleDataGridViewTextBoxColumn.HeaderText = "rule";
-            this.codeRuleDataGridViewTextBoxColumn.Name = "codeRuleDataGridViewTextBoxColumn";
-            this.codeRuleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeRuleDataGridViewTextBoxColumn.Width = 80;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(308, 11);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 13);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "year:";
             // 
-            // codeDataGridViewTextBoxColumn1
+            // year2Selection_CB
             // 
-            this.codeDataGridViewTextBoxColumn1.DataPropertyName = "code";
-            this.codeDataGridViewTextBoxColumn1.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
-            this.codeDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.codeDataGridViewTextBoxColumn1.Width = 80;
+            this.year2Selection_CB.FormatString = "0000";
+            this.year2Selection_CB.FormattingEnabled = true;
+            this.year2Selection_CB.Items.AddRange(new object[] {
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019"});
+            this.year2Selection_CB.Location = new System.Drawing.Point(342, 11);
+            this.year2Selection_CB.Margin = new System.Windows.Forms.Padding(2);
+            this.year2Selection_CB.Name = "year2Selection_CB";
+            this.year2Selection_CB.Size = new System.Drawing.Size(92, 21);
+            this.year2Selection_CB.TabIndex = 16;
+            this.year2Selection_CB.SelectedIndexChanged += new System.EventHandler(this.year2Selection_CB_SelectedIndexChanged);
             // 
-            // addendumDataGridViewTextBoxColumn
+            // label12
             // 
-            this.addendumDataGridViewTextBoxColumn.DataPropertyName = "addendum";
-            this.addendumDataGridViewTextBoxColumn.HeaderText = "addendum";
-            this.addendumDataGridViewTextBoxColumn.Name = "addendumDataGridViewTextBoxColumn";
-            this.addendumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 11);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 13);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "url 2: ";
             // 
-            // ignorePriceDataGridViewCheckBoxColumn
+            // mainFormBindingSource
             // 
-            this.ignorePriceDataGridViewCheckBoxColumn.DataPropertyName = "ignorePrice";
-            this.ignorePriceDataGridViewCheckBoxColumn.HeaderText = "Ign. Price";
-            this.ignorePriceDataGridViewCheckBoxColumn.Name = "ignorePriceDataGridViewCheckBoxColumn";
-            this.ignorePriceDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.ignorePriceDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hasCostDataGridViewCheckBoxColumn
-            // 
-            this.hasCostDataGridViewCheckBoxColumn.DataPropertyName = "hasCost";
-            this.hasCostDataGridViewCheckBoxColumn.HeaderText = "Cost?";
-            this.hasCostDataGridViewCheckBoxColumn.Name = "hasCostDataGridViewCheckBoxColumn";
-            this.hasCostDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.hasCostDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // descriptionDataGridViewTextBoxColumn1
-            // 
-            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
-            this.descriptionDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // conflictsWithExprDataGridViewTextBoxColumn
-            // 
-            this.conflictsWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsWithExpr";
-            this.conflictsWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsWithExpr";
-            this.conflictsWithExprDataGridViewTextBoxColumn.Name = "conflictsWithExprDataGridViewTextBoxColumn";
-            this.conflictsWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conflictsOnElementWithExprDataGridViewTextBoxColumn
-            // 
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsOnElementWithExpr";
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsOnElementWithExpr";
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Name = "conflictsOnElementWithExprDataGridViewTextBoxColumn";
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mandatoryWithExprDataGridViewTextBoxColumn
-            // 
-            this.mandatoryWithExprDataGridViewTextBoxColumn.DataPropertyName = "mandatoryWithExpr";
-            this.mandatoryWithExprDataGridViewTextBoxColumn.HeaderText = "mandatoryWithExpr";
-            this.mandatoryWithExprDataGridViewTextBoxColumn.Name = "mandatoryWithExprDataGridViewTextBoxColumn";
-            this.mandatoryWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // onlyWithExprDataGridViewTextBoxColumn
-            // 
-            this.onlyWithExprDataGridViewTextBoxColumn.DataPropertyName = "onlyWithExpr";
-            this.onlyWithExprDataGridViewTextBoxColumn.HeaderText = "onlyWithExpr";
-            this.onlyWithExprDataGridViewTextBoxColumn.Name = "onlyWithExprDataGridViewTextBoxColumn";
-            this.onlyWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            this.onlyWithExprDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nrOfSurfacesDataGridViewTextBoxColumn
-            // 
-            this.nrOfSurfacesDataGridViewTextBoxColumn.DataPropertyName = "nrOfSurfaces";
-            this.nrOfSurfacesDataGridViewTextBoxColumn.HeaderText = "nrOfSurfaces";
-            this.nrOfSurfacesDataGridViewTextBoxColumn.Name = "nrOfSurfacesDataGridViewTextBoxColumn";
-            this.nrOfSurfacesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maxNrDataGridViewTextBoxColumn
-            // 
-            this.maxNrDataGridViewTextBoxColumn.DataPropertyName = "maxNr";
-            this.maxNrDataGridViewTextBoxColumn.HeaderText = "maxNr";
-            this.maxNrDataGridViewTextBoxColumn.Name = "maxNrDataGridViewTextBoxColumn";
-            this.maxNrDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn
-            // 
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxNrOfPerformancesOnObjectType";
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "maxNrOfPerformancesOnObjectType";
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.Name = "maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn";
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // periodLengthInDaysDataGridViewTextBoxColumn
-            // 
-            this.periodLengthInDaysDataGridViewTextBoxColumn.DataPropertyName = "periodLengthInDays";
-            this.periodLengthInDaysDataGridViewTextBoxColumn.HeaderText = "periodLengthInDays";
-            this.periodLengthInDaysDataGridViewTextBoxColumn.Name = "periodLengthInDaysDataGridViewTextBoxColumn";
-            this.periodLengthInDaysDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // alarmDataGridViewCheckBoxColumn
-            // 
-            this.alarmDataGridViewCheckBoxColumn.DataPropertyName = "alarm";
-            this.alarmDataGridViewCheckBoxColumn.HeaderText = "Alarm";
-            this.alarmDataGridViewCheckBoxColumn.Name = "alarmDataGridViewCheckBoxColumn";
-            this.alarmDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.alarmDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // elementRequiredDataGridViewCheckBoxColumn
-            // 
-            this.elementRequiredDataGridViewCheckBoxColumn.DataPropertyName = "elementRequired";
-            this.elementRequiredDataGridViewCheckBoxColumn.HeaderText = "El. req?";
-            this.elementRequiredDataGridViewCheckBoxColumn.Name = "elementRequiredDataGridViewCheckBoxColumn";
-            this.elementRequiredDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.elementRequiredDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // conflictsInGroupDataGridViewTextBoxColumn
-            // 
-            this.conflictsInGroupDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroup";
-            this.conflictsInGroupDataGridViewTextBoxColumn.HeaderText = "conflictsInGroup";
-            this.conflictsInGroupDataGridViewTextBoxColumn.Name = "conflictsInGroupDataGridViewTextBoxColumn";
-            this.conflictsInGroupDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conflictsInGroupExprDataGridViewTextBoxColumn
-            // 
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroupExpr";
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.HeaderText = "conflictsInGroupExpr";
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.Name = "conflictsInGroupExprDataGridViewTextBoxColumn";
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conflictObjectTypeDataGridViewTextBoxColumn
-            // 
-            this.conflictObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "conflictObjectType";
-            this.conflictObjectTypeDataGridViewTextBoxColumn.HeaderText = "conflictObjectType";
-            this.conflictObjectTypeDataGridViewTextBoxColumn.Name = "conflictObjectTypeDataGridViewTextBoxColumn";
-            this.conflictObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mandatoryObjTypeDataGridViewTextBoxColumn
-            // 
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.DataPropertyName = "mandatoryObjType";
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.HeaderText = "mandatoryObjType";
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.Name = "mandatoryObjTypeDataGridViewTextBoxColumn";
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // elementGroupsDataGridViewTextBoxColumn
-            // 
-            this.elementGroupsDataGridViewTextBoxColumn.DataPropertyName = "elementGroups";
-            this.elementGroupsDataGridViewTextBoxColumn.HeaderText = "elementGroups";
-            this.elementGroupsDataGridViewTextBoxColumn.Name = "elementGroupsDataGridViewTextBoxColumn";
-            this.elementGroupsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // validFromDataGridViewTextBoxColumn
-            // 
-            this.validFromDataGridViewTextBoxColumn.DataPropertyName = "validFrom";
-            this.validFromDataGridViewTextBoxColumn.HeaderText = "validFrom";
-            this.validFromDataGridViewTextBoxColumn.Name = "validFromDataGridViewTextBoxColumn";
-            this.validFromDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // validToDataGridViewTextBoxColumn
-            // 
-            this.validToDataGridViewTextBoxColumn.DataPropertyName = "validTo";
-            this.validToDataGridViewTextBoxColumn.HeaderText = "validTo";
-            this.validToDataGridViewTextBoxColumn.Name = "validToDataGridViewTextBoxColumn";
-            this.validToDataGridViewTextBoxColumn.ReadOnly = true;
-            this.validToDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // inputFileIdDataGridViewCheckBoxColumn
-            // 
-            this.inputFileIdDataGridViewCheckBoxColumn.DataPropertyName = "inputFileId";
-            this.inputFileIdDataGridViewCheckBoxColumn.HeaderText = "inputFileId";
-            this.inputFileIdDataGridViewCheckBoxColumn.Name = "inputFileIdDataGridViewCheckBoxColumn";
-            this.inputFileIdDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.inputFileIdDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // maxCountOnObjectTypeDataGridViewTextBoxColumn
-            // 
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxCountOnObjectType";
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "maxCountOnObjectType";
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.Name = "maxCountOnObjectTypeDataGridViewTextBoxColumn";
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deletedDataGridViewCheckBoxColumn
-            // 
-            this.deletedDataGridViewCheckBoxColumn.DataPropertyName = "deleted";
-            this.deletedDataGridViewCheckBoxColumn.HeaderText = "deleted";
-            this.deletedDataGridViewCheckBoxColumn.Name = "deletedDataGridViewCheckBoxColumn";
-            this.deletedDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.deletedDataGridViewCheckBoxColumn.Visible = false;
+            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
             // 
             // mainForm
             // 

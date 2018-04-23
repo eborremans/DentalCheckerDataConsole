@@ -10,11 +10,13 @@ namespace RESTConsumptionExamples
     {
         public String code { get; set; }
         public String description { get; set; }
+        public String addendum { get; set; }
 
-        public SimpleTreatment(string code, string description)
+        public SimpleTreatment(string code, string description, string addendum)
         {
             this.code = code;
             this.description = description;
+            this.addendum = addendum;
         }
 
         public override String ToString()
@@ -22,9 +24,11 @@ namespace RESTConsumptionExamples
             StringBuilder text = new StringBuilder();
 
             text.Append("code              :" + code);
-            text.AppendLine();             
+            text.AppendLine();
             text.Append("description       :" + description);
-            text.AppendLine();             
+            text.AppendLine();
+            text.Append("addendum          :" + addendum);
+            text.AppendLine();
 
             return text.ToString();
         }

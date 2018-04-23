@@ -15,9 +15,10 @@ namespace RESTConsumptionExamples
         public SimpleReferenceData(
             string code, 
             string description, 
+            string addendum,
             bool   hasTechnicalCost, 
             string validFrom, 
-            string validTo) : base(code, description)
+            string validTo) : base(code, description, addendum)
         {
             this.hasTechnicalCost = hasTechnicalCost;
             this.validFrom = validFrom;

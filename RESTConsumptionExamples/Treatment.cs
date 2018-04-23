@@ -22,6 +22,7 @@ namespace RESTConsumptionExamples
         public Treatment(
             string code,
             string description,
+            string addendum,
             bool hasTechnicalCost,
             string validFrom,
             string validTo,
@@ -33,7 +34,7 @@ namespace RESTConsumptionExamples
             string referenceNumber, 
             decimal tariffAmount, 
             string therapistAGBCode, 
-            Int16 typeOfTreatment) : base(code, description)
+            Int16 typeOfTreatment) : base(code, description, addendum)
         {
             this.calculatedAmount = calculatedAmount;
             this.date = date;
