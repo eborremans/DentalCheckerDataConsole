@@ -93,6 +93,13 @@ namespace RESTConsumptionExamples
                 return;
             }
 
+            // Hack/workaround for dealing with https without valid certificate
+            ServicePointManager.ServerCertificateValidationCallback = new
+                System.Net.Security.RemoteCertificateValidationCallback
+                (
+                    delegate { return true; }
+                );
+
             HttpWebResponse response = inputView.getResponse(request);
             if (null == response)
             {
