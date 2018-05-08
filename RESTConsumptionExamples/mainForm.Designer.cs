@@ -195,10 +195,10 @@
             // 
             // getInvoicePublicIds_BTN
             // 
-            this.getInvoicePublicIds_BTN.Location = new System.Drawing.Point(328, 15);
-            this.getInvoicePublicIds_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getInvoicePublicIds_BTN.Location = new System.Drawing.Point(246, 12);
+            this.getInvoicePublicIds_BTN.Margin = new System.Windows.Forms.Padding(2);
             this.getInvoicePublicIds_BTN.Name = "getInvoicePublicIds_BTN";
-            this.getInvoicePublicIds_BTN.Size = new System.Drawing.Size(213, 30);
+            this.getInvoicePublicIds_BTN.Size = new System.Drawing.Size(160, 24);
             this.getInvoicePublicIds_BTN.TabIndex = 0;
             this.getInvoicePublicIds_BTN.Text = "Get Invoice Public Ids";
             this.getInvoicePublicIds_BTN.UseVisualStyleBackColor = true;
@@ -206,10 +206,10 @@
             // 
             // getDentalCheckerVersionResponse_BTN
             // 
-            this.getDentalCheckerVersionResponse_BTN.Location = new System.Drawing.Point(1348, 2);
-            this.getDentalCheckerVersionResponse_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getDentalCheckerVersionResponse_BTN.Location = new System.Drawing.Point(1011, 2);
+            this.getDentalCheckerVersionResponse_BTN.Margin = new System.Windows.Forms.Padding(2);
             this.getDentalCheckerVersionResponse_BTN.Name = "getDentalCheckerVersionResponse_BTN";
-            this.getDentalCheckerVersionResponse_BTN.Size = new System.Drawing.Size(141, 34);
+            this.getDentalCheckerVersionResponse_BTN.Size = new System.Drawing.Size(106, 28);
             this.getDentalCheckerVersionResponse_BTN.TabIndex = 1;
             this.getDentalCheckerVersionResponse_BTN.Text = "DENTIC Response";
             this.getDentalCheckerVersionResponse_BTN.UseVisualStyleBackColor = true;
@@ -218,27 +218,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(413, 2);
+            this.label1.Location = new System.Drawing.Point(310, 2);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "api key:";
             // 
             // apiKey_TXT
             // 
-            this.apiKey_TXT.Location = new System.Drawing.Point(476, 2);
-            this.apiKey_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.apiKey_TXT.Location = new System.Drawing.Point(357, 2);
+            this.apiKey_TXT.Margin = new System.Windows.Forms.Padding(2);
             this.apiKey_TXT.Name = "apiKey_TXT";
-            this.apiKey_TXT.Size = new System.Drawing.Size(305, 22);
+            this.apiKey_TXT.Size = new System.Drawing.Size(230, 20);
             this.apiKey_TXT.TabIndex = 4;
             this.apiKey_TXT.TextChanged += new System.EventHandler(this.apiKey_TXT_TextChanged);
             // 
             // loadKey_BTN
             // 
-            this.loadKey_BTN.Location = new System.Drawing.Point(789, 1);
-            this.loadKey_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loadKey_BTN.Location = new System.Drawing.Point(592, 1);
+            this.loadKey_BTN.Margin = new System.Windows.Forms.Padding(2);
             this.loadKey_BTN.Name = "loadKey_BTN";
-            this.loadKey_BTN.Size = new System.Drawing.Size(101, 33);
+            this.loadKey_BTN.Size = new System.Drawing.Size(76, 27);
             this.loadKey_BTN.TabIndex = 5;
             this.loadKey_BTN.Text = "Load Config";
             this.loadKey_BTN.UseVisualStyleBackColor = true;
@@ -246,10 +247,10 @@
             // 
             // saveKey_BTN
             // 
-            this.saveKey_BTN.Location = new System.Drawing.Point(897, 1);
-            this.saveKey_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveKey_BTN.Location = new System.Drawing.Point(673, 1);
+            this.saveKey_BTN.Margin = new System.Windows.Forms.Padding(2);
             this.saveKey_BTN.Name = "saveKey_BTN";
-            this.saveKey_BTN.Size = new System.Drawing.Size(104, 33);
+            this.saveKey_BTN.Size = new System.Drawing.Size(78, 27);
             this.saveKey_BTN.TabIndex = 6;
             this.saveKey_BTN.Text = "Save Config";
             this.saveKey_BTN.UseVisualStyleBackColor = true;
@@ -257,10 +258,10 @@
             // 
             // getInvoice_BTN
             // 
-            this.getInvoice_BTN.Location = new System.Drawing.Point(29, 11);
-            this.getInvoice_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getInvoice_BTN.Location = new System.Drawing.Point(22, 9);
+            this.getInvoice_BTN.Margin = new System.Windows.Forms.Padding(2);
             this.getInvoice_BTN.Name = "getInvoice_BTN";
-            this.getInvoice_BTN.Size = new System.Drawing.Size(105, 33);
+            this.getInvoice_BTN.Size = new System.Drawing.Size(79, 27);
             this.getInvoice_BTN.TabIndex = 7;
             this.getInvoice_BTN.Text = "Get Invoice";
             this.getInvoice_BTN.UseVisualStyleBackColor = true;
@@ -268,19 +269,20 @@
             // 
             // invoiceNr_TXT
             // 
-            this.invoiceNr_TXT.Location = new System.Drawing.Point(149, 16);
-            this.invoiceNr_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.invoiceNr_TXT.Location = new System.Drawing.Point(112, 13);
+            this.invoiceNr_TXT.Margin = new System.Windows.Forms.Padding(2);
             this.invoiceNr_TXT.Name = "invoiceNr_TXT";
-            this.invoiceNr_TXT.Size = new System.Drawing.Size(169, 22);
+            this.invoiceNr_TXT.Size = new System.Drawing.Size(128, 20);
             this.invoiceNr_TXT.TabIndex = 8;
             this.invoiceNr_TXT.Text = "INV-0000000304";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 2);
+            this.label2.Location = new System.Drawing.Point(4, 2);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 17);
+            this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "url:";
             // 
@@ -288,10 +290,10 @@
             // 
             this.url_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
             this.url_CB.FormattingEnabled = true;
-            this.url_CB.Location = new System.Drawing.Point(39, 2);
-            this.url_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.url_CB.Location = new System.Drawing.Point(29, 2);
+            this.url_CB.Margin = new System.Windows.Forms.Padding(2);
             this.url_CB.Name = "url_CB";
-            this.url_CB.Size = new System.Drawing.Size(368, 24);
+            this.url_CB.Size = new System.Drawing.Size(277, 21);
             this.url_CB.TabIndex = 12;
             // 
             // configurationBindingSource
@@ -302,7 +304,7 @@
             // 
             this.jsonSplitContainer_SPLT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.jsonSplitContainer_SPLT.Location = new System.Drawing.Point(0, 0);
-            this.jsonSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.jsonSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(2);
             this.jsonSplitContainer_SPLT.Name = "jsonSplitContainer_SPLT";
             // 
             // jsonSplitContainer_SPLT.Panel1
@@ -312,8 +314,9 @@
             // jsonSplitContainer_SPLT.Panel2
             // 
             this.jsonSplitContainer_SPLT.Panel2.Controls.Add(this.prettyJSon_TXT);
-            this.jsonSplitContainer_SPLT.Size = new System.Drawing.Size(1911, 211);
-            this.jsonSplitContainer_SPLT.SplitterDistance = 491;
+            this.jsonSplitContainer_SPLT.Size = new System.Drawing.Size(1712, 171);
+            this.jsonSplitContainer_SPLT.SplitterDistance = 439;
+            this.jsonSplitContainer_SPLT.SplitterWidth = 3;
             this.jsonSplitContainer_SPLT.TabIndex = 13;
             // 
             // json_TXT
@@ -322,12 +325,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.json_TXT.Font = new System.Drawing.Font("Andale Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.json_TXT.Location = new System.Drawing.Point(5, 2);
-            this.json_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.json_TXT.Location = new System.Drawing.Point(4, 2);
+            this.json_TXT.Margin = new System.Windows.Forms.Padding(2);
             this.json_TXT.Multiline = true;
             this.json_TXT.Name = "json_TXT";
             this.json_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.json_TXT.Size = new System.Drawing.Size(483, 208);
+            this.json_TXT.Size = new System.Drawing.Size(434, 170);
             this.json_TXT.TabIndex = 3;
             // 
             // prettyJSon_TXT
@@ -336,12 +339,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.prettyJSon_TXT.Font = new System.Drawing.Font("Andale Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prettyJSon_TXT.Location = new System.Drawing.Point(3, 2);
-            this.prettyJSon_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.prettyJSon_TXT.Location = new System.Drawing.Point(2, 2);
+            this.prettyJSon_TXT.Margin = new System.Windows.Forms.Padding(2);
             this.prettyJSon_TXT.Multiline = true;
             this.prettyJSon_TXT.Name = "prettyJSon_TXT";
             this.prettyJSon_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prettyJSon_TXT.Size = new System.Drawing.Size(1420, 207);
+            this.prettyJSon_TXT.Size = new System.Drawing.Size(1276, 169);
             this.prettyJSon_TXT.TabIndex = 14;
             // 
             // invoicePublicIds_CB
@@ -349,20 +352,20 @@
             this.invoicePublicIds_CB.FormattingEnabled = true;
             this.invoicePublicIds_CB.Items.AddRange(new object[] {
             "<empty>"});
-            this.invoicePublicIds_CB.Location = new System.Drawing.Point(149, 49);
-            this.invoicePublicIds_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.invoicePublicIds_CB.Location = new System.Drawing.Point(112, 40);
+            this.invoicePublicIds_CB.Margin = new System.Windows.Forms.Padding(2);
             this.invoicePublicIds_CB.Name = "invoicePublicIds_CB";
-            this.invoicePublicIds_CB.Size = new System.Drawing.Size(169, 24);
+            this.invoicePublicIds_CB.Size = new System.Drawing.Size(128, 21);
             this.invoicePublicIds_CB.TabIndex = 14;
             this.invoicePublicIds_CB.SelectedIndexChanged += new System.EventHandler(this.invoicePublicIds_CB_SelectedIndexChanged);
             this.invoicePublicIds_CB.SelectedValueChanged += new System.EventHandler(this.invoicePublicIds_CB_SelectedValueChanged);
             // 
             // testResponse_BTN
             // 
-            this.testResponse_BTN.Location = new System.Drawing.Point(1495, 2);
-            this.testResponse_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.testResponse_BTN.Location = new System.Drawing.Point(1121, 2);
+            this.testResponse_BTN.Margin = new System.Windows.Forms.Padding(2);
             this.testResponse_BTN.Name = "testResponse_BTN";
-            this.testResponse_BTN.Size = new System.Drawing.Size(144, 34);
+            this.testResponse_BTN.Size = new System.Drawing.Size(108, 28);
             this.testResponse_BTN.TabIndex = 15;
             this.testResponse_BTN.Text = "Test Save";
             this.testResponse_BTN.UseVisualStyleBackColor = true;
@@ -391,11 +394,10 @@
             this.therapistAGBCodeDataGridViewTextBoxColumn,
             this.typeOfTreatmentDataGridViewTextBoxColumn});
             this.patientTreatments_DGV.DataSource = this.treatmentBindingSource;
-            this.patientTreatments_DGV.Location = new System.Drawing.Point(565, 11);
-            this.patientTreatments_DGV.Margin = new System.Windows.Forms.Padding(4);
+            this.patientTreatments_DGV.Location = new System.Drawing.Point(440, 9);
             this.patientTreatments_DGV.Name = "patientTreatments_DGV";
             this.patientTreatments_DGV.ReadOnly = true;
-            this.patientTreatments_DGV.Size = new System.Drawing.Size(1894, 253);
+            this.patientTreatments_DGV.Size = new System.Drawing.Size(1683, 205);
             this.patientTreatments_DGV.TabIndex = 16;
             // 
             // codeDataGridViewTextBoxColumn
@@ -495,56 +497,50 @@
             // 
             // patientHealthInsurance_TXT
             // 
-            this.patientHealthInsurance_TXT.Location = new System.Drawing.Point(149, 185);
-            this.patientHealthInsurance_TXT.Margin = new System.Windows.Forms.Padding(4);
+            this.patientHealthInsurance_TXT.Location = new System.Drawing.Point(112, 150);
             this.patientHealthInsurance_TXT.Name = "patientHealthInsurance_TXT";
-            this.patientHealthInsurance_TXT.Size = new System.Drawing.Size(169, 22);
+            this.patientHealthInsurance_TXT.Size = new System.Drawing.Size(128, 20);
             this.patientHealthInsurance_TXT.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 190);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(16, 154);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 17);
+            this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "Health Insurance:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 228);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(55, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "Birthdate:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(73, 273);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(55, 222);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 17);
+            this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 22;
             this.label7.Text = "Policy Nr:";
             // 
             // patientBirthdate_TXT
             // 
-            this.patientBirthdate_TXT.Location = new System.Drawing.Point(149, 225);
-            this.patientBirthdate_TXT.Margin = new System.Windows.Forms.Padding(4);
+            this.patientBirthdate_TXT.Location = new System.Drawing.Point(112, 183);
             this.patientBirthdate_TXT.Name = "patientBirthdate_TXT";
-            this.patientBirthdate_TXT.Size = new System.Drawing.Size(169, 22);
+            this.patientBirthdate_TXT.Size = new System.Drawing.Size(128, 20);
             this.patientBirthdate_TXT.TabIndex = 23;
             // 
             // patientPolicyNumber_TXT
             // 
-            this.patientPolicyNumber_TXT.Location = new System.Drawing.Point(149, 270);
-            this.patientPolicyNumber_TXT.Margin = new System.Windows.Forms.Padding(4);
+            this.patientPolicyNumber_TXT.Location = new System.Drawing.Point(112, 219);
             this.patientPolicyNumber_TXT.Name = "patientPolicyNumber_TXT";
-            this.patientPolicyNumber_TXT.Size = new System.Drawing.Size(169, 22);
+            this.patientPolicyNumber_TXT.Size = new System.Drawing.Size(128, 20);
             this.patientPolicyNumber_TXT.TabIndex = 25;
             // 
             // patientExternalId_CB
@@ -552,38 +548,35 @@
             this.patientExternalId_CB.FormattingEnabled = true;
             this.patientExternalId_CB.Items.AddRange(new object[] {
             "<empty>"});
-            this.patientExternalId_CB.Location = new System.Drawing.Point(149, 146);
-            this.patientExternalId_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.patientExternalId_CB.Location = new System.Drawing.Point(112, 119);
+            this.patientExternalId_CB.Margin = new System.Windows.Forms.Padding(2);
             this.patientExternalId_CB.Name = "patientExternalId_CB";
-            this.patientExternalId_CB.Size = new System.Drawing.Size(169, 24);
+            this.patientExternalId_CB.Size = new System.Drawing.Size(128, 21);
             this.patientExternalId_CB.TabIndex = 26;
             this.patientExternalId_CB.SelectedIndexChanged += new System.EventHandler(this.patientExternalId_CB_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 150);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(10, 122);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 17);
+            this.label6.Size = new System.Drawing.Size(97, 13);
             this.label6.TabIndex = 27;
             this.label6.Text = "Patient external ID:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 54);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(16, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 17);
+            this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 28;
             this.label5.Text = "Invoice Public ID:";
             // 
             // mainSplitContainer_SPLT
             // 
             this.mainSplitContainer_SPLT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainSplitContainer_SPLT.Location = new System.Drawing.Point(3, 2);
-            this.mainSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(4);
+            this.mainSplitContainer_SPLT.Location = new System.Drawing.Point(2, 2);
             this.mainSplitContainer_SPLT.Name = "mainSplitContainer_SPLT";
             this.mainSplitContainer_SPLT.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -594,9 +587,8 @@
             // mainSplitContainer_SPLT.Panel2
             // 
             this.mainSplitContainer_SPLT.Panel2.Controls.Add(this.jsonSplitContainer_SPLT);
-            this.mainSplitContainer_SPLT.Size = new System.Drawing.Size(1911, 844);
-            this.mainSplitContainer_SPLT.SplitterDistance = 628;
-            this.mainSplitContainer_SPLT.SplitterWidth = 5;
+            this.mainSplitContainer_SPLT.Size = new System.Drawing.Size(1712, 683);
+            this.mainSplitContainer_SPLT.SplitterDistance = 508;
             this.mainSplitContainer_SPLT.TabIndex = 29;
             // 
             // treatmentsSplitContainer
@@ -604,8 +596,7 @@
             this.treatmentsSplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treatmentsSplitContainer.Location = new System.Drawing.Point(5, 4);
-            this.treatmentsSplitContainer.Margin = new System.Windows.Forms.Padding(4);
+            this.treatmentsSplitContainer.Location = new System.Drawing.Point(4, 3);
             this.treatmentsSplitContainer.Name = "treatmentsSplitContainer";
             this.treatmentsSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -633,46 +624,43 @@
             // treatmentsSplitContainer.Panel2
             // 
             this.treatmentsSplitContainer.Panel2.Controls.Add(this.checkResultSplitContainer_SPLT);
-            this.treatmentsSplitContainer.Size = new System.Drawing.Size(1923, 619);
-            this.treatmentsSplitContainer.SplitterDistance = 264;
-            this.treatmentsSplitContainer.SplitterWidth = 5;
+            this.treatmentsSplitContainer.Size = new System.Drawing.Size(1721, 501);
+            this.treatmentsSplitContainer.SplitterDistance = 213;
             this.treatmentsSplitContainer.TabIndex = 17;
             // 
             // invoiceDate_TXT
             // 
-            this.invoiceDate_TXT.Location = new System.Drawing.Point(149, 90);
-            this.invoiceDate_TXT.Margin = new System.Windows.Forms.Padding(4);
+            this.invoiceDate_TXT.Location = new System.Drawing.Point(112, 73);
             this.invoiceDate_TXT.Name = "invoiceDate_TXT";
-            this.invoiceDate_TXT.Size = new System.Drawing.Size(169, 22);
+            this.invoiceDate_TXT.Size = new System.Drawing.Size(128, 20);
             this.invoiceDate_TXT.TabIndex = 32;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(52, 90);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(39, 73);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 17);
+            this.label9.Size = new System.Drawing.Size(69, 13);
             this.label9.TabIndex = 31;
             this.label9.Text = "Invoice date:";
             // 
             // endDatePicker_DTP
             // 
             this.endDatePicker_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.endDatePicker_DTP.Location = new System.Drawing.Point(333, 90);
-            this.endDatePicker_DTP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.endDatePicker_DTP.Location = new System.Drawing.Point(250, 73);
+            this.endDatePicker_DTP.Margin = new System.Windows.Forms.Padding(2);
             this.endDatePicker_DTP.Name = "endDatePicker_DTP";
-            this.endDatePicker_DTP.Size = new System.Drawing.Size(200, 22);
+            this.endDatePicker_DTP.Size = new System.Drawing.Size(151, 20);
             this.endDatePicker_DTP.TabIndex = 30;
             this.endDatePicker_DTP.Value = new System.DateTime(2018, 3, 14, 22, 43, 0, 0);
             // 
             // startDatePicker_DTP
             // 
             this.startDatePicker_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startDatePicker_DTP.Location = new System.Drawing.Point(333, 54);
-            this.startDatePicker_DTP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.startDatePicker_DTP.Location = new System.Drawing.Point(250, 44);
+            this.startDatePicker_DTP.Margin = new System.Windows.Forms.Padding(2);
             this.startDatePicker_DTP.Name = "startDatePicker_DTP";
-            this.startDatePicker_DTP.Size = new System.Drawing.Size(200, 22);
+            this.startDatePicker_DTP.Size = new System.Drawing.Size(151, 20);
             this.startDatePicker_DTP.TabIndex = 29;
             this.startDatePicker_DTP.Value = new System.DateTime(2018, 1, 1, 21, 49, 0, 0);
             // 
@@ -682,7 +670,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkResultSplitContainer_SPLT.Location = new System.Drawing.Point(0, 0);
-            this.checkResultSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(4);
             this.checkResultSplitContainer_SPLT.Name = "checkResultSplitContainer_SPLT";
             // 
             // checkResultSplitContainer_SPLT.Panel1
@@ -692,9 +679,8 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1915, 328);
-            this.checkResultSplitContainer_SPLT.SplitterDistance = 634;
-            this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1715, 281);
+            this.checkResultSplitContainer_SPLT.SplitterDistance = 438;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
             // 
             // patientViolations_LB
@@ -704,11 +690,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.patientViolations_LB.DataSource = this.violationsBindingSource;
             this.patientViolations_LB.FormattingEnabled = true;
-            this.patientViolations_LB.ItemHeight = 16;
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
-            this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(629, 292);
+            this.patientViolations_LB.Size = new System.Drawing.Size(436, 277);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -722,20 +706,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkReportRenderer_WB.Location = new System.Drawing.Point(0, 0);
-            this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
-            this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
+            this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(20, 20);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1257, 328);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1258, 281);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1644, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(1233, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 34);
+            this.button1.Size = new System.Drawing.Size(108, 28);
             this.button1.TabIndex = 30;
-            this.button1.Text = "Test Load";
+            this.button1.Text = "Test Button";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -746,21 +729,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 42);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 34);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1925, 877);
+            this.tabControl1.Size = new System.Drawing.Size(1724, 713);
             this.tabControl1.TabIndex = 31;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.mainSplitContainer_SPLT);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1917, 848);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(1716, 687);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Invoice";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -768,11 +751,11 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.referenceDataSplitter_SPLT);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1917, 848);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(1716, 687);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reference Data";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -782,8 +765,8 @@
             this.referenceDataSplitter_SPLT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceDataSplitter_SPLT.Location = new System.Drawing.Point(5, 6);
-            this.referenceDataSplitter_SPLT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.referenceDataSplitter_SPLT.Location = new System.Drawing.Point(4, 5);
+            this.referenceDataSplitter_SPLT.Margin = new System.Windows.Forms.Padding(2);
             this.referenceDataSplitter_SPLT.Name = "referenceDataSplitter_SPLT";
             this.referenceDataSplitter_SPLT.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -805,16 +788,17 @@
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label13);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.year2Selection_CB);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label12);
-            this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(1908, 840);
-            this.referenceDataSplitter_SPLT.SplitterDistance = 420;
+            this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(1431, 682);
+            this.referenceDataSplitter_SPLT.SplitterDistance = 341;
+            this.referenceDataSplitter_SPLT.SplitterWidth = 3;
             this.referenceDataSplitter_SPLT.TabIndex = 20;
             // 
             // loadRefData_BTN
             // 
-            this.loadRefData_BTN.Location = new System.Drawing.Point(583, 11);
-            this.loadRefData_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loadRefData_BTN.Location = new System.Drawing.Point(437, 9);
+            this.loadRefData_BTN.Margin = new System.Windows.Forms.Padding(2);
             this.loadRefData_BTN.Name = "loadRefData_BTN";
-            this.loadRefData_BTN.Size = new System.Drawing.Size(181, 33);
+            this.loadRefData_BTN.Size = new System.Drawing.Size(136, 27);
             this.loadRefData_BTN.TabIndex = 7;
             this.loadRefData_BTN.Text = "Load Reference Data";
             this.loadRefData_BTN.UseVisualStyleBackColor = true;
@@ -859,12 +843,12 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn,
             this.deletedDataGridViewCheckBoxColumn});
             this.referenceData1_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData1_GV.Location = new System.Drawing.Point(3, 49);
-            this.referenceData1_GV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.referenceData1_GV.Location = new System.Drawing.Point(2, 40);
+            this.referenceData1_GV.Margin = new System.Windows.Forms.Padding(2);
             this.referenceData1_GV.Name = "referenceData1_GV";
             this.referenceData1_GV.ReadOnly = true;
             this.referenceData1_GV.RowTemplate.Height = 24;
-            this.referenceData1_GV.Size = new System.Drawing.Size(1901, 368);
+            this.referenceData1_GV.Size = new System.Drawing.Size(1426, 299);
             this.referenceData1_GV.TabIndex = 0;
             // 
             // codeRuleDataGridViewTextBoxColumn
@@ -1083,9 +1067,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(411, 11);
+            this.label8.Location = new System.Drawing.Point(308, 9);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 17);
+            this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "year:";
             // 
@@ -1099,37 +1084,39 @@
             "2017",
             "2018",
             "2019"});
-            this.year1Selection_CB.Location = new System.Drawing.Point(456, 11);
-            this.year1Selection_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.year1Selection_CB.Location = new System.Drawing.Point(342, 9);
+            this.year1Selection_CB.Margin = new System.Windows.Forms.Padding(2);
             this.year1Selection_CB.Name = "year1Selection_CB";
-            this.year1Selection_CB.Size = new System.Drawing.Size(121, 24);
+            this.year1Selection_CB.Size = new System.Drawing.Size(92, 21);
             this.year1Selection_CB.TabIndex = 9;
             this.year1Selection_CB.SelectedIndexChanged += new System.EventHandler(this.yearSelection_CB_SelectedIndexChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(787, 11);
+            this.label10.Location = new System.Drawing.Point(590, 9);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 17);
+            this.label10.Size = new System.Drawing.Size(56, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "code filter:";
             // 
             // codeFilter_TXT
             // 
-            this.codeFilter_TXT.Location = new System.Drawing.Point(867, 11);
-            this.codeFilter_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.codeFilter_TXT.Location = new System.Drawing.Point(650, 9);
+            this.codeFilter_TXT.Margin = new System.Windows.Forms.Padding(2);
             this.codeFilter_TXT.Name = "codeFilter_TXT";
-            this.codeFilter_TXT.Size = new System.Drawing.Size(109, 22);
+            this.codeFilter_TXT.Size = new System.Drawing.Size(83, 20);
             this.codeFilter_TXT.TabIndex = 11;
             this.codeFilter_TXT.TextChanged += new System.EventHandler(this.codeFilter_TXT_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 11);
+            this.label11.Location = new System.Drawing.Point(10, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 17);
+            this.label11.Size = new System.Drawing.Size(33, 13);
             this.label11.TabIndex = 13;
             this.label11.Text = "url 1: ";
             // 
@@ -1137,20 +1124,20 @@
             // 
             this.refDataURL1_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
             this.refDataURL1_CB.FormattingEnabled = true;
-            this.refDataURL1_CB.Location = new System.Drawing.Point(57, 11);
-            this.refDataURL1_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refDataURL1_CB.Location = new System.Drawing.Point(43, 9);
+            this.refDataURL1_CB.Margin = new System.Windows.Forms.Padding(2);
             this.refDataURL1_CB.Name = "refDataURL1_CB";
-            this.refDataURL1_CB.Size = new System.Drawing.Size(335, 24);
+            this.refDataURL1_CB.Size = new System.Drawing.Size(252, 21);
             this.refDataURL1_CB.TabIndex = 14;
             // 
             // refDataURL2_CB
             // 
             this.refDataURL2_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrl", true));
             this.refDataURL2_CB.FormattingEnabled = true;
-            this.refDataURL2_CB.Location = new System.Drawing.Point(57, 14);
-            this.refDataURL2_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refDataURL2_CB.Location = new System.Drawing.Point(43, 11);
+            this.refDataURL2_CB.Margin = new System.Windows.Forms.Padding(2);
             this.refDataURL2_CB.Name = "refDataURL2_CB";
-            this.refDataURL2_CB.Size = new System.Drawing.Size(335, 24);
+            this.refDataURL2_CB.Size = new System.Drawing.Size(252, 21);
             this.refDataURL2_CB.TabIndex = 18;
             // 
             // referenceData2_GV
@@ -1192,12 +1179,12 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn1,
             this.deletedDataGridViewCheckBoxColumn1});
             this.referenceData2_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData2_GV.Location = new System.Drawing.Point(3, 44);
-            this.referenceData2_GV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.referenceData2_GV.Location = new System.Drawing.Point(2, 36);
+            this.referenceData2_GV.Margin = new System.Windows.Forms.Padding(2);
             this.referenceData2_GV.Name = "referenceData2_GV";
             this.referenceData2_GV.ReadOnly = true;
             this.referenceData2_GV.RowTemplate.Height = 24;
-            this.referenceData2_GV.Size = new System.Drawing.Size(1901, 376);
+            this.referenceData2_GV.Size = new System.Drawing.Size(1426, 308);
             this.referenceData2_GV.TabIndex = 19;
             // 
             // codeRuleDataGridViewTextBoxColumn1
@@ -1411,9 +1398,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(411, 14);
+            this.label13.Location = new System.Drawing.Point(308, 11);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 17);
+            this.label13.Size = new System.Drawing.Size(30, 13);
             this.label13.TabIndex = 15;
             this.label13.Text = "year:";
             // 
@@ -1427,19 +1415,20 @@
             "2017",
             "2018",
             "2019"});
-            this.year2Selection_CB.Location = new System.Drawing.Point(456, 14);
-            this.year2Selection_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.year2Selection_CB.Location = new System.Drawing.Point(342, 11);
+            this.year2Selection_CB.Margin = new System.Windows.Forms.Padding(2);
             this.year2Selection_CB.Name = "year2Selection_CB";
-            this.year2Selection_CB.Size = new System.Drawing.Size(121, 24);
+            this.year2Selection_CB.Size = new System.Drawing.Size(92, 21);
             this.year2Selection_CB.TabIndex = 16;
             this.year2Selection_CB.SelectedIndexChanged += new System.EventHandler(this.year2Selection_CB_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 14);
+            this.label12.Location = new System.Drawing.Point(10, 11);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 17);
+            this.label12.Size = new System.Drawing.Size(33, 13);
             this.label12.TabIndex = 17;
             this.label12.Text = "url 2: ";
             // 
@@ -1449,9 +1438,9 @@
             // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1933, 919);
+            this.ClientSize = new System.Drawing.Size(1730, 747);
             this.Controls.Add(this.loadKey_BTN);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
@@ -1462,7 +1451,7 @@
             this.Controls.Add(this.apiKey_TXT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.getDentalCheckerVersionResponse_BTN);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mainForm";
             this.Text = "REST API Consumption Examples";
             this.Load += new System.EventHandler(this.mainForm_Load);

@@ -64,10 +64,22 @@ namespace RESTConsumptionExamples
         public mainForm()
         {
             InitializeComponent();
+            InitializeCustom();
             invoiceController = new InvoiceController(this, this);
             configurationController = new ConfigurationController(this);
             referenceDataController = new ReferenceDataController(this, this);
             testController = new TestController(this, this);
+        }
+
+        private void InitializeCustom()
+        {
+            DateTime now = DateTime.Now;
+            DateTime endDate = new DateTime(now.Year, now.Month, now.Day);
+            // DateTime startDate = endDate.Subtract(new TimeSpan(90, 0, 0, 0));
+            DateTime startDate = new DateTime(2016, 1, 1);
+
+            startDatePicker_DTP.Value = startDate;
+            endDatePicker_DTP.Value = endDate;
         }
 
         // Test button
@@ -107,8 +119,8 @@ namespace RESTConsumptionExamples
 
             getInvoice_BTN.Select();
 
-            startDatePicker_DTP.Value = DateTime.Now.AddDays(-31);
-            endDatePicker_DTP.Value = DateTime.Now;
+            // startDatePicker_DTP.Value = DateTime.Now.AddDays(-31);
+            // endDatePicker_DTP.Value = DateTime.Now;
 
             loading = false;
         }
@@ -331,7 +343,8 @@ namespace RESTConsumptionExamples
 
         private void button1_Click(object sender, EventArgs e)
         {
-            deSerializeTest();
+            // deSerializeTest();
+            MessageBox.Show("Date start: " + startDatePicker_DTP.Text);
         }
 
         private void apiKey_TXT_TextChanged(object sender, EventArgs e)
