@@ -146,13 +146,19 @@ namespace RESTConsumptionExamples
 
         public Configuration getConfiguration() {
 
-            configuration.apiKey = apiKey_TXT.Text;
-            configuration.urls = url_CB.Items.Cast<String>().ToList();
-            configuration.currentInvoiceId = invoiceNr_TXT.Text;
-            configuration.currentUrl = url_CB.SelectedItem.ToString();
-            configuration.refDataUrl1 = refDataURL1_CB.SelectedItem.ToString();
-            configuration.refDataUrl2 = refDataURL2_CB.SelectedItem.ToString();
-
+            try {
+                configuration.apiKey = apiKey_TXT.Text;
+                configuration.urls = url_CB.Items.Cast<String>().ToList();
+                configuration.currentInvoiceId = invoiceNr_TXT.Text;
+                configuration.currentUrl = url_CB.SelectedItem.ToString();
+                configuration.refDataUrl1 = refDataURL1_CB.SelectedItem.ToString();
+                configuration.refDataUrl2 = refDataURL2_CB.SelectedItem.ToString();
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return null;
+            }
             return configuration;
         }
 

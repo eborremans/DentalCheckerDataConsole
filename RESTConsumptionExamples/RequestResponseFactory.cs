@@ -72,11 +72,11 @@ namespace RESTConsumptionExamples
                 try
                 {
                     // Hack/workaround for dealing with https without valid certificate
-                    ServicePointManager.ServerCertificateValidationCallback = new
-                        System.Net.Security.RemoteCertificateValidationCallback
-                        (
-                            delegate { return true; }
-                        );
+                    //ServicePointManager.ServerCertificateValidationCallback = new
+                    //    System.Net.Security.RemoteCertificateValidationCallback
+                    //    (
+                    //        delegate { return true; }
+                    //    );
                     // System.Net.ServicePointManager.ServerCertificateValidationCallback = (senderX, certificate, chain, sslPolicyErrors) => { return true; };
                     using (var stream = request.GetRequestStream())
                     {
