@@ -23,6 +23,7 @@ namespace RESTConsumptionExamples
     // Main view
     public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView
     {
+        private const int CODE_RULE_COL_IDX = 0;
         private const int CODE_COL_IDX = 1;
 
         // Controls the retrieval of invoice data
@@ -80,6 +81,9 @@ namespace RESTConsumptionExamples
 
             startDatePicker_DTP.Value = startDate;
             endDatePicker_DTP.Value = endDate;
+
+            referenceData1_GV.MultiSelect = true;
+            referenceData1_GV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         // Test button
@@ -423,14 +427,26 @@ namespace RESTConsumptionExamples
         {
             matchWithWildCard(referenceData1_GV);
             matchWithWildCard(referenceData2_GV);
+            hiliteWithWildCard(referenceData1_GV);
+            hiliteWithWildCard(referenceData2_GV);
             // matchWithRegExp(referenceData1_GV);
             // matchWithRegExp(referenceData2_GV);
         }
 
+        /* 
+         * Method that shows only the rows that match the wildcard
+         */
         private void matchWithWildCard(DataGridView dataGridView)
         {
             Boolean matchFound = false;
-            for (int rowCounter = 0; rowCounter < dataGridView.RowCount; rowCounter++)
+
+            Debug.WriteLine("Updating " + dataGridView.RowCount + " grid rows");
+            //if (dataGridView.RowCount > 0)
+            //{
+            //    dataGridView.Rows[0].Visible = true;
+            //    dataGridView.FirstDisplayedScrollingRowIndex = 0;
+            //}
+            for (int rowCounter = 0; rowCounter < dataGridView.RowCount - 1; rowCounter++)
             {
                 if (codeFilter_TXT.Text != null && codeFilter_TXT.Text != "")
                 {
@@ -442,8 +458,11 @@ namespace RESTConsumptionExamples
                     }
                     catch (Exception exc)
                     {
-                        Debug.WriteLine("Let's swallow this exception for now (Empty grid cell?)" + exc.Message);
+                        Debug.WriteLine("Let's swallow this exception for now, code: " + code + " (Empty grid cell?)" + exc.Message);
+                        Debug.WriteLine("RowCounter: " + rowCounter);
                     }
+                    // Reset the selected rows because hiliteWithWildCard will be called to reestablish selected rows
+                    dataGridView.Rows[rowCounter].Selected = false;
                     if (matchFound)
                     {
                         dataGridView.Rows[rowCounter].Visible = true;
@@ -452,15 +471,94 @@ namespace RESTConsumptionExamples
                     {
                         try
                         {
+                            // Hide a row if it is not matching the filter anymore
                             dataGridView.CurrentCell = null;
                             dataGridView.Rows[rowCounter].Visible = false;
+                            dataGridView.Rows[rowCounter].Selected = false;
                         }
                         catch (Exception exc)
                         {
-                            Debug.WriteLine("Let's swallow this exception for now (DataGridException?)" + exc.Message);
+                            Debug.WriteLine("Let's swallow this exception for now, code: " + code + " (DataGridException?)" + exc.Message);
+                            Debug.WriteLine("RowCounter: " + rowCounter);
                         }
                     }
                 }
+            }
+        }
+
+        private void findCodeFilter_TXT_TextChanged(object sender, EventArgs e)
+        {
+            hiliteWithWildCard(referenceData1_GV);
+            hiliteWithWildCard(referenceData2_GV);
+        }
+
+        /* 
+         * Method that select the rows that match the wildcard and moves the cursor 
+         * to the first selected row in the grid
+         */
+        private void hiliteWithWildCard(DataGridView dataGridView)
+        {
+            Boolean matchFound = false;
+            Boolean rowsSelected = false;
+            int firstVisibleIndex = -1;
+            Debug.WriteLine("Updating " + dataGridView.RowCount + " grid rows");
+            for (int rowCounter = 0; rowCounter < dataGridView.RowCount - 1; rowCounter++)
+            {
+                if (dataGridView.Rows[rowCounter].Visible) // Can only select rows that are actually visible
+                {
+                    if(firstVisibleIndex == -1)
+                    {
+                        // Determine the first visible row as determined by the matchWithWildCard method
+                        firstVisibleIndex = rowCounter;
+                    }
+                    if (findCodeFilter_TXT.Text != null && findCodeFilter_TXT.Text != "")
+                    {
+                        String codeRule = "";
+                        try
+                        {
+                            codeRule = (String)(dataGridView.Rows[rowCounter].Cells[CODE_RULE_COL_IDX].Value);
+                            matchFound = LikeOperator.LikeString(codeRule, findCodeFilter_TXT.Text, Microsoft.VisualBasic.CompareMethod.Text);
+                        }
+                        catch (Exception exc)
+                        {
+                            Debug.WriteLine("Let's swallow this exception for now (Empty grid cell?)" + exc.Message);
+                        }
+                        if (matchFound)
+                        {
+                            dataGridView.Rows[rowCounter].Selected = true;
+                            Debug.WriteLine("Selected row " + codeRule);
+                            // Determine if at least one row is selected
+                            rowsSelected = dataGridView.Rows[rowCounter].Visible;
+                        }
+                        else
+                        {
+                            try
+                            {
+                                // Unselect a row if it is not matching the filter anymore
+                                dataGridView.CurrentCell = null;
+                                dataGridView.Rows[rowCounter].Selected = false;
+                            }
+                            catch (Exception exc)
+                            {
+                                Debug.WriteLine("Let's swallow this exception for now (DataGridException?)" + exc.Message);
+                            }
+                        }
+                    }                    
+                }
+            }
+            if (rowsSelected)
+            {
+                // For some reason the selected rows are ordered from high index to low
+                Debug.WriteLine("First selected row (" + (String)(dataGridView.SelectedRows[dataGridView.SelectedRows.Count - 1].Cells[CODE_RULE_COL_IDX].Value) + "): " + dataGridView.SelectedRows[dataGridView.SelectedRows.Count - 1].Index);
+                int firstSelectedRowIndex = dataGridView.SelectedRows[dataGridView.SelectedRows.Count - 1].Index;
+                int distanceFromFirstVisibleRow = firstSelectedRowIndex - firstVisibleIndex;
+
+                // FirstDisplayedScrollingRowIndex is the index of the first actually visible row in the grid 
+                // Note that this does not necessarily match the Visible property of the row, which is used to determine if the 
+                // row is appearing in the scrollable area of the grid
+                // Show up to 5 leading rows if possible 
+                int firstDisplayedIndex = dataGridView.SelectedRows[dataGridView.SelectedRows.Count - 1].Index - (Math.Min(5, distanceFromFirstVisibleRow));
+                dataGridView.FirstDisplayedScrollingRowIndex = firstDisplayedIndex;
             }
         }
 
@@ -542,5 +640,14 @@ namespace RESTConsumptionExamples
 
         }
 
+        private void codeFilter_TXT_MouseClick(object sender, MouseEventArgs e)
+        {
+            codeFilter_TXT.SelectAll();
+        }
+
+        private void findCodeFilter_TXT_MouseClick(object sender, MouseEventArgs e)
+        {
+            findCodeFilter_TXT.SelectAll();
+        }
     }
 }

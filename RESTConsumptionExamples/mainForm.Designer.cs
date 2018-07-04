@@ -89,6 +89,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.referenceDataSplitter_SPLT = new System.Windows.Forms.SplitContainer();
+            this.label14 = new System.Windows.Forms.Label();
+            this.findCodeFilter_TXT = new System.Windows.Forms.TextBox();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
             this.referenceData1_GV = new System.Windows.Forms.DataGridView();
             this.codeRuleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -392,7 +394,7 @@
             this.typeOfTreatmentDataGridViewTextBoxColumn});
             this.patientTreatments_DGV.DataSource = this.treatmentBindingSource;
             this.patientTreatments_DGV.Location = new System.Drawing.Point(587, 11);
-            this.patientTreatments_DGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.patientTreatments_DGV.Margin = new System.Windows.Forms.Padding(4);
             this.patientTreatments_DGV.Name = "patientTreatments_DGV";
             this.patientTreatments_DGV.ReadOnly = true;
             this.patientTreatments_DGV.Size = new System.Drawing.Size(2246, 253);
@@ -496,7 +498,7 @@
             // patientHealthInsurance_TXT
             // 
             this.patientHealthInsurance_TXT.Location = new System.Drawing.Point(149, 185);
-            this.patientHealthInsurance_TXT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.patientHealthInsurance_TXT.Margin = new System.Windows.Forms.Padding(4);
             this.patientHealthInsurance_TXT.Name = "patientHealthInsurance_TXT";
             this.patientHealthInsurance_TXT.Size = new System.Drawing.Size(169, 22);
             this.patientHealthInsurance_TXT.TabIndex = 17;
@@ -534,7 +536,7 @@
             // patientBirthdate_TXT
             // 
             this.patientBirthdate_TXT.Location = new System.Drawing.Point(149, 225);
-            this.patientBirthdate_TXT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.patientBirthdate_TXT.Margin = new System.Windows.Forms.Padding(4);
             this.patientBirthdate_TXT.Name = "patientBirthdate_TXT";
             this.patientBirthdate_TXT.Size = new System.Drawing.Size(169, 22);
             this.patientBirthdate_TXT.TabIndex = 23;
@@ -542,7 +544,7 @@
             // patientPolicyNumber_TXT
             // 
             this.patientPolicyNumber_TXT.Location = new System.Drawing.Point(149, 270);
-            this.patientPolicyNumber_TXT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.patientPolicyNumber_TXT.Margin = new System.Windows.Forms.Padding(4);
             this.patientPolicyNumber_TXT.Name = "patientPolicyNumber_TXT";
             this.patientPolicyNumber_TXT.Size = new System.Drawing.Size(169, 22);
             this.patientPolicyNumber_TXT.TabIndex = 25;
@@ -583,7 +585,7 @@
             // 
             this.mainSplitContainer_SPLT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainSplitContainer_SPLT.Location = new System.Drawing.Point(3, 2);
-            this.mainSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(4);
             this.mainSplitContainer_SPLT.Name = "mainSplitContainer_SPLT";
             this.mainSplitContainer_SPLT.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -605,7 +607,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treatmentsSplitContainer.Location = new System.Drawing.Point(5, 4);
-            this.treatmentsSplitContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treatmentsSplitContainer.Margin = new System.Windows.Forms.Padding(4);
             this.treatmentsSplitContainer.Name = "treatmentsSplitContainer";
             this.treatmentsSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -641,7 +643,7 @@
             // invoiceDate_TXT
             // 
             this.invoiceDate_TXT.Location = new System.Drawing.Point(149, 90);
-            this.invoiceDate_TXT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.invoiceDate_TXT.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceDate_TXT.Name = "invoiceDate_TXT";
             this.invoiceDate_TXT.Size = new System.Drawing.Size(169, 22);
             this.invoiceDate_TXT.TabIndex = 32;
@@ -682,7 +684,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkResultSplitContainer_SPLT.Location = new System.Drawing.Point(0, 0);
-            this.checkResultSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkResultSplitContainer_SPLT.Margin = new System.Windows.Forms.Padding(4);
             this.checkResultSplitContainer_SPLT.Name = "checkResultSplitContainer_SPLT";
             // 
             // checkResultSplitContainer_SPLT.Panel1
@@ -692,7 +694,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 348);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 344);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 584;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -706,9 +708,9 @@
             this.patientViolations_LB.FormattingEnabled = true;
             this.patientViolations_LB.ItemHeight = 16;
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
-            this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(580, 340);
+            this.patientViolations_LB.Size = new System.Drawing.Size(580, 276);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -722,10 +724,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkReportRenderer_WB.Location = new System.Drawing.Point(0, 0);
-            this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1680, 344);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1676, 340);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -789,6 +791,8 @@
             // 
             // referenceDataSplitter_SPLT.Panel1
             // 
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label14);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.findCodeFilter_TXT);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.loadRefData_BTN);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.referenceData1_GV);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label8);
@@ -808,6 +812,25 @@
             this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(1908, 839);
             this.referenceDataSplitter_SPLT.SplitterDistance = 419;
             this.referenceDataSplitter_SPLT.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(993, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(121, 17);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "jump to code rule:";
+            // 
+            // findCodeFilter_TXT
+            // 
+            this.findCodeFilter_TXT.Location = new System.Drawing.Point(1120, 11);
+            this.findCodeFilter_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.findCodeFilter_TXT.Name = "findCodeFilter_TXT";
+            this.findCodeFilter_TXT.Size = new System.Drawing.Size(109, 22);
+            this.findCodeFilter_TXT.TabIndex = 16;
+            this.findCodeFilter_TXT.Text = "*";
+            this.findCodeFilter_TXT.TextChanged += new System.EventHandler(this.findCodeFilter_TXT_TextChanged);
             // 
             // loadRefData_BTN
             // 
@@ -1122,6 +1145,7 @@
             this.codeFilter_TXT.Name = "codeFilter_TXT";
             this.codeFilter_TXT.Size = new System.Drawing.Size(109, 22);
             this.codeFilter_TXT.TabIndex = 11;
+            this.codeFilter_TXT.Text = "*";
             this.codeFilter_TXT.TextChanged += new System.EventHandler(this.codeFilter_TXT_TextChanged);
             // 
             // label11
@@ -1633,6 +1657,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn inputFileIdDataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxCountOnObjectTypeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn deletedDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox findCodeFilter_TXT;
     }
 }
 
