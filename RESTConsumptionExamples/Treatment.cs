@@ -15,7 +15,7 @@ namespace RESTConsumptionExamples
         public String          referenceNumber   { get; set; }
         public Decimal         tariffAmount      { get; set; }
         public String          therapistAGBCode  { get; set; }
-        public Int16           typeOfTreatment   { get; set; }
+        public Int16?           typeOfTreatment   { get; set; }
         public Decimal         calculatedAmount  { get; set; }
         public List<Violation> violations        { get; set; }
 
@@ -33,8 +33,8 @@ namespace RESTConsumptionExamples
             short nrOfTreatments, 
             string referenceNumber, 
             decimal tariffAmount, 
-            string therapistAGBCode, 
-            Int16 typeOfTreatment) : base(code, description, addendum)
+            string therapistAGBCode,
+            Int16? typeOfTreatment) : base(code, description, addendum)
         {
             this.calculatedAmount = calculatedAmount;
             this.date = date;

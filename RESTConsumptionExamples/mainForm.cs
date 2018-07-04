@@ -140,7 +140,6 @@ namespace RESTConsumptionExamples
             invoiceController.getInvoicePublicIds();
         }
 
-        // ------------------ IInputView ------------------
         public string getAPIKey()
         {
             return apiKey_TXT.Text;
@@ -156,9 +155,28 @@ namespace RESTConsumptionExamples
             return url_CB.Text;
         }
 
-        public Configuration getConfiguration() {
 
-            try {
+        public void setSelectedURL(String url) { url_CB.Text = url; }
+
+        public List<String> getURLs() { return url_CB.Items.Cast<String>().ToList(); }
+        public void setURLs(List<String> urls)
+        {
+            url_CB.Items.Clear();
+            url_CB.Items.AddRange(urls.ToArray());
+        }
+
+        // ------------------ IInputView ------------------
+        // getConfiguration();
+        // setConfiguration(Configuration configuration);
+        // getResponse(HttpWebRequest request);
+        // getRefDataYear();
+        // getDateRange();
+
+        public Configuration getConfiguration()
+        {
+
+            try
+            {
                 configuration.apiKey = apiKey_TXT.Text;
                 configuration.urls = url_CB.Items.Cast<String>().ToList();
                 configuration.currentInvoiceId = invoiceNr_TXT.Text;
@@ -166,7 +184,7 @@ namespace RESTConsumptionExamples
                 configuration.refDataUrl1 = refDataURL1_CB.SelectedItem.ToString();
                 configuration.refDataUrl2 = refDataURL2_CB.SelectedItem.ToString();
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
                 return null;
@@ -190,15 +208,6 @@ namespace RESTConsumptionExamples
             //refDataURL2_CB.SelectedText = this.configuration.refDataUrl2;
         }
 
-        public void setSelectedURL(String url) { url_CB.Text = url; }
-
-        public List<String> getURLs() { return url_CB.Items.Cast<String>().ToList(); }
-        public void setURLs(List<String> urls)
-        {
-            url_CB.Items.Clear();
-            url_CB.Items.AddRange(urls.ToArray());
-        }
-
         public HttpWebResponse getResponse(HttpWebRequest request) 
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
@@ -210,11 +219,25 @@ namespace RESTConsumptionExamples
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                // MessageBox.Show(exc.Message);
                 return null;
             }
 
             return response;
+        }
+
+        public int getRefDataYear()
+        {
+            return yearStringToInteger(year1Selection_CB.SelectedItem.ToString());
+        }
+
+        public DateRangeRequest getDateRange()
+        {
+            DateRangeRequest request = new DateRangeRequest();
+            request.startDate = startDatePicker_DTP.Value;
+            request.endDate = endDatePicker_DTP.Value;
+
+            return request;
         }
 
         // ------------------ IInvoiceView ------------------
@@ -380,11 +403,6 @@ namespace RESTConsumptionExamples
             return year;
         }
 
-        public int getRefDataYear()
-        {
-            return yearStringToInteger(year1Selection_CB.SelectedItem.ToString());
-        }
-
         public void setReferenceDataList1(List<ReferenceData> referenceDataList)
         {
             referenceData1 = referenceDataList;
@@ -399,15 +417,6 @@ namespace RESTConsumptionExamples
             SortableBindingList<ReferenceData> sortableReferenceData = new SortableBindingList<ReferenceData>(referenceData2.ToList());
             referenceData2_GV.DataSource = sortableReferenceData;
             referenceData2_GV.Sort(referenceData2_GV.Columns[0], ListSortDirection.Ascending);
-        }
-
-        public DateRangeRequest getDateRange()
-        {
-            DateRangeRequest request = new DateRangeRequest();
-            request.startDate = startDatePicker_DTP.Value;
-            request.endDate = endDatePicker_DTP.Value;
-
-            return request;
         }
 
         private void codeFilter_TXT_TextChanged(object sender, EventArgs e)

@@ -62,7 +62,7 @@ namespace RESTConsumptionExamples
                 JToken jt = JToken.Parse(content);
                 formattedJson = jt.ToString();
 
-                JsonSerializerSettings settings = new JsonSerializerSettings()
+                JsonSerializerSettings settings = new JsonSerializerSettings
                 {
                     NullValueHandling = NullValueHandling.Ignore,
                     MissingMemberHandling = MissingMemberHandling.Ignore
@@ -103,6 +103,7 @@ namespace RESTConsumptionExamples
             HttpWebResponse response = inputView.getResponse(request);
             if (null == response)
             {
+                invoiceView.setCustomerMessage("Couldn't retrieve reponse for request:" + request.RequestUri.ToString());
                 return;
             }
 
