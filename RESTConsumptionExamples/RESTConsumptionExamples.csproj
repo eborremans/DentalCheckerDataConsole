@@ -82,6 +82,9 @@
   <ItemGroup>
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationController.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerController.cs" />
+    <Compile Include="ICheckInvoiceView.cs" />
     <Compile Include="IInvoiceView.cs" />
     <Compile Include="IInputView.cs" />
     <Compile Include="InvoiceController.cs" />
@@ -102,6 +105,7 @@
     <Compile Include="SimpleReferenceData.cs" />
     <Compile Include="SortableBindingList.cs" />
     <Compile Include="TestController.cs" />
+    <Compile Include="InputTreatment.cs" />
     <Compile Include="Treatment.cs" />
     <Compile Include="SimpleTreatment.cs" />
     <Compile Include="VektisUtils.cs" />

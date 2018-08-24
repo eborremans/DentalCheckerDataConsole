@@ -29,13 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.getInvoicePublicIds_BTN = new System.Windows.Forms.Button();
             this.getDentalCheckerVersionResponse_BTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -161,6 +168,23 @@
             this.label13 = new System.Windows.Forms.Label();
             this.year2Selection_CB = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.getCustomerExternalIds_BTN = new System.Windows.Forms.Button();
+            this.customer_TXT = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
@@ -192,6 +216,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.referenceData1_GV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -417,8 +445,8 @@
             // dentalElementCodeDataGridViewTextBoxColumn
             // 
             this.dentalElementCodeDataGridViewTextBoxColumn.DataPropertyName = "dentalElementCode";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dentalElementCodeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dentalElementCodeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
             this.dentalElementCodeDataGridViewTextBoxColumn.HeaderText = "dentalElementCode";
             this.dentalElementCodeDataGridViewTextBoxColumn.Name = "dentalElementCodeDataGridViewTextBoxColumn";
             this.dentalElementCodeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -426,8 +454,8 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
             this.dateDataGridViewTextBoxColumn.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -435,8 +463,8 @@
             // tariffAmountDataGridViewTextBoxColumn
             // 
             this.tariffAmountDataGridViewTextBoxColumn.DataPropertyName = "tariffAmount";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.tariffAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.tariffAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
             this.tariffAmountDataGridViewTextBoxColumn.HeaderText = "tariffAmount";
             this.tariffAmountDataGridViewTextBoxColumn.Name = "tariffAmountDataGridViewTextBoxColumn";
             this.tariffAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -444,8 +472,8 @@
             // declaredAmountDataGridViewTextBoxColumn
             // 
             this.declaredAmountDataGridViewTextBoxColumn.DataPropertyName = "declaredAmount";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.declaredAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.declaredAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
             this.declaredAmountDataGridViewTextBoxColumn.HeaderText = "declaredAmount";
             this.declaredAmountDataGridViewTextBoxColumn.Name = "declaredAmountDataGridViewTextBoxColumn";
             this.declaredAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -453,8 +481,8 @@
             // calculatedAmountDataGridViewTextBoxColumn
             // 
             this.calculatedAmountDataGridViewTextBoxColumn.DataPropertyName = "calculatedAmount";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.calculatedAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.calculatedAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
             this.calculatedAmountDataGridViewTextBoxColumn.HeaderText = "calculatedAmount";
             this.calculatedAmountDataGridViewTextBoxColumn.Name = "calculatedAmountDataGridViewTextBoxColumn";
             this.calculatedAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -462,8 +490,8 @@
             // nrOfTreatmentsDataGridViewTextBoxColumn
             // 
             this.nrOfTreatmentsDataGridViewTextBoxColumn.DataPropertyName = "nrOfTreatments";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.nrOfTreatmentsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.nrOfTreatmentsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
             this.nrOfTreatmentsDataGridViewTextBoxColumn.HeaderText = "nrOfTreatments";
             this.nrOfTreatmentsDataGridViewTextBoxColumn.Name = "nrOfTreatmentsDataGridViewTextBoxColumn";
             this.nrOfTreatmentsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -485,8 +513,8 @@
             // typeOfTreatmentDataGridViewTextBoxColumn
             // 
             this.typeOfTreatmentDataGridViewTextBoxColumn.DataPropertyName = "typeOfTreatment";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.typeOfTreatmentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.typeOfTreatmentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
             this.typeOfTreatmentDataGridViewTextBoxColumn.HeaderText = "typeOfTreatment";
             this.typeOfTreatmentDataGridViewTextBoxColumn.Name = "typeOfTreatmentDataGridViewTextBoxColumn";
             this.typeOfTreatmentDataGridViewTextBoxColumn.ReadOnly = true;
@@ -694,7 +722,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 344);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 342);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 584;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -710,7 +738,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(580, 276);
+            this.patientViolations_LB.Size = new System.Drawing.Size(580, 244);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -727,7 +755,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1676, 340);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1674, 338);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -748,6 +776,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 42);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -1467,6 +1496,162 @@
             this.label12.TabIndex = 17;
             this.label12.Text = "url 2: ";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.getCustomerExternalIds_BTN);
+            this.tabPage3.Controls.Add(this.customer_TXT);
+            this.tabPage3.Controls.Add(this.panel1);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.customerExternalIds_CB);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(2291, 849);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Check Declaration";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // getCustomerExternalIds_BTN
+            // 
+            this.getCustomerExternalIds_BTN.Location = new System.Drawing.Point(338, 28);
+            this.getCustomerExternalIds_BTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getCustomerExternalIds_BTN.Name = "getCustomerExternalIds_BTN";
+            this.getCustomerExternalIds_BTN.Size = new System.Drawing.Size(213, 30);
+            this.getCustomerExternalIds_BTN.TabIndex = 20;
+            this.getCustomerExternalIds_BTN.Text = "Get Customer External Ids";
+            this.getCustomerExternalIds_BTN.UseVisualStyleBackColor = true;
+            this.getCustomerExternalIds_BTN.Click += new System.EventHandler(this.getCustomerExternalIds_BTN_Click);
+            // 
+            // customer_TXT
+            // 
+            this.customer_TXT.Location = new System.Drawing.Point(22, 83);
+            this.customer_TXT.Multiline = true;
+            this.customer_TXT.Name = "customer_TXT";
+            this.customer_TXT.Size = new System.Drawing.Size(537, 228);
+            this.customer_TXT.TabIndex = 19;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(19, 330);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1649, 430);
+            this.panel1.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn11});
+            this.dataGridView1.DataSource = this.treatmentBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1174, 253);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "code";
+            this.dataGridViewTextBoxColumn1.HeaderText = "code";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "description";
+            this.dataGridViewTextBoxColumn2.HeaderText = "description";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "dentalElementCode";
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dataGridViewTextBoxColumn3.HeaderText = "dentalElementCode";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "date";
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dataGridViewTextBoxColumn4.HeaderText = "date";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "tariffAmount";
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dataGridViewTextBoxColumn5.HeaderText = "tariffAmount";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "declaredAmount";
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle25;
+            this.dataGridViewTextBoxColumn6.HeaderText = "declaredAmount";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "calculatedAmount";
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle26;
+            this.dataGridViewTextBoxColumn7.HeaderText = "calculatedAmount";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "nrOfTreatments";
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle27;
+            this.dataGridViewTextBoxColumn8.HeaderText = "nrOfTreatments";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "typeOfTreatment";
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle28;
+            this.dataGridViewTextBoxColumn11.HeaderText = "typeOfTreatment";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // treatmentBindingSource1
+            // 
+            this.treatmentBindingSource1.DataSource = typeof(RESTConsumptionExamples.Treatment);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(19, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(117, 17);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Select customer: ";
+            // 
+            // customerExternalIds_CB
+            // 
+            this.customerExternalIds_CB.FormattingEnabled = true;
+            this.customerExternalIds_CB.Location = new System.Drawing.Point(142, 32);
+            this.customerExternalIds_CB.Name = "customerExternalIds_CB";
+            this.customerExternalIds_CB.Size = new System.Drawing.Size(169, 24);
+            this.customerExternalIds_CB.TabIndex = 0;
+            // 
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
@@ -1525,6 +1710,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.referenceData1_GV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1659,6 +1849,23 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn deletedDataGridViewCheckBoxColumn1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox findCodeFilter_TXT;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox customer_TXT;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox customerExternalIds_CB;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.BindingSource treatmentBindingSource1;
+        private System.Windows.Forms.Button getCustomerExternalIds_BTN;
     }
 }
 

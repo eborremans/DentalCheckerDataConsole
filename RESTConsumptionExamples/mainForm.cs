@@ -21,13 +21,15 @@ using Microsoft.VisualBasic.CompilerServices;
 namespace RESTConsumptionExamples
 {
     // Main view
-    public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView
+    public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView, ICheckInvoiceView
     {
         private const int CODE_RULE_COL_IDX = 0;
         private const int CODE_COL_IDX = 1;
 
         // Controls the retrieval of invoice data
-        private InvoiceController invoiceController = null; 
+        private InvoiceController invoiceController = null;
+        // Controls the retrieval of customer data
+        private CustomerController customerController = null;
         // Controls the retrieval and storage of configuration data
         private ConfigurationController configurationController = null;
         // Controls test functionality
@@ -55,6 +57,8 @@ namespace RESTConsumptionExamples
         public List<ReferenceData> referenceData1 { get; set; }
         // Lower reference data grid contents
         public List<ReferenceData> referenceData2 { get; set; }
+        // Check declaration grid input treatments
+        public List<Treatment> inputTreatments { get; set; }
 
         // Configuration class
         private Configuration configuration = new Configuration();
@@ -67,6 +71,7 @@ namespace RESTConsumptionExamples
             InitializeComponent();
             InitializeCustom();
             invoiceController = new InvoiceController(this, this);
+            customerController = new CustomerController(this, this);
             configurationController = new ConfigurationController(this);
             referenceDataController = new ReferenceDataController(this, this);
             testController = new TestController(this, this);
@@ -655,6 +660,31 @@ namespace RESTConsumptionExamples
         private void findCodeFilter_TXT_MouseClick(object sender, MouseEventArgs e)
         {
             findCodeFilter_TXT.SelectAll();
+        }
+
+        private void getCustomerExternalIds_BTN_Click(object sender, EventArgs e)
+        {
+            customerController.getCustomerExternalIds();
+        }
+
+        public void setCustomerExternalIds(List<string> customerExternalIds)
+        {
+            customerExternalIds_CB.DataSource = customerExternalIds;
+        }
+
+        public void setCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void uploadInvoice()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void checkInvoice(string invoiceId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -42,6 +42,11 @@ namespace RESTConsumptionExamples
             return createRequest(url + "refdata/" + year, "", apiKey);
         }
 
+        public static HttpWebRequest createCustomerExternalIdsRequest(String url, String apiKey)
+        {
+            return createRequest(url + "customer/customerExternalIds", "", apiKey);
+        }
+  
         public static HttpWebRequest createRequest(String url, String callerID, String apiKey, DateRangeRequest dateRangeRequest = null)
         {
             HttpWebRequest request = null;
