@@ -389,12 +389,14 @@ namespace RESTConsumptionExamples
         {
             String year1 = year1Selection_CB.SelectedItem.ToString();
             referenceDataController.getReferenceData1(yearStringToInteger(year1));
+            reselectWithFilters();
         }
 
         private void loadReferenceData2()
         {
             String year2 = year2Selection_CB.SelectedItem.ToString();
             referenceDataController.getReferenceData2(yearStringToInteger(year2));
+            reselectWithFilters();
         }
 
         private int yearStringToInteger(String yearString)
@@ -424,6 +426,11 @@ namespace RESTConsumptionExamples
         }
 
         private void codeFilter_TXT_TextChanged(object sender, EventArgs e)
+        {
+            reselectWithFilters();
+        }
+
+        private void reselectWithFilters()
         {
             matchWithWildCard(referenceData1_GV);
             matchWithWildCard(referenceData2_GV);
