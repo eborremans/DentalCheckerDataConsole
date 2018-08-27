@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +47,58 @@ namespace RESTConsumptionExamples
             List<String> customerExternalIdsList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<String>>(content);
 
             checkInvoiceView.setCustomerExternalIds(customerExternalIdsList);
+        }
+
+        public void getCustomerJSon()
+        {
+            System.Net.HttpWebRequest request = RequestResponseFactory.createCustomerRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, checkInvoiceView.getCurrentCustomerId());
+            if (null == request)
+            {
+                return;
+            }
+
+            System.Net.HttpWebResponse response = inputView.getResponse(request);
+            if (null == response)
+            {
+                return;
+            }
+
+            String content = String.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            Customer customer = null;
+            String formattedJson = "<No customer JSon found>";
+
+            try
+            {
+                JToken jt = JToken.Parse(content);
+                formattedJson = jt.ToString();
+
+                JsonSerializerSettings settings = new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    MissingMemberHandling = MissingMemberHandling.Ignore
+                };
+
+                customer = Newtonsoft.Json.JsonConvert.DeserializeObject<Customer>(content, settings);
+                if (null != customer)
+                {
+                    checkInvoiceView.setCustomer(customer);
+                    checkInvoiceView.setCustomerJSon(formattedJson);
+                }
+            }
+            catch (Exception exc)
+            {
+                checkInvoiceView.setMessage(exc.Message);
+            }
+
+            return;
         }
     }
 }

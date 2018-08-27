@@ -18,11 +18,14 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using Microsoft.VisualBasic.CompilerServices;
 
+
 namespace RESTConsumptionExamples
 {
     // Main view
     public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView, ICheckInvoiceView
     {
+        public enum TreatmentGridColumns : int { CODE = 0, DESCRIPTION = 1}
+
         private const int CODE_RULE_COL_IDX = 0;
         private const int CODE_COL_IDX = 1;
 
@@ -57,14 +60,24 @@ namespace RESTConsumptionExamples
         public List<ReferenceData> referenceData1 { get; set; }
         // Lower reference data grid contents
         public List<ReferenceData> referenceData2 { get; set; }
-        // Check declaration grid input treatments
-        public List<Treatment> inputTreatments { get; set; }
 
         // Configuration class
         private Configuration configuration = new Configuration();
 
         // To mark the phase where the main form is being loaded
         private bool loading = true;
+
+        // Currently selected customer
+        private Customer customer = null;
+
+        // Invoice to be uploaded and checked
+        private SimpleInvoice newInvoice = null;
+        // Check declaration grid input treatments
+        public List<Treatment> inputTreatments { get; set; }
+        // Treatment codes
+        public List<TreatmentCode> treatmentCodes { get; set; }
+
+        public Dictionary<String, TreatmentCode> treatmentDescriptions = new Dictionary<String, TreatmentCode>();
 
         public mainForm()
         {
@@ -376,7 +389,10 @@ namespace RESTConsumptionExamples
         private void button1_Click(object sender, EventArgs e)
         {
             // deSerializeTest();
-            MessageBox.Show("Date start: " + startDatePicker_DTP.Text);
+            String selectedPatientId = patientExternalId_CB.SelectedItem.ToString();
+            Patient selectedPatient = invoicePatients[selectedPatientId];
+
+            Debug.WriteLine("Code: " + selectedPatient.treatments[0].code);
         }
 
         private void apiKey_TXT_TextChanged(object sender, EventArgs e)
@@ -672,9 +688,33 @@ namespace RESTConsumptionExamples
             customerExternalIds_CB.DataSource = customerExternalIds;
         }
 
+        // ------------------ ICheckInvoiceView ------------------
+
         public void setCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            this.customer = customer;
+            if(null != this.customer)
+            {
+                newInvoice = new SimpleInvoice();
+                newInvoice.customerExternalId = customer.customerExternalId;
+
+                customerExternalId_TXT.Text = customer.customerExternalId;
+
+                //newInvoice.clinicAGBCode = clinicAGBCode;
+                //newInvoice.customerExternalId = customerExternalId;
+                //newInvoice.dcInvoicePublicId = dcInvoicePublicId;
+                //newInvoice.declarerAGBCode = declarerAGBCode;
+                //newInvoice.healthcareProviderName = healthcareProviderName;
+                //newInvoice.institutionAGBCdde = institutionAGBCdde;
+                //newInvoice.invoiceDate = invoiceDate;
+                //newInvoice.invoiceNumber = invoiceNumber;
+                //newInvoice.patients = patients;
+
+                inputTreatments = new List<Treatment>();
+                Treatment newTreatment = new Treatment();
+                inputTreatments.Add(newTreatment);
+                invoiceTreatments_GV.DataSource = new BindingList < Treatment > (inputTreatments);
+            }
         }
 
         public void uploadInvoice()
@@ -685,6 +725,68 @@ namespace RESTConsumptionExamples
         public void checkInvoice(string invoiceId)
         {
             throw new NotImplementedException();
+        }
+
+        public string getCurrentCustomerId()
+        {
+            return customerExternalIds_CB.SelectedItem.ToString();
+        }
+
+        public void setMessage(String message)
+        {
+            checkInvoiceMessage_TXT.Text = message;
+        }
+
+        public void setCustomerJSon(String json)
+        {
+            customerJSon_TXT.Text = json;
+        }
+
+        private void customerExternalIds_CB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            customerController.getCustomerJSon();
+            if (treatmentCodes.Count == 0) // url changed
+            { 
+                referenceDataController.getTreatmentCodes();
+            }
+        }
+
+        private void invoiceTreatments_GV_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+           if (inputTreatments.Count > 0) {
+                if (e.ColumnIndex == (int)TreatmentGridColumns.CODE)
+                {
+                    Treatment editedTreatment = inputTreatments[e.RowIndex];
+                    if (treatmentDescriptions.ContainsKey(editedTreatment.code)) {
+                        TreatmentCode treatmentCode = treatmentDescriptions[editedTreatment.code];
+                        if (null != treatmentCode)
+                        {
+                            editedTreatment.description = treatmentCode.description;
+                            Debug.WriteLine("Set description for " + editedTreatment.code + " to " + editedTreatment.description);
+                        }
+                    }
+                }
+           }
+        }
+
+        public void setTreatmentCodes(List<TreatmentCode> treatmentCodes)
+        {
+            this.treatmentCodes = treatmentCodes;
+            treatmentCodes_TXT.Text = "";
+
+            foreach (TreatmentCode treatmentCode in treatmentCodes)
+            {
+                if (!treatmentDescriptions.ContainsKey(treatmentCode.code)) { 
+                    treatmentDescriptions[treatmentCode.code] = treatmentCode;
+                    treatmentCodes_TXT.AppendText(treatmentCode.code + " : " + treatmentCode.description + "\n");
+                }
+            }
+        }
+
+        private void url_CB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            treatmentCodes = new List<TreatmentCode>();
+            treatmentDescriptions = new Dictionary<string, TreatmentCode>();
         }
     }
 }

@@ -15,11 +15,12 @@ namespace RESTConsumptionExamples
         public String dcInvoicePublicId { get; set; }
         public String declarerAGBCode { get; set; }
         public String healthcareProviderName { get; set; }
-        public String institutionAGBCdde { get; set; }
+        public String institutionAGBCode { get; set; }
         public String invoiceDate { get; set; }
         public String invoiceNumber { get; set; }
         public List<Patient> patients { get; set; }
 
+        public SimpleInvoice() { }
         public SimpleInvoice(
             string invoicePublicId,
             string clinicAGBCode, 
@@ -27,7 +28,7 @@ namespace RESTConsumptionExamples
             string dcInvoicePublicId, 
             string declarerAGBCode, 
             string healthcareProviderName, 
-            string institutionAGBCdde, 
+            string institutionAGBCode, 
             string invoiceDate, 
             string invoiceNumber, 
             List<Patient> patients
@@ -40,7 +41,7 @@ namespace RESTConsumptionExamples
             this.dcInvoicePublicId = dcInvoicePublicId;
             this.declarerAGBCode = declarerAGBCode;
             this.healthcareProviderName = healthcareProviderName;
-            this.institutionAGBCdde = institutionAGBCdde;
+            this.institutionAGBCode = institutionAGBCode;
             this.invoiceDate = invoiceDate;
             this.invoiceNumber = invoiceNumber;
             this.patients = patients;
@@ -62,7 +63,7 @@ namespace RESTConsumptionExamples
             text.AppendLine();
             text.Append("healthcareProviderName :" + healthcareProviderName);
             text.AppendLine();
-            text.Append("institutionAGBCdde     :" + institutionAGBCdde);
+            text.Append("institutionAGBCdde     :" + institutionAGBCode);
             text.AppendLine();
             text.Append("invoiceDate            :" + invoiceDate);
             text.AppendLine();

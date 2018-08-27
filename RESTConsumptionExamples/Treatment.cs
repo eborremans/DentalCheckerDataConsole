@@ -15,9 +15,11 @@ namespace RESTConsumptionExamples
         public String          referenceNumber   { get; set; }
         public Decimal         tariffAmount      { get; set; }
         public String          therapistAGBCode  { get; set; }
-        public Int16?           typeOfTreatment   { get; set; }
+        public Int16?          typeOfTreatment   { get; set; }
         public Decimal         calculatedAmount  { get; set; }
         public List<Violation> violations        { get; set; }
+
+        public Treatment() : base("", "", "") { }
 
         public Treatment(
             string code,

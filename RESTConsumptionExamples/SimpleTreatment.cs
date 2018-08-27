@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,14 @@ namespace RESTConsumptionExamples
 {
     public class SimpleTreatment
     {
-        public String code { get; set; }
+        private String _code;
+        public String code {
+            get { return _code; }
+            set {
+                this._code = value;
+                //Debug.WriteLine("Code: " + this.code);
+            }
+        }
         public String description { get; set; }
         public String addendum { get; set; }
 

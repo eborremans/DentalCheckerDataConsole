@@ -15,5 +15,6 @@ namespace RESTConsumptionExamples
         HttpWebResponse getResponse(HttpWebRequest request);
         int getRefDataYear();
         DateRangeRequest getDateRange();
+        void setTreatmentCodes(List<TreatmentCode> treatmentCodes);
     }
 }

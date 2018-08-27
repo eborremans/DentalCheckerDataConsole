@@ -55,7 +55,7 @@ namespace RESTConsumptionExamples
             }
 
             SimpleInvoice invoice = null;
-            String formattedJson = "<No JSon found>";
+            String formattedJson = "<No invoice JSon found>";
 
             try
             {

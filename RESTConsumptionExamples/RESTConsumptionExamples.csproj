@@ -108,6 +108,7 @@
     <Compile Include="InputTreatment.cs" />
     <Compile Include="Treatment.cs" />
     <Compile Include="SimpleTreatment.cs" />
+    <Compile Include="TreatmentCode.cs" />
     <Compile Include="VektisUtils.cs" />
     <Compile Include="Violation.cs" />
     <EmbeddedResource Include="mainForm.resx">

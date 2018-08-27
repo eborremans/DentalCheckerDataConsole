@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.getInvoicePublicIds_BTN = new System.Windows.Forms.Button();
             this.getDentalCheckerVersionResponse_BTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -169,10 +169,30 @@
             this.year2Selection_CB = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.treatmentCodes_TXT = new System.Windows.Forms.TextBox();
+            this.newInvoiceNumber_TXT = new System.Windows.Forms.TextBox();
+            this.newInvoiceDate_TXT = new System.Windows.Forms.TextBox();
+            this.institutionAGBCode_TXT = new System.Windows.Forms.TextBox();
+            this.healthcareProviderName_TXT = new System.Windows.Forms.TextBox();
+            this.declarerAGBCode_TXT = new System.Windows.Forms.TextBox();
+            this.newDcInvoicePublicId_TXT = new System.Windows.Forms.TextBox();
+            this.customerExternalId_TXT = new System.Windows.Forms.TextBox();
+            this.clinicAGBCode_TXT = new System.Windows.Forms.TextBox();
+            this.newInvoicePublicId_TXT = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkInvoiceMessage_TXT = new System.Windows.Forms.TextBox();
             this.getCustomerExternalIds_BTN = new System.Windows.Forms.Button();
-            this.customer_TXT = new System.Windows.Forms.TextBox();
+            this.customerJSon_TXT = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.invoiceTreatments_GV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -218,7 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceTreatments_GV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -323,6 +343,7 @@
             this.url_CB.Name = "url_CB";
             this.url_CB.Size = new System.Drawing.Size(368, 24);
             this.url_CB.TabIndex = 12;
+            this.url_CB.SelectedIndexChanged += new System.EventHandler(this.url_CB_SelectedIndexChanged);
             // 
             // configurationBindingSource
             // 
@@ -445,8 +466,8 @@
             // dentalElementCodeDataGridViewTextBoxColumn
             // 
             this.dentalElementCodeDataGridViewTextBoxColumn.DataPropertyName = "dentalElementCode";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dentalElementCodeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dentalElementCodeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.dentalElementCodeDataGridViewTextBoxColumn.HeaderText = "dentalElementCode";
             this.dentalElementCodeDataGridViewTextBoxColumn.Name = "dentalElementCodeDataGridViewTextBoxColumn";
             this.dentalElementCodeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -454,8 +475,8 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateDataGridViewTextBoxColumn.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -463,8 +484,8 @@
             // tariffAmountDataGridViewTextBoxColumn
             // 
             this.tariffAmountDataGridViewTextBoxColumn.DataPropertyName = "tariffAmount";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.tariffAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.tariffAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.tariffAmountDataGridViewTextBoxColumn.HeaderText = "tariffAmount";
             this.tariffAmountDataGridViewTextBoxColumn.Name = "tariffAmountDataGridViewTextBoxColumn";
             this.tariffAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -472,8 +493,8 @@
             // declaredAmountDataGridViewTextBoxColumn
             // 
             this.declaredAmountDataGridViewTextBoxColumn.DataPropertyName = "declaredAmount";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.declaredAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.declaredAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.declaredAmountDataGridViewTextBoxColumn.HeaderText = "declaredAmount";
             this.declaredAmountDataGridViewTextBoxColumn.Name = "declaredAmountDataGridViewTextBoxColumn";
             this.declaredAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -481,8 +502,8 @@
             // calculatedAmountDataGridViewTextBoxColumn
             // 
             this.calculatedAmountDataGridViewTextBoxColumn.DataPropertyName = "calculatedAmount";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.calculatedAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.calculatedAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.calculatedAmountDataGridViewTextBoxColumn.HeaderText = "calculatedAmount";
             this.calculatedAmountDataGridViewTextBoxColumn.Name = "calculatedAmountDataGridViewTextBoxColumn";
             this.calculatedAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -490,8 +511,8 @@
             // nrOfTreatmentsDataGridViewTextBoxColumn
             // 
             this.nrOfTreatmentsDataGridViewTextBoxColumn.DataPropertyName = "nrOfTreatments";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.nrOfTreatmentsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.nrOfTreatmentsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.nrOfTreatmentsDataGridViewTextBoxColumn.HeaderText = "nrOfTreatments";
             this.nrOfTreatmentsDataGridViewTextBoxColumn.Name = "nrOfTreatmentsDataGridViewTextBoxColumn";
             this.nrOfTreatmentsDataGridViewTextBoxColumn.ReadOnly = true;
@@ -513,8 +534,8 @@
             // typeOfTreatmentDataGridViewTextBoxColumn
             // 
             this.typeOfTreatmentDataGridViewTextBoxColumn.DataPropertyName = "typeOfTreatment";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.typeOfTreatmentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.typeOfTreatmentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.typeOfTreatmentDataGridViewTextBoxColumn.HeaderText = "typeOfTreatment";
             this.typeOfTreatmentDataGridViewTextBoxColumn.Name = "typeOfTreatmentDataGridViewTextBoxColumn";
             this.typeOfTreatmentDataGridViewTextBoxColumn.ReadOnly = true;
@@ -722,7 +743,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 342);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 329);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 584;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -738,7 +759,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(580, 244);
+            this.patientViolations_LB.Size = new System.Drawing.Size(580, 36);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -755,7 +776,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1674, 338);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1661, 325);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -1498,8 +1519,28 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.treatmentCodes_TXT);
+            this.tabPage3.Controls.Add(this.newInvoiceNumber_TXT);
+            this.tabPage3.Controls.Add(this.newInvoiceDate_TXT);
+            this.tabPage3.Controls.Add(this.institutionAGBCode_TXT);
+            this.tabPage3.Controls.Add(this.healthcareProviderName_TXT);
+            this.tabPage3.Controls.Add(this.declarerAGBCode_TXT);
+            this.tabPage3.Controls.Add(this.newDcInvoicePublicId_TXT);
+            this.tabPage3.Controls.Add(this.customerExternalId_TXT);
+            this.tabPage3.Controls.Add(this.clinicAGBCode_TXT);
+            this.tabPage3.Controls.Add(this.newInvoicePublicId_TXT);
+            this.tabPage3.Controls.Add(this.label24);
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Controls.Add(this.label22);
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.checkInvoiceMessage_TXT);
             this.tabPage3.Controls.Add(this.getCustomerExternalIds_BTN);
-            this.tabPage3.Controls.Add(this.customer_TXT);
+            this.tabPage3.Controls.Add(this.customerJSon_TXT);
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.customerExternalIds_CB);
@@ -1510,6 +1551,166 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check Declaration";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // treatmentCodes_TXT
+            // 
+            this.treatmentCodes_TXT.Location = new System.Drawing.Point(683, 83);
+            this.treatmentCodes_TXT.Multiline = true;
+            this.treatmentCodes_TXT.Name = "treatmentCodes_TXT";
+            this.treatmentCodes_TXT.Size = new System.Drawing.Size(936, 228);
+            this.treatmentCodes_TXT.TabIndex = 40;
+            // 
+            // newInvoiceNumber_TXT
+            // 
+            this.newInvoiceNumber_TXT.Location = new System.Drawing.Point(497, 283);
+            this.newInvoiceNumber_TXT.Name = "newInvoiceNumber_TXT";
+            this.newInvoiceNumber_TXT.Size = new System.Drawing.Size(164, 22);
+            this.newInvoiceNumber_TXT.TabIndex = 39;
+            // 
+            // newInvoiceDate_TXT
+            // 
+            this.newInvoiceDate_TXT.Location = new System.Drawing.Point(497, 258);
+            this.newInvoiceDate_TXT.Name = "newInvoiceDate_TXT";
+            this.newInvoiceDate_TXT.Size = new System.Drawing.Size(164, 22);
+            this.newInvoiceDate_TXT.TabIndex = 38;
+            // 
+            // institutionAGBCode_TXT
+            // 
+            this.institutionAGBCode_TXT.Location = new System.Drawing.Point(498, 233);
+            this.institutionAGBCode_TXT.Name = "institutionAGBCode_TXT";
+            this.institutionAGBCode_TXT.Size = new System.Drawing.Size(164, 22);
+            this.institutionAGBCode_TXT.TabIndex = 37;
+            // 
+            // healthcareProviderName_TXT
+            // 
+            this.healthcareProviderName_TXT.Location = new System.Drawing.Point(498, 208);
+            this.healthcareProviderName_TXT.Name = "healthcareProviderName_TXT";
+            this.healthcareProviderName_TXT.Size = new System.Drawing.Size(164, 22);
+            this.healthcareProviderName_TXT.TabIndex = 36;
+            // 
+            // declarerAGBCode_TXT
+            // 
+            this.declarerAGBCode_TXT.Location = new System.Drawing.Point(498, 183);
+            this.declarerAGBCode_TXT.Name = "declarerAGBCode_TXT";
+            this.declarerAGBCode_TXT.Size = new System.Drawing.Size(164, 22);
+            this.declarerAGBCode_TXT.TabIndex = 35;
+            // 
+            // newDcInvoicePublicId_TXT
+            // 
+            this.newDcInvoicePublicId_TXT.Location = new System.Drawing.Point(498, 158);
+            this.newDcInvoicePublicId_TXT.Name = "newDcInvoicePublicId_TXT";
+            this.newDcInvoicePublicId_TXT.Size = new System.Drawing.Size(164, 22);
+            this.newDcInvoicePublicId_TXT.TabIndex = 34;
+            // 
+            // customerExternalId_TXT
+            // 
+            this.customerExternalId_TXT.Location = new System.Drawing.Point(498, 133);
+            this.customerExternalId_TXT.Name = "customerExternalId_TXT";
+            this.customerExternalId_TXT.Size = new System.Drawing.Size(164, 22);
+            this.customerExternalId_TXT.TabIndex = 33;
+            // 
+            // clinicAGBCode_TXT
+            // 
+            this.clinicAGBCode_TXT.Location = new System.Drawing.Point(498, 108);
+            this.clinicAGBCode_TXT.Name = "clinicAGBCode_TXT";
+            this.clinicAGBCode_TXT.Size = new System.Drawing.Size(164, 22);
+            this.clinicAGBCode_TXT.TabIndex = 32;
+            // 
+            // newInvoicePublicId_TXT
+            // 
+            this.newInvoicePublicId_TXT.Location = new System.Drawing.Point(498, 83);
+            this.newInvoicePublicId_TXT.Name = "newInvoicePublicId_TXT";
+            this.newInvoicePublicId_TXT.Size = new System.Drawing.Size(164, 22);
+            this.newInvoicePublicId_TXT.TabIndex = 31;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(385, 283);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(106, 17);
+            this.label24.TabIndex = 30;
+            this.label24.Text = "invoiceNumber:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(405, 258);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(86, 17);
+            this.label20.TabIndex = 29;
+            this.label20.Text = "invoiceDate:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(357, 233);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(134, 17);
+            this.label21.TabIndex = 28;
+            this.label21.Text = "institutionAGBCdde:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(322, 208);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(169, 17);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "healthcareProviderName:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(365, 183);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(126, 17);
+            this.label23.TabIndex = 26;
+            this.label23.Text = "declarerAGBCode:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(371, 158);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(120, 17);
+            this.label18.TabIndex = 25;
+            this.label18.Text = "dcInvoicePublicId:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(359, 133);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(132, 17);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "customerExternalId:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(386, 108);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(105, 17);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "clinicAGBCode:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(386, 83);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(105, 17);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "invoicePublicId:";
+            // 
+            // checkInvoiceMessage_TXT
+            // 
+            this.checkInvoiceMessage_TXT.Location = new System.Drawing.Point(1625, 83);
+            this.checkInvoiceMessage_TXT.Multiline = true;
+            this.checkInvoiceMessage_TXT.Name = "checkInvoiceMessage_TXT";
+            this.checkInvoiceMessage_TXT.Size = new System.Drawing.Size(537, 228);
+            this.checkInvoiceMessage_TXT.TabIndex = 21;
             // 
             // getCustomerExternalIds_BTN
             // 
@@ -1522,31 +1723,31 @@
             this.getCustomerExternalIds_BTN.UseVisualStyleBackColor = true;
             this.getCustomerExternalIds_BTN.Click += new System.EventHandler(this.getCustomerExternalIds_BTN_Click);
             // 
-            // customer_TXT
+            // customerJSon_TXT
             // 
-            this.customer_TXT.Location = new System.Drawing.Point(22, 83);
-            this.customer_TXT.Multiline = true;
-            this.customer_TXT.Name = "customer_TXT";
-            this.customer_TXT.Size = new System.Drawing.Size(537, 228);
-            this.customer_TXT.TabIndex = 19;
+            this.customerJSon_TXT.Location = new System.Drawing.Point(22, 83);
+            this.customerJSon_TXT.Multiline = true;
+            this.customerJSon_TXT.Name = "customerJSon_TXT";
+            this.customerJSon_TXT.Size = new System.Drawing.Size(289, 228);
+            this.customerJSon_TXT.TabIndex = 19;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.invoiceTreatments_GV);
             this.panel1.Location = new System.Drawing.Point(19, 330);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1649, 430);
             this.panel1.TabIndex = 18;
             // 
-            // dataGridView1
+            // invoiceTreatments_GV
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.invoiceTreatments_GV.AllowUserToOrderColumns = true;
+            this.invoiceTreatments_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.invoiceTreatments_GV.AutoGenerateColumns = false;
+            this.invoiceTreatments_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoiceTreatments_GV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -1556,12 +1757,13 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn11});
-            this.dataGridView1.DataSource = this.treatmentBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1174, 253);
-            this.dataGridView1.TabIndex = 17;
+            this.invoiceTreatments_GV.DataSource = this.treatmentBindingSource1;
+            this.invoiceTreatments_GV.Location = new System.Drawing.Point(4, 4);
+            this.invoiceTreatments_GV.Margin = new System.Windows.Forms.Padding(4);
+            this.invoiceTreatments_GV.Name = "invoiceTreatments_GV";
+            this.invoiceTreatments_GV.Size = new System.Drawing.Size(1174, 253);
+            this.invoiceTreatments_GV.TabIndex = 17;
+            this.invoiceTreatments_GV.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellEndEdit);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1578,61 +1780,62 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "dentalElementCode";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewTextBoxColumn3.HeaderText = "dentalElementCode";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "date";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn4.HeaderText = "date";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "tariffAmount";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn5.HeaderText = "tariffAmount";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "declaredAmount";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn6.HeaderText = "declaredAmount";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "calculatedAmount";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn7.HeaderText = "calculatedAmount";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "nrOfTreatments";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTextBoxColumn8.HeaderText = "nrOfTreatments";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "typeOfTreatment";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTextBoxColumn11.HeaderText = "typeOfTreatment";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
             // treatmentBindingSource1
             // 
+            this.treatmentBindingSource1.AllowNew = true;
             this.treatmentBindingSource1.DataSource = typeof(RESTConsumptionExamples.Treatment);
             // 
             // label16
@@ -1651,6 +1854,7 @@
             this.customerExternalIds_CB.Name = "customerExternalIds_CB";
             this.customerExternalIds_CB.Size = new System.Drawing.Size(169, 24);
             this.customerExternalIds_CB.TabIndex = 0;
+            this.customerExternalIds_CB.SelectedIndexChanged += new System.EventHandler(this.customerExternalIds_CB_SelectedIndexChanged);
             // 
             // mainFormBindingSource
             // 
@@ -1713,7 +1917,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceTreatments_GV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -1850,11 +2054,11 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox findCodeFilter_TXT;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox customer_TXT;
+        private System.Windows.Forms.TextBox customerJSon_TXT;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox customerExternalIds_CB;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView invoiceTreatments_GV;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1866,6 +2070,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.BindingSource treatmentBindingSource1;
         private System.Windows.Forms.Button getCustomerExternalIds_BTN;
+        private System.Windows.Forms.TextBox checkInvoiceMessage_TXT;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox newInvoiceDate_TXT;
+        private System.Windows.Forms.TextBox institutionAGBCode_TXT;
+        private System.Windows.Forms.TextBox healthcareProviderName_TXT;
+        private System.Windows.Forms.TextBox declarerAGBCode_TXT;
+        private System.Windows.Forms.TextBox newDcInvoicePublicId_TXT;
+        private System.Windows.Forms.TextBox customerExternalId_TXT;
+        private System.Windows.Forms.TextBox clinicAGBCode_TXT;
+        private System.Windows.Forms.TextBox newInvoicePublicId_TXT;
+        private System.Windows.Forms.TextBox newInvoiceNumber_TXT;
+        private System.Windows.Forms.TextBox treatmentCodes_TXT;
     }
 }
 

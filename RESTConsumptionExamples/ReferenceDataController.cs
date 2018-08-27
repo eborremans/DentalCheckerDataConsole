@@ -23,6 +23,58 @@ namespace RESTConsumptionExamples
             this.referenceDataView = referenceDataView;
         }
 
+        public void getTreatmentCodes()
+        {
+            HttpWebRequest request = RequestResponseFactory.createTreatmentCodesRequest(this.inputView.getConfiguration().currentUrl, this.inputView.getConfiguration().apiKey);
+            if (null == request)
+            {
+                return;
+            }
+
+            // Hack/workaround for dealing with https without valid certificate
+            //ServicePointManager.ServerCertificateValidationCallback = new
+            //    System.Net.Security.RemoteCertificateValidationCallback
+            //    (
+            //        delegate { return true; }
+            //    );
+
+            HttpWebResponse response = this.inputView.getResponse(request);
+            if (null == response)
+            {
+                return;
+            }
+
+            String content = String.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            List<TreatmentCode> treatmentCodes = null;
+
+            try
+            {
+                JsonSerializerSettings settings = new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    MissingMemberHandling = MissingMemberHandling.Ignore
+                };
+
+                treatmentCodes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TreatmentCode>>(content, settings);
+                if (null != treatmentCodes)
+                {
+                    inputView.setTreatmentCodes(treatmentCodes);
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
         public void getReferenceData1(int year)
         {
             getReferenceData(UPPER_REF_GRID, referenceDataView, year, inputView.getConfiguration().refDataUrl1);
