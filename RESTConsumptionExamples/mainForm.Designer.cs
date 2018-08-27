@@ -193,6 +193,10 @@
             this.customerJSon_TXT = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.invoiceTreatments_GV = new System.Windows.Forms.DataGridView();
+            this.treatmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
+            this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -202,10 +206,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treatmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label16 = new System.Windows.Forms.Label();
-            this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
-            this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
@@ -743,7 +743,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 329);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 328);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 584;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -759,7 +759,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(580, 36);
+            this.patientViolations_LB.Size = new System.Drawing.Size(580, 20);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -776,7 +776,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1661, 325);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1660, 324);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -1765,6 +1765,33 @@
             this.invoiceTreatments_GV.TabIndex = 17;
             this.invoiceTreatments_GV.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellEndEdit);
             // 
+            // treatmentBindingSource1
+            // 
+            this.treatmentBindingSource1.AllowNew = true;
+            this.treatmentBindingSource1.DataSource = typeof(RESTConsumptionExamples.Treatment);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(19, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(117, 17);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Select customer: ";
+            // 
+            // customerExternalIds_CB
+            // 
+            this.customerExternalIds_CB.FormattingEnabled = true;
+            this.customerExternalIds_CB.Location = new System.Drawing.Point(142, 32);
+            this.customerExternalIds_CB.Name = "customerExternalIds_CB";
+            this.customerExternalIds_CB.Size = new System.Drawing.Size(169, 24);
+            this.customerExternalIds_CB.TabIndex = 0;
+            this.customerExternalIds_CB.SelectedIndexChanged += new System.EventHandler(this.customerExternalIds_CB_SelectedIndexChanged);
+            // 
+            // mainFormBindingSource
+            // 
+            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "code";
@@ -1776,6 +1803,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "description";
             this.dataGridViewTextBoxColumn2.HeaderText = "description";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 400;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1832,33 +1860,6 @@
             this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTextBoxColumn11.HeaderText = "typeOfTreatment";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // treatmentBindingSource1
-            // 
-            this.treatmentBindingSource1.AllowNew = true;
-            this.treatmentBindingSource1.DataSource = typeof(RESTConsumptionExamples.Treatment);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 35);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(117, 17);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Select customer: ";
-            // 
-            // customerExternalIds_CB
-            // 
-            this.customerExternalIds_CB.FormattingEnabled = true;
-            this.customerExternalIds_CB.Location = new System.Drawing.Point(142, 32);
-            this.customerExternalIds_CB.Name = "customerExternalIds_CB";
-            this.customerExternalIds_CB.Size = new System.Drawing.Size(169, 24);
-            this.customerExternalIds_CB.TabIndex = 0;
-            this.customerExternalIds_CB.SelectedIndexChanged += new System.EventHandler(this.customerExternalIds_CB_SelectedIndexChanged);
-            // 
-            // mainFormBindingSource
-            // 
-            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
             // 
             // mainForm
             // 
@@ -2059,15 +2060,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox customerExternalIds_CB;
         private System.Windows.Forms.DataGridView invoiceTreatments_GV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.BindingSource treatmentBindingSource1;
         private System.Windows.Forms.Button getCustomerExternalIds_BTN;
         private System.Windows.Forms.TextBox checkInvoiceMessage_TXT;
@@ -2090,6 +2082,15 @@
         private System.Windows.Forms.TextBox newInvoicePublicId_TXT;
         private System.Windows.Forms.TextBox newInvoiceNumber_TXT;
         private System.Windows.Forms.TextBox treatmentCodes_TXT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }
 
