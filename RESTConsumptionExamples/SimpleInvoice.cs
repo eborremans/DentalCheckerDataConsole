@@ -78,5 +78,33 @@ namespace RESTConsumptionExamples
 
             return text.ToString();
         }
+
+        public static SimpleInvoice getTestInvoice()
+        {
+            SimpleInvoice invoice = new SimpleInvoice();
+
+            invoice.invoicePublicId = "invoicePublicId";
+            invoice.clinicAGBCode = "clinicAGBCode";
+            invoice.customerExternalId = "";
+            invoice.dcInvoicePublicId = "dcInvoicePublicId";
+            invoice.declarerAGBCode = "declarerAGBCode";
+            invoice.healthcareProviderName = "healthcareProviderName";
+            invoice.institutionAGBCode = "institutionAGBCode";
+            invoice.invoiceDate = "2018-01-01";
+            invoice.invoiceNumber = "invoiceNumber";
+
+            invoice.patients = Patient.getTestPatients();
+
+            return invoice;
+        }
+
+        public static SimpleInvoice getTestInvoice(Customer customer)
+        {
+            SimpleInvoice invoice = getTestInvoice();
+
+            invoice.patients = Patient.getTestPatients(customer);
+
+            return invoice;
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace RESTConsumptionExamples
         void setCustomerExternalIds(List<String> customerExternalIds);
         void setCustomer(Customer customer);
         void setCustomerJSon(String json);
+        void setCustomerInvoice(SimpleInvoice invoice);
 
         void setMessage(String message);
 

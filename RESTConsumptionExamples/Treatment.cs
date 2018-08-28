@@ -80,5 +80,34 @@ namespace RESTConsumptionExamples
 
             return text.ToString();
         }
+
+        public static List<Treatment> getTestTreatments() {
+            List<Treatment> treatments = new List<Treatment>();
+            treatments.Add(getTestTreatment());
+
+            return treatments;
+        }
+
+        public static Treatment getTestTreatment()
+        {
+            Treatment treatment = new Treatment();
+
+            treatment.code = "B10";
+            treatment.description = "Uitleg voor het geven van een roesje (lachgas)";
+            treatment.addendum = "Bedoeld voor uitleg in de eerste zitting. Eenmalig in rekening te brengen bij eerste zitting";
+
+            treatment.tariffAmount = new decimal(27.63);
+            treatment.calculatedAmount = treatment.tariffAmount;
+            treatment.date = "2018-01-01";
+            treatment.declaredAmount = treatment.tariffAmount;
+            treatment.dentalElementCode = "23";
+            treatment.nrOfTreatments = 1;
+            treatment.referenceNumber = "referenceNumber";
+            treatment.therapistAGBCode = "therapistAGBCode";
+            treatment.typeOfTreatment = 1;
+
+
+            return treatment;
+        }
     }
 }

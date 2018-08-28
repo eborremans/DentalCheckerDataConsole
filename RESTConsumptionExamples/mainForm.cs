@@ -695,23 +695,13 @@ namespace RESTConsumptionExamples
             this.customer = customer;
             if(null != this.customer)
             {
-                newInvoice = new SimpleInvoice();
-                newInvoice.customerExternalId = customer.customerExternalId;
+                SimpleInvoice customerInvoice = SimpleInvoice.getTestInvoice(customer);
+                customerInvoice.customerExternalId = customer.customerExternalId;
 
-                customerExternalId_TXT.Text = customer.customerExternalId;
-
-                //newInvoice.clinicAGBCode = clinicAGBCode;
-                //newInvoice.customerExternalId = customerExternalId;
-                //newInvoice.dcInvoicePublicId = dcInvoicePublicId;
-                //newInvoice.declarerAGBCode = declarerAGBCode;
-                //newInvoice.healthcareProviderName = healthcareProviderName;
-                //newInvoice.institutionAGBCdde = institutionAGBCdde;
-                //newInvoice.invoiceDate = invoiceDate;
-                //newInvoice.invoiceNumber = invoiceNumber;
-                //newInvoice.patients = patients;
+                setCustomerInvoice(customerInvoice);
 
                 inputTreatments = new List<Treatment>();
-                Treatment newTreatment = new Treatment();
+                Treatment newTreatment = Treatment.getTestTreatment();
                 inputTreatments.Add(newTreatment);
                 invoiceTreatments_GV.DataSource = new BindingList < Treatment > (inputTreatments);
             }
@@ -725,6 +715,26 @@ namespace RESTConsumptionExamples
         public void checkInvoice(string invoiceId)
         {
             throw new NotImplementedException();
+        }
+
+        public void setCustomerInvoice(SimpleInvoice invoice)
+        {
+            newInvoice = invoice;
+
+            updateNewInvoiceView();
+        }
+
+        private void updateNewInvoiceView()
+        {
+            newInvoicePublicId_TXT.Text = newInvoice.invoicePublicId;
+            clinicAGBCode_TXT.Text = newInvoice.clinicAGBCode;
+            customerExternalId_TXT.Text = newInvoice.customerExternalId;
+            newDcInvoicePublicId_TXT.Text = newInvoice.dcInvoicePublicId;
+            declarerAGBCode_TXT.Text = newInvoice.declarerAGBCode;
+            healthcareProviderName_TXT.Text = newInvoice.healthcareProviderName;
+            institutionAGBCode_TXT.Text = newInvoice.institutionAGBCode;
+            newInvoiceDate_TXT.Text = newInvoice.invoiceDate;
+            newInvoiceNumber_TXT.Text = newInvoice.invoiceNumber;
         }
 
         public string getCurrentCustomerId()
