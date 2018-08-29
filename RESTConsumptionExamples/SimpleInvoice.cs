@@ -90,7 +90,8 @@ namespace RESTConsumptionExamples
             invoice.declarerAGBCode = "declarerAGBCode";
             invoice.healthcareProviderName = "healthcareProviderName";
             invoice.institutionAGBCode = "institutionAGBCode";
-            invoice.invoiceDate = "2018-01-01";
+            DateTime now = DateTime.Now;
+            invoice.invoiceDate = now.Year + "-" + now.Month + "-" + now.Day;
             invoice.invoiceNumber = "invoiceNumber";
 
             invoice.patients = Patient.getTestPatients();

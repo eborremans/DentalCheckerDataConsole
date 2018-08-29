@@ -17,7 +17,7 @@ using System.Xml.Serialization;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 using Microsoft.VisualBasic.CompilerServices;
-
+using System.Globalization;
 
 namespace RESTConsumptionExamples
 {
@@ -79,6 +79,9 @@ namespace RESTConsumptionExamples
 
         public Dictionary<String, TreatmentCode> treatmentDescriptions = new Dictionary<String, TreatmentCode>();
 
+        DateTimePicker gridView_DTP = new DateTimePicker();
+        Rectangle gridViewDTPRectangle;
+
         public mainForm()
         {
             InitializeComponent();
@@ -98,10 +101,22 @@ namespace RESTConsumptionExamples
             DateTime startDate = new DateTime(2016, 1, 1);
 
             startDatePicker_DTP.Value = startDate;
+            startDatePicker_DTP.Format = DateTimePickerFormat.Custom;
+            startDatePicker_DTP.CustomFormat = "yyyy-MM-dd";
             endDatePicker_DTP.Value = endDate;
+            endDatePicker_DTP.Format = DateTimePickerFormat.Custom;
+            endDatePicker_DTP.CustomFormat = "yyyy-MM-dd";
 
             referenceData1_GV.MultiSelect = true;
             referenceData1_GV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            invoiceTreatments_GV.Controls.Add(gridView_DTP);
+            gridView_DTP.Visible = false;
+            gridView_DTP.Format = DateTimePickerFormat.Custom;
+            gridView_DTP.CustomFormat = "yyyy-MM-dd";
+            gridView_DTP.TextChanged += new EventHandler(gridView_TextChanged);
+            
+
         }
 
         // Test button
@@ -701,8 +716,9 @@ namespace RESTConsumptionExamples
                 setCustomerInvoice(customerInvoice);
 
                 inputTreatments = new List<Treatment>();
-                Treatment newTreatment = Treatment.getTestTreatment();
-                inputTreatments.Add(newTreatment);
+                // Treatment newTreatment = Treatment.getTestTreatment();
+                // Treatment newTreatment = Treatment.getDefaultInputTreatment(today());
+                // inputTreatments.Add(newTreatment);
                 invoiceTreatments_GV.DataSource = new BindingList < Treatment > (inputTreatments);
             }
         }
@@ -733,7 +749,7 @@ namespace RESTConsumptionExamples
             declarerAGBCode_TXT.Text = newInvoice.declarerAGBCode;
             healthcareProviderName_TXT.Text = newInvoice.healthcareProviderName;
             institutionAGBCode_TXT.Text = newInvoice.institutionAGBCode;
-            newInvoiceDate_TXT.Text = newInvoice.invoiceDate;
+            newInvoiceDate_DTP.Value = DateTime.ParseExact(newInvoice.invoiceDate, "yyyy-M-dd", CultureInfo.InvariantCulture);
             newInvoiceNumber_TXT.Text = newInvoice.invoiceNumber;
         }
 
@@ -763,7 +779,14 @@ namespace RESTConsumptionExamples
 
         private void invoiceTreatments_GV_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-           if (inputTreatments.Count > 0) {
+            switch (invoiceTreatments_GV.Columns[e.ColumnIndex].Name)
+            {
+                case "dateColumn":
+                    gridView_DTP.Visible = false;
+                    break;
+            }
+
+            if (null != inputTreatments && inputTreatments.Count > 0) {
                 if (e.ColumnIndex == (int)TreatmentGridColumns.CODE)
                 {
                     Treatment editedTreatment = inputTreatments[e.RowIndex];
@@ -797,6 +820,77 @@ namespace RESTConsumptionExamples
         {
             treatmentCodes = new List<TreatmentCode>();
             treatmentDescriptions = new Dictionary<string, TreatmentCode>();
+        }
+
+        private void invoiceTreatments_GV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            switch(invoiceTreatments_GV.Columns[e.ColumnIndex].Name)
+            {
+                case "dateColumn":
+                    gridViewDTPRectangle = invoiceTreatments_GV.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                    gridView_DTP.Size = new Size(gridViewDTPRectangle.Width, gridViewDTPRectangle.Height);
+                    gridView_DTP.Location = new Point(gridViewDTPRectangle.X, gridViewDTPRectangle.Y);
+                    gridView_DTP.Visible = true;
+                    break;
+            }
+        }
+
+        private void gridView_TextChanged(object sender, EventArgs e)
+        {
+            invoiceTreatments_GV.CurrentCell.Value = gridView_DTP.Text.ToString();
+        }
+
+        private void invoiceTreatments_GV_ColumnWidthChanged(object sender, DataGridViewColumnEventArgs e)
+        {
+            gridView_DTP.Visible = false;
+        }
+
+        private void invoiceTreatments_GV_Scroll(object sender, ScrollEventArgs e)
+        {
+            gridView_DTP.Visible = false;
+        }
+
+        String today()
+        {
+            DateTime now = DateTime.Now;
+            String today = now.Year + "-" + now.Month.ToString("00.#") + "-" + now.Day;
+
+            return today;
+        }
+
+        private void invoiceTreatments_GV_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            String previousDate = "";
+
+            Treatment newTreatment = null;
+
+            if (null != inputTreatments && inputTreatments.Count > 0 && inputTreatments.Count >= e.Row.Index) { 
+                if (e.Row.Index - 2 >= 0) {
+                    previousDate = inputTreatments[e.Row.Index - 2].date;
+                    newTreatment = Treatment.getDefaultInputTreatment(previousDate);
+                } else
+                {
+                    newTreatment = Treatment.getDefaultInputTreatment(today());
+                }
+                inputTreatments[e.Row.Index - 1] = newTreatment;
+            }
+
+            Debug.WriteLine("User added row: row index: " + e.Row.Index + ", Treatment Count:" + (null != inputTreatments ? inputTreatments.Count.ToString() : "null"));
+
+            if (null != inputTreatments && inputTreatments.Count > 0 && inputTreatments.Count >= e.Row.Index)
+            {
+                Debug.WriteLine(inputTreatments[e.Row.Index - 1].ToString());
+            }
+        }
+
+        private void invoiceTreatments_GV_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //if(e.RowIndex + 1 < inputTreatments.Count)
+            //{
+            //    Treatment newTreatment = Treatment.getDefaultInputTreatment("");
+            //    inputTreatments.Add(newTreatment);
+            //}
+            Debug.WriteLine("Added row     : row index: " + e.RowIndex + ", Treatment Count:" + (null != inputTreatments ? inputTreatments.Count.ToString() : "null"));
         }
     }
 }

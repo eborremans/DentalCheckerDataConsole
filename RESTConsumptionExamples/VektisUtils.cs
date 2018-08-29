@@ -12,10 +12,13 @@ namespace RESTConsumptionExamples
         {
             StringBuilder text = new StringBuilder();
 
-            foreach (T obj in objects)
+            if (null != objects)
             {
-                text.Append(obj.ToString());
-                text.AppendLine();
+                foreach (T obj in objects)
+                {
+                    text.Append(obj.ToString());
+                    text.AppendLine();
+                }
             }
 
             return text.ToString();

@@ -109,5 +109,19 @@ namespace RESTConsumptionExamples
 
             return treatment;
         }
+
+        public static Treatment getDefaultInputTreatment(String previousTreatmentDate)
+        {
+            Treatment treatment = new Treatment();
+
+
+            treatment.date = previousTreatmentDate;
+            treatment.nrOfTreatments = 1;
+            treatment.referenceNumber = "referenceNumber";
+            treatment.typeOfTreatment = 1;
+
+
+            return treatment;
+        }
     }
 }
