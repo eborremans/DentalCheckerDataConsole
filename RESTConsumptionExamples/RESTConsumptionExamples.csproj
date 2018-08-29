@@ -82,8 +82,10 @@
   <ItemGroup>
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationController.cs" />
+    <Compile Include="CreateInvoiceRequest.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerController.cs" />
+    <Compile Include="DateUtils.cs" />
     <Compile Include="ICheckInvoiceView.cs" />
     <Compile Include="IInvoiceView.cs" />
     <Compile Include="IInputView.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="ReferenceData.cs" />
     <Compile Include="ReferenceDataController.cs" />
     <Compile Include="RequestResponseFactory.cs" />
+    <Compile Include="RestErrorResponse.cs" />
     <Compile Include="SimpleInvoice.cs" />
     <Compile Include="SimpleReferenceData.cs" />
     <Compile Include="SortableBindingList.cs" />

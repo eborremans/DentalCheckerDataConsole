@@ -69,6 +69,7 @@ namespace RESTConsumptionExamples
 
         // Currently selected customer
         private Customer customer = null;
+        private Patient newInvoicePatient = null; // Customer and patient are always same person
 
         // Invoice to be uploaded and checked
         private SimpleInvoice newInvoice = null;
@@ -81,6 +82,8 @@ namespace RESTConsumptionExamples
 
         DateTimePicker gridView_DTP = new DateTimePicker();
         Rectangle gridViewDTPRectangle;
+
+        Boolean dontProcessTextChanged = false;
 
         public mainForm()
         {
@@ -115,8 +118,10 @@ namespace RESTConsumptionExamples
             gridView_DTP.Format = DateTimePickerFormat.Custom;
             gridView_DTP.CustomFormat = "yyyy-MM-dd";
             gridView_DTP.TextChanged += new EventHandler(gridView_TextChanged);
-            
 
+            newInvoiceDate_DTP.Value = endDate;
+            newInvoiceDate_DTP.Format = DateTimePickerFormat.Custom;
+            newInvoiceDate_DTP.CustomFormat = "yyyy-MM-dd";
         }
 
         // Test button
@@ -254,9 +259,30 @@ namespace RESTConsumptionExamples
             {
                 response = (HttpWebResponse)request.GetResponse();
             }
-            catch (Exception exc)
+            catch (WebException exc)
             {
                 // MessageBox.Show(exc.Message);
+
+                if (exc.Status == WebExceptionStatus.ProtocolError)
+                {
+                    Console.WriteLine("Status Code : {0}", ((HttpWebResponse)exc.Response).StatusCode);
+                    Console.WriteLine("Status Description : {0}", ((HttpWebResponse)exc.Response).StatusDescription);
+
+                    using (Stream responseStream = exc.Response.GetResponseStream())
+                    {
+                        if (responseStream != null)
+                        {
+                            using (StreamReader responseReader = new StreamReader(responseStream))
+                            {
+                                String content = responseReader.ReadToEnd();
+                                JToken jt = JToken.Parse(content);
+                                string formattedJson = jt.ToString();
+                                //RestErrorResponse errorResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<RestErrorResponse>(content);
+                                checkInvoiceMessage_TXT.Text = formattedJson;
+                            }
+                        }
+                    }
+                }
                 return null;
             }
 
@@ -705,11 +731,20 @@ namespace RESTConsumptionExamples
 
         // ------------------ ICheckInvoiceView ------------------
 
+        public void setInvoicePublicId(String invoicePublicId)
+        {
+            newInvoice.invoicePublicId = invoicePublicId;
+            updateNewInvoiceView();
+        }
+
         public void setCustomer(Customer customer)
         {
             this.customer = customer;
             if(null != this.customer)
             {
+                newInvoicePatient = new Patient(customer);
+                newInvoicePatient.patientPolicyNumber = "patientPolicyNumber";
+                newInvoicePatient.healthInsuranceName = "healthInsuranceName";
                 SimpleInvoice customerInvoice = SimpleInvoice.getTestInvoice(customer);
                 customerInvoice.customerExternalId = customer.customerExternalId;
 
@@ -725,7 +760,10 @@ namespace RESTConsumptionExamples
 
         public void uploadInvoice()
         {
-            throw new NotImplementedException();
+            newInvoicePatient.treatments = inputTreatments;
+            newInvoice.patients = new List<Patient>();
+            newInvoice.patients.Add(newInvoicePatient);
+            customerController.uploadInvoice(customer, newInvoice);
         }
 
         public void checkInvoice(string invoiceId)
@@ -742,15 +780,32 @@ namespace RESTConsumptionExamples
 
         private void updateNewInvoiceView()
         {
+            dontProcessTextChanged = true;
             newInvoicePublicId_TXT.Text = newInvoice.invoicePublicId;
             clinicAGBCode_TXT.Text = newInvoice.clinicAGBCode;
             customerExternalId_TXT.Text = newInvoice.customerExternalId;
             newDcInvoicePublicId_TXT.Text = newInvoice.dcInvoicePublicId;
             declarerAGBCode_TXT.Text = newInvoice.declarerAGBCode;
             healthcareProviderName_TXT.Text = newInvoice.healthcareProviderName;
-            institutionAGBCode_TXT.Text = newInvoice.institutionAGBCode;
-            newInvoiceDate_DTP.Value = DateTime.ParseExact(newInvoice.invoiceDate, "yyyy-M-dd", CultureInfo.InvariantCulture);
+            institutionAGBCdde_TXT.Text = newInvoice.institutionAGBCdde;
+            newInvoiceDate_DTP.Value = DateTime.ParseExact(newInvoice.invoiceDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
             newInvoiceNumber_TXT.Text = newInvoice.invoiceNumber;
+            dontProcessTextChanged = false;
+        }
+
+        private void updateNewInvoice()
+        {
+            if (!dontProcessTextChanged) { 
+                newInvoice.invoicePublicId = newInvoicePublicId_TXT.Text;
+                newInvoice.clinicAGBCode = clinicAGBCode_TXT.Text;
+                newInvoice.customerExternalId = customerExternalId_TXT.Text;
+                newInvoice.dcInvoicePublicId = newDcInvoicePublicId_TXT.Text;
+                newInvoice.declarerAGBCode = declarerAGBCode_TXT.Text;
+                newInvoice.healthcareProviderName = healthcareProviderName_TXT.Text;
+                newInvoice.institutionAGBCdde = institutionAGBCdde_TXT.Text;
+                newInvoice.invoiceDate = DateUtils.dateTimeToString(newInvoiceDate_DTP.Value);
+                newInvoice.invoiceNumber = newInvoiceNumber_TXT.Text;
+            }
         }
 
         public string getCurrentCustomerId()
@@ -850,14 +905,6 @@ namespace RESTConsumptionExamples
             gridView_DTP.Visible = false;
         }
 
-        String today()
-        {
-            DateTime now = DateTime.Now;
-            String today = now.Year + "-" + now.Month.ToString("00.#") + "-" + now.Day;
-
-            return today;
-        }
-
         private void invoiceTreatments_GV_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             String previousDate = "";
@@ -870,7 +917,7 @@ namespace RESTConsumptionExamples
                     newTreatment = Treatment.getDefaultInputTreatment(previousDate);
                 } else
                 {
-                    newTreatment = Treatment.getDefaultInputTreatment(today());
+                    newTreatment = Treatment.getDefaultInputTreatment(DateUtils.today());
                 }
                 inputTreatments[e.Row.Index - 1] = newTreatment;
             }
@@ -885,12 +932,71 @@ namespace RESTConsumptionExamples
 
         private void invoiceTreatments_GV_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            //if(e.RowIndex + 1 < inputTreatments.Count)
-            //{
-            //    Treatment newTreatment = Treatment.getDefaultInputTreatment("");
-            //    inputTreatments.Add(newTreatment);
-            //}
             Debug.WriteLine("Added row     : row index: " + e.RowIndex + ", Treatment Count:" + (null != inputTreatments ? inputTreatments.Count.ToString() : "null"));
+        }
+
+        private void uploadInvoice_BTN_Click(object sender, EventArgs e)
+        {
+            uploadInvoice();
+        }
+
+        private void newInvoicePublicId_TXT_TextChanged(object sender, EventArgs e)
+        {
+            updateNewInvoice();
+        }
+
+        private void clinicAGBCode_TXT_TextChanged(object sender, EventArgs e)
+        {
+            updateNewInvoice();
+        }
+
+        private void newDcInvoicePublicId_TXT_TextChanged(object sender, EventArgs e)
+        {
+            updateNewInvoice();
+        }
+
+        private void declarerAGBCode_TXT_TextChanged(object sender, EventArgs e)
+        {
+            updateNewInvoice();
+        }
+
+        private void healthcareProviderName_TXT_TextChanged(object sender, EventArgs e)
+        {
+            updateNewInvoice();
+        }
+
+        private void institutionAGBCdde_TXT_TextChanged(object sender, EventArgs e)
+        {
+            updateNewInvoice();
+        }
+
+        private void newInvoiceNumber_TXT_TextChanged(object sender, EventArgs e)
+        {
+            updateNewInvoice();
+        }
+
+        private void createTestTreatments_BTN_Click(object sender, EventArgs e)
+        {
+            Treatment treatment1 = Treatment.getTestTreatment();
+            treatment1.code = "V94";
+            treatment1.dentalElementCode = "23";
+            treatment1.calculatedAmount = 25;
+            Treatment treatment2 = Treatment.getTestTreatment();
+            treatment2.code = "V93";
+            treatment2.dentalElementCode = "23";
+            treatment2.calculatedAmount = 26;
+
+            if(null == inputTreatments)
+            {
+                inputTreatments = new List<Treatment>();
+            }
+            inputTreatments.Add(treatment1);
+            inputTreatments.Add(treatment2);
+
+            invoiceTreatments_GV.DataSource = new BindingList<Treatment>(inputTreatments);
+
+            invoiceTreatments_GV.Invalidate();
+            invoiceTreatments_GV.Update();
         }
     }
 }

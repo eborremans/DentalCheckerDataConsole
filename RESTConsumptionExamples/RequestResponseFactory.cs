@@ -58,10 +58,17 @@ namespace RESTConsumptionExamples
             return createRequest(url + "performancecodes", "", apiKey);
         }
 
-        public static HttpWebRequest createRequest(String url, String callerID, String apiKey, DateRangeRequest dateRangeRequest = null)
+        public static HttpWebRequest createNewInvoiceRequest(String url, String apiKey, CreateInvoiceRequest newInvoiceRequest)
+        {
+            return createRequest(url + "invoices/", "", apiKey, newInvoiceRequest);
+        }
+
+        // public static HttpWebRequest createRequest(String url, String callerID, String apiKey, DateRangeRequest dateRangeRequest = null)
+        public static HttpWebRequest createRequest(String url, String callerID, String apiKey, Object postRequest = null)
         {
             HttpWebRequest request = null;
-            try {
+            try
+            {
                 request = (HttpWebRequest)WebRequest.Create(url);
             }
             catch (Exception e)
@@ -76,9 +83,9 @@ namespace RESTConsumptionExamples
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
 
 
-            if (null != dateRangeRequest)
+            if (null != postRequest)
             {
-                String requestData = Newtonsoft.Json.JsonConvert.SerializeObject(dateRangeRequest);
+                String requestData = Newtonsoft.Json.JsonConvert.SerializeObject(postRequest);
                 var data = Encoding.ASCII.GetBytes(requestData);
 
                 request.Method = "POST";
@@ -108,6 +115,7 @@ namespace RESTConsumptionExamples
             }
             return request;
         }
+        
     }
 
     public class DateRangeRequest

@@ -167,12 +167,13 @@
             this.year2Selection_CB = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.createTestTreatments_BTN = new System.Windows.Forms.Button();
             this.newInvoiceDate_DTP = new System.Windows.Forms.DateTimePicker();
             this.checkInvoice_BTN = new System.Windows.Forms.Button();
             this.uploadInvoice_BTN = new System.Windows.Forms.Button();
             this.treatmentCodes_TXT = new System.Windows.Forms.TextBox();
             this.newInvoiceNumber_TXT = new System.Windows.Forms.TextBox();
-            this.institutionAGBCode_TXT = new System.Windows.Forms.TextBox();
+            this.institutionAGBCdde_TXT = new System.Windows.Forms.TextBox();
             this.healthcareProviderName_TXT = new System.Windows.Forms.TextBox();
             this.declarerAGBCode_TXT = new System.Windows.Forms.TextBox();
             this.newDcInvoicePublicId_TXT = new System.Windows.Forms.TextBox();
@@ -193,10 +194,6 @@
             this.customerJSon_TXT = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.invoiceTreatments_GV = new System.Windows.Forms.DataGridView();
-            this.treatmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label16 = new System.Windows.Forms.Label();
-            this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
-            this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -204,6 +201,10 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
+            this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
@@ -741,7 +742,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 317);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2289, 313);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 583;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -774,7 +775,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1648, 312);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1644, 308);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -1517,12 +1518,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.createTestTreatments_BTN);
             this.tabPage3.Controls.Add(this.newInvoiceDate_DTP);
             this.tabPage3.Controls.Add(this.checkInvoice_BTN);
             this.tabPage3.Controls.Add(this.uploadInvoice_BTN);
             this.tabPage3.Controls.Add(this.treatmentCodes_TXT);
             this.tabPage3.Controls.Add(this.newInvoiceNumber_TXT);
-            this.tabPage3.Controls.Add(this.institutionAGBCode_TXT);
+            this.tabPage3.Controls.Add(this.institutionAGBCdde_TXT);
             this.tabPage3.Controls.Add(this.healthcareProviderName_TXT);
             this.tabPage3.Controls.Add(this.declarerAGBCode_TXT);
             this.tabPage3.Controls.Add(this.newDcInvoicePublicId_TXT);
@@ -1553,6 +1555,16 @@
             this.tabPage3.Text = "Check Declaration";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // createTestTreatments_BTN
+            // 
+            this.createTestTreatments_BTN.Location = new System.Drawing.Point(21, 338);
+            this.createTestTreatments_BTN.Name = "createTestTreatments_BTN";
+            this.createTestTreatments_BTN.Size = new System.Drawing.Size(200, 33);
+            this.createTestTreatments_BTN.TabIndex = 44;
+            this.createTestTreatments_BTN.Text = "Create Test Treatments";
+            this.createTestTreatments_BTN.UseVisualStyleBackColor = true;
+            this.createTestTreatments_BTN.Click += new System.EventHandler(this.createTestTreatments_BTN_Click);
+            // 
             // newInvoiceDate_DTP
             // 
             this.newInvoiceDate_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -1582,6 +1594,7 @@
             this.uploadInvoice_BTN.TabIndex = 41;
             this.uploadInvoice_BTN.Text = "Upload";
             this.uploadInvoice_BTN.UseVisualStyleBackColor = true;
+            this.uploadInvoice_BTN.Click += new System.EventHandler(this.uploadInvoice_BTN_Click);
             // 
             // treatmentCodes_TXT
             // 
@@ -1589,7 +1602,7 @@
             this.treatmentCodes_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treatmentCodes_TXT.Multiline = true;
             this.treatmentCodes_TXT.Name = "treatmentCodes_TXT";
-            this.treatmentCodes_TXT.Size = new System.Drawing.Size(952, 228);
+            this.treatmentCodes_TXT.Size = new System.Drawing.Size(711, 228);
             this.treatmentCodes_TXT.TabIndex = 40;
             // 
             // newInvoiceNumber_TXT
@@ -1599,14 +1612,16 @@
             this.newInvoiceNumber_TXT.Name = "newInvoiceNumber_TXT";
             this.newInvoiceNumber_TXT.Size = new System.Drawing.Size(164, 22);
             this.newInvoiceNumber_TXT.TabIndex = 39;
+            this.newInvoiceNumber_TXT.TextChanged += new System.EventHandler(this.newInvoiceNumber_TXT_TextChanged);
             // 
-            // institutionAGBCode_TXT
+            // institutionAGBCdde_TXT
             // 
-            this.institutionAGBCode_TXT.Location = new System.Drawing.Point(497, 230);
-            this.institutionAGBCode_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.institutionAGBCode_TXT.Name = "institutionAGBCode_TXT";
-            this.institutionAGBCode_TXT.Size = new System.Drawing.Size(164, 22);
-            this.institutionAGBCode_TXT.TabIndex = 37;
+            this.institutionAGBCdde_TXT.Location = new System.Drawing.Point(497, 230);
+            this.institutionAGBCdde_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.institutionAGBCdde_TXT.Name = "institutionAGBCdde_TXT";
+            this.institutionAGBCdde_TXT.Size = new System.Drawing.Size(164, 22);
+            this.institutionAGBCdde_TXT.TabIndex = 37;
+            this.institutionAGBCdde_TXT.TextChanged += new System.EventHandler(this.institutionAGBCdde_TXT_TextChanged);
             // 
             // healthcareProviderName_TXT
             // 
@@ -1615,6 +1630,7 @@
             this.healthcareProviderName_TXT.Name = "healthcareProviderName_TXT";
             this.healthcareProviderName_TXT.Size = new System.Drawing.Size(164, 22);
             this.healthcareProviderName_TXT.TabIndex = 36;
+            this.healthcareProviderName_TXT.TextChanged += new System.EventHandler(this.healthcareProviderName_TXT_TextChanged);
             // 
             // declarerAGBCode_TXT
             // 
@@ -1623,6 +1639,7 @@
             this.declarerAGBCode_TXT.Name = "declarerAGBCode_TXT";
             this.declarerAGBCode_TXT.Size = new System.Drawing.Size(164, 22);
             this.declarerAGBCode_TXT.TabIndex = 35;
+            this.declarerAGBCode_TXT.TextChanged += new System.EventHandler(this.declarerAGBCode_TXT_TextChanged);
             // 
             // newDcInvoicePublicId_TXT
             // 
@@ -1631,12 +1648,14 @@
             this.newDcInvoicePublicId_TXT.Name = "newDcInvoicePublicId_TXT";
             this.newDcInvoicePublicId_TXT.Size = new System.Drawing.Size(164, 22);
             this.newDcInvoicePublicId_TXT.TabIndex = 34;
+            this.newDcInvoicePublicId_TXT.TextChanged += new System.EventHandler(this.newDcInvoicePublicId_TXT_TextChanged);
             // 
             // customerExternalId_TXT
             // 
             this.customerExternalId_TXT.Location = new System.Drawing.Point(497, 132);
             this.customerExternalId_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customerExternalId_TXT.Name = "customerExternalId_TXT";
+            this.customerExternalId_TXT.ReadOnly = true;
             this.customerExternalId_TXT.Size = new System.Drawing.Size(164, 22);
             this.customerExternalId_TXT.TabIndex = 33;
             // 
@@ -1647,14 +1666,17 @@
             this.clinicAGBCode_TXT.Name = "clinicAGBCode_TXT";
             this.clinicAGBCode_TXT.Size = new System.Drawing.Size(164, 22);
             this.clinicAGBCode_TXT.TabIndex = 32;
+            this.clinicAGBCode_TXT.TextChanged += new System.EventHandler(this.clinicAGBCode_TXT_TextChanged);
             // 
             // newInvoicePublicId_TXT
             // 
             this.newInvoicePublicId_TXT.Location = new System.Drawing.Point(497, 82);
             this.newInvoicePublicId_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newInvoicePublicId_TXT.Name = "newInvoicePublicId_TXT";
+            this.newInvoicePublicId_TXT.ReadOnly = true;
             this.newInvoicePublicId_TXT.Size = new System.Drawing.Size(164, 22);
             this.newInvoicePublicId_TXT.TabIndex = 31;
+            this.newInvoicePublicId_TXT.TextChanged += new System.EventHandler(this.newInvoicePublicId_TXT_TextChanged);
             // 
             // label24
             // 
@@ -1739,11 +1761,11 @@
             // 
             // checkInvoiceMessage_TXT
             // 
-            this.checkInvoiceMessage_TXT.Location = new System.Drawing.Point(1625, 82);
+            this.checkInvoiceMessage_TXT.Location = new System.Drawing.Point(1384, 82);
             this.checkInvoiceMessage_TXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkInvoiceMessage_TXT.Multiline = true;
             this.checkInvoiceMessage_TXT.Name = "checkInvoiceMessage_TXT";
-            this.checkInvoiceMessage_TXT.Size = new System.Drawing.Size(537, 228);
+            this.checkInvoiceMessage_TXT.Size = new System.Drawing.Size(531, 228);
             this.checkInvoiceMessage_TXT.TabIndex = 21;
             // 
             // getCustomerExternalIds_BTN
@@ -1807,34 +1829,6 @@
             this.invoiceTreatments_GV.Scroll += new System.Windows.Forms.ScrollEventHandler(this.invoiceTreatments_GV_Scroll);
             this.invoiceTreatments_GV.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.invoiceTreatments_GV_UserAddedRow);
             // 
-            // treatmentBindingSource1
-            // 
-            this.treatmentBindingSource1.AllowNew = true;
-            this.treatmentBindingSource1.DataSource = typeof(RESTConsumptionExamples.Treatment);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 34);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(117, 17);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Select customer: ";
-            // 
-            // customerExternalIds_CB
-            // 
-            this.customerExternalIds_CB.FormattingEnabled = true;
-            this.customerExternalIds_CB.Location = new System.Drawing.Point(141, 32);
-            this.customerExternalIds_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customerExternalIds_CB.Name = "customerExternalIds_CB";
-            this.customerExternalIds_CB.Size = new System.Drawing.Size(169, 24);
-            this.customerExternalIds_CB.TabIndex = 0;
-            this.customerExternalIds_CB.SelectedIndexChanged += new System.EventHandler(this.customerExternalIds_CB_SelectedIndexChanged);
-            // 
-            // mainFormBindingSource
-            // 
-            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "code";
@@ -1887,6 +1881,34 @@
             this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn11.HeaderText = "Type";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // treatmentBindingSource1
+            // 
+            this.treatmentBindingSource1.AllowNew = true;
+            this.treatmentBindingSource1.DataSource = typeof(RESTConsumptionExamples.Treatment);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(19, 34);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(117, 17);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Select customer: ";
+            // 
+            // customerExternalIds_CB
+            // 
+            this.customerExternalIds_CB.FormattingEnabled = true;
+            this.customerExternalIds_CB.Location = new System.Drawing.Point(141, 32);
+            this.customerExternalIds_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerExternalIds_CB.Name = "customerExternalIds_CB";
+            this.customerExternalIds_CB.Size = new System.Drawing.Size(169, 24);
+            this.customerExternalIds_CB.TabIndex = 0;
+            this.customerExternalIds_CB.SelectedIndexChanged += new System.EventHandler(this.customerExternalIds_CB_SelectedIndexChanged);
+            // 
+            // mainFormBindingSource
+            // 
+            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
             // 
             // mainForm
             // 
@@ -2099,7 +2121,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox institutionAGBCode_TXT;
+        private System.Windows.Forms.TextBox institutionAGBCdde_TXT;
         private System.Windows.Forms.TextBox healthcareProviderName_TXT;
         private System.Windows.Forms.TextBox declarerAGBCode_TXT;
         private System.Windows.Forms.TextBox newDcInvoicePublicId_TXT;
@@ -2118,6 +2140,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.Button createTestTreatments_BTN;
     }
 }
 

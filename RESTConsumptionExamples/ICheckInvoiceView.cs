@@ -12,6 +12,7 @@ namespace RESTConsumptionExamples
         void setCustomer(Customer customer);
         void setCustomerJSon(String json);
         void setCustomerInvoice(SimpleInvoice invoice);
+        void setInvoicePublicId(String invoicePublicId);
 
         void setMessage(String message);
 

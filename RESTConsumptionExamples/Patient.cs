@@ -17,6 +17,14 @@ namespace RESTConsumptionExamples
         public List<Treatment> treatments { get; set; }
 
         public Patient() { }
+
+        public Patient(Customer customer) {
+            this.patientBirthdate = customer.customerBirthdate;
+            this.patientExternalId = customer.customerExternalId;
+            this.patientInitials = customer.customerInitials;
+            this.patientLastName = customer.customerLastName;
+        }
+
         public Patient(
             string healthInsuranceName,
             string patientBirthdate,

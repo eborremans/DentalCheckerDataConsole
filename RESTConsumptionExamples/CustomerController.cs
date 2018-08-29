@@ -2,8 +2,10 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -99,6 +101,44 @@ namespace RESTConsumptionExamples
             }
 
             return;
+        }
+
+        public void uploadInvoice(Customer customer, SimpleInvoice newInvoice)
+        {
+            CreateInvoiceRequest newInvoiceRequest = new CreateInvoiceRequest();
+            newInvoiceRequest.invoiceData = newInvoice;
+
+            HttpWebRequest request = RequestResponseFactory.createNewInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, newInvoiceRequest); 
+            if (null == request)
+            {
+                return;
+            }
+
+            var json = JsonConvert.SerializeObject(request);
+            Debug.WriteLine(json);
+
+            HttpWebResponse response = inputView.getResponse(request);
+            if (null == response)
+            {
+                return;
+            }
+
+            string content = string.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            checkInvoiceView.setMessage(content);
+
+            if (content.StartsWith("INV"))
+            {
+                checkInvoiceView.setInvoicePublicId(content);
+            }
+
         }
     }
 }

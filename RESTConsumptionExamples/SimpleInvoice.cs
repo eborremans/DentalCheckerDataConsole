@@ -15,7 +15,7 @@ namespace RESTConsumptionExamples
         public String dcInvoicePublicId { get; set; }
         public String declarerAGBCode { get; set; }
         public String healthcareProviderName { get; set; }
-        public String institutionAGBCode { get; set; }
+        public String institutionAGBCdde { get; set; }
         public String invoiceDate { get; set; }
         public String invoiceNumber { get; set; }
         public List<Patient> patients { get; set; }
@@ -28,7 +28,7 @@ namespace RESTConsumptionExamples
             string dcInvoicePublicId, 
             string declarerAGBCode, 
             string healthcareProviderName, 
-            string institutionAGBCode, 
+            string institutionAGBCdde, 
             string invoiceDate, 
             string invoiceNumber, 
             List<Patient> patients
@@ -41,7 +41,7 @@ namespace RESTConsumptionExamples
             this.dcInvoicePublicId = dcInvoicePublicId;
             this.declarerAGBCode = declarerAGBCode;
             this.healthcareProviderName = healthcareProviderName;
-            this.institutionAGBCode = institutionAGBCode;
+            this.institutionAGBCdde = institutionAGBCdde;
             this.invoiceDate = invoiceDate;
             this.invoiceNumber = invoiceNumber;
             this.patients = patients;
@@ -63,7 +63,7 @@ namespace RESTConsumptionExamples
             text.AppendLine();
             text.Append("healthcareProviderName :" + healthcareProviderName);
             text.AppendLine();
-            text.Append("institutionAGBCdde     :" + institutionAGBCode);
+            text.Append("institutionAGBCdde     :" + institutionAGBCdde);
             text.AppendLine();
             text.Append("invoiceDate            :" + invoiceDate);
             text.AppendLine();
@@ -89,9 +89,9 @@ namespace RESTConsumptionExamples
             invoice.dcInvoicePublicId = "dcInvoicePublicId";
             invoice.declarerAGBCode = "declarerAGBCode";
             invoice.healthcareProviderName = "healthcareProviderName";
-            invoice.institutionAGBCode = "institutionAGBCode";
+            invoice.institutionAGBCdde = "institutionAGBCdde";
             DateTime now = DateTime.Now;
-            invoice.invoiceDate = now.Year + "-" + now.Month + "-" + now.Day;
+            invoice.invoiceDate = DateUtils.today();
             invoice.invoiceNumber = "invoiceNumber";
 
             invoice.patients = Patient.getTestPatients();
