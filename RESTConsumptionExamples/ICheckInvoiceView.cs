@@ -19,6 +19,5 @@ namespace RESTConsumptionExamples
         String getCurrentCustomerId();
 
         void uploadInvoice();
-        void checkInvoice(String invoiceId);
     }
 }

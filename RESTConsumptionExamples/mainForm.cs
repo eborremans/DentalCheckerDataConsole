@@ -766,12 +766,7 @@ namespace RESTConsumptionExamples
             customerController.uploadInvoice(customer, newInvoice);
         }
 
-        public void checkInvoice(string invoiceId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setCustomerInvoice(SimpleInvoice invoice)
+    public void setCustomerInvoice(SimpleInvoice invoice)
         {
             newInvoice = invoice;
 
@@ -997,6 +992,16 @@ namespace RESTConsumptionExamples
 
             invoiceTreatments_GV.Invalidate();
             invoiceTreatments_GV.Update();
+        }
+
+        private void checkInvoice_BTN_Click(object sender, EventArgs e)
+        {
+            customerController.checkInvoice(newInvoicePublicId_TXT.Text);
+        }
+
+        private void checkInvoice_BTN_Click_1(object sender, EventArgs e)
+        {
+            customerController.checkInvoice(invoiceNr_TXT.Text);
         }
     }
 }

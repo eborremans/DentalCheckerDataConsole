@@ -108,7 +108,7 @@ namespace RESTConsumptionExamples
             CreateInvoiceRequest newInvoiceRequest = new CreateInvoiceRequest();
             newInvoiceRequest.invoiceData = newInvoice;
 
-            HttpWebRequest request = RequestResponseFactory.createNewInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, newInvoiceRequest); 
+            HttpWebRequest request = RequestResponseFactory.createNewInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, newInvoiceRequest);
             if (null == request)
             {
                 return;
@@ -139,6 +139,31 @@ namespace RESTConsumptionExamples
                 checkInvoiceView.setInvoicePublicId(content);
             }
 
+        }
+        public void checkInvoice(String publicInvoiceId)
+        {
+            HttpWebRequest request = RequestResponseFactory.checkInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, publicInvoiceId);
+            if (null == request)
+            {
+                return;
+            }
+
+            HttpWebResponse response = inputView.getResponse(request);
+            if (null == response)
+            {
+                return;
+            }
+
+            string content = string.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            checkInvoiceView.setMessage(content);
         }
     }
 }

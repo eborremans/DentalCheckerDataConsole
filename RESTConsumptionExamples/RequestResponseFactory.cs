@@ -34,7 +34,7 @@ namespace RESTConsumptionExamples
 
         public static HttpWebRequest createInvoicePublicIdsRequest(String url, String apiKey, DateRangeRequest dateRangeRequest)
         {
-            return createRequest(url + "invoices/publicIds", "", apiKey, dateRangeRequest);
+            return createRequest(url + "invoices/publicIds", "", apiKey, "GET", dateRangeRequest);
         }
 
         public static HttpWebRequest createReferenceDataRequest(String url, String apiKey, int year)
@@ -45,7 +45,7 @@ namespace RESTConsumptionExamples
         public static HttpWebRequest createCustomerExternalIdsRequest(String url, String apiKey)
         {
             DateRangeRequest dateRangeRequest = new DateRangeRequest();
-            return createRequest(url + "customer/customerExternalIds", "", apiKey, dateRangeRequest);
+            return createRequest(url + "customer/customerExternalIds", "", apiKey, "GET", dateRangeRequest);
         }
 
         public static HttpWebRequest createCustomerRequest(String url, String apiKey, String customerExternalId)
@@ -60,16 +60,22 @@ namespace RESTConsumptionExamples
 
         public static HttpWebRequest createNewInvoiceRequest(String url, String apiKey, CreateInvoiceRequest newInvoiceRequest)
         {
-            return createRequest(url + "invoices/", "", apiKey, newInvoiceRequest);
+            return createRequest(url + "invoices/", "", apiKey, "PUT", newInvoiceRequest);
+        }
+
+        public static HttpWebRequest checkInvoiceRequest(String url, String apiKey, String publicInvoiceId)
+        {
+            return createRequest(url + "checker/" + publicInvoiceId, "", apiKey, "PUT");
         }
 
         // public static HttpWebRequest createRequest(String url, String callerID, String apiKey, DateRangeRequest dateRangeRequest = null)
-        public static HttpWebRequest createRequest(String url, String callerID, String apiKey, Object postRequest = null)
+        public static HttpWebRequest createRequest(String url, String callerID, String apiKey, String method = "GET", Object postRequest = null)
         {
             HttpWebRequest request = null;
             try
             {
                 request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = method;
             }
             catch (Exception e)
             {
