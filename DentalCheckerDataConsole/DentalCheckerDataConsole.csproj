@@ -7,13 +7,13 @@
     <ProjectGuid>{1FBD816D-0C03-40F7-9BB1-D34913F9272B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RESTConsumptionExamples</RootNamespace>
-    <AssemblyName>RESTConsumptionExamples</AssemblyName>
+    <RootNamespace>DentalCheckerDataConsole</RootNamespace>
+    <AssemblyName>DentalCheckerDataConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\projects\billinghouse\RESTConsumptionExamples\deploy\</PublishUrl>
+    <PublishUrl>D:\projects\billinghouse\DentalCheckerDataConsole\deploy\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -125,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Configuration.datasource" />
