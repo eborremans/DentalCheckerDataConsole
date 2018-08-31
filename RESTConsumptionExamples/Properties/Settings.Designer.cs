@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RESTConsumptionExamples.Properties
+namespace DentalCheckerDataConsole.Properties
 {
 
 

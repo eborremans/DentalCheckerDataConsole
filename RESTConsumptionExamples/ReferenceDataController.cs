@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Windows.Forms;
 
-namespace RESTConsumptionExamples
+namespace DentalCheckerDataConsole
 {
     public class ReferenceDataController
     {

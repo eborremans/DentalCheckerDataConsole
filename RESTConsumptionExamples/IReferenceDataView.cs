@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RESTConsumptionExamples
+namespace DentalCheckerDataConsole
 {
     public interface IReferenceDataView
     {

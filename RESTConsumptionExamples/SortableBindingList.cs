@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
  
-namespace RESTConsumptionExamples
+namespace DentalCheckerDataConsole
 {
     /// <summary>
     /// Provides a generic collection that supports data binding and additionally supports sorting.

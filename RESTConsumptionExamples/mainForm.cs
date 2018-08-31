@@ -19,7 +19,7 @@ using System.Text.RegularExpressions;
 using Microsoft.VisualBasic.CompilerServices;
 using System.Globalization;
 
-namespace RESTConsumptionExamples
+namespace DentalCheckerDataConsole
 {
     // Main view
     public partial class mainForm : Form, IInputView, IInvoiceView, IReferenceDataView, ICheckInvoiceView

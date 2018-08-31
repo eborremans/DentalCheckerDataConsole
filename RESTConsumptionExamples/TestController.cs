@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RESTConsumptionExamples
+namespace DentalCheckerDataConsole
 {
     public class TestController
     {

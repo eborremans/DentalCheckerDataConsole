@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.IO;
 
-namespace RESTConsumptionExamples
+namespace DentalCheckerDataConsole
 {
     public static class RequestResponseFactory
     {

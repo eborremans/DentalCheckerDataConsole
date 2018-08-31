@@ -1,4 +1,4 @@
-﻿namespace RESTConsumptionExamples
+﻿namespace DentalCheckerDataConsole
 {
     partial class mainForm
     {
@@ -347,7 +347,7 @@
             // 
             // configurationBindingSource
             // 
-            this.configurationBindingSource.DataSource = typeof(RESTConsumptionExamples.Configuration);
+            this.configurationBindingSource.DataSource = typeof(DentalCheckerDataConsole.Configuration);
             // 
             // jsonSplitContainer_SPLT
             // 
@@ -542,7 +542,7 @@
             // 
             // treatmentBindingSource
             // 
-            this.treatmentBindingSource.DataSource = typeof(RESTConsumptionExamples.Treatment);
+            this.treatmentBindingSource.DataSource = typeof(DentalCheckerDataConsole.Treatment);
             // 
             // patientHealthInsurance_TXT
             // 
@@ -1151,7 +1151,7 @@
             // 
             // referenceDataBindingSource
             // 
-            this.referenceDataBindingSource.DataSource = typeof(RESTConsumptionExamples.ReferenceData);
+            this.referenceDataBindingSource.DataSource = typeof(DentalCheckerDataConsole.ReferenceData);
             this.referenceDataBindingSource.CurrentChanged += new System.EventHandler(this.referenceDataBindingSource_CurrentChanged);
             // 
             // label8
@@ -1888,7 +1888,7 @@
             // treatmentBindingSource1
             // 
             this.treatmentBindingSource1.AllowNew = true;
-            this.treatmentBindingSource1.DataSource = typeof(RESTConsumptionExamples.Treatment);
+            this.treatmentBindingSource1.DataSource = typeof(DentalCheckerDataConsole.Treatment);
             // 
             // label16
             // 
@@ -1911,7 +1911,7 @@
             // 
             // mainFormBindingSource
             // 
-            this.mainFormBindingSource.DataSource = typeof(RESTConsumptionExamples.mainForm);
+            this.mainFormBindingSource.DataSource = typeof(DentalCheckerDataConsole.mainForm);
             // 
             // checkInvoice_BTN
             // 
