@@ -15,7 +15,7 @@ namespace DentalCheckerDataConsole
 
         public static String dateTimeToString(DateTime dateTime)
         {
-            String str = dateTime.Year + "-" + dateTime.Month.ToString("00.#") + "-" + dateTime.Day;
+            String str = dateTime.Year + "-" + dateTime.Month.ToString("00.#") + "-" + dateTime.Day.ToString("00.#");
 
             return str;
         }

@@ -783,7 +783,14 @@ namespace DentalCheckerDataConsole
             declarerAGBCode_TXT.Text = newInvoice.declarerAGBCode;
             healthcareProviderName_TXT.Text = newInvoice.healthcareProviderName;
             institutionAGBCdde_TXT.Text = newInvoice.institutionAGBCdde;
-            newInvoiceDate_DTP.Value = DateTime.ParseExact(newInvoice.invoiceDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            try
+            {
+                newInvoiceDate_DTP.Value = DateTime.ParseExact(newInvoice.invoiceDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            }
+            catch(Exception e)
+            {
+                newInvoiceDate_DTP.Value = DateTime.ParseExact(newInvoice.invoiceDate, "yyyy-MM-d", CultureInfo.InvariantCulture);
+            }
             newInvoiceNumber_TXT.Text = newInvoice.invoiceNumber;
             dontProcessTextChanged = false;
         }
@@ -912,7 +919,8 @@ namespace DentalCheckerDataConsole
                     newTreatment = Treatment.getDefaultInputTreatment(previousDate);
                 } else
                 {
-                    newTreatment = Treatment.getDefaultInputTreatment(DateUtils.today());
+                    String dateString = DateUtils.today();
+                    newTreatment = Treatment.getDefaultInputTreatment(dateString);
                 }
                 inputTreatments[e.Row.Index - 1] = newTreatment;
             }
