@@ -881,7 +881,7 @@ namespace DentalCheckerDataConsole
 
         private void invoiceTreatments_GV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            switch(invoiceTreatments_GV.Columns[e.ColumnIndex].Name)
+            switch (invoiceTreatments_GV.Columns[e.ColumnIndex].Name)
             {
                 case "dateColumn":
                     gridViewDTPRectangle = invoiceTreatments_GV.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
@@ -904,6 +904,12 @@ namespace DentalCheckerDataConsole
 
         private void invoiceTreatments_GV_Scroll(object sender, ScrollEventArgs e)
         {
+            gridView_DTP.Visible = false;
+        }
+
+        private void invoiceTreatments_GV_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            Debug.WriteLine("Leaving cell (" + e.RowIndex + ", " + e.ColumnIndex + ")");
             gridView_DTP.Visible = false;
         }
 
@@ -1011,5 +1017,6 @@ namespace DentalCheckerDataConsole
         {
             customerController.checkInvoice(invoiceNr_TXT.Text);
         }
+
     }
 }
