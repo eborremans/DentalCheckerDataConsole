@@ -443,8 +443,11 @@ namespace DentalCheckerDataConsole
 
         private void loadRefData_BTN_Click(object sender, EventArgs e)
         {
+            Cursor previousCursor = Cursor.Current;
+            Cursor.Current = Cursors.WaitCursor;
             loadReferenceData1();
             loadReferenceData2();
+            Cursor.Current = previousCursor;
         }
 
         private void loadReferenceData1()

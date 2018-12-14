@@ -7,7 +7,8 @@
 *.userosscache
 *.sln.docstates
 apikey.key
-configuration.local.xml
+Debug/configuration.local.xml
+Release/configuration.local.xml
 *.bak
 
 # User-specific files (MonoDevelop/Xamarin Studio)
