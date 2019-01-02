@@ -26,7 +26,7 @@ namespace DentalCheckerDataConsole
 
         public void getCustomerExternalIds()
         {
-            System.Net.HttpWebRequest request = RequestResponseFactory.createCustomerExternalIdsRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
+            System.Net.HttpWebRequest request = RequestResponseFactory.createCustomerExternalIdsRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey);
             if (null == request)
             {
                 return;
@@ -53,7 +53,7 @@ namespace DentalCheckerDataConsole
 
         public void getCustomerJSon()
         {
-            System.Net.HttpWebRequest request = RequestResponseFactory.createCustomerRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, checkInvoiceView.getCurrentCustomerId());
+            System.Net.HttpWebRequest request = RequestResponseFactory.createCustomerRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey, checkInvoiceView.getCurrentCustomerId());
             if (null == request)
             {
                 return;
@@ -108,7 +108,7 @@ namespace DentalCheckerDataConsole
             CreateInvoiceRequest newInvoiceRequest = new CreateInvoiceRequest();
             newInvoiceRequest.invoiceData = newInvoice;
 
-            HttpWebRequest request = RequestResponseFactory.createNewInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, newInvoiceRequest);
+            HttpWebRequest request = RequestResponseFactory.createNewInvoiceRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey, newInvoiceRequest);
             if (null == request)
             {
                 return;
@@ -142,7 +142,7 @@ namespace DentalCheckerDataConsole
         }
         public void checkInvoice(String publicInvoiceId)
         {
-            HttpWebRequest request = RequestResponseFactory.checkInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, publicInvoiceId);
+            HttpWebRequest request = RequestResponseFactory.checkInvoiceRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey, publicInvoiceId);
             if (null == request)
             {
                 return;

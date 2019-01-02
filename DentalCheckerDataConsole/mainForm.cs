@@ -139,7 +139,7 @@ namespace DentalCheckerDataConsole
         // Load de api key from the configuration file
         private void loadKey_BTN_Click(object sender, EventArgs e)
         {
-            configurationController.loadConfiguration();
+            loadConfiguration();
             if (null == codeFilter_TXT.Text) {
                 codeFilter_TXT.Text = "";
             }
@@ -150,20 +150,23 @@ namespace DentalCheckerDataConsole
             configurationController.storeConfiguration();
         }
 
+        private void loadConfiguration()
+        {
+            configurationController.loadConfiguration();
+
+            url_CB.SelectedIndex = configuration.currentUrlSelectedIndex;
+            year1Selection_CB.SelectedIndex = year1Selection_CB.Items.Count - 1; // Default to the latest year available
+            year2Selection_CB.SelectedIndex = year2Selection_CB.Items.Count - 1; // Default to the latest year available
+
+            refDataURL1_CB.SelectedIndex = configuration.refDataUrl1SelectedIndex;
+            refDataURL2_CB.SelectedIndex = configuration.refDataUrl2SelectedIndex;
+
+            getInvoice_BTN.Select();
+        }
         private void mainForm_Load(object sender, EventArgs e)
         {
             loading = true;
-            configurationController.loadConfiguration();
-
-            url_CB.SelectedIndex = 0;
-            year1Selection_CB.SelectedIndex = 3;
-            year2Selection_CB.SelectedIndex = 3;
-
-            getInvoice_BTN.Select();
-
-            // startDatePicker_DTP.Value = DateTime.Now.AddDays(-31);
-            // endDatePicker_DTP.Value = DateTime.Now;
-
+            loadConfiguration();
             loading = false;
         }
 
@@ -222,9 +225,9 @@ namespace DentalCheckerDataConsole
                 configuration.apiKey = apiKey_TXT.Text;
                 configuration.urls = url_CB.Items.Cast<String>().ToList();
                 configuration.currentInvoiceId = invoiceNr_TXT.Text;
-                configuration.currentUrl = url_CB.SelectedItem.ToString();
-                configuration.refDataUrl1 = refDataURL1_CB.SelectedItem.ToString();
-                configuration.refDataUrl2 = refDataURL2_CB.SelectedItem.ToString();
+                configuration.currentUrlSelectedIndex = url_CB.SelectedIndex;
+                configuration.refDataUrl1SelectedIndex = refDataURL1_CB.SelectedIndex;
+                configuration.refDataUrl2SelectedIndex = refDataURL2_CB.SelectedIndex;
             }
             catch (Exception exc)
             {
@@ -466,10 +469,10 @@ namespace DentalCheckerDataConsole
 
         private int yearStringToInteger(String yearString)
         {
-            int year = 2018;
+            int year = 2019;
             if (!int.TryParse(yearString, out year))
             {
-                MessageBox.Show("Hey, we need an int over here. Defaulting to 2018");
+                MessageBox.Show("Hey, we need an int over here. Defaulting to 2019");
             }
             return year;
         }
@@ -830,6 +833,7 @@ namespace DentalCheckerDataConsole
 
         private void customerExternalIds_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            checkInvoiceMessage_TXT.Text = "";
             customerController.getCustomerJSon();
             if (treatmentCodes.Count == 0) // url changed
             { 
@@ -1021,5 +1025,12 @@ namespace DentalCheckerDataConsole
             customerController.checkInvoice(invoiceNr_TXT.Text);
         }
 
+        private void refDataURL1_CB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(linkToUrl1_CHCK.Checked && refDataURL1_CB.Items.Count > 0 && refDataURL2_CB.Items.Count > 0)
+            {
+                refDataURL2_CB.SelectedIndex = refDataURL1_CB.SelectedIndex;
+            }
+        }
     }
 }

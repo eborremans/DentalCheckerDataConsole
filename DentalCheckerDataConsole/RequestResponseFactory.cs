@@ -76,6 +76,7 @@ namespace DentalCheckerDataConsole
             {
                 request = (HttpWebRequest)WebRequest.Create(url);
                 request.Method = method;
+                request.Timeout = 2000;
             }
             catch (Exception e)
             {

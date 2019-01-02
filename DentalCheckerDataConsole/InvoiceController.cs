@@ -33,7 +33,7 @@ namespace DentalCheckerDataConsole
 
         public void getInvoiceJSon()
         {
-            HttpWebRequest request = RequestResponseFactory.createInvoiceRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
+            HttpWebRequest request = RequestResponseFactory.createInvoiceRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
             if (null == request)
             {
                 return;
@@ -87,7 +87,7 @@ namespace DentalCheckerDataConsole
 
         public void getCustomerMessage()
         {
-            HttpWebRequest request = RequestResponseFactory.createCustomerMessageRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
+            HttpWebRequest request = RequestResponseFactory.createCustomerMessageRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey, inputView.getConfiguration().currentInvoiceId);
             if (null == request)
             {
                 return;
@@ -126,7 +126,7 @@ namespace DentalCheckerDataConsole
 
         public void getInvoicePublicIds()
         {
-            HttpWebRequest request = RequestResponseFactory.createInvoicePublicIdsRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey, inputView.getDateRange());
+            HttpWebRequest request = RequestResponseFactory.createInvoicePublicIdsRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey, inputView.getDateRange());
             if (null == request)
             {
                 return;

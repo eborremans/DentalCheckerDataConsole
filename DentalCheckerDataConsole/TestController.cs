@@ -26,7 +26,7 @@ namespace DentalCheckerDataConsole
 
         public void getVersionInfo()
         {
-            HttpWebRequest request = RequestResponseFactory.createVersionRequest(inputView.getConfiguration().currentUrl, inputView.getConfiguration().apiKey);
+            HttpWebRequest request = RequestResponseFactory.createVersionRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey);
             if (null == request)
             {
                 return;

@@ -27,20 +27,31 @@ namespace DentalCheckerDataConsole
             this.inputView = inputView;
         }
 
+        private void createDefaultConfigurationFile()
+        {
+            File.Copy(@"configuration.xml", @"configuration.local.xml");
+        }
         public void loadConfiguration()
         {
             Configuration configuration = new Configuration();
 
             XmlSerializer ser = new XmlSerializer(typeof(Configuration));
 
-            try {
+            try
+            {
+                if (!File.Exists(@"configuration.local.xml"))
+                { 
+                    createDefaultConfigurationFile();
+                }
                 using (FileStream fs = new FileStream(@"configuration.local.xml", FileMode.Open))
                 {
                     configuration = (Configuration)ser.Deserialize(fs);
                 }
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+                throw e;
             }
 
             inputView.setConfiguration(configuration);
@@ -61,6 +72,7 @@ namespace DentalCheckerDataConsole
             {
                 using (FileStream fs = new FileStream(@"configuration.local.xml", FileMode.OpenOrCreate))
                 {
+                    fs.SetLength(0);
                     ser.Serialize(fs, configuration);
                 }
             } catch(Exception e)

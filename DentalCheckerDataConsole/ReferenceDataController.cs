@@ -25,7 +25,7 @@ namespace DentalCheckerDataConsole
 
         public void getTreatmentCodes()
         {
-            HttpWebRequest request = RequestResponseFactory.createTreatmentCodesRequest(this.inputView.getConfiguration().currentUrl, this.inputView.getConfiguration().apiKey);
+            HttpWebRequest request = RequestResponseFactory.createTreatmentCodesRequest(this.inputView.getConfiguration().getCurrentUrl(), this.inputView.getConfiguration().apiKey);
             if (null == request)
             {
                 return;
@@ -77,12 +77,12 @@ namespace DentalCheckerDataConsole
 
         public void getReferenceData1(int year)
         {
-            getReferenceData(UPPER_REF_GRID, referenceDataView, year, inputView.getConfiguration().refDataUrl1);
+            getReferenceData(UPPER_REF_GRID, referenceDataView, year, inputView.getConfiguration().getRefDataUrl(1));
         }
 
         public void getReferenceData2(int year)
         {
-            getReferenceData(LOWER_REF_GRID, referenceDataView, year, inputView.getConfiguration().refDataUrl2);
+            getReferenceData(LOWER_REF_GRID, referenceDataView, year, inputView.getConfiguration().getRefDataUrl(2));
         }
 
         public void getReferenceData(int refGrid, IReferenceDataView referenceDataView, int year, String url)
