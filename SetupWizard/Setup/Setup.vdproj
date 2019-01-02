@@ -33,14 +33,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A617760650DF2EB9BF33A24B5BD1B638"
-        "OwnerKey" = "8:_8588ACDC59754499A9CCEBAD75F08EE9"
+        "MsmKey" = "8:_8FFEE3FED41C46ED9976D2E6E92F1F2D"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A617760650DF2EB9BF33A24B5BD1B638"
+        "MsmKey" = "8:_A617760650DF2EB9BF33A24B5BD1B638"
+        "OwnerKey" = "8:_8588ACDC59754499A9CCEBAD75F08EE9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -53,6 +53,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_27E79F43218EE290CE7C11519316E132"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A617760650DF2EB9BF33A24B5BD1B638"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -73,6 +79,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -89,6 +103,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -153,6 +183,26 @@
             {
             "SourcePath" = "8:..\\..\\DentalCheckerDataConsole\\configuration.local.xml"
             "TargetName" = "8:configuration.local.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_5467B7F3824340118ADB7AAE77285BED"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8FFEE3FED41C46ED9976D2E6E92F1F2D"
+            {
+            "SourcePath" = "8:..\\..\\DentalCheckerDataConsole\\configuration.xml"
+            "TargetName" = "8:configuration.xml"
             "Tag" = "8:"
             "Folder" = "8:_5467B7F3824340118ADB7AAE77285BED"
             "Condition" = "8:"
@@ -257,11 +307,11 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Dental Checker Data Console"
         "ProductCode" = "8:{AA7ED65E-0E75-4E78-BBEC-279F28F065F8}"
-        "PackageCode" = "8:{6D803EAD-468A-44B9-A191-A068B744B55C}"
+        "PackageCode" = "8:{94DA3FFF-BD7E-4F18-A56F-7E87D5549084}"
         "UpgradeCode" = "8:{13193DDC-8978-4148-8E7D-91ED69DFDD1E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
