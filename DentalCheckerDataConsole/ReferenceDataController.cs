@@ -101,11 +101,30 @@ namespace DentalCheckerDataConsole
             //        delegate { return true; }
             //    );
 
-            HttpWebResponse response = inputView.getResponse(request);
-            if (null == response)
+            HttpWebResponse response = null;
+            try
             {
+                response = inputView.getResponse(request);
+                if (null == response)
+                {
+                    System.Diagnostics.Debug.WriteLine("Empty response " + request.Address);
+                    MessageBox.Show("Empty response " + request.Address);
+                    return;
+                }
+            } catch (TimeoutException e)
+            {
+                System.Diagnostics.Debug.WriteLine("Caught TimeoutException: " + e.Message + " address: " + request.Address);
+                MessageBox.Show(e.Message + " address: " + request.Address);
                 return;
             }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Caught TimeoutException: " + e.Message + " address: " + request.Address);
+                MessageBox.Show(e.Message + " address: " + request.Address);
+                return;
+            }
+
+            System.Diagnostics.Debug.WriteLine("Received response for request " + request.Address);
 
             String content = String.Empty;
             using (var stream = response.GetResponseStream())
