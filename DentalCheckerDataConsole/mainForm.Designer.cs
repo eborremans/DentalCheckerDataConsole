@@ -211,7 +211,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.refDataURL_API_Combination1_CB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
@@ -370,7 +369,7 @@
             // jsonSplitContainer_SPLT.Panel2
             // 
             this.jsonSplitContainer_SPLT.Panel2.Controls.Add(this.prettyJSon_TXT);
-            this.jsonSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 213);
+            this.jsonSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 261);
             this.jsonSplitContainer_SPLT.SplitterDistance = 486;
             this.jsonSplitContainer_SPLT.TabIndex = 13;
             // 
@@ -385,7 +384,7 @@
             this.json_TXT.Multiline = true;
             this.json_TXT.Name = "json_TXT";
             this.json_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.json_TXT.Size = new System.Drawing.Size(476, 209);
+            this.json_TXT.Size = new System.Drawing.Size(476, 257);
             this.json_TXT.TabIndex = 3;
             // 
             // prettyJSon_TXT
@@ -399,7 +398,7 @@
             this.prettyJSon_TXT.Multiline = true;
             this.prettyJSon_TXT.Name = "prettyJSon_TXT";
             this.prettyJSon_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prettyJSon_TXT.Size = new System.Drawing.Size(1032, 209);
+            this.prettyJSon_TXT.Size = new System.Drawing.Size(1032, 257);
             this.prettyJSon_TXT.TabIndex = 14;
             // 
             // invoicePublicIds_CB
@@ -453,7 +452,7 @@
             this.patientTreatments_DGV.Margin = new System.Windows.Forms.Padding(4);
             this.patientTreatments_DGV.Name = "patientTreatments_DGV";
             this.patientTreatments_DGV.ReadOnly = true;
-            this.patientTreatments_DGV.Size = new System.Drawing.Size(932, 249);
+            this.patientTreatments_DGV.Size = new System.Drawing.Size(932, 307);
             this.patientTreatments_DGV.TabIndex = 16;
             // 
             // codeDataGridViewTextBoxColumn
@@ -653,8 +652,8 @@
             // mainSplitContainer_SPLT.Panel2
             // 
             this.mainSplitContainer_SPLT.Panel2.Controls.Add(this.jsonSplitContainer_SPLT);
-            this.mainSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 845);
-            this.mainSplitContainer_SPLT.SplitterDistance = 627;
+            this.mainSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 1031);
+            this.mainSplitContainer_SPLT.SplitterDistance = 765;
             this.mainSplitContainer_SPLT.SplitterWidth = 5;
             this.mainSplitContainer_SPLT.TabIndex = 29;
             // 
@@ -694,8 +693,8 @@
             // treatmentsSplitContainer.Panel2
             // 
             this.treatmentsSplitContainer.Panel2.Controls.Add(this.checkResultSplitContainer_SPLT);
-            this.treatmentsSplitContainer.Size = new System.Drawing.Size(1912, 618);
-            this.treatmentsSplitContainer.SplitterDistance = 261;
+            this.treatmentsSplitContainer.Size = new System.Drawing.Size(1912, 756);
+            this.treatmentsSplitContainer.SplitterDistance = 319;
             this.treatmentsSplitContainer.SplitterWidth = 5;
             this.treatmentsSplitContainer.TabIndex = 17;
             // 
@@ -765,7 +764,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 294);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 373);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 483;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -781,7 +780,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(477, 4);
+            this.patientViolations_LB.Size = new System.Drawing.Size(477, 84);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -798,7 +797,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1020, 287);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1019, 366);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -834,7 +833,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1908, 849);
+            this.tabPage1.Size = new System.Drawing.Size(1908, 1035);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Invoice";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -864,7 +863,6 @@
             // 
             // referenceDataSplitter_SPLT.Panel1
             // 
-            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.refDataURL_API_Combination1_CB);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.version1_TXT);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label25);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label14);
@@ -977,12 +975,12 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn,
             this.deletedDataGridViewCheckBoxColumn});
             this.referenceData1_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData1_GV.Location = new System.Drawing.Point(3, 95);
+            this.referenceData1_GV.Location = new System.Drawing.Point(3, 48);
             this.referenceData1_GV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.referenceData1_GV.Name = "referenceData1_GV";
             this.referenceData1_GV.ReadOnly = true;
             this.referenceData1_GV.RowTemplate.Height = 24;
-            this.referenceData1_GV.Size = new System.Drawing.Size(1892, 410);
+            this.referenceData1_GV.Size = new System.Drawing.Size(1892, 457);
             this.referenceData1_GV.TabIndex = 0;
             // 
             // codeRuleDataGridViewTextBoxColumn
@@ -1340,12 +1338,12 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn1,
             this.deletedDataGridViewCheckBoxColumn1});
             this.referenceData2_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData2_GV.Location = new System.Drawing.Point(3, 83);
+            this.referenceData2_GV.Location = new System.Drawing.Point(3, 42);
             this.referenceData2_GV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.referenceData2_GV.Name = "referenceData2_GV";
             this.referenceData2_GV.ReadOnly = true;
             this.referenceData2_GV.RowTemplate.Height = 24;
-            this.referenceData2_GV.Size = new System.Drawing.Size(1893, 425);
+            this.referenceData2_GV.Size = new System.Drawing.Size(1893, 466);
             this.referenceData2_GV.TabIndex = 19;
             // 
             // codeRuleDataGridViewTextBoxColumn1
@@ -1625,7 +1623,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1908, 849);
+            this.tabPage3.Size = new System.Drawing.Size(1908, 1035);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check Declaration";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1989,16 +1987,6 @@
             // 
             this.mainFormBindingSource.DataSource = typeof(DentalCheckerDataConsole.mainForm);
             // 
-            // refDataURL_API_Combination1_CB
-            // 
-            this.refDataURL_API_Combination1_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrlSelectedIndex", true));
-            this.refDataURL_API_Combination1_CB.FormattingEnabled = true;
-            this.refDataURL_API_Combination1_CB.Location = new System.Drawing.Point(57, 58);
-            this.refDataURL_API_Combination1_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.refDataURL_API_Combination1_CB.Name = "refDataURL_API_Combination1_CB";
-            this.refDataURL_API_Combination1_CB.Size = new System.Drawing.Size(707, 24);
-            this.refDataURL_API_Combination1_CB.TabIndex = 19;
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2236,7 +2224,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox version2_TXT;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox refDataURL_API_Combination1_CB;
     }
 }
 
