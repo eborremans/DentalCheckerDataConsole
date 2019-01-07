@@ -764,7 +764,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 373);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 372);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 483;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -780,7 +780,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(477, 84);
+            this.patientViolations_LB.Size = new System.Drawing.Size(477, 68);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -797,7 +797,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1019, 366);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1018, 365);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -816,8 +816,8 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(8, 40);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
