@@ -10,10 +10,12 @@ namespace DentalCheckerDataConsole
     public class Configuration
     {
         public String apiKey { get; set; }
+        // public String currentApiKey { get; set; }
         public Int32 currentUrlSelectedIndex { get; set; }
         public String currentInvoiceId { get; set; }
 
         public List<String> urls { get; set; }
+        // public Dictionary<string, string> urlApiKeyCombinations { get; set; }
         public Int32 refDataUrl1SelectedIndex { get; set; }
         public Int32 refDataUrl2SelectedIndex { get; set; }
 

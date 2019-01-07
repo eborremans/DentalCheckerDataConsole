@@ -95,6 +95,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.referenceDataSplitter_SPLT = new System.Windows.Forms.SplitContainer();
+            this.version1_TXT = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.findCodeFilter_TXT = new System.Windows.Forms.TextBox();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
@@ -134,6 +136,8 @@
             this.codeFilter_TXT = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.refDataURL1_CB = new System.Windows.Forms.ComboBox();
+            this.version2_TXT = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.linkToUrl1_CHCK = new System.Windows.Forms.CheckBox();
             this.refDataURL2_CB = new System.Windows.Forms.ComboBox();
             this.referenceData2_GV = new System.Windows.Forms.DataGridView();
@@ -207,6 +211,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.refDataURL_API_Combination1_CB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
@@ -760,7 +765,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 300);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(1902, 294);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 483;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 5;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -793,7 +798,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(27, 25);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1026, 293);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1020, 287);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -819,7 +824,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1916, 878);
+            this.tabControl1.Size = new System.Drawing.Size(1916, 1064);
             this.tabControl1.TabIndex = 31;
             // 
             // tabPage1
@@ -841,7 +846,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1908, 849);
+            this.tabPage2.Size = new System.Drawing.Size(1908, 1035);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reference Data";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -859,6 +864,9 @@
             // 
             // referenceDataSplitter_SPLT.Panel1
             // 
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.refDataURL_API_Combination1_CB);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.version1_TXT);
+            this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label25);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.label14);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.findCodeFilter_TXT);
             this.referenceDataSplitter_SPLT.Panel1.Controls.Add(this.loadRefData_BTN);
@@ -872,15 +880,33 @@
             // 
             // referenceDataSplitter_SPLT.Panel2
             // 
+            this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.version2_TXT);
+            this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label26);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.linkToUrl1_CHCK);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.refDataURL2_CB);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.referenceData2_GV);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label13);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.year2Selection_CB);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label12);
-            this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(1900, 839);
-            this.referenceDataSplitter_SPLT.SplitterDistance = 417;
+            this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(1900, 1025);
+            this.referenceDataSplitter_SPLT.SplitterDistance = 509;
             this.referenceDataSplitter_SPLT.TabIndex = 20;
+            // 
+            // version1_TXT
+            // 
+            this.version1_TXT.Location = new System.Drawing.Point(1343, 11);
+            this.version1_TXT.Name = "version1_TXT";
+            this.version1_TXT.Size = new System.Drawing.Size(153, 22);
+            this.version1_TXT.TabIndex = 18;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(1276, 11);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 17);
+            this.label25.TabIndex = 17;
+            this.label25.Text = "version:";
             // 
             // label14
             // 
@@ -951,12 +977,12 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn,
             this.deletedDataGridViewCheckBoxColumn});
             this.referenceData1_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData1_GV.Location = new System.Drawing.Point(3, 49);
+            this.referenceData1_GV.Location = new System.Drawing.Point(3, 95);
             this.referenceData1_GV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.referenceData1_GV.Name = "referenceData1_GV";
             this.referenceData1_GV.ReadOnly = true;
             this.referenceData1_GV.RowTemplate.Height = 24;
-            this.referenceData1_GV.Size = new System.Drawing.Size(1892, 364);
+            this.referenceData1_GV.Size = new System.Drawing.Size(1892, 410);
             this.referenceData1_GV.TabIndex = 0;
             // 
             // codeRuleDataGridViewTextBoxColumn
@@ -1237,6 +1263,22 @@
             this.refDataURL1_CB.TabIndex = 14;
             this.refDataURL1_CB.SelectedIndexChanged += new System.EventHandler(this.refDataURL1_CB_SelectedIndexChanged);
             // 
+            // version2_TXT
+            // 
+            this.version2_TXT.Location = new System.Drawing.Point(1343, 14);
+            this.version2_TXT.Name = "version2_TXT";
+            this.version2_TXT.Size = new System.Drawing.Size(153, 22);
+            this.version2_TXT.TabIndex = 22;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(1276, 14);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(58, 17);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "version:";
+            // 
             // linkToUrl1_CHCK
             // 
             this.linkToUrl1_CHCK.AutoSize = true;
@@ -1298,12 +1340,12 @@
             this.maxCountOnObjectTypeDataGridViewTextBoxColumn1,
             this.deletedDataGridViewCheckBoxColumn1});
             this.referenceData2_GV.DataSource = this.referenceDataBindingSource;
-            this.referenceData2_GV.Location = new System.Drawing.Point(3, 44);
+            this.referenceData2_GV.Location = new System.Drawing.Point(3, 83);
             this.referenceData2_GV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.referenceData2_GV.Name = "referenceData2_GV";
             this.referenceData2_GV.ReadOnly = true;
             this.referenceData2_GV.RowTemplate.Height = 24;
-            this.referenceData2_GV.Size = new System.Drawing.Size(1893, 370);
+            this.referenceData2_GV.Size = new System.Drawing.Size(1893, 425);
             this.referenceData2_GV.TabIndex = 19;
             // 
             // codeRuleDataGridViewTextBoxColumn1
@@ -1947,11 +1989,21 @@
             // 
             this.mainFormBindingSource.DataSource = typeof(DentalCheckerDataConsole.mainForm);
             // 
+            // refDataURL_API_Combination1_CB
+            // 
+            this.refDataURL_API_Combination1_CB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.configurationBindingSource, "currentUrlSelectedIndex", true));
+            this.refDataURL_API_Combination1_CB.FormattingEnabled = true;
+            this.refDataURL_API_Combination1_CB.Location = new System.Drawing.Point(57, 58);
+            this.refDataURL_API_Combination1_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.refDataURL_API_Combination1_CB.Name = "refDataURL_API_Combination1_CB";
+            this.refDataURL_API_Combination1_CB.Size = new System.Drawing.Size(707, 24);
+            this.refDataURL_API_Combination1_CB.TabIndex = 19;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 919);
+            this.ClientSize = new System.Drawing.Size(1924, 1105);
             this.Controls.Add(this.loadKey_BTN);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
@@ -2180,6 +2232,11 @@
         private System.Windows.Forms.Button createTestTreatments_BTN;
         private System.Windows.Forms.Button checkInvoice_BTN;
         private System.Windows.Forms.CheckBox linkToUrl1_CHCK;
+        private System.Windows.Forms.TextBox version1_TXT;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox version2_TXT;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ComboBox refDataURL_API_Combination1_CB;
     }
 }
 

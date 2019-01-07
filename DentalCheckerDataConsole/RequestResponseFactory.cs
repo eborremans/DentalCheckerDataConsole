@@ -68,6 +68,11 @@ namespace DentalCheckerDataConsole
             return createRequest(url + "checker/" + publicInvoiceId, "", apiKey, "PUT");
         }
 
+        public static HttpWebRequest createApplicationVersionRequest(String url, String apiKey)
+        {
+            return createRequest(url + "version", "TESTING", apiKey);
+        }
+
         // public static HttpWebRequest createRequest(String url, String callerID, String apiKey, DateRangeRequest dateRangeRequest = null)
         public static HttpWebRequest createRequest(String url, String callerID, String apiKey, String method = "GET", Object postRequest = null)
         {

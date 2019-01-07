@@ -71,6 +71,7 @@ namespace DentalCheckerDataConsole
             try
             {
                 using (FileStream fs = new FileStream(@"configuration.local.xml", FileMode.OpenOrCreate))
+                // using (FileStream fs = new FileStream(@"configuration_test.xml", FileMode.OpenOrCreate))
                 {
                     fs.SetLength(0);
                     ser.Serialize(fs, configuration);

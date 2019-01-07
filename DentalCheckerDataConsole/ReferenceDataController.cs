@@ -75,6 +75,16 @@ namespace DentalCheckerDataConsole
             }
         }
 
+        public void getApplicationVersion1()
+        {
+            getVersion(UPPER_REF_GRID, referenceDataView, inputView.getConfiguration().getRefDataUrl(1));
+        }
+
+        public void getApplicationVersion2()
+        {
+            getVersion(LOWER_REF_GRID, referenceDataView, inputView.getConfiguration().getRefDataUrl(2));
+        }
+
         public void getReferenceData1(int year)
         {
             getReferenceData(UPPER_REF_GRID, referenceDataView, year, inputView.getConfiguration().getRefDataUrl(1));
@@ -105,36 +115,37 @@ namespace DentalCheckerDataConsole
             try
             {
                 response = inputView.getResponse(request);
-                if (null == response)
-                {
-                    System.Diagnostics.Debug.WriteLine("Empty response " + request.Address);
-                    MessageBox.Show("Empty response " + request.Address);
-                    return;
-                }
             } catch (TimeoutException e)
             {
-                System.Diagnostics.Debug.WriteLine("Caught TimeoutException: " + e.Message + " address: " + request.Address);
+                System.Diagnostics.Debug.WriteLine("Caught TimeoutException: " + e.Message + " address: " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
                 MessageBox.Show(e.Message + " address: " + request.Address);
                 return;
             }
             catch (Exception e)
             {
-                System.Diagnostics.Debug.WriteLine("Caught TimeoutException: " + e.Message + " address: " + request.Address);
+                System.Diagnostics.Debug.WriteLine("Caught TimeoutException: " + e.Message + " address: " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
                 MessageBox.Show(e.Message + " address: " + request.Address);
                 return;
             }
 
-            System.Diagnostics.Debug.WriteLine("Received response for request " + request.Address);
-
             String content = String.Empty;
-            using (var stream = response.GetResponseStream())
+            if (null == response)
             {
-                using (var sr = new StreamReader(stream))
+                System.Diagnostics.Debug.WriteLine("Empty response " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
+                // MessageBox.Show("Empty response " + request.Address);
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Received response for request " + request.Address);
+
+                using (var stream = response.GetResponseStream())
                 {
-                    content = sr.ReadToEnd();
+                    using (var sr = new StreamReader(stream))
+                    {
+                        content = sr.ReadToEnd();
+                    }
                 }
             }
-
             List<ReferenceData> refdata = null;
             
             try
@@ -146,15 +157,102 @@ namespace DentalCheckerDataConsole
                 };
 
                 refdata = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ReferenceData>>(content, settings);
-                if (null != refdata)
+                if (refGrid == UPPER_REF_GRID)
+                {
+                    referenceDataView.setReferenceDataList1(refdata);
+                }
+                if (refGrid == LOWER_REF_GRID)
+                {
+                    referenceDataView.setReferenceDataList2(refdata);
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        public class KeyValuePair
+        {
+            public string Key { get; set; }
+            public string Value { get; set; }
+        }
+
+        public void getVersion(int refGrid, IReferenceDataView referenceDataView, String url)
+        {
+            HttpWebRequest request = RequestResponseFactory.createApplicationVersionRequest(url, inputView.getConfiguration().apiKey);
+            if (null == request)
+            {
+                return;
+            }
+
+            HttpWebResponse response = null;
+            try
+            {
+                response = inputView.getResponse(request);
+            }
+            catch (TimeoutException e)
+            {
+                System.Diagnostics.Debug.WriteLine("Caught TimeoutException: " + e.Message + " address: " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
+                MessageBox.Show(e.Message + " address: " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
+                return;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Caught Exception: " + e.Message + " address: " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
+                MessageBox.Show(e.Message + " address: " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
+                return;
+            }
+
+            String content = String.Empty;
+            if (null == response)
+            {
+                System.Diagnostics.Debug.WriteLine("Empty response " + request.Address + " for api_key: " + inputView.getConfiguration().apiKey);
+                // MessageBox.Show("Empty response " + request.Address);
+                // return;
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Received response for request " + request.Address);
+                using (var stream = response.GetResponseStream())
+                {
+                    using (var sr = new StreamReader(stream))
+                    {
+                        content = sr.ReadToEnd();
+                    }
+                }
+            }
+
+            Dictionary<String, String> refdata = null;
+
+            try
+            {
+                JsonSerializerSettings settings = new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    MissingMemberHandling = MissingMemberHandling.Ignore
+                };
+
+                refdata = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<String, String>>(content, settings);
+                if (null != refdata && refdata.Count > 0)
                 {
                     if (refGrid == UPPER_REF_GRID)
                     {
-                        referenceDataView.setReferenceDataList1(refdata);
+                        referenceDataView.setVersion1(refdata["version"]);
                     }
                     if (refGrid == LOWER_REF_GRID)
                     {
-                        referenceDataView.setReferenceDataList2(refdata);
+                        referenceDataView.setVersion2(refdata["version"]);
+                    }
+                } else
+                {
+                    if (refGrid == UPPER_REF_GRID)
+                    {
+                        referenceDataView.setVersion1("<no data>");
+                    }
+                    if (refGrid == LOWER_REF_GRID)
+                    {
+                        referenceDataView.setVersion2("<no data>");
                     }
                 }
             }

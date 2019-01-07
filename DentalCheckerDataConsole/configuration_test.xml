@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <apiKey>-- put a valid api key here --</apiKey>
+  <currentUrlSelectedIndex>4</currentUrlSelectedIndex>
+  <currentInvoiceId>INV-0000000303</currentInvoiceId>
+  <urls>
+    <string>http://172.30.254.233:9090/</string>
+    <string>http://127.0.0.1:9090/</string>
+    <string>http://172.30.182.88:9090/</string>
+    <string>https://prod-01.dental-checker.billinghouse.nl/dental-checker/</string>
+    <string>https://acc-01.dental-checker.billinghouse.nl/dental-checker/</string>
+    <string>http://127.0.0.1:18081/dental-checker/</string>
+    <string>http://127.0.0.1:28081/dental-checker/</string>
+    <string>http://172.30.143.132:9090/</string>
+  </urls>
+  <refDataUrl1SelectedIndex>4</refDataUrl1SelectedIndex>
+  <refDataUrl2SelectedIndex>3</refDataUrl2SelectedIndex>
+</Configuration>

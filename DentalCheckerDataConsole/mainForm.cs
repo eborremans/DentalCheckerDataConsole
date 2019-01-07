@@ -223,7 +223,9 @@ namespace DentalCheckerDataConsole
             try
             {
                 configuration.apiKey = apiKey_TXT.Text;
+                // configuration.currentApiKey = apiKey_TXT.Text;
                 configuration.urls = url_CB.Items.Cast<String>().ToList();
+                // configuration.urlApiKeyCombinations = url_CB.Items.Cast<string>().ToDictionary(v => v);
                 configuration.currentInvoiceId = invoiceNr_TXT.Text;
                 configuration.currentUrlSelectedIndex = url_CB.SelectedIndex;
                 configuration.refDataUrl1SelectedIndex = refDataURL1_CB.SelectedIndex;
@@ -458,6 +460,8 @@ namespace DentalCheckerDataConsole
             String year1 = year1Selection_CB.SelectedItem.ToString();
             referenceDataController.getReferenceData1(yearStringToInteger(year1));
             reselectWithFilters();
+
+            referenceDataController.getApplicationVersion1();
         }
 
         private void loadReferenceData2()
@@ -465,6 +469,8 @@ namespace DentalCheckerDataConsole
             String year2 = year2Selection_CB.SelectedItem.ToString();
             referenceDataController.getReferenceData2(yearStringToInteger(year2));
             reselectWithFilters();
+
+            referenceDataController.getApplicationVersion2();
         }
 
         private int yearStringToInteger(String yearString)
@@ -479,18 +485,40 @@ namespace DentalCheckerDataConsole
 
         public void setReferenceDataList1(List<ReferenceData> referenceDataList)
         {
-            referenceData1 = referenceDataList;
-            SortableBindingList<ReferenceData> sortableReferenceData = new SortableBindingList<ReferenceData>(referenceData1.ToList());
-            referenceData1_GV.DataSource = sortableReferenceData;
-            referenceData1_GV.Sort(referenceData1_GV.Columns[0], ListSortDirection.Ascending);
+            if (null != referenceDataList)
+            {
+                referenceData1 = referenceDataList;
+                SortableBindingList<ReferenceData> sortableReferenceData = new SortableBindingList<ReferenceData>(referenceData1.ToList());
+                referenceData1_GV.DataSource = sortableReferenceData;
+                referenceData1_GV.Sort(referenceData1_GV.Columns[0], ListSortDirection.Ascending);
+            } else
+            {
+                referenceData1_GV.DataSource = null;
+            }
         }
 
         public void setReferenceDataList2(List<ReferenceData> referenceDataList)
         {
-            referenceData2 = referenceDataList;
-            SortableBindingList<ReferenceData> sortableReferenceData = new SortableBindingList<ReferenceData>(referenceData2.ToList());
-            referenceData2_GV.DataSource = sortableReferenceData;
-            referenceData2_GV.Sort(referenceData2_GV.Columns[0], ListSortDirection.Ascending);
+            if (null != referenceDataList)
+            {
+                referenceData2 = referenceDataList;
+                SortableBindingList<ReferenceData> sortableReferenceData = new SortableBindingList<ReferenceData>(referenceData2.ToList());
+                referenceData2_GV.DataSource = sortableReferenceData;
+                referenceData2_GV.Sort(referenceData2_GV.Columns[0], ListSortDirection.Ascending);
+            } else
+            {
+                referenceData2_GV.DataSource = null;
+            }
+        }
+
+public void setVersion1(string version)
+        {
+            version1_TXT.Text = version;
+        }
+
+        public void setVersion2(string version)
+        {
+            version2_TXT.Text = version;
         }
 
         private void codeFilter_TXT_TextChanged(object sender, EventArgs e)
