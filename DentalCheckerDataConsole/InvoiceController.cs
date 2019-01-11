@@ -147,6 +147,7 @@ namespace DentalCheckerDataConsole
             }
 
             List<String> invoicePublicIdsList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<String>>(content);
+            invoicePublicIdsList = invoicePublicIdsList.OrderBy(q => q).ToList();
 
             invoiceView.setInvoicePublicIds(invoicePublicIdsList);
         }
