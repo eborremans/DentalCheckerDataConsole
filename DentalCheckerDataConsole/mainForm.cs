@@ -876,6 +876,9 @@ public void setVersion1(string version)
                 case "dateColumn":
                     gridView_DTP.Visible = false;
                     break;
+                case "amountColumn": // Update the calculatedAmount to the input value (which is passed to the  declaredAmount column)
+                    inputTreatments[e.RowIndex].calculatedAmount = inputTreatments[e.RowIndex].declaredAmount;
+                    break;
             }
 
             if (null != inputTreatments && inputTreatments.Count > 0) {
@@ -916,7 +919,7 @@ public void setVersion1(string version)
 
         private void invoiceTreatments_GV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            switch (invoiceTreatments_GV.Columns[e.ColumnIndex].Name)
+                    switch (invoiceTreatments_GV.Columns[e.ColumnIndex].Name)
             {
                 case "dateColumn":
                     gridViewDTPRectangle = invoiceTreatments_GV.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
@@ -1059,6 +1062,11 @@ public void setVersion1(string version)
             {
                 refDataURL2_CB.SelectedIndex = refDataURL1_CB.SelectedIndex;
             }
+        }
+
+        private void invoiceTreatments_GV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
