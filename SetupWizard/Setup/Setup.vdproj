@@ -86,6 +86,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -306,15 +314,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Dental Checker Data Console"
-        "ProductCode" = "8:{AA7ED65E-0E75-4E78-BBEC-279F28F065F8}"
-        "PackageCode" = "8:{94DA3FFF-BD7E-4F18-A56F-7E87D5549084}"
+        "ProductCode" = "8:{19C422EB-1075-4E1C-B483-14624F117318}"
+        "PackageCode" = "8:{2A44D06C-4BA0-4490-87F4-044E2C8E377A}"
         "UpgradeCode" = "8:{13193DDC-8978-4148-8E7D-91ED69DFDD1E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.2.3"
         "Manufacturer" = "8:Billinghouse"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

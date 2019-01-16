@@ -18,6 +18,7 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using Microsoft.VisualBasic.CompilerServices;
 using System.Globalization;
+using System.Deployment.Application;
 
 namespace DentalCheckerDataConsole
 {
@@ -166,6 +167,13 @@ namespace DentalCheckerDataConsole
         private void mainForm_Load(object sender, EventArgs e)
         {
             loading = true;
+
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            string version = fvi.FileMajorPart + "." + fvi.FileMinorPart + "." + fvi.FileBuildPart;
+
+            this.Text = "Dental Checker Data Console - v" + version;
+
             loadConfiguration();
             loading = false;
         }
@@ -1065,6 +1073,11 @@ public void setVersion1(string version)
         }
 
         private void invoiceTreatments_GV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void mainForm_Activated(object sender, EventArgs e)
         {
 
         }
