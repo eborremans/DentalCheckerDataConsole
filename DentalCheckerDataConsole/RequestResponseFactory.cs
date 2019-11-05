@@ -48,6 +48,11 @@ namespace DentalCheckerDataConsole
             return createRequest(url + "customer/customerExternalIds", "", apiKey, "GET", dateRangeRequest);
         }
 
+        public static HttpWebRequest createCustomersRequest(String url, String apiKey)
+        {
+            return createRequest(url + "customers", "", apiKey, "GET");
+        }
+
         public static HttpWebRequest createCustomerRequest(String url, String apiKey, String customerExternalId)
         {
             return createRequest(url + "customer/" + customerExternalId, "", apiKey);

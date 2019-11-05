@@ -15,6 +15,7 @@ namespace DentalCheckerDataConsole
     {
         private ICheckInvoiceView checkInvoiceView = null;
         private IInputView inputView = null;
+        private List<Customer> customerList = new List<Customer>();
 
         private CustomerController() { }
 
@@ -22,6 +23,11 @@ namespace DentalCheckerDataConsole
         {
             this.checkInvoiceView = checkInvoiceView;
             this.inputView = inputView;
+        }
+
+        public List<Customer> getCustomerList()
+        {
+            return customerList;
         }
 
         public void getCustomerExternalIds()
@@ -49,6 +55,33 @@ namespace DentalCheckerDataConsole
             List<String> customerExternalIdsList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<String>>(content);
 
             checkInvoiceView.setCustomerExternalIds(customerExternalIdsList);
+        }
+
+        public void getCustomers()
+        {
+            System.Net.HttpWebRequest request = RequestResponseFactory.createCustomersRequest(inputView.getConfiguration().getCurrentUrl(), inputView.getConfiguration().apiKey);
+            if (null == request)
+            {
+                return;
+            }
+            System.Net.HttpWebResponse response = inputView.getResponse(request);
+            if (null == response)
+            {
+                return;
+            }
+
+            string content = string.Empty;
+            using (var stream = response.GetResponseStream())
+            {
+                using (var sr = new System.IO.StreamReader(stream))
+                {
+                    content = sr.ReadToEnd();
+                }
+            }
+
+            List<Customer> customers = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Customer>>(content);
+
+            checkInvoiceView.setCustomers(customers);
         }
 
         public void getCustomerJSon()

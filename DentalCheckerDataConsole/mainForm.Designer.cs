@@ -173,6 +173,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.customerPanel = new System.Windows.Forms.Panel();
+            this.customer_DGV = new System.Windows.Forms.DataGridView();
+            this.emailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initialsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.externalIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.createTestTreatments_BTN = new System.Windows.Forms.Button();
             this.newInvoiceDate_DTP = new System.Windows.Forms.DateTimePicker();
             this.checkNewInvoice_BTN = new System.Windows.Forms.Button();
@@ -198,7 +206,7 @@
             this.checkInvoiceMessage_TXT = new System.Windows.Forms.TextBox();
             this.getCustomerExternalIds_BTN = new System.Windows.Forms.Button();
             this.customerJSon_TXT = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.invoicePanel = new System.Windows.Forms.Panel();
             this.invoiceTreatments_GV = new System.Windows.Forms.DataGridView();
             this.codeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -242,7 +250,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.customerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customer_DGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            this.invoicePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceTreatments_GV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).BeginInit();
@@ -369,8 +380,8 @@
             // jsonSplitContainer_SPLT.Panel2
             // 
             this.jsonSplitContainer_SPLT.Panel2.Controls.Add(this.prettyJSon_TXT);
-            this.jsonSplitContainer_SPLT.Size = new System.Drawing.Size(2318, 273);
-            this.jsonSplitContainer_SPLT.SplitterDistance = 589;
+            this.jsonSplitContainer_SPLT.Size = new System.Drawing.Size(2727, 325);
+            this.jsonSplitContainer_SPLT.SplitterDistance = 692;
             this.jsonSplitContainer_SPLT.TabIndex = 13;
             // 
             // json_TXT
@@ -384,7 +395,7 @@
             this.json_TXT.Multiline = true;
             this.json_TXT.Name = "json_TXT";
             this.json_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.json_TXT.Size = new System.Drawing.Size(579, 267);
+            this.json_TXT.Size = new System.Drawing.Size(682, 319);
             this.json_TXT.TabIndex = 3;
             // 
             // prettyJSon_TXT
@@ -398,7 +409,7 @@
             this.prettyJSon_TXT.Multiline = true;
             this.prettyJSon_TXT.Name = "prettyJSon_TXT";
             this.prettyJSon_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.prettyJSon_TXT.Size = new System.Drawing.Size(1723, 267);
+            this.prettyJSon_TXT.Size = new System.Drawing.Size(2029, 319);
             this.prettyJSon_TXT.TabIndex = 14;
             // 
             // invoicePublicIds_CB
@@ -452,7 +463,7 @@
             this.patientTreatments_DGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.patientTreatments_DGV.Name = "patientTreatments_DGV";
             this.patientTreatments_DGV.ReadOnly = true;
-            this.patientTreatments_DGV.Size = new System.Drawing.Size(1646, 313);
+            this.patientTreatments_DGV.Size = new System.Drawing.Size(2055, 374);
             this.patientTreatments_DGV.TabIndex = 16;
             // 
             // codeDataGridViewTextBoxColumn
@@ -652,8 +663,8 @@
             // mainSplitContainer_SPLT.Panel2
             // 
             this.mainSplitContainer_SPLT.Panel2.Controls.Add(this.jsonSplitContainer_SPLT);
-            this.mainSplitContainer_SPLT.Size = new System.Drawing.Size(2318, 1068);
-            this.mainSplitContainer_SPLT.SplitterDistance = 789;
+            this.mainSplitContainer_SPLT.Size = new System.Drawing.Size(2727, 1266);
+            this.mainSplitContainer_SPLT.SplitterDistance = 935;
             this.mainSplitContainer_SPLT.SplitterWidth = 6;
             this.mainSplitContainer_SPLT.TabIndex = 29;
             // 
@@ -693,8 +704,8 @@
             // treatmentsSplitContainer.Panel2
             // 
             this.treatmentsSplitContainer.Panel2.Controls.Add(this.checkResultSplitContainer_SPLT);
-            this.treatmentsSplitContainer.Size = new System.Drawing.Size(2328, 778);
-            this.treatmentsSplitContainer.SplitterDistance = 327;
+            this.treatmentsSplitContainer.Size = new System.Drawing.Size(2737, 924);
+            this.treatmentsSplitContainer.SplitterDistance = 388;
             this.treatmentsSplitContainer.SplitterWidth = 6;
             this.treatmentsSplitContainer.TabIndex = 17;
             // 
@@ -764,8 +775,8 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2309, 360);
-            this.checkResultSplitContainer_SPLT.SplitterDistance = 581;
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2718, 435);
+            this.checkResultSplitContainer_SPLT.SplitterDistance = 683;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 6;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
             // 
@@ -780,7 +791,7 @@
             this.patientViolations_LB.Location = new System.Drawing.Point(0, 0);
             this.patientViolations_LB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.patientViolations_LB.Name = "patientViolations_LB";
-            this.patientViolations_LB.Size = new System.Drawing.Size(573, 4);
+            this.patientViolations_LB.Size = new System.Drawing.Size(675, 4);
             this.patientViolations_LB.TabIndex = 0;
             // 
             // violationsBindingSource
@@ -795,7 +806,7 @@
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(30, 31);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(1720, 358);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(2027, 433);
             this.checkReportRenderer_WB.TabIndex = 1;
             // 
             // button1
@@ -821,7 +832,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(2332, 1105);
+            this.tabControl1.Size = new System.Drawing.Size(2741, 1303);
             this.tabControl1.TabIndex = 31;
             // 
             // tabPage2
@@ -831,7 +842,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(2324, 1072);
+            this.tabPage2.Size = new System.Drawing.Size(2733, 1270);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Reference Data";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -872,8 +883,8 @@
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label13);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.year2Selection_CB);
             this.referenceDataSplitter_SPLT.Panel2.Controls.Add(this.label12);
-            this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(2314, 1043);
-            this.referenceDataSplitter_SPLT.SplitterDistance = 516;
+            this.referenceDataSplitter_SPLT.Size = new System.Drawing.Size(2314, 1241);
+            this.referenceDataSplitter_SPLT.SplitterDistance = 613;
             this.referenceDataSplitter_SPLT.SplitterWidth = 5;
             this.referenceDataSplitter_SPLT.TabIndex = 20;
             // 
@@ -968,7 +979,7 @@
             this.referenceData1_GV.Name = "referenceData1_GV";
             this.referenceData1_GV.ReadOnly = true;
             this.referenceData1_GV.RowTemplate.Height = 24;
-            this.referenceData1_GV.Size = new System.Drawing.Size(2304, 451);
+            this.referenceData1_GV.Size = new System.Drawing.Size(2304, 548);
             this.referenceData1_GV.TabIndex = 0;
             // 
             // codeRuleDataGridViewTextBoxColumn
@@ -1201,7 +1212,10 @@
             "2016",
             "2017",
             "2018",
-            "2019"});
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
             this.year1Selection_CB.Location = new System.Drawing.Point(513, 14);
             this.year1Selection_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.year1Selection_CB.Name = "year1Selection_CB";
@@ -1332,7 +1346,7 @@
             this.referenceData2_GV.Name = "referenceData2_GV";
             this.referenceData2_GV.ReadOnly = true;
             this.referenceData2_GV.RowTemplate.Height = 24;
-            this.referenceData2_GV.Size = new System.Drawing.Size(2306, 470);
+            this.referenceData2_GV.Size = new System.Drawing.Size(2306, 566);
             this.referenceData2_GV.TabIndex = 19;
             // 
             // codeRuleDataGridViewTextBoxColumn1
@@ -1584,13 +1598,14 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(2324, 1072);
+            this.tabPage1.Size = new System.Drawing.Size(2733, 1270);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Invoice";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.customerPanel);
             this.tabPage3.Controls.Add(this.createTestTreatments_BTN);
             this.tabPage3.Controls.Add(this.newInvoiceDate_DTP);
             this.tabPage3.Controls.Add(this.checkNewInvoice_BTN);
@@ -1616,17 +1631,83 @@
             this.tabPage3.Controls.Add(this.checkInvoiceMessage_TXT);
             this.tabPage3.Controls.Add(this.getCustomerExternalIds_BTN);
             this.tabPage3.Controls.Add(this.customerJSon_TXT);
-            this.tabPage3.Controls.Add(this.panel1);
+            this.tabPage3.Controls.Add(this.invoicePanel);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.customerExternalIds_CB);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(2324, 1072);
+            this.tabPage3.Size = new System.Drawing.Size(2733, 1270);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check Declaration";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // customerPanel
+            // 
+            this.customerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.customerPanel.Controls.Add(this.customer_DGV);
+            this.customerPanel.Location = new System.Drawing.Point(12, 491);
+            this.customerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerPanel.Name = "customerPanel";
+            this.customerPanel.Size = new System.Drawing.Size(2297, 286);
+            this.customerPanel.TabIndex = 45;
+            // 
+            // customer_DGV
+            // 
+            this.customer_DGV.AllowUserToOrderColumns = true;
+            this.customer_DGV.AutoGenerateColumns = false;
+            this.customer_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customer_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.emailColumn,
+            this.initialsColumn,
+            this.lastNameColumn,
+            this.externalIdColumn,
+            this.birthDateColumn});
+            this.customer_DGV.DataSource = this.customerBindingSource;
+            this.customer_DGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customer_DGV.Location = new System.Drawing.Point(0, 0);
+            this.customer_DGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.customer_DGV.Name = "customer_DGV";
+            this.customer_DGV.Size = new System.Drawing.Size(2297, 286);
+            this.customer_DGV.TabIndex = 17;
+            // 
+            // emailColumn
+            // 
+            this.emailColumn.DataPropertyName = "customerEmail";
+            this.emailColumn.HeaderText = "eMail";
+            this.emailColumn.Name = "emailColumn";
+            // 
+            // initialsColumn
+            // 
+            this.initialsColumn.DataPropertyName = "customerInitials";
+            this.initialsColumn.HeaderText = "Initials";
+            this.initialsColumn.Name = "initialsColumn";
+            // 
+            // lastNameColumn
+            // 
+            this.lastNameColumn.DataPropertyName = "customerLastName";
+            this.lastNameColumn.HeaderText = "Last Name";
+            this.lastNameColumn.Name = "lastNameColumn";
+            // 
+            // externalIdColumn
+            // 
+            this.externalIdColumn.DataPropertyName = "customerExternalId";
+            this.externalIdColumn.HeaderText = "External Id";
+            this.externalIdColumn.Name = "externalIdColumn";
+            // 
+            // birthDateColumn
+            // 
+            this.birthDateColumn.DataPropertyName = "customerBirthdate";
+            this.birthDateColumn.HeaderText = "Birth Date";
+            this.birthDateColumn.Name = "birthDateColumn";
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.AllowNew = true;
+            this.customerBindingSource.DataSource = typeof(DentalCheckerDataConsole.Customer);
             // 
             // createTestTreatments_BTN
             // 
@@ -1652,7 +1733,7 @@
             // checkNewInvoice_BTN
             // 
             this.checkNewInvoice_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkNewInvoice_BTN.Location = new System.Drawing.Point(2028, 1009);
+            this.checkNewInvoice_BTN.Location = new System.Drawing.Point(2212, 1235);
             this.checkNewInvoice_BTN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkNewInvoice_BTN.Name = "checkNewInvoice_BTN";
             this.checkNewInvoice_BTN.Size = new System.Drawing.Size(112, 35);
@@ -1664,12 +1745,12 @@
             // uploadInvoice_BTN
             // 
             this.uploadInvoice_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadInvoice_BTN.Location = new System.Drawing.Point(1906, 1009);
+            this.uploadInvoice_BTN.Location = new System.Drawing.Point(2020, 1235);
             this.uploadInvoice_BTN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uploadInvoice_BTN.Name = "uploadInvoice_BTN";
-            this.uploadInvoice_BTN.Size = new System.Drawing.Size(112, 35);
+            this.uploadInvoice_BTN.Size = new System.Drawing.Size(184, 35);
             this.uploadInvoice_BTN.TabIndex = 41;
-            this.uploadInvoice_BTN.Text = "Upload";
+            this.uploadInvoice_BTN.Text = "Upload Invoice";
             this.uploadInvoice_BTN.UseVisualStyleBackColor = true;
             this.uploadInvoice_BTN.Click += new System.EventHandler(this.uploadInvoice_BTN_Click);
             // 
@@ -1865,24 +1946,21 @@
             this.customerJSon_TXT.Size = new System.Drawing.Size(325, 284);
             this.customerJSon_TXT.TabIndex = 19;
             // 
-            // panel1
+            // invoicePanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.invoicePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.invoiceTreatments_GV);
-            this.panel1.Location = new System.Drawing.Point(21, 469);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2138, 480);
-            this.panel1.TabIndex = 18;
+            this.invoicePanel.Controls.Add(this.invoiceTreatments_GV);
+            this.invoicePanel.Location = new System.Drawing.Point(11, 926);
+            this.invoicePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.invoicePanel.Name = "invoicePanel";
+            this.invoicePanel.Size = new System.Drawing.Size(2297, 302);
+            this.invoicePanel.TabIndex = 18;
             // 
             // invoiceTreatments_GV
             // 
             this.invoiceTreatments_GV.AllowUserToOrderColumns = true;
-            this.invoiceTreatments_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.invoiceTreatments_GV.AutoGenerateColumns = false;
             this.invoiceTreatments_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.invoiceTreatments_GV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1894,10 +1972,11 @@
             this.countColumn,
             this.typeColumn});
             this.invoiceTreatments_GV.DataSource = this.treatmentBindingSource1;
-            this.invoiceTreatments_GV.Location = new System.Drawing.Point(4, 5);
+            this.invoiceTreatments_GV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.invoiceTreatments_GV.Location = new System.Drawing.Point(0, 0);
             this.invoiceTreatments_GV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.invoiceTreatments_GV.Name = "invoiceTreatments_GV";
-            this.invoiceTreatments_GV.Size = new System.Drawing.Size(2121, 445);
+            this.invoiceTreatments_GV.Size = new System.Drawing.Size(2297, 302);
             this.invoiceTreatments_GV.TabIndex = 17;
             this.invoiceTreatments_GV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellClick);
             this.invoiceTreatments_GV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellContentClick);
@@ -1993,7 +2072,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2328, 1149);
+            this.ClientSize = new System.Drawing.Size(2737, 1347);
             this.Controls.Add(this.loadKey_BTN);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
@@ -2046,7 +2125,10 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.customerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customer_DGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            this.invoicePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.invoiceTreatments_GV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).EndInit();
@@ -2129,7 +2211,7 @@
         private System.Windows.Forms.TextBox findCodeFilter_TXT;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox customerJSon_TXT;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel invoicePanel;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox customerExternalIds_CB;
         private System.Windows.Forms.DataGridView invoiceTreatments_GV;
@@ -2227,6 +2309,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amountColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn countColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeColumn;
+        private System.Windows.Forms.Panel customerPanel;
+        private System.Windows.Forms.DataGridView customer_DGV;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn initialsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn externalIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateColumn;
     }
 }
 

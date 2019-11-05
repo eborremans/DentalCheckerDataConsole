@@ -131,6 +131,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Configuration.datasource" />
+    <None Include="Properties\DataSources\Customer.datasource" />
     <None Include="Properties\DataSources\mainForm.datasource" />
     <None Include="Properties\DataSources\ReferenceData.datasource" />
     <None Include="Properties\DataSources\Treatment.datasource" />

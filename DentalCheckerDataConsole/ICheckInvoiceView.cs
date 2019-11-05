@@ -9,6 +9,7 @@ namespace DentalCheckerDataConsole
     public interface ICheckInvoiceView
     {
         void setCustomerExternalIds(List<String> customerExternalIds);
+        void setCustomers(List<Customer> customers);
         void setCustomer(Customer customer);
         void setCustomerJSon(String json);
         void setCustomerInvoice(SimpleInvoice invoice);

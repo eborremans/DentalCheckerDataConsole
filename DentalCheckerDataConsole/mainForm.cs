@@ -263,6 +263,7 @@ namespace DentalCheckerDataConsole
             //refDataURL2_CB.SelectedText = this.configuration.refDataUrl2;
         }
 
+        // TODO: Move this method elsewhere...
         public HttpWebResponse getResponse(HttpWebRequest request) 
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
@@ -764,11 +765,19 @@ public void setVersion1(string version)
         private void getCustomerExternalIds_BTN_Click(object sender, EventArgs e)
         {
             customerController.getCustomerExternalIds();
+            customerController.getCustomers();
+
+            customer_DGV.DataSource = customerController.getCustomerList();
         }
 
         public void setCustomerExternalIds(List<string> customerExternalIds)
         {
             customerExternalIds_CB.DataSource = customerExternalIds;
+        }
+
+        public void setCustomers(List<Customer> customers)
+        {
+            customer_DGV.DataSource = customers;
         }
 
         // ------------------ ICheckInvoiceView ------------------
