@@ -314,15 +314,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Dental Checker Data Console"
-        "ProductCode" = "8:{19C422EB-1075-4E1C-B483-14624F117318}"
-        "PackageCode" = "8:{2A44D06C-4BA0-4490-87F4-044E2C8E377A}"
+        "ProductCode" = "8:{A531482F-E2FA-4AD6-8736-7757BA6A7646}"
+        "PackageCode" = "8:{4176246B-16AF-4A13-944E-F4B9D43200C9}"
         "UpgradeCode" = "8:{13193DDC-8978-4148-8E7D-91ED69DFDD1E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.2.3"
+        "ProductVersion" = "8:1.2.4"
         "Manufacturer" = "8:Billinghouse"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -836,7 +836,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8588ACDC59754499A9CCEBAD75F08EE9"
             {
-            "SourcePath" = "8:..\\..\\DentalCheckerDataConsole\\obj\\Release\\DentalCheckerDataConsole.exe"
+            "SourcePath" = "8:..\\..\\DentalCheckerDataConsole\\obj\\Debug\\DentalCheckerDataConsole.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5467B7F3824340118ADB7AAE77285BED"
