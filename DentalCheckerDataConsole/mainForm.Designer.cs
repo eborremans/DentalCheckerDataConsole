@@ -36,6 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,13 +54,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.getInvoicePublicIds_BTN = new System.Windows.Forms.Button();
             this.getDentalCheckerVersionResponse_BTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -113,6 +113,34 @@
             this.findCodeFilter_TXT = new System.Windows.Forms.TextBox();
             this.loadRefData_BTN = new System.Windows.Forms.Button();
             this.referenceData1_GV = new System.Windows.Forms.DataGridView();
+            this.codeRuleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addendumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ignorePriceDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hasCostDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mandatoryWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onlyWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrOfSurfacesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.periodLengthInDaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alarmDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.elementRequiredDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.conflictsInGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictsInGroupExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conflictObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mandatoryObjTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementGroupsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inputFileIdDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.referenceDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.year1Selection_CB = new System.Windows.Forms.ComboBox();
@@ -158,7 +186,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.customerPanel = new System.Windows.Forms.Panel();
+            this.checkDeclaration_SPLT = new System.Windows.Forms.SplitContainer();
             this.customer_DGV = new System.Windows.Forms.DataGridView();
             this.emailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.initialsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,6 +194,15 @@
             this.externalIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birthDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invoiceTreatments_GV = new System.Windows.Forms.DataGridView();
+            this.codeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.elementColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.createTestTreatments_BTN = new System.Windows.Forms.Button();
             this.newInvoiceDate_DTP = new System.Windows.Forms.DateTimePicker();
             this.checkNewInvoice_BTN = new System.Windows.Forms.Button();
@@ -191,47 +228,9 @@
             this.checkInvoiceMessage_TXT = new System.Windows.Forms.TextBox();
             this.getCustomerExternalIds_BTN = new System.Windows.Forms.Button();
             this.customerJSon_TXT = new System.Windows.Forms.TextBox();
-            this.invoicePanel = new System.Windows.Forms.Panel();
-            this.invoiceTreatments_GV = new System.Windows.Forms.DataGridView();
-            this.codeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elementColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treatmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.customerExternalIds_CB = new System.Windows.Forms.ComboBox();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codeRuleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addendumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ignorePriceDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hasCostDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictsWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mandatoryWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onlyWithExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nrOfSurfacesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.periodLengthInDaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alarmDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.elementRequiredDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.conflictsInGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictsInGroupExprDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conflictObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mandatoryObjTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.elementGroupsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inputFileIdDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deletedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jsonSplitContainer_SPLT)).BeginInit();
             this.jsonSplitContainer_SPLT.Panel1.SuspendLayout();
@@ -263,10 +262,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.referenceData2_GV)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.customerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkDeclaration_SPLT)).BeginInit();
+            this.checkDeclaration_SPLT.Panel1.SuspendLayout();
+            this.checkDeclaration_SPLT.Panel2.SuspendLayout();
+            this.checkDeclaration_SPLT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customer_DGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            this.invoicePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceTreatments_GV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).BeginInit();
@@ -788,7 +789,7 @@
             // checkResultSplitContainer_SPLT.Panel2
             // 
             this.checkResultSplitContainer_SPLT.Panel2.Controls.Add(this.checkReportRenderer_WB);
-            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2943, 401);
+            this.checkResultSplitContainer_SPLT.Size = new System.Drawing.Size(2943, 387);
             this.checkResultSplitContainer_SPLT.SplitterDistance = 738;
             this.checkResultSplitContainer_SPLT.SplitterWidth = 6;
             this.checkResultSplitContainer_SPLT.TabIndex = 2;
@@ -814,13 +815,16 @@
             // 
             // checkReportRenderer_WB
             // 
-            this.checkReportRenderer_WB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkReportRenderer_WB.Location = new System.Drawing.Point(0, 0);
+            this.checkReportRenderer_WB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkReportRenderer_WB.Location = new System.Drawing.Point(4, 4);
             this.checkReportRenderer_WB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkReportRenderer_WB.MinimumSize = new System.Drawing.Size(30, 31);
             this.checkReportRenderer_WB.Name = "checkReportRenderer_WB";
-            this.checkReportRenderer_WB.Size = new System.Drawing.Size(2197, 399);
+            this.checkReportRenderer_WB.Size = new System.Drawing.Size(2185, 376);
             this.checkReportRenderer_WB.TabIndex = 1;
+            this.checkReportRenderer_WB.Resize += new System.EventHandler(this.checkReportRenderer_WB_Resize);
             // 
             // button1
             // 
@@ -995,6 +999,246 @@
             this.referenceData1_GV.Size = new System.Drawing.Size(2936, 548);
             this.referenceData1_GV.TabIndex = 0;
             // 
+            // codeRuleDataGridViewTextBoxColumn
+            // 
+            this.codeRuleDataGridViewTextBoxColumn.DataPropertyName = "codeRule";
+            dataGridViewCellStyle8.NullValue = null;
+            this.codeRuleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.codeRuleDataGridViewTextBoxColumn.HeaderText = "Rule";
+            this.codeRuleDataGridViewTextBoxColumn.Name = "codeRuleDataGridViewTextBoxColumn";
+            this.codeRuleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeRuleDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // codeDataGridViewTextBoxColumn1
+            // 
+            this.codeDataGridViewTextBoxColumn1.DataPropertyName = "code";
+            this.codeDataGridViewTextBoxColumn1.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
+            this.codeDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // addendumDataGridViewTextBoxColumn
+            // 
+            this.addendumDataGridViewTextBoxColumn.DataPropertyName = "addendum";
+            this.addendumDataGridViewTextBoxColumn.HeaderText = "Addendum";
+            this.addendumDataGridViewTextBoxColumn.Name = "addendumDataGridViewTextBoxColumn";
+            this.addendumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ignorePriceDataGridViewCheckBoxColumn
+            // 
+            this.ignorePriceDataGridViewCheckBoxColumn.DataPropertyName = "ignorePrice";
+            this.ignorePriceDataGridViewCheckBoxColumn.HeaderText = "Ign. Price";
+            this.ignorePriceDataGridViewCheckBoxColumn.Name = "ignorePriceDataGridViewCheckBoxColumn";
+            this.ignorePriceDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.ignorePriceDataGridViewCheckBoxColumn.Width = 50;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "C2";
+            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // hasCostDataGridViewCheckBoxColumn
+            // 
+            this.hasCostDataGridViewCheckBoxColumn.DataPropertyName = "hasCost";
+            this.hasCostDataGridViewCheckBoxColumn.HeaderText = "Cost?";
+            this.hasCostDataGridViewCheckBoxColumn.Name = "hasCostDataGridViewCheckBoxColumn";
+            this.hasCostDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.hasCostDataGridViewCheckBoxColumn.Width = 50;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // descriptionDataGridViewTextBoxColumn1
+            // 
+            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
+            this.descriptionDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // conflictsWithExprDataGridViewTextBoxColumn
+            // 
+            this.conflictsWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsWithExpr";
+            this.conflictsWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsWithExpr";
+            this.conflictsWithExprDataGridViewTextBoxColumn.Name = "conflictsWithExprDataGridViewTextBoxColumn";
+            this.conflictsWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conflictsOnElementWithExprDataGridViewTextBoxColumn
+            // 
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsOnElementWithExpr";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsOnElementWithExpr";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Name = "conflictsOnElementWithExprDataGridViewTextBoxColumn";
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // mandatoryWithExprDataGridViewTextBoxColumn
+            // 
+            this.mandatoryWithExprDataGridViewTextBoxColumn.DataPropertyName = "mandatoryWithExpr";
+            this.mandatoryWithExprDataGridViewTextBoxColumn.HeaderText = "mandatoryWithExpr";
+            this.mandatoryWithExprDataGridViewTextBoxColumn.Name = "mandatoryWithExprDataGridViewTextBoxColumn";
+            this.mandatoryWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // onlyWithExprDataGridViewTextBoxColumn
+            // 
+            this.onlyWithExprDataGridViewTextBoxColumn.DataPropertyName = "onlyWithExpr";
+            this.onlyWithExprDataGridViewTextBoxColumn.HeaderText = "onlyWithExpr";
+            this.onlyWithExprDataGridViewTextBoxColumn.Name = "onlyWithExprDataGridViewTextBoxColumn";
+            this.onlyWithExprDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nrOfSurfacesDataGridViewTextBoxColumn
+            // 
+            this.nrOfSurfacesDataGridViewTextBoxColumn.DataPropertyName = "nrOfSurfaces";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N0";
+            dataGridViewCellStyle11.NullValue = null;
+            this.nrOfSurfacesDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.nrOfSurfacesDataGridViewTextBoxColumn.HeaderText = "Nr of surfaces";
+            this.nrOfSurfacesDataGridViewTextBoxColumn.Name = "nrOfSurfacesDataGridViewTextBoxColumn";
+            this.nrOfSurfacesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nrOfSurfacesDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // maxNrDataGridViewTextBoxColumn
+            // 
+            this.maxNrDataGridViewTextBoxColumn.DataPropertyName = "maxNr";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "N0";
+            dataGridViewCellStyle12.NullValue = null;
+            this.maxNrDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.maxNrDataGridViewTextBoxColumn.HeaderText = "Max nr";
+            this.maxNrDataGridViewTextBoxColumn.Name = "maxNrDataGridViewTextBoxColumn";
+            this.maxNrDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maxNrDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn
+            // 
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxNrOfPerformancesOnObjectType";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "N0";
+            dataGridViewCellStyle13.NullValue = null;
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "Max nr of performances on object type";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.Name = "maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn";
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // periodLengthInDaysDataGridViewTextBoxColumn
+            // 
+            this.periodLengthInDaysDataGridViewTextBoxColumn.DataPropertyName = "periodLengthInDays";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "N0";
+            dataGridViewCellStyle14.NullValue = null;
+            this.periodLengthInDaysDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.periodLengthInDaysDataGridViewTextBoxColumn.HeaderText = "Period (days)";
+            this.periodLengthInDaysDataGridViewTextBoxColumn.Name = "periodLengthInDaysDataGridViewTextBoxColumn";
+            this.periodLengthInDaysDataGridViewTextBoxColumn.ReadOnly = true;
+            this.periodLengthInDaysDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // alarmDataGridViewCheckBoxColumn
+            // 
+            this.alarmDataGridViewCheckBoxColumn.DataPropertyName = "alarm";
+            this.alarmDataGridViewCheckBoxColumn.HeaderText = "Alarm";
+            this.alarmDataGridViewCheckBoxColumn.Name = "alarmDataGridViewCheckBoxColumn";
+            this.alarmDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.alarmDataGridViewCheckBoxColumn.Width = 50;
+            // 
+            // elementRequiredDataGridViewCheckBoxColumn
+            // 
+            this.elementRequiredDataGridViewCheckBoxColumn.DataPropertyName = "elementRequired";
+            this.elementRequiredDataGridViewCheckBoxColumn.HeaderText = "El. req?";
+            this.elementRequiredDataGridViewCheckBoxColumn.Name = "elementRequiredDataGridViewCheckBoxColumn";
+            this.elementRequiredDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.elementRequiredDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // conflictsInGroupDataGridViewTextBoxColumn
+            // 
+            this.conflictsInGroupDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroup";
+            this.conflictsInGroupDataGridViewTextBoxColumn.HeaderText = "conflictsInGroup";
+            this.conflictsInGroupDataGridViewTextBoxColumn.Name = "conflictsInGroupDataGridViewTextBoxColumn";
+            this.conflictsInGroupDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conflictsInGroupExprDataGridViewTextBoxColumn
+            // 
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroupExpr";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.HeaderText = "conflictsInGroupExpr";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.Name = "conflictsInGroupExprDataGridViewTextBoxColumn";
+            this.conflictsInGroupExprDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // conflictObjectTypeDataGridViewTextBoxColumn
+            // 
+            this.conflictObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "conflictObjectType";
+            this.conflictObjectTypeDataGridViewTextBoxColumn.HeaderText = "conflictObjectType";
+            this.conflictObjectTypeDataGridViewTextBoxColumn.Name = "conflictObjectTypeDataGridViewTextBoxColumn";
+            this.conflictObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mandatoryObjTypeDataGridViewTextBoxColumn
+            // 
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.DataPropertyName = "mandatoryObjType";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.HeaderText = "mandatoryObjType";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.Name = "mandatoryObjTypeDataGridViewTextBoxColumn";
+            this.mandatoryObjTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // elementGroupsDataGridViewTextBoxColumn
+            // 
+            this.elementGroupsDataGridViewTextBoxColumn.DataPropertyName = "elementGroups";
+            this.elementGroupsDataGridViewTextBoxColumn.HeaderText = "elementGroups";
+            this.elementGroupsDataGridViewTextBoxColumn.Name = "elementGroupsDataGridViewTextBoxColumn";
+            this.elementGroupsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // validFromDataGridViewTextBoxColumn
+            // 
+            this.validFromDataGridViewTextBoxColumn.DataPropertyName = "validFrom";
+            this.validFromDataGridViewTextBoxColumn.HeaderText = "Valid from";
+            this.validFromDataGridViewTextBoxColumn.Name = "validFromDataGridViewTextBoxColumn";
+            this.validFromDataGridViewTextBoxColumn.ReadOnly = true;
+            this.validFromDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // validToDataGridViewTextBoxColumn
+            // 
+            this.validToDataGridViewTextBoxColumn.DataPropertyName = "validTo";
+            this.validToDataGridViewTextBoxColumn.HeaderText = "Valid to";
+            this.validToDataGridViewTextBoxColumn.Name = "validToDataGridViewTextBoxColumn";
+            this.validToDataGridViewTextBoxColumn.ReadOnly = true;
+            this.validToDataGridViewTextBoxColumn.Visible = false;
+            this.validToDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // inputFileIdDataGridViewCheckBoxColumn
+            // 
+            this.inputFileIdDataGridViewCheckBoxColumn.DataPropertyName = "inputFileId";
+            this.inputFileIdDataGridViewCheckBoxColumn.HeaderText = "inputFileId";
+            this.inputFileIdDataGridViewCheckBoxColumn.Name = "inputFileIdDataGridViewCheckBoxColumn";
+            this.inputFileIdDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.inputFileIdDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // maxCountOnObjectTypeDataGridViewTextBoxColumn
+            // 
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxCountOnObjectType";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "Max count on object type";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.Name = "maxCountOnObjectTypeDataGridViewTextBoxColumn";
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // deletedDataGridViewCheckBoxColumn
+            // 
+            this.deletedDataGridViewCheckBoxColumn.DataPropertyName = "deleted";
+            this.deletedDataGridViewCheckBoxColumn.HeaderText = "Deleted";
+            this.deletedDataGridViewCheckBoxColumn.Name = "deletedDataGridViewCheckBoxColumn";
+            this.deletedDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.deletedDataGridViewCheckBoxColumn.Visible = false;
+            // 
             // referenceDataBindingSource
             // 
             this.referenceDataBindingSource.DataSource = typeof(DentalCheckerDataConsole.ReferenceData);
@@ -1020,8 +1264,7 @@
             "2018",
             "2019",
             "2020",
-            "2021",
-            "2022"});
+            "2021"});
             this.year1Selection_CB.Location = new System.Drawing.Point(513, 14);
             this.year1Selection_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.year1Selection_CB.Name = "year1Selection_CB";
@@ -1152,7 +1395,7 @@
             this.referenceData2_GV.Name = "referenceData2_GV";
             this.referenceData2_GV.ReadOnly = true;
             this.referenceData2_GV.RowTemplate.Height = 24;
-            this.referenceData2_GV.Size = new System.Drawing.Size(2936, 549);
+            this.referenceData2_GV.Size = new System.Drawing.Size(2936, 542);
             this.referenceData2_GV.TabIndex = 19;
             // 
             // codeRuleDataGridViewTextBoxColumn1
@@ -1412,7 +1655,9 @@
             "2016",
             "2017",
             "2018",
-            "2019"});
+            "2019",
+            "2020",
+            "2021"});
             this.year2Selection_CB.Location = new System.Drawing.Point(513, 18);
             this.year2Selection_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.year2Selection_CB.Name = "year2Selection_CB";
@@ -1443,7 +1688,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.customerPanel);
+            this.tabPage3.Controls.Add(this.checkDeclaration_SPLT);
             this.tabPage3.Controls.Add(this.createTestTreatments_BTN);
             this.tabPage3.Controls.Add(this.newInvoiceDate_DTP);
             this.tabPage3.Controls.Add(this.checkNewInvoice_BTN);
@@ -1469,7 +1714,6 @@
             this.tabPage3.Controls.Add(this.checkInvoiceMessage_TXT);
             this.tabPage3.Controls.Add(this.getCustomerExternalIds_BTN);
             this.tabPage3.Controls.Add(this.customerJSon_TXT);
-            this.tabPage3.Controls.Add(this.invoicePanel);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.customerExternalIds_CB);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
@@ -1481,21 +1725,32 @@
             this.tabPage3.Text = "Check Declaration";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // customerPanel
+            // checkDeclaration_SPLT
             // 
-            this.customerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.checkDeclaration_SPLT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.customerPanel.Controls.Add(this.customer_DGV);
-            this.customerPanel.Location = new System.Drawing.Point(12, 491);
-            this.customerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customerPanel.Name = "customerPanel";
-            this.customerPanel.Size = new System.Drawing.Size(2297, 286);
-            this.customerPanel.TabIndex = 45;
+            this.checkDeclaration_SPLT.Location = new System.Drawing.Point(25, 490);
+            this.checkDeclaration_SPLT.Name = "checkDeclaration_SPLT";
+            this.checkDeclaration_SPLT.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // checkDeclaration_SPLT.Panel1
+            // 
+            this.checkDeclaration_SPLT.Panel1.Controls.Add(this.customer_DGV);
+            // 
+            // checkDeclaration_SPLT.Panel2
+            // 
+            this.checkDeclaration_SPLT.Panel2.Controls.Add(this.invoiceTreatments_GV);
+            this.checkDeclaration_SPLT.Size = new System.Drawing.Size(2925, 737);
+            this.checkDeclaration_SPLT.SplitterDistance = 368;
+            this.checkDeclaration_SPLT.TabIndex = 46;
             // 
             // customer_DGV
             // 
             this.customer_DGV.AllowUserToOrderColumns = true;
+            this.customer_DGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.customer_DGV.AutoGenerateColumns = false;
             this.customer_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customer_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1505,12 +1760,11 @@
             this.externalIdColumn,
             this.birthDateColumn});
             this.customer_DGV.DataSource = this.customerBindingSource;
-            this.customer_DGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customer_DGV.Location = new System.Drawing.Point(0, 0);
             this.customer_DGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.customer_DGV.Name = "customer_DGV";
-            this.customer_DGV.Size = new System.Drawing.Size(2297, 286);
-            this.customer_DGV.TabIndex = 17;
+            this.customer_DGV.Size = new System.Drawing.Size(2925, 368);
+            this.customer_DGV.TabIndex = 18;
             // 
             // emailColumn
             // 
@@ -1546,6 +1800,87 @@
             // 
             this.customerBindingSource.AllowNew = true;
             this.customerBindingSource.DataSource = typeof(DentalCheckerDataConsole.Customer);
+            // 
+            // invoiceTreatments_GV
+            // 
+            this.invoiceTreatments_GV.AllowUserToOrderColumns = true;
+            this.invoiceTreatments_GV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.invoiceTreatments_GV.AutoGenerateColumns = false;
+            this.invoiceTreatments_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoiceTreatments_GV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codeColumn,
+            this.descriptionColumn,
+            this.dateColumn,
+            this.elementColumn,
+            this.amountColumn,
+            this.countColumn,
+            this.typeColumn});
+            this.invoiceTreatments_GV.DataSource = this.treatmentBindingSource1;
+            this.invoiceTreatments_GV.Location = new System.Drawing.Point(0, 0);
+            this.invoiceTreatments_GV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.invoiceTreatments_GV.Name = "invoiceTreatments_GV";
+            this.invoiceTreatments_GV.Size = new System.Drawing.Size(2925, 365);
+            this.invoiceTreatments_GV.TabIndex = 18;
+            // 
+            // codeColumn
+            // 
+            this.codeColumn.DataPropertyName = "code";
+            this.codeColumn.HeaderText = "Code";
+            this.codeColumn.Name = "codeColumn";
+            // 
+            // descriptionColumn
+            // 
+            this.descriptionColumn.DataPropertyName = "description";
+            this.descriptionColumn.HeaderText = "Description";
+            this.descriptionColumn.Name = "descriptionColumn";
+            this.descriptionColumn.Width = 400;
+            // 
+            // dateColumn
+            // 
+            this.dateColumn.DataPropertyName = "date";
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dateColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dateColumn.HeaderText = "Date";
+            this.dateColumn.Name = "dateColumn";
+            // 
+            // elementColumn
+            // 
+            this.elementColumn.DataPropertyName = "dentalElementCode";
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.elementColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            this.elementColumn.HeaderText = "Element";
+            this.elementColumn.Name = "elementColumn";
+            // 
+            // amountColumn
+            // 
+            this.amountColumn.DataPropertyName = "declaredAmount";
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.amountColumn.DefaultCellStyle = dataGridViewCellStyle23;
+            this.amountColumn.HeaderText = "Amount";
+            this.amountColumn.Name = "amountColumn";
+            // 
+            // countColumn
+            // 
+            this.countColumn.DataPropertyName = "nrOfTreatments";
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.countColumn.DefaultCellStyle = dataGridViewCellStyle24;
+            this.countColumn.HeaderText = "Count";
+            this.countColumn.Name = "countColumn";
+            // 
+            // typeColumn
+            // 
+            this.typeColumn.DataPropertyName = "typeOfTreatment";
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.typeColumn.DefaultCellStyle = dataGridViewCellStyle25;
+            this.typeColumn.HeaderText = "Type";
+            this.typeColumn.Name = "typeColumn";
+            // 
+            // treatmentBindingSource1
+            // 
+            this.treatmentBindingSource1.AllowNew = true;
+            this.treatmentBindingSource1.DataSource = typeof(DentalCheckerDataConsole.Treatment);
             // 
             // createTestTreatments_BTN
             // 
@@ -1784,105 +2119,6 @@
             this.customerJSon_TXT.Size = new System.Drawing.Size(325, 284);
             this.customerJSon_TXT.TabIndex = 19;
             // 
-            // invoicePanel
-            // 
-            this.invoicePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.invoicePanel.Controls.Add(this.invoiceTreatments_GV);
-            this.invoicePanel.Location = new System.Drawing.Point(11, 926);
-            this.invoicePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.invoicePanel.Name = "invoicePanel";
-            this.invoicePanel.Size = new System.Drawing.Size(2297, 302);
-            this.invoicePanel.TabIndex = 18;
-            // 
-            // invoiceTreatments_GV
-            // 
-            this.invoiceTreatments_GV.AllowUserToOrderColumns = true;
-            this.invoiceTreatments_GV.AutoGenerateColumns = false;
-            this.invoiceTreatments_GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.invoiceTreatments_GV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codeColumn,
-            this.descriptionColumn,
-            this.dateColumn,
-            this.elementColumn,
-            this.amountColumn,
-            this.countColumn,
-            this.typeColumn});
-            this.invoiceTreatments_GV.DataSource = this.treatmentBindingSource1;
-            this.invoiceTreatments_GV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.invoiceTreatments_GV.Location = new System.Drawing.Point(0, 0);
-            this.invoiceTreatments_GV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.invoiceTreatments_GV.Name = "invoiceTreatments_GV";
-            this.invoiceTreatments_GV.Size = new System.Drawing.Size(2297, 302);
-            this.invoiceTreatments_GV.TabIndex = 17;
-            this.invoiceTreatments_GV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellClick);
-            this.invoiceTreatments_GV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellContentClick);
-            this.invoiceTreatments_GV.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellEndEdit);
-            this.invoiceTreatments_GV.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceTreatments_GV_CellLeave);
-            this.invoiceTreatments_GV.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.invoiceTreatments_GV_ColumnWidthChanged);
-            this.invoiceTreatments_GV.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.invoiceTreatments_GV_RowsAdded);
-            this.invoiceTreatments_GV.Scroll += new System.Windows.Forms.ScrollEventHandler(this.invoiceTreatments_GV_Scroll);
-            this.invoiceTreatments_GV.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.invoiceTreatments_GV_UserAddedRow);
-            // 
-            // codeColumn
-            // 
-            this.codeColumn.DataPropertyName = "code";
-            this.codeColumn.HeaderText = "Code";
-            this.codeColumn.Name = "codeColumn";
-            // 
-            // descriptionColumn
-            // 
-            this.descriptionColumn.DataPropertyName = "description";
-            this.descriptionColumn.HeaderText = "Description";
-            this.descriptionColumn.Name = "descriptionColumn";
-            this.descriptionColumn.Width = 400;
-            // 
-            // dateColumn
-            // 
-            this.dateColumn.DataPropertyName = "date";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dateColumn.DefaultCellStyle = dataGridViewCellStyle21;
-            this.dateColumn.HeaderText = "Date";
-            this.dateColumn.Name = "dateColumn";
-            // 
-            // elementColumn
-            // 
-            this.elementColumn.DataPropertyName = "dentalElementCode";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.elementColumn.DefaultCellStyle = dataGridViewCellStyle22;
-            this.elementColumn.HeaderText = "Element";
-            this.elementColumn.Name = "elementColumn";
-            // 
-            // amountColumn
-            // 
-            this.amountColumn.DataPropertyName = "declaredAmount";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.amountColumn.DefaultCellStyle = dataGridViewCellStyle23;
-            this.amountColumn.HeaderText = "Amount";
-            this.amountColumn.Name = "amountColumn";
-            // 
-            // countColumn
-            // 
-            this.countColumn.DataPropertyName = "nrOfTreatments";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.countColumn.DefaultCellStyle = dataGridViewCellStyle24;
-            this.countColumn.HeaderText = "Count";
-            this.countColumn.Name = "countColumn";
-            // 
-            // typeColumn
-            // 
-            this.typeColumn.DataPropertyName = "typeOfTreatment";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.typeColumn.DefaultCellStyle = dataGridViewCellStyle25;
-            this.typeColumn.HeaderText = "Type";
-            this.typeColumn.Name = "typeColumn";
-            // 
-            // treatmentBindingSource1
-            // 
-            this.treatmentBindingSource1.AllowNew = true;
-            this.treatmentBindingSource1.DataSource = typeof(DentalCheckerDataConsole.Treatment);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -1905,246 +2141,6 @@
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(DentalCheckerDataConsole.mainForm);
-            // 
-            // codeRuleDataGridViewTextBoxColumn
-            // 
-            this.codeRuleDataGridViewTextBoxColumn.DataPropertyName = "codeRule";
-            dataGridViewCellStyle8.NullValue = null;
-            this.codeRuleDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.codeRuleDataGridViewTextBoxColumn.HeaderText = "Rule";
-            this.codeRuleDataGridViewTextBoxColumn.Name = "codeRuleDataGridViewTextBoxColumn";
-            this.codeRuleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeRuleDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // codeDataGridViewTextBoxColumn1
-            // 
-            this.codeDataGridViewTextBoxColumn1.DataPropertyName = "code";
-            this.codeDataGridViewTextBoxColumn1.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
-            this.codeDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.codeDataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // addendumDataGridViewTextBoxColumn
-            // 
-            this.addendumDataGridViewTextBoxColumn.DataPropertyName = "addendum";
-            this.addendumDataGridViewTextBoxColumn.HeaderText = "Addendum";
-            this.addendumDataGridViewTextBoxColumn.Name = "addendumDataGridViewTextBoxColumn";
-            this.addendumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ignorePriceDataGridViewCheckBoxColumn
-            // 
-            this.ignorePriceDataGridViewCheckBoxColumn.DataPropertyName = "ignorePrice";
-            this.ignorePriceDataGridViewCheckBoxColumn.HeaderText = "Ign. Price";
-            this.ignorePriceDataGridViewCheckBoxColumn.Name = "ignorePriceDataGridViewCheckBoxColumn";
-            this.ignorePriceDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.ignorePriceDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "C2";
-            this.costDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            this.costDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // hasCostDataGridViewCheckBoxColumn
-            // 
-            this.hasCostDataGridViewCheckBoxColumn.DataPropertyName = "hasCost";
-            this.hasCostDataGridViewCheckBoxColumn.HeaderText = "Cost?";
-            this.hasCostDataGridViewCheckBoxColumn.Name = "hasCostDataGridViewCheckBoxColumn";
-            this.hasCostDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.hasCostDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "C2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // descriptionDataGridViewTextBoxColumn1
-            // 
-            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
-            this.descriptionDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // conflictsWithExprDataGridViewTextBoxColumn
-            // 
-            this.conflictsWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsWithExpr";
-            this.conflictsWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsWithExpr";
-            this.conflictsWithExprDataGridViewTextBoxColumn.Name = "conflictsWithExprDataGridViewTextBoxColumn";
-            this.conflictsWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conflictsOnElementWithExprDataGridViewTextBoxColumn
-            // 
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsOnElementWithExpr";
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.HeaderText = "conflictsOnElementWithExpr";
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Name = "conflictsOnElementWithExprDataGridViewTextBoxColumn";
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            this.conflictsOnElementWithExprDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mandatoryWithExprDataGridViewTextBoxColumn
-            // 
-            this.mandatoryWithExprDataGridViewTextBoxColumn.DataPropertyName = "mandatoryWithExpr";
-            this.mandatoryWithExprDataGridViewTextBoxColumn.HeaderText = "mandatoryWithExpr";
-            this.mandatoryWithExprDataGridViewTextBoxColumn.Name = "mandatoryWithExprDataGridViewTextBoxColumn";
-            this.mandatoryWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // onlyWithExprDataGridViewTextBoxColumn
-            // 
-            this.onlyWithExprDataGridViewTextBoxColumn.DataPropertyName = "onlyWithExpr";
-            this.onlyWithExprDataGridViewTextBoxColumn.HeaderText = "onlyWithExpr";
-            this.onlyWithExprDataGridViewTextBoxColumn.Name = "onlyWithExprDataGridViewTextBoxColumn";
-            this.onlyWithExprDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nrOfSurfacesDataGridViewTextBoxColumn
-            // 
-            this.nrOfSurfacesDataGridViewTextBoxColumn.DataPropertyName = "nrOfSurfaces";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N0";
-            dataGridViewCellStyle11.NullValue = null;
-            this.nrOfSurfacesDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            this.nrOfSurfacesDataGridViewTextBoxColumn.HeaderText = "Nr of surfaces";
-            this.nrOfSurfacesDataGridViewTextBoxColumn.Name = "nrOfSurfacesDataGridViewTextBoxColumn";
-            this.nrOfSurfacesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nrOfSurfacesDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // maxNrDataGridViewTextBoxColumn
-            // 
-            this.maxNrDataGridViewTextBoxColumn.DataPropertyName = "maxNr";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "N0";
-            dataGridViewCellStyle12.NullValue = null;
-            this.maxNrDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
-            this.maxNrDataGridViewTextBoxColumn.HeaderText = "Max nr";
-            this.maxNrDataGridViewTextBoxColumn.Name = "maxNrDataGridViewTextBoxColumn";
-            this.maxNrDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maxNrDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn
-            // 
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxNrOfPerformancesOnObjectType";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "N0";
-            dataGridViewCellStyle13.NullValue = null;
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "Max nr of performances on object type";
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.Name = "maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn";
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maxNrOfPerformancesOnObjectTypeDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // periodLengthInDaysDataGridViewTextBoxColumn
-            // 
-            this.periodLengthInDaysDataGridViewTextBoxColumn.DataPropertyName = "periodLengthInDays";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "N0";
-            dataGridViewCellStyle14.NullValue = null;
-            this.periodLengthInDaysDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
-            this.periodLengthInDaysDataGridViewTextBoxColumn.HeaderText = "Period (days)";
-            this.periodLengthInDaysDataGridViewTextBoxColumn.Name = "periodLengthInDaysDataGridViewTextBoxColumn";
-            this.periodLengthInDaysDataGridViewTextBoxColumn.ReadOnly = true;
-            this.periodLengthInDaysDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // alarmDataGridViewCheckBoxColumn
-            // 
-            this.alarmDataGridViewCheckBoxColumn.DataPropertyName = "alarm";
-            this.alarmDataGridViewCheckBoxColumn.HeaderText = "Alarm";
-            this.alarmDataGridViewCheckBoxColumn.Name = "alarmDataGridViewCheckBoxColumn";
-            this.alarmDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.alarmDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // elementRequiredDataGridViewCheckBoxColumn
-            // 
-            this.elementRequiredDataGridViewCheckBoxColumn.DataPropertyName = "elementRequired";
-            this.elementRequiredDataGridViewCheckBoxColumn.HeaderText = "El. req?";
-            this.elementRequiredDataGridViewCheckBoxColumn.Name = "elementRequiredDataGridViewCheckBoxColumn";
-            this.elementRequiredDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.elementRequiredDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // conflictsInGroupDataGridViewTextBoxColumn
-            // 
-            this.conflictsInGroupDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroup";
-            this.conflictsInGroupDataGridViewTextBoxColumn.HeaderText = "conflictsInGroup";
-            this.conflictsInGroupDataGridViewTextBoxColumn.Name = "conflictsInGroupDataGridViewTextBoxColumn";
-            this.conflictsInGroupDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conflictsInGroupExprDataGridViewTextBoxColumn
-            // 
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.DataPropertyName = "conflictsInGroupExpr";
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.HeaderText = "conflictsInGroupExpr";
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.Name = "conflictsInGroupExprDataGridViewTextBoxColumn";
-            this.conflictsInGroupExprDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // conflictObjectTypeDataGridViewTextBoxColumn
-            // 
-            this.conflictObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "conflictObjectType";
-            this.conflictObjectTypeDataGridViewTextBoxColumn.HeaderText = "conflictObjectType";
-            this.conflictObjectTypeDataGridViewTextBoxColumn.Name = "conflictObjectTypeDataGridViewTextBoxColumn";
-            this.conflictObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mandatoryObjTypeDataGridViewTextBoxColumn
-            // 
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.DataPropertyName = "mandatoryObjType";
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.HeaderText = "mandatoryObjType";
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.Name = "mandatoryObjTypeDataGridViewTextBoxColumn";
-            this.mandatoryObjTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // elementGroupsDataGridViewTextBoxColumn
-            // 
-            this.elementGroupsDataGridViewTextBoxColumn.DataPropertyName = "elementGroups";
-            this.elementGroupsDataGridViewTextBoxColumn.HeaderText = "elementGroups";
-            this.elementGroupsDataGridViewTextBoxColumn.Name = "elementGroupsDataGridViewTextBoxColumn";
-            this.elementGroupsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // validFromDataGridViewTextBoxColumn
-            // 
-            this.validFromDataGridViewTextBoxColumn.DataPropertyName = "validFrom";
-            this.validFromDataGridViewTextBoxColumn.HeaderText = "Valid from";
-            this.validFromDataGridViewTextBoxColumn.Name = "validFromDataGridViewTextBoxColumn";
-            this.validFromDataGridViewTextBoxColumn.ReadOnly = true;
-            this.validFromDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // validToDataGridViewTextBoxColumn
-            // 
-            this.validToDataGridViewTextBoxColumn.DataPropertyName = "validTo";
-            this.validToDataGridViewTextBoxColumn.HeaderText = "Valid to";
-            this.validToDataGridViewTextBoxColumn.Name = "validToDataGridViewTextBoxColumn";
-            this.validToDataGridViewTextBoxColumn.ReadOnly = true;
-            this.validToDataGridViewTextBoxColumn.Visible = false;
-            this.validToDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // inputFileIdDataGridViewCheckBoxColumn
-            // 
-            this.inputFileIdDataGridViewCheckBoxColumn.DataPropertyName = "inputFileId";
-            this.inputFileIdDataGridViewCheckBoxColumn.HeaderText = "inputFileId";
-            this.inputFileIdDataGridViewCheckBoxColumn.Name = "inputFileIdDataGridViewCheckBoxColumn";
-            this.inputFileIdDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.inputFileIdDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // maxCountOnObjectTypeDataGridViewTextBoxColumn
-            // 
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.DataPropertyName = "maxCountOnObjectType";
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.HeaderText = "Max count on object type";
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.Name = "maxCountOnObjectTypeDataGridViewTextBoxColumn";
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maxCountOnObjectTypeDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // deletedDataGridViewCheckBoxColumn
-            // 
-            this.deletedDataGridViewCheckBoxColumn.DataPropertyName = "deleted";
-            this.deletedDataGridViewCheckBoxColumn.HeaderText = "Deleted";
-            this.deletedDataGridViewCheckBoxColumn.Name = "deletedDataGridViewCheckBoxColumn";
-            this.deletedDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.deletedDataGridViewCheckBoxColumn.Visible = false;
             // 
             // mainForm
             // 
@@ -2203,10 +2199,12 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.customerPanel.ResumeLayout(false);
+            this.checkDeclaration_SPLT.Panel1.ResumeLayout(false);
+            this.checkDeclaration_SPLT.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkDeclaration_SPLT)).EndInit();
+            this.checkDeclaration_SPLT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customer_DGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            this.invoicePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.invoiceTreatments_GV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatmentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).EndInit();
@@ -2289,10 +2287,8 @@
         private System.Windows.Forms.TextBox findCodeFilter_TXT;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox customerJSon_TXT;
-        private System.Windows.Forms.Panel invoicePanel;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox customerExternalIds_CB;
-        private System.Windows.Forms.DataGridView invoiceTreatments_GV;
         private System.Windows.Forms.BindingSource treatmentBindingSource1;
         private System.Windows.Forms.Button getCustomerExternalIds_BTN;
         private System.Windows.Forms.TextBox checkInvoiceMessage_TXT;
@@ -2324,21 +2320,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox version2_TXT;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn elementColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeColumn;
-        private System.Windows.Forms.Panel customerPanel;
-        private System.Windows.Forms.DataGridView customer_DGV;
         private System.Windows.Forms.BindingSource customerBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn initialsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn externalIdColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeRuleDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn addendumDataGridViewTextBoxColumn1;
@@ -2395,6 +2377,21 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn inputFileIdDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxCountOnObjectTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn deletedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.SplitContainer checkDeclaration_SPLT;
+        private System.Windows.Forms.DataGridView customer_DGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn initialsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn externalIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateColumn;
+        private System.Windows.Forms.DataGridView invoiceTreatments_GV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn elementColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeColumn;
     }
 }
 

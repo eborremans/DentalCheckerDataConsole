@@ -156,8 +156,8 @@ namespace DentalCheckerDataConsole
             configurationController.loadConfiguration();
 
             url_CB.SelectedIndex = configuration.currentUrlSelectedIndex;
-            year1Selection_CB.SelectedIndex = year1Selection_CB.Items.Count - 1; // Default to the latest year available
-            year2Selection_CB.SelectedIndex = year2Selection_CB.Items.Count - 1; // Default to the latest year available
+            year1Selection_CB.SelectedIndex = year1Selection_CB.FindStringExact(DateTime.Now.Year.ToString()); // Default to the current year
+            year2Selection_CB.SelectedIndex = year1Selection_CB.FindStringExact(DateTime.Now.Year.ToString()); // Default to the current year
 
             refDataURL1_CB.SelectedIndex = configuration.refDataUrl1SelectedIndex;
             refDataURL2_CB.SelectedIndex = configuration.refDataUrl2SelectedIndex;
@@ -731,6 +731,7 @@ public void setVersion1(string version)
 
         private void yearSelection_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Debug.WriteLine("Index changed to " + year1Selection_CB.SelectedIndex + " by " + sender.ToString());
             if (!loading)
             {
                 loadReferenceData1();
@@ -1089,6 +1090,11 @@ public void setVersion1(string version)
         private void mainForm_Activated(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkReportRenderer_WB_Resize(object sender, EventArgs e)
+        {
+            checkReportRenderer_WB.ScrollBarsEnabled = true;
         }
     }
 }
