@@ -46,12 +46,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_745C10E29C53B86C7DCD0DE79008ACE7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E04385BAE2F74D29903FC5FFECAF7033"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -59,6 +53,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_95FF3B0C69B38754AF5F4CDD40A9C89B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_745C10E29C53B86C7DCD0DE79008ACE7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -79,6 +79,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -95,6 +103,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -282,15 +306,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Dental Checker Data Console"
-        "ProductCode" = "8:{78F5875C-D3DF-41FF-87CD-8E8F01646DC7}"
-        "PackageCode" = "8:{86652464-C867-4F5C-AB56-966256CE85FC}"
+        "ProductCode" = "8:{086D7538-0A52-4EE3-955B-ED0EFA1D640E}"
+        "PackageCode" = "8:{37EE7EFA-697F-4557-8120-1FAAA42C9675}"
         "UpgradeCode" = "8:{6AA44721-A123-413D-9FC7-BC3482A8275F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.0.0"
+        "ProductVersion" = "8:2.0.1"
         "Manufacturer" = "8:Billing House"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -804,7 +828,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E04385BAE2F74D29903FC5FFECAF7033"
             {
-            "SourcePath" = "8:..\\DentalCheckerDataConsole\\obj\\Debug\\DentalCheckerDataConsole.exe"
+            "SourcePath" = "8:..\\DentalCheckerDataConsole\\obj\\Release\\DentalCheckerDataConsole.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_59ED0FB27A134CF18BF13451E119C50F"
